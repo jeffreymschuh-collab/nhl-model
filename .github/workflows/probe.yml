@@ -1,0 +1,10 @@
+name: Probe goalie saves odds
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests && python scripts/probe_props.py
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
