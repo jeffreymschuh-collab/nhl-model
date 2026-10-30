@@ -1,0 +1,11 @@
+{
+ "params": {
+  "sv_prior_shots": 1500,
+  "sv_half_life": 365,
+  "shots_disp": 60.0,
+  "pull_ga": 3,
+  "pull_p": 0.4,
+  "ot_shots": 2.0,
+  "w_model": 0.35
+ }
+}
