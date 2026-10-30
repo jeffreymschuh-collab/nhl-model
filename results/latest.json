@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T18:39:55.187660+00:00",
+ "generated_at": "2026-10-30T18:41:06.532167+00:00",
  "date": "2026-10-30",
  "run": "pm",
  "params": {
@@ -12,9 +12,156 @@
   "w_model": 0.35
  },
  "odds_quota": {
-  "remaining": "497",
-  "used": "3"
+  "remaining": "494",
+  "used": "6"
  },
+ "odds_events": [
+  {
+   "event": "New Jersey Devils @ Vegas Golden Knights",
+   "commence": "2026-10-30T22:10:00Z",
+   "matched": "NJD @ VGK",
+   "books": [
+    "draftkings",
+    "betmgm",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle"
+   ]
+  },
+  {
+   "event": "Winnipeg Jets @ Florida Panthers",
+   "commence": "2026-10-30T23:10:00Z",
+   "matched": "WPG @ FLA",
+   "books": [
+    "draftkings",
+    "betmgm",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle"
+   ]
+  },
+  {
+   "event": "Seattle Kraken @ Calgary Flames",
+   "commence": "2026-10-31T00:10:00Z",
+   "matched": "SEA @ CGY",
+   "books": [
+    "draftkings",
+    "betmgm",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle"
+   ]
+  },
+  {
+   "event": "Chicago Blackhawks @ Boston Bruins",
+   "commence": "2026-10-31T17:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "St Louis Blues @ Detroit Red Wings",
+   "commence": "2026-10-31T17:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Edmonton Oilers @ New York Islanders",
+   "commence": "2026-10-31T18:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Tampa Bay Lightning @ Nashville Predators",
+   "commence": "2026-10-31T18:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Buffalo Sabres @ Los Angeles Kings",
+   "commence": "2026-10-31T20:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Ottawa Senators @ San Jose Sharks",
+   "commence": "2026-10-31T20:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Pittsburgh Penguins @ Montr\u00e9al Canadiens",
+   "commence": "2026-10-31T23:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Toronto Maple Leafs @ Vancouver Canucks",
+   "commence": "2026-10-31T23:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Columbus Blue Jackets @ Dallas Stars",
+   "commence": "2026-11-01T00:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Calgary Flames @ Colorado Avalanche",
+   "commence": "2026-11-01T02:10:00Z",
+   "matched": null,
+   "books": [
+    "draftkings",
+    "fanduel",
+    "betmgm"
+   ]
+  }
+ ],
  "games": [
   {
    "game_id": 2026020214,
