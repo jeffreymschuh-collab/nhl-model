@@ -19,8 +19,8 @@ from nhlmodel.config import DEFAULT_PARAMS, PARAMS_JSON, RESULTS_DIR  # noqa: E4
 from nhlmodel.probs import score_matrix  # noqa: E402
 
 TUNE, TEST = 20242025, 20252026
-FIT_GRID = {"half_life_days": [30, 60, 120], "season_carry": [0.3, 0.6], "alpha": [0.001, 0.005]}
-CHEAP_GRID = {"w_shots": [0.0, 0.3, 0.6], "en_shift": [0.0, 0.15, 0.3], "ot_k": [0.3, 0.6]}
+FIT_GRID = {"half_life_days": [90, 150, 240], "season_carry": [0.6, 0.8], "alpha": [0.005, 0.015, 0.04]}
+CHEAP_GRID = {"w_shots": [0.45, 0.6, 0.75, 0.9], "en_shift": [0.25, 0.35, 0.45], "ot_k": [0.4, 0.6]}
 
 
 def outcomes(f):

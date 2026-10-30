@@ -1,7 +1,7 @@
 """Price every Hard Rock line, blend model with market, and size bets."""
 import math
 
-from .config import BET_RULES, TARGET_BOOK
+from .config import BET_MARKETS, BET_RULES, TARGET_BOOK
 from .odds import american_to_decimal, book_lines, decimal_to_american, market_consensus
 
 
@@ -66,6 +66,8 @@ def select_bets(rows: list[dict]) -> list[dict]:
     r = BET_RULES
     best = {}
     for x in rows:
+        if x["market"] not in BET_MARKETS:
+            continue
         if x["p_market"] is None:          # never bet without a market reference
             continue
         if not (r["min_odds"] <= x["price"] <= r["max_odds"]):
