@@ -1,0 +1,260 @@
+{
+ "generated_at": "2026-10-30T18:39:55.187660+00:00",
+ "date": "2026-10-30",
+ "run": "pm",
+ "params": {
+  "half_life_days": 150,
+  "season_carry": 0.8,
+  "alpha": 0.04,
+  "w_shots": 0.45,
+  "en_shift": 0.25,
+  "ot_k": 0.6,
+  "w_model": 0.35
+ },
+ "odds_quota": {
+  "remaining": "497",
+  "used": "3"
+ },
+ "games": [
+  {
+   "game_id": 2026020214,
+   "matchup": "NJD @ VGK",
+   "home": "VGK",
+   "away": "NJD",
+   "start_utc": "2026-10-30T22:00:00Z",
+   "xg_home": 3.12,
+   "xg_away": 2.78,
+   "model_home_win": 0.559,
+   "model_over_6_5": 0.427,
+   "lines": [],
+   "bets": []
+  },
+  {
+   "game_id": 2026020215,
+   "matchup": "WPG @ FLA",
+   "home": "FLA",
+   "away": "WPG",
+   "start_utc": "2026-10-30T23:00:00Z",
+   "xg_home": 3.08,
+   "xg_away": 2.73,
+   "model_home_win": 0.563,
+   "model_over_6_5": 0.413,
+   "lines": [],
+   "bets": []
+  },
+  {
+   "game_id": 2026020216,
+   "matchup": "SEA @ CGY",
+   "home": "CGY",
+   "away": "SEA",
+   "start_utc": "2026-10-31T00:00:00Z",
+   "xg_home": 3.04,
+   "xg_away": 3.02,
+   "model_home_win": 0.503,
+   "model_over_6_5": 0.454,
+   "lines": [],
+   "bets": []
+  }
+ ],
+ "power_rankings": [
+  {
+   "team": "CAR",
+   "xgf": 3.493,
+   "xga": 2.609,
+   "net": 0.885
+  },
+  {
+   "team": "COL",
+   "xgf": 3.474,
+   "xga": 2.766,
+   "net": 0.708
+  },
+  {
+   "team": "TBL",
+   "xgf": 3.269,
+   "xga": 2.788,
+   "net": 0.481
+  },
+  {
+   "team": "VGK",
+   "xgf": 3.18,
+   "xga": 2.738,
+   "net": 0.442
+  },
+  {
+   "team": "MIN",
+   "xgf": 3.218,
+   "xga": 2.777,
+   "net": 0.44
+  },
+  {
+   "team": "EDM",
+   "xgf": 3.281,
+   "xga": 2.941,
+   "net": 0.34
+  },
+  {
+   "team": "UTA",
+   "xgf": 3.205,
+   "xga": 2.886,
+   "net": 0.319
+  },
+  {
+   "team": "DAL",
+   "xgf": 2.983,
+   "xga": 2.681,
+   "net": 0.303
+  },
+  {
+   "team": "OTT",
+   "xgf": 3.116,
+   "xga": 2.821,
+   "net": 0.295
+  },
+  {
+   "team": "WSH",
+   "xgf": 3.18,
+   "xga": 2.899,
+   "net": 0.28
+  },
+  {
+   "team": "BUF",
+   "xgf": 3.201,
+   "xga": 2.94,
+   "net": 0.262
+  },
+  {
+   "team": "BOS",
+   "xgf": 3.105,
+   "xga": 2.853,
+   "net": 0.252
+  },
+  {
+   "team": "NJD",
+   "xgf": 3.12,
+   "xga": 2.869,
+   "net": 0.251
+  },
+  {
+   "team": "FLA",
+   "xgf": 3.106,
+   "xga": 2.887,
+   "net": 0.219
+  },
+  {
+   "team": "MTL",
+   "xgf": 3.065,
+   "xga": 2.86,
+   "net": 0.205
+  },
+  {
+   "team": "STL",
+   "xgf": 3.005,
+   "xga": 2.868,
+   "net": 0.137
+  },
+  {
+   "team": "PIT",
+   "xgf": 3.154,
+   "xga": 3.021,
+   "net": 0.132
+  },
+  {
+   "team": "NYI",
+   "xgf": 2.978,
+   "xga": 2.853,
+   "net": 0.125
+  },
+  {
+   "team": "DET",
+   "xgf": 2.995,
+   "xga": 2.886,
+   "net": 0.108
+  },
+  {
+   "team": "NYR",
+   "xgf": 3.021,
+   "xga": 2.919,
+   "net": 0.102
+  },
+  {
+   "team": "LAK",
+   "xgf": 2.921,
+   "xga": 2.842,
+   "net": 0.079
+  },
+  {
+   "team": "CBJ",
+   "xgf": 2.972,
+   "xga": 2.944,
+   "net": 0.027
+  },
+  {
+   "team": "NSH",
+   "xgf": 3.002,
+   "xga": 2.991,
+   "net": 0.01
+  },
+  {
+   "team": "PHI",
+   "xgf": 2.805,
+   "xga": 2.799,
+   "net": 0.006
+  },
+  {
+   "team": "WPG",
+   "xgf": 2.903,
+   "xga": 2.908,
+   "net": -0.004
+  },
+  {
+   "team": "TOR",
+   "xgf": 3.159,
+   "xga": 3.181,
+   "net": -0.022
+  },
+  {
+   "team": "ANA",
+   "xgf": 3.124,
+   "xga": 3.147,
+   "net": -0.023
+  },
+  {
+   "team": "SEA",
+   "xgf": 3.014,
+   "xga": 3.095,
+   "net": -0.081
+  },
+  {
+   "team": "CGY",
+   "xgf": 2.866,
+   "xga": 3.08,
+   "net": -0.214
+  },
+  {
+   "team": "SJS",
+   "xgf": 2.901,
+   "xga": 3.173,
+   "net": -0.272
+  },
+  {
+   "team": "CHI",
+   "xgf": 2.67,
+   "xga": 3.152,
+   "net": -0.482
+  },
+  {
+   "team": "VAN",
+   "xgf": 2.784,
+   "xga": 3.342,
+   "net": -0.557
+  }
+ ],
+ "performance": {
+  "overall": {
+   "bets": 0
+  },
+  "by_market": {},
+  "pending": 0
+ }
+}
