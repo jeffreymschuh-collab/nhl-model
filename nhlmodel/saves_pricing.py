@@ -59,9 +59,23 @@ def _market_over(by_book: dict, goalie: str, line: float, dist) -> float | None:
     return sum(p * w for p, w in ests) / sum(w for _, w in ests)
 
 
-def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str) -> tuple[list, list]:
+def starters_from_props(by_book: dict, gl, teams: set, day: str) -> dict:
+    """{team: player_id} for goalies the books are hanging saves lines on (their expected starters)."""
+    out = {}
+    for book in TARGET_BOOKS + REFERENCE_BOOKS:
+        for goalie in by_book.get(book, {}):
+            pid, team = goalies.find_goalie(gl, goalie, teams, day)
+            if team and team not in out:
+                out[team] = pid
+    return out
+
+
+def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str, by_book: dict | None = None,
+               b2b: dict | None = None) -> tuple[list, list]:
     """Returns (rows like picks.price_event, diagnostics)."""
-    by_book, _ = fetch_event_saves(event["id"])
+    if by_book is None:
+        by_book, _ = fetch_event_saves(event["id"])
+    b2b = b2b or {}
     hr_book = next((b for b in TARGET_BOOKS if by_book.get(b)), None)
     diag, rows = [], []
     if not hr_book:
@@ -74,7 +88,8 @@ def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str) -> 
                          "note": "skipped: goalie not found on either team (name or roster mismatch)"})
             continue
         opp = game["away"] if team == game["home"] else game["home"]
-        mu = R.expected_shots(opp, team, shooter_home=(opp == game["home"]))
+        mu = R.expected_shots(opp, team, shooter_home=(opp == game["home"]),
+                              att_b2b=b2b.get(opp, 0), def_b2b=b2b.get(team, 0))
         sv, league, n_games = goalies.save_pct(gl, pid, day, sp)
         dist = goalies.simulate_saves(mu, sv, mp["p_tie_reg"], sp, seed=int(game["game_id"]) % 100000)
         mean = float(sum(k * p for k, p in enumerate(dist)))

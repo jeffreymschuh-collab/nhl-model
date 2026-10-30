@@ -14,13 +14,14 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nhlmodel import nhl_api, ratings  # noqa: E402
+from nhlmodel import features, goalies, nhl_api, ratings  # noqa: E402
+from nhlmodel.saves_pricing import load_saves_params  # noqa: E402
 from nhlmodel.config import DEFAULT_PARAMS, PARAMS_JSON, RESULTS_DIR  # noqa: E402
 from nhlmodel.probs import score_matrix  # noqa: E402
 
 TUNE, TEST = 20242025, 20252026
-FIT_GRID = {"half_life_days": [90, 150, 240], "season_carry": [0.6, 0.8], "alpha": [0.005, 0.015, 0.04]}
-CHEAP_GRID = {"w_shots": [0.45, 0.6, 0.75, 0.9], "en_shift": [0.25, 0.35, 0.45], "ot_k": [0.4, 0.6]}
+FIT_GRID = {"rest": [False, True], "half_life_days": [120, 180, 270], "season_carry": [0.8, 1.0], "alpha": [0.03, 0.06]}
+CHEAP_GRID = {"w_shots": [0.3, 0.45, 0.6], "en_shift": [0.2, 0.3], "ot_k": [0.5, 0.7], "goalie_k": [0.0, 0.5, 1.0]}
 
 
 def outcomes(f):
@@ -57,18 +58,36 @@ def walk(fin, season, fit_p):
             for _, g in wk.iterrows():
                 if g["home"] not in R.teams or g["away"] not in R.teams:
                     continue
-                R.w_shots = 0.0; lg = R.expected_goals(g["home"], g["away"])
-                R.w_shots = 1.0 if R.coef_s is not None else 0.0; ls = R.expected_goals(g["home"], g["away"])
+                b = (int(g.get("home_b2b", 0)), int(g.get("away_b2b", 0)))
+                R.w_shots = 0.0; lg = R.expected_goals(g["home"], g["away"], *b)
+                R.w_shots = 1.0 if R.coef_s is not None else 0.0; ls = R.expected_goals(g["home"], g["away"], *b)
                 out.append((g["game_id"], *lg, *ls))
         d = nxt
     x = pd.DataFrame(out, columns=["game_id", "lh_g", "la_g", "lh_s", "la_s"])
     return test.merge(x, on="game_id")
 
 
+def goalie_ratios(df, ctx, gl):
+    """Actual starters' goaltending ratio vs their team's usual (confirmed-starter scenario, like the 5pm run)."""
+    st = gl[gl["starter"].astype(bool)].set_index(["game_id", "team"])["player_id"]
+    rh, ra = [], []
+    for g in df.itertuples():
+        ph = st.get((g.game_id, g.home)); pa = st.get((g.game_id, g.away))
+        ph = int(ph.iloc[0]) if isinstance(ph, pd.Series) else (int(ph) if ph is not None else None)
+        pa = int(pa.iloc[0]) if isinstance(pa, pd.Series) else (int(pa) if pa is not None else None)
+        rh.append(ctx.ratio(ph, g.home, g.date)); ra.append(ctx.ratio(pa, g.away, g.date))
+    df = df.copy(); df["r_home_g"] = rh; df["r_away_g"] = ra
+    return df
+
+
 def score(df, cp):
     w = cp["w_shots"]
+    k = cp.get("goalie_k", 0.0)
     lh = np.exp((1 - w) * np.log(df["lh_g"]) + w * np.log(df["lh_s"]))
     la = np.exp((1 - w) * np.log(df["la_g"]) + w * np.log(df["la_s"]))
+    if k and "r_home_g" in df:
+        lh = lh * df["r_away_g"] ** k      # away goalie weaker than usual -> home scores more
+        la = la * df["r_home_g"] ** k
     preds = np.array([predict(a, b, cp["en_shift"], cp["ot_k"]) for a, b in zip(lh, la)])
     y = outcomes(df)
     res = {k: ll(preds[:, n], y[k]) for n, k in enumerate(["ml", "pl", "o55", "o65"])}
@@ -88,13 +107,30 @@ def calibration(p, y, bins=8):
 
 def main():
     games = nhl_api.update_games()
-    fin = nhl_api.finals(games)
-    print(f"{len(fin)} completed games loaded")
+    fin = nhl_api.finals(features.add_rest(games))
+    gl = goalies.update_goalies(games)
+    ctx = features.GoalieContext(gl, load_saves_params())
+    print(f"{len(fin)} completed games, {len(gl)} goalie appearances loaded")
+
+    ratios = {}
+    for season in (TUNE, TEST):
+        base = fin[(fin["season"] == season) & (fin["game_type"] == 2)]
+        ratios[season] = goalie_ratios(base, ctx, gl)[["game_id", "r_home_g", "r_away_g"]]
+        print(f"goalie ratios ready for {season}")
+
+    def run(season, fp):
+        return walk(fin, season, fp).merge(ratios[season], on="game_id", how="left").fillna({"r_home_g": 1.0, "r_away_g": 1.0})
+
+    # Current production model, scored on the test season for an apples-to-apples comparison
+    old = json.loads(PARAMS_JSON.read_text())["params"] if PARAMS_JSON.exists() else dict(DEFAULT_PARAMS)
+    old_fp = {k: old[k] for k in ("half_life_days", "season_carry", "alpha")} | {"rest": False}
+    old_cp = {k: old[k] for k in ("w_shots", "en_shift", "ot_k")} | {"goalie_k": 0.0}
+    s_old, _, _ = score(run(TEST, old_fp), old_cp)
 
     best = None
     for vals in itertools.product(*FIT_GRID.values()):
         fp = dict(zip(FIT_GRID, vals))
-        tune = walk(fin, TUNE, fp)
+        tune = run(TUNE, fp)
         for cv in itertools.product(*CHEAP_GRID.values()):
             cp = dict(zip(CHEAP_GRID, cv))
             s, _, _ = score(tune, cp)
@@ -103,27 +139,37 @@ def main():
                 best = (s, fp, cp)
 
     s_tune, fp, cp = best
-    test = walk(fin, TEST, fp)
+    test = run(TEST, fp)
     s_test, preds, y = score(test, cp)
     prior = fin[fin["season"] < TEST]
     base = baseline(outcomes(prior), y)
     names = {"ml": "Moneyline (home wins)", "pl": "Puck line (home -1.5)",
              "o55": "Total over 5.5", "o65": "Total over 6.5"}
+    ship = s_test["total"] < s_old["total"]
+    R = ratings.fit(fin, test["date"].max(), dict(DEFAULT_PARAMS, **fp, w_shots=cp["w_shots"]))
     report = {
         "tuned_on": TUNE, "tested_on": TEST, "test_games": len(test),
         "params": {**fp, **cp},
         "test_log_loss": {names[k]: {"model": round(s_test[k], 4), "baseline": round(base[k], 4),
-                                     "improvement_pct": round(100 * (base[k] - s_test[k]) / base[k], 2)}
+                                     "previous_model": round(s_old[k], 4),
+                                     "improvement_pct": round(100 * (base[k] - s_test[k]) / base[k], 2),
+                                     "vs_previous_pct": round(100 * (s_old[k] - s_test[k]) / s_old[k], 2)}
                           for k in names},
+        "shipped": bool(ship),
+        "back_to_back_effects": R.b2b_effects(),
         "ml_calibration_test": calibration(preds[:, 0], y["ml"]),
-        "note": "Baseline = always predict the historical average rate. Positive improvement = model beats it. "
-                "Betting markets are much tougher than this baseline; real edge is measured live via CLV.",
+        "note": "Baseline = always predict the historical average rate. previous_model = the model that was live "
+                "before this run, scored on the same games. Goalie terms use the actual starter (the 5pm confirmed-"
+                "starter situation). Real edge is measured live via CLV.",
     }
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-    (RESULTS_DIR / "backtest_report.json").write_text(json.dumps(report, indent=1))
     keep = {k: v for k, v in DEFAULT_PARAMS.items()}
     keep.update(fp); keep.update(cp)
-    PARAMS_JSON.write_text(json.dumps({"params": keep, "source": "backtest", "report": "results/backtest_report.json"}, indent=1))
+    if ship:
+        (RESULTS_DIR / "backtest_report.json").write_text(json.dumps(report, indent=1))
+        PARAMS_JSON.write_text(json.dumps({"params": keep, "source": "backtest", "report": "results/backtest_report.json"}, indent=1))
+    else:
+        (RESULTS_DIR / "backtest_candidate.json").write_text(json.dumps(report, indent=1))
     print(json.dumps(report, indent=1))
 
 

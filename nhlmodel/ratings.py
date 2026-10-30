@@ -20,28 +20,39 @@ class Ratings:
     icpt_s: float | None
     w_shots: float
     sh_pct: float | None = None
+    rest: bool = False
 
-    def expected_shots(self, shooter: str, defender: str, shooter_home: bool) -> float:
+    def expected_shots(self, shooter: str, defender: str, shooter_home: bool, att_b2b: int = 0, def_b2b: int = 0) -> float:
         """Shots on goal `shooter` is expected to take against `defender`."""
         if self.coef_s is None or not self.sh_pct:
             raise ValueError("shots model not fitted")
-        return self._lam(self.coef_s, self.icpt_s, shooter, defender, int(shooter_home)) / self.sh_pct
+        return self._lam(self.coef_s, self.icpt_s, shooter, defender, int(shooter_home), att_b2b, def_b2b) / self.sh_pct
 
-    def _lam(self, coef, icpt, att, dfn, home):
+    def _lam(self, coef, icpt, att, dfn, home, att_b2b=0, def_b2b=0):
         n = len(self.teams)
         ia, idf = self.teams.index(att), self.teams.index(dfn)
-        return float(np.exp(icpt + coef[ia] + coef[n + idf] + coef[2 * n] * home))
+        z = icpt + coef[ia] + coef[n + idf] + coef[2 * n] * home
+        if self.rest and len(coef) > 2 * n + 1:
+            z += coef[2 * n + 1] * att_b2b + coef[2 * n + 2] * def_b2b
+        return float(np.exp(z))
 
-    def expected_goals(self, home: str, away: str) -> tuple[float, float]:
+    def b2b_effects(self) -> dict:
+        n = len(self.teams)
+        if not self.rest or len(self.coef_g) <= 2 * n + 1:
+            return {}
+        return {"own_goals_when_b2b": round(float(np.exp(self.coef_g[2 * n + 1])), 3),
+                "goals_allowed_when_b2b": round(float(np.exp(self.coef_g[2 * n + 2])), 3)}
+
+    def expected_goals(self, home: str, away: str, home_b2b: int = 0, away_b2b: int = 0) -> tuple[float, float]:
         for t in (home, away):
             if t not in self.teams:
                 raise KeyError(f"no rating for {t}")
-        lh_g = self._lam(self.coef_g, self.icpt_g, home, away, 1)
-        la_g = self._lam(self.coef_g, self.icpt_g, away, home, 0)
+        lh_g = self._lam(self.coef_g, self.icpt_g, home, away, 1, home_b2b, away_b2b)
+        la_g = self._lam(self.coef_g, self.icpt_g, away, home, 0, away_b2b, home_b2b)
         if self.coef_s is None or self.w_shots == 0:
             return lh_g, la_g
-        lh_s = self._lam(self.coef_s, self.icpt_s, home, away, 1)
-        la_s = self._lam(self.coef_s, self.icpt_s, away, home, 0)
+        lh_s = self._lam(self.coef_s, self.icpt_s, home, away, 1, home_b2b, away_b2b)
+        la_s = self._lam(self.coef_s, self.icpt_s, away, home, 0, away_b2b, home_b2b)
         w = self.w_shots
         return float(np.exp((1 - w) * np.log(lh_g) + w * np.log(lh_s))), \
             float(np.exp((1 - w) * np.log(la_g) + w * np.log(la_s)))
@@ -56,17 +67,22 @@ class Ratings:
         return pd.DataFrame(rows).sort_values("net", ascending=False).reset_index(drop=True)
 
 
-def _design(f: pd.DataFrame, teams: list):
+def _design(f: pd.DataFrame, teams: list, rest: bool = False):
     n = len(teams)
     idx = {t: i for i, t in enumerate(teams)}
     m = len(f)
-    X = np.zeros((2 * m, 2 * n + 1))
+    X = np.zeros((2 * m, 2 * n + 1 + (2 if rest else 0)))
     r = np.arange(m)
     h = f["home"].map(idx).to_numpy()
     a = f["away"].map(idx).to_numpy()
     # rows 0..m-1: home attacking; rows m..2m-1: away attacking
     X[r, h] = 1; X[r, n + a] = 1; X[r, 2 * n] = 1
     X[m + r, a] = 1; X[m + r, n + h] = 1
+    if rest:
+        hb = f["home_b2b"].fillna(0).to_numpy() if "home_b2b" in f else np.zeros(m)
+        ab = f["away_b2b"].fillna(0).to_numpy() if "away_b2b" in f else np.zeros(m)
+        X[r, 2 * n + 1] = hb; X[r, 2 * n + 2] = ab          # home attacking: own b2b, defender b2b
+        X[m + r, 2 * n + 1] = ab; X[m + r, 2 * n + 2] = hb
     return X
 
 
@@ -87,7 +103,8 @@ def fit(finals_df: pd.DataFrame, as_of: str, params: dict) -> Ratings:
     teams = sorted(set(f.loc[f["season"] == cur_season, "home"]) | set(f.loc[f["season"] == cur_season, "away"]))
     f_mask = f["home"].isin(teams) & f["away"].isin(teams)
     f, w = f[f_mask], w[f_mask]
-    X = _design(f, teams)
+    rest = bool(params.get("rest", False)) and "home_b2b" in f
+    X = _design(f, teams, rest)
     W = np.concatenate([w, w])
     W = W / W.mean()
 
@@ -101,7 +118,7 @@ def fit(finals_df: pd.DataFrame, as_of: str, params: dict) -> Ratings:
         sh_pct = (f["home_goals"].sum() + f["away_goals"].sum()) / (f["home_sog"].sum() + f["away_sog"].sum())
         y_s = np.concatenate([s["home_sog"].to_numpy(), s["away_sog"].to_numpy()]).astype(float) * sh_pct
         ms = PoissonRegressor(alpha=params["alpha"], max_iter=500).fit(
-            _design(s, teams), y_s, sample_weight=np.concatenate([sw, sw]))
+            _design(s, teams, rest), y_s, sample_weight=np.concatenate([sw, sw]))
         coef_s, icpt_s = ms.coef_, ms.intercept_
     return Ratings(teams, mg.coef_, mg.intercept_, coef_s, icpt_s,
-                   params["w_shots"] if coef_s is not None else 0.0, sh_pct)
+                   params["w_shots"] if coef_s is not None else 0.0, sh_pct, rest)
