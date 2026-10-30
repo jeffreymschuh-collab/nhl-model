@@ -1,1 +1,1 @@
-date,run,game_id,matchup,start_utc,market,selection,side,point,price,units,p_final,edge,close_price,clv_pct,result,profit_units
+date,run,game_id,matchup,start_utc,market,selection,side,point,price,book,units,p_final,edge,close_price,clv_pct,result,profit_units

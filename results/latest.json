@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T18:41:06.532167+00:00",
+ "generated_at": "2026-10-30T18:43:03.800597+00:00",
  "date": "2026-10-30",
  "run": "pm",
  "params": {
@@ -12,8 +12,8 @@
   "w_model": 0.35
  },
  "odds_quota": {
-  "remaining": "494",
-  "used": "6"
+  "remaining": "491",
+  "used": "9"
  },
  "odds_events": [
   {
@@ -173,7 +173,86 @@
    "xg_away": 2.78,
    "model_home_win": 0.559,
    "model_over_6_5": 0.427,
-   "lines": [],
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "NJD ML",
+     "side": "away",
+     "point": null,
+     "price": -110,
+     "p_model": 0.4408,
+     "p_market": 0.4932,
+     "p_final": 0.4748,
+     "fair_price": 111,
+     "edge": -0.0936
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "VGK ML",
+     "side": "home",
+     "point": null,
+     "price": -110,
+     "p_model": 0.5592,
+     "p_market": 0.5068,
+     "p_final": 0.5252,
+     "fair_price": -111,
+     "edge": 0.0027
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "NJD -1.5",
+     "side": "away",
+     "point": -1.5,
+     "price": 200,
+     "p_model": 0.2555,
+     "p_market": 0.3125,
+     "p_final": 0.2918,
+     "fair_price": 243,
+     "edge": -0.1247
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "VGK +1.5",
+     "side": "home",
+     "point": 1.5,
+     "price": -300,
+     "p_model": 0.7445,
+     "p_market": 0.6875,
+     "p_final": 0.7082,
+     "fair_price": -243,
+     "edge": -0.0557
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 5.5",
+     "side": "over",
+     "point": 5.5,
+     "price": -145,
+     "p_model": 0.5636,
+     "p_market": null,
+     "p_final": 0.5636,
+     "fair_price": -129,
+     "edge": -0.0477
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 5.5",
+     "side": "under",
+     "point": 5.5,
+     "price": 115,
+     "p_model": 0.4364,
+     "p_market": null,
+     "p_final": 0.4364,
+     "fair_price": 129,
+     "edge": -0.0618
+    }
+   ],
    "bets": []
   },
   {
@@ -186,7 +265,86 @@
    "xg_away": 2.73,
    "model_home_win": 0.563,
    "model_over_6_5": 0.413,
-   "lines": [],
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "FLA ML",
+     "side": "home",
+     "point": null,
+     "price": -225,
+     "p_model": 0.5631,
+     "p_market": 0.668,
+     "p_final": 0.6326,
+     "fair_price": -172,
+     "edge": -0.0863
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "WPG ML",
+     "side": "away",
+     "point": null,
+     "price": 175,
+     "p_model": 0.4369,
+     "p_market": 0.332,
+     "p_final": 0.3674,
+     "fair_price": 172,
+     "edge": 0.0104
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "FLA -1.5",
+     "side": "home",
+     "point": -1.5,
+     "price": 105,
+     "p_model": 0.3515,
+     "p_market": 0.4561,
+     "p_final": 0.4186,
+     "fair_price": 139,
+     "edge": -0.142
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "WPG +1.5",
+     "side": "away",
+     "point": 1.5,
+     "price": -130,
+     "p_model": 0.6485,
+     "p_market": 0.5439,
+     "p_final": 0.5814,
+     "fair_price": -139,
+     "edge": 0.0287
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 6.5",
+     "side": "over",
+     "point": 6.5,
+     "price": 105,
+     "p_model": 0.4133,
+     "p_market": 0.4574,
+     "p_final": 0.4418,
+     "fair_price": 126,
+     "edge": -0.0943
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 6.5",
+     "side": "under",
+     "point": 6.5,
+     "price": -130,
+     "p_model": 0.5867,
+     "p_market": 0.5426,
+     "p_final": 0.5582,
+     "fair_price": -126,
+     "edge": -0.0125
+    }
+   ],
    "bets": []
   },
   {
@@ -199,7 +357,86 @@
    "xg_away": 3.02,
    "model_home_win": 0.503,
    "model_over_6_5": 0.454,
-   "lines": [],
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "CGY ML",
+     "side": "home",
+     "point": null,
+     "price": -105,
+     "p_model": 0.5028,
+     "p_market": 0.4844,
+     "p_final": 0.4909,
+     "fair_price": 104,
+     "edge": -0.0417
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "SEA ML",
+     "side": "away",
+     "point": null,
+     "price": -115,
+     "p_model": 0.4972,
+     "p_market": 0.5156,
+     "p_final": 0.5091,
+     "fair_price": -104,
+     "edge": -0.0481
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "CGY +1.5",
+     "side": "home",
+     "point": 1.5,
+     "price": -250,
+     "p_model": 0.6987,
+     "p_market": 0.6873,
+     "p_final": 0.6913,
+     "fair_price": -224,
+     "edge": -0.0322
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "SEA -1.5",
+     "side": "away",
+     "point": -1.5,
+     "price": 180,
+     "p_model": 0.3013,
+     "p_market": 0.3127,
+     "p_final": 0.3087,
+     "fair_price": 224,
+     "edge": -0.1356
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 6.5",
+     "side": "over",
+     "point": 6.5,
+     "price": -105,
+     "p_model": 0.4538,
+     "p_market": 0.4851,
+     "p_final": 0.4741,
+     "fair_price": 111,
+     "edge": -0.0744
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 6.5",
+     "side": "under",
+     "point": 6.5,
+     "price": -115,
+     "p_model": 0.5462,
+     "p_market": 0.5149,
+     "p_final": 0.5259,
+     "fair_price": -111,
+     "edge": -0.0168
+    }
+   ],
    "bets": []
   }
  ],
