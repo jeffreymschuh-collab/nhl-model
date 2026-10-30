@@ -3,74 +3,74 @@
  "tested_on": 20252026,
  "test_games": 1312,
  "params": {
-  "half_life_days": 120,
-  "season_carry": 0.6,
-  "alpha": 0.005,
-  "w_shots": 0.6,
-  "en_shift": 0.3,
+  "half_life_days": 150,
+  "season_carry": 0.8,
+  "alpha": 0.04,
+  "w_shots": 0.45,
+  "en_shift": 0.25,
   "ot_k": 0.6
  },
  "test_log_loss": {
   "Moneyline (home wins)": {
-   "model": 0.684,
+   "model": 0.6853,
    "baseline": 0.6939,
-   "improvement_pct": 1.42
+   "improvement_pct": 1.24
   },
   "Puck line (home -1.5)": {
-   "model": 0.6034,
+   "model": 0.6037,
    "baseline": 0.616,
-   "improvement_pct": 2.05
+   "improvement_pct": 2.0
   },
   "Total over 5.5": {
-   "model": 0.6811,
+   "model": 0.6806,
    "baseline": 0.683,
-   "improvement_pct": 0.29
+   "improvement_pct": 0.36
   },
   "Total over 6.5": {
-   "model": 0.6931,
+   "model": 0.6921,
    "baseline": 0.6928,
-   "improvement_pct": -0.04
+   "improvement_pct": 0.1
   }
  },
  "ml_calibration_test": [
   {
-   "pred": 0.395,
-   "actual": 0.433,
+   "pred": 0.428,
+   "actual": 0.439,
    "n": 164
   },
   {
-   "pred": 0.46,
-   "actual": 0.476,
+   "pred": 0.478,
+   "actual": 0.488,
    "n": 164
   },
   {
-   "pred": 0.49,
-   "actual": 0.5,
+   "pred": 0.501,
+   "actual": 0.482,
    "n": 164
   },
   {
-   "pred": 0.514,
-   "actual": 0.5,
-   "n": 164
-  },
-  {
-   "pred": 0.538,
+   "pred": 0.519,
    "actual": 0.524,
    "n": 164
   },
   {
-   "pred": 0.564,
-   "actual": 0.537,
+   "pred": 0.537,
+   "actual": 0.5,
    "n": 164
   },
   {
-   "pred": 0.592,
-   "actual": 0.53,
+   "pred": 0.557,
+   "actual": 0.518,
    "n": 164
   },
   {
-   "pred": 0.657,
-   "actual": 0.677,
+   "pred": 0.579,
+   "actual": 0.585,
+   "n": 164
+  },
+  {
+   "pred": 0.629,
+   "actual": 0.64,
    "n": 164
   }
  ],
