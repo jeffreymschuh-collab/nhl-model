@@ -11,7 +11,9 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from nhlmodel import nhl_api, odds, picks, probs, ratings, tracking  # noqa: E402
+import os  # noqa: E402
+
+from nhlmodel import goalies, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
 from nhlmodel.config import RESULTS_DIR, load_params  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
@@ -21,6 +23,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", choices=["am", "pm"])
     ap.add_argument("--date")
+    ap.add_argument("--saves", choices=["auto", "on", "off"], default="auto",
+                    help="price goalie saves (auto = pre-game run only, to save odds credits)")
     a = ap.parse_args()
     now = datetime.now(ET)
     day = a.date or now.date().isoformat()
@@ -28,7 +32,11 @@ def main():
     params = load_params()
 
     games = nhl_api.update_games()
-    tracking.grade(games)
+    try:
+        gl = goalies.update_goalies(games)
+    except Exception as err:          # never let goalie data break the game-line run
+        print(f"[goalies] update failed: {err}"); gl = None
+    tracking.grade(games, gl)
     fin = nhl_api.finals(games)
     R = ratings.fit(fin, day, params)
 
@@ -47,6 +55,11 @@ def main():
                           "matched": f"{aw} @ {h}" if (h, aw) in by_pair else None,
                           "books": [b["key"] for b in e.get("bookmakers", [])]})
 
+    do_saves = gl is not None and os.environ.get("ODDS_API_KEY") and (
+        a.saves == "on" or (a.saves == "auto" and run == "pm"))
+    sp = saves_pricing.load_saves_params()
+    saves_diag = []
+
     out_games, new_picks, all_lines = [], [], {}
     for (h, aw), g in by_pair.items():
         try:
@@ -63,6 +76,12 @@ def main():
         e = ev_by_pair.get((h, aw))
         if e:
             lines = picks.price_event(e, h, aw, mp, params)
+            if do_saves:
+                try:
+                    srows, sd = saves_pricing.price_game(e, g, R, gl, mp, sp, day)
+                    lines += srows; saves_diag += sd
+                except Exception as err:
+                    saves_diag.append({"game": row["matchup"], "note": f"saves pricing failed: {err}"})
             row["lines"] = lines
             for ln in lines:
                 all_lines[(g["game_id"], ln["market"], ln["side"],
@@ -80,7 +99,7 @@ def main():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(), "date": day, "run": run,
-        "params": params, "odds_quota": quota, "odds_events": odds_diag, "games": out_games,
+        "params": params, "odds_quota": quota, "odds_events": odds_diag, "saves_priced": bool(do_saves), "saves_diag": saves_diag, "games": out_games,
         "power_rankings": R.table().to_dict(orient="records"), "performance": summ,
     }
     (RESULTS_DIR / "latest.json").write_text(json.dumps(payload, indent=1, default=str))

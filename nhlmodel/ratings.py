@@ -19,6 +19,13 @@ class Ratings:
     coef_s: np.ndarray | None
     icpt_s: float | None
     w_shots: float
+    sh_pct: float | None = None
+
+    def expected_shots(self, shooter: str, defender: str, shooter_home: bool) -> float:
+        """Shots on goal `shooter` is expected to take against `defender`."""
+        if self.coef_s is None or not self.sh_pct:
+            raise ValueError("shots model not fitted")
+        return self._lam(self.coef_s, self.icpt_s, shooter, defender, int(shooter_home)) / self.sh_pct
 
     def _lam(self, coef, icpt, att, dfn, home):
         n = len(self.teams)
@@ -87,7 +94,7 @@ def fit(finals_df: pd.DataFrame, as_of: str, params: dict) -> Ratings:
     y_g = np.concatenate([f["home_reg"].to_numpy(), f["away_reg"].to_numpy()]).astype(float)
     mg = PoissonRegressor(alpha=params["alpha"], max_iter=500).fit(X, y_g, sample_weight=W)
 
-    coef_s = icpt_s = None
+    coef_s = icpt_s = sh_pct = None
     s = f.dropna(subset=["home_sog", "away_sog"])
     if params["w_shots"] > 0 and len(s) > 0.8 * len(f):
         sw = W[: len(f)][f.index.isin(s.index)]
@@ -96,4 +103,5 @@ def fit(finals_df: pd.DataFrame, as_of: str, params: dict) -> Ratings:
         ms = PoissonRegressor(alpha=params["alpha"], max_iter=500).fit(
             _design(s, teams), y_s, sample_weight=np.concatenate([sw, sw]))
         coef_s, icpt_s = ms.coef_, ms.intercept_
-    return Ratings(teams, mg.coef_, mg.intercept_, coef_s, icpt_s, params["w_shots"] if coef_s is not None else 0.0)
+    return Ratings(teams, mg.coef_, mg.intercept_, coef_s, icpt_s,
+                   params["w_shots"] if coef_s is not None else 0.0, sh_pct)

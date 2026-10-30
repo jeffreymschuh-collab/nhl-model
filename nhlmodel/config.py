@@ -34,10 +34,11 @@ DEFAULT_PARAMS = {
 
 # Markets the model is allowed to bet. Totals are priced and shown but not bet:
 # the 2025-26 backtest showed no real skill on totals.
-BET_MARKETS = {"h2h", "spreads"}
+BET_MARKETS = {"h2h", "spreads", "saves"}
 
 BET_RULES = {
-    "min_edge": {"h2h": 0.03, "spreads": 0.04, "totals": 0.03},
+    "min_edge": {"h2h": 0.03, "spreads": 0.04, "totals": 0.03, "saves": 0.05},
+    "max_units_by_market": {"saves": 1.0},   # props are capped lower
     "kelly_fraction": 0.25,     # quarter Kelly
     "unit_pct": 0.01,           # 1 unit = 1% of bankroll
     "min_units": 0.5,

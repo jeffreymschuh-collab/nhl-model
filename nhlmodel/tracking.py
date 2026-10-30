@@ -45,10 +45,19 @@ def record(day: str, run: str, picks: list[dict], all_lines: dict) -> pd.DataFra
     return log
 
 
-def _grade_one(r, g) -> tuple[str, float]:
+def _grade_one(r, g, gl=None) -> tuple[str, float]:
     hg, ag = int(g["home_goals"]), int(g["away_goals"])
     m, side = r["market"], r["side"]
-    if m == "h2h":
+    if m == "saves":
+        from .goalies import name_key
+        direction, key = side.split("|", 1)
+        rows = gl[(gl["game_id"] == int(r["game_id"])) & (gl["name"].map(name_key) == key)] if gl is not None else []
+        if len(rows) == 0:
+            return "V", 0.0          # goalie did not play: void
+        saves = float(rows["saves"].sum())
+        v = (saves - float(r["point"])) if direction == "over" else (float(r["point"]) - saves)
+        res = "W" if v > 0 else "P" if v == 0 else "L"
+    elif m == "h2h":
         won = (hg > ag) if side == "home" else (ag > hg)
         res = "W" if won else "L"
     elif m == "spreads":
@@ -64,14 +73,16 @@ def _grade_one(r, g) -> tuple[str, float]:
     return res, round(profit, 3)
 
 
-def grade(games: pd.DataFrame) -> pd.DataFrame:
+def grade(games: pd.DataFrame, gl: pd.DataFrame | None = None) -> pd.DataFrame:
     log = load_log()
     if log.empty:
         return log
     fin = games[games["state"].isin(["OFF", "FINAL"])].set_index("game_id")
     for i, r in log.iterrows():
         if (pd.isna(r["result"]) or r["result"] == "") and int(r["game_id"]) in fin.index:
-            res, pr = _grade_one(r, fin.loc[int(r["game_id"])])
+            if r["market"] == "saves" and (gl is None or int(r["game_id"]) not in set(gl["game_id"])):
+                continue             # box score not loaded yet
+            res, pr = _grade_one(r, fin.loc[int(r["game_id"])], gl)
             log.at[i, "result"] = res
             log.at[i, "profit_units"] = pr
     log.to_csv(LOG, index=False)
@@ -79,13 +90,16 @@ def grade(games: pd.DataFrame) -> pd.DataFrame:
 
 
 def summary(log: pd.DataFrame) -> dict:
-    g = log[log["result"].isin(["W", "L", "P"])].copy()
+    g = log[log["result"].isin(["W", "L", "P", "V"])].copy()
     out = {"overall": _agg(g), "by_market": {m: _agg(d) for m, d in g.groupby("market")},
-           "pending": int((~log["result"].isin(["W", "L", "P"])).sum())}
+           "pending": int((~log["result"].isin(["W", "L", "P", "V"])).sum())}
     return out
 
 
 def _agg(d: pd.DataFrame) -> dict:
+    if d.empty:
+        return {"bets": 0}
+    d = d[d["result"] != "V"]
     if d.empty:
         return {"bets": 0}
     risked = d["units"].astype(float).sum()

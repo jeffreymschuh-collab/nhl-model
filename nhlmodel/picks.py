@@ -80,5 +80,8 @@ def select_bets(rows: list[dict]) -> list[dict]:
     out = []
     for x in best.values():
         y = dict(x); y["units"] = units_for(x["edge"], american_to_decimal(x["price"]))
+        cap = r.get("max_units_by_market", {}).get(x["market"])
+        if cap:
+            y["units"] = min(y["units"], cap)
         out.append(y)
     return out

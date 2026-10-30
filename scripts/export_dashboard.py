@@ -12,7 +12,7 @@ from nhlmodel.config import BET_MARKETS, RESULTS_DIR  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
 OUT = RESULTS_DIR / "dashboard"
-MKT = {"h2h": "Moneyline", "spreads": "Puck line", "totals": "Total"}
+MKT = {"h2h": "Moneyline", "spreads": "Puck line", "totals": "Total", "saves": "Goalie saves"}
 
 
 def et_time(iso):
