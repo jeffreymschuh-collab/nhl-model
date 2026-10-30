@@ -1,0 +1,353 @@
+<meta name="dash-one-writer">
+<style>
+  .nb { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
+  .nb-head { display: grid; gap: var(--cds-gap-xs); }
+  .nb-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .nb-lede { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); }
+  .nb-lede b { color: var(--color-fg); font-weight: 600; }
+  .nb-tiles { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+  .nb-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: grid; gap: var(--cds-gap-xs); }
+  .nb-tile-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .nb-tile-value { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+  .nb-tile-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .nb-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); min-width: 0; }
+  .nb-card-head { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: baseline; justify-content: space-between; }
+  .nb-h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .nb-note { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 70ch; }
+  .nb-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); }
+  .nb-toggle { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); overflow: hidden; }
+  .nb-toggle button { font: inherit; font-size: var(--cds-font-size-caption); background: transparent; color: var(--color-fg-muted); border: 0; padding: var(--cds-pad-xs) var(--cds-pad-sm); cursor: pointer; }
+  .nb-toggle button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); }
+  .nb-toggle button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: -2px; }
+  .nb-scroll { overflow-x: auto; max-height: 34rem; overflow-y: auto; }
+  .nb-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .nb-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .nb-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .nb-table .num { text-align: right; }
+  .nb-table tr.is-pick td { font-weight: 600; }
+  .nb-edge { display: inline-block; min-width: 3.5rem; text-align: right; }
+  .nb-edge.pos { color: var(--color-ok); }
+  .nb-edge.neg { color: var(--color-fg-muted); }
+  .nb-res-W { color: var(--color-ok); font-weight: 600; }
+  .nb-res-L { color: var(--color-bad); font-weight: 600; }
+  .nb-chart { position: relative; min-height: 36rem; }
+  .nb-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; }
+  .nb-tip-sub { color: var(--cds-text-secondary); }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  [data-dash-source-state=empty] { color: transparent; }
+</style>
+
+<div class="nb">
+  <header class="nb-head" id="top">
+    <h1 class="nb-title">NHL Edge Board</h1>
+    <p class="nb-lede"><b data-draw="picks-n" data-source="run_info" data-field="picks_today">—</b> picks across <b data-draw="games-n" data-source="run_info" data-field="games">—</b> games on the slate. <span data-draw="run" data-source="run_info" data-field="run">—</span> run, updated <span data-draw="updated" data-source="run_info" data-field="updated_label">—</span>.</p>
+  </header>
+
+  <section class="nb-tiles" id="season" aria-label="Season results">
+    <div class="nb-tile">
+      <span class="nb-tile-label">Season record (W-L-P)</span>
+      <span class="nb-tile-value" data-draw="t-record" data-source="performance" data-where="market=All" data-field="record">—</span>
+      <span class="nb-tile-note">All graded picks</span>
+    </div>
+    <div class="nb-tile">
+      <span class="nb-tile-label">Units won</span>
+      <span class="nb-tile-value" data-draw="t-units" data-source="performance" data-where="market=All" data-field="units_profit">—</span>
+      <span class="nb-tile-note">1 unit = 1% of bankroll</span>
+    </div>
+    <div class="nb-tile">
+      <span class="nb-tile-label">Return on units risked</span>
+      <span class="nb-tile-value" data-draw="t-roi" data-source="performance" data-where="market=All" data-field="roi_pct">—</span>
+      <span class="nb-tile-note">Needs 200+ bets to mean much</span>
+    </div>
+    <div class="nb-tile">
+      <span class="nb-tile-label">Closing-line value</span>
+      <span class="nb-tile-value" data-draw="t-clv" data-source="performance" data-where="market=All" data-field="avg_clv_pct">—</span>
+      <span class="nb-tile-note">Avg points of win chance gained vs. the later price. Above 0 = real edge.</span>
+    </div>
+  </section>
+
+  <section class="nb-card" id="tonight">
+    <div class="nb-card-head">
+      <h2 class="nb-h2">Tonight's Hard Rock lines</h2>
+      <div class="nb-toggle" role="group" aria-label="Which lines to show">
+        <button type="button" class="nb-show" data-show="picks" aria-pressed="true">Picks only</button>
+        <button type="button" class="nb-show" data-show="all" aria-pressed="false">All lines</button>
+      </div>
+    </div>
+    <p class="nb-note">Win % blends the model with the no-vig price from Pinnacle, DraftKings, FanDuel and BetMGM. Edge is expected profit per dollar at Hard Rock's price. A pick needs at least +3% (moneyline) or +4% (puck line). Totals are shown for reference and never picked.</p>
+    <p class="nb-note nb-none" hidden>No line clears the edge bar right now. That is normal on many nights. Switch to All lines to see every price.</p>
+    <div class="nb-scroll">
+      <table class="nb-table" data-source="lines" data-row-key="line_id">
+        <thead><tr>
+          <th data-field="matchup">Game</th>
+          <th data-field="start_et">Start (ET)</th>
+          <th data-field="selection">Bet</th>
+          <th data-field="price" class="num">Hard Rock</th>
+          <th data-field="fair_price" class="num">Fair price</th>
+          <th data-field="win_pct" class="num">Win %</th>
+          <th data-field="edge_pct" class="num">Edge</th>
+          <th data-field="units" class="num">Units</th>
+        </tr></thead>
+        <tbody data-draw="lines-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="nb-card" id="projections">
+    <h2 class="nb-h2">Game projections</h2>
+    <p class="nb-note">Expected regulation goals for each side and the model's home-win chance before it is blended with the market.</p>
+    <div class="nb-scroll">
+      <table class="nb-table" data-source="games" data-row-key="game_id">
+        <thead><tr>
+          <th data-field="matchup">Game</th>
+          <th data-field="start_et">Start (ET)</th>
+          <th data-field="xg_away" class="num">Away xG</th>
+          <th data-field="xg_home" class="num">Home xG</th>
+          <th data-field="home_win_pct" class="num">Home win %</th>
+          <th data-field="best_line">Best line</th>
+          <th data-field="best_edge_pct" class="num">Its edge</th>
+        </tr></thead>
+        <tbody data-draw="games-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="nb-grid">
+    <section class="nb-card" id="by-market">
+      <h2 class="nb-h2">Results by market</h2>
+      <p class="nb-note">Graded picks only. Beat close % is how often your locked price was better than the later one.</p>
+      <div class="nb-scroll">
+        <table class="nb-table" data-source="performance" data-row-key="market">
+          <thead><tr>
+            <th data-field="market">Market</th>
+            <th data-field="bets" class="num">Bets</th>
+            <th data-field="record" class="num">W-L-P</th>
+            <th data-field="units_profit" class="num">Units</th>
+            <th data-field="roi_pct" class="num">ROI</th>
+            <th data-field="beat_close_pct" class="num">Beat close</th>
+          </tr></thead>
+          <tbody data-draw="perf-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="nb-card" id="history">
+      <h2 class="nb-h2">Pick history</h2>
+      <p class="nb-note">Every pick the model locked, newest first. Close is the later Hard Rock price.</p>
+      <p class="nb-note nb-nopicks" hidden>No picks logged yet. They appear here the first time a line clears the edge bar.</p>
+      <div class="nb-scroll">
+        <table class="nb-table" data-source="picks" data-row-key="pick_id">
+          <thead><tr>
+            <th data-field="date">Date</th>
+            <th data-field="selection">Bet</th>
+            <th data-field="price" class="num">Price</th>
+            <th data-field="close" class="num">Close</th>
+            <th data-field="units" class="num">Units</th>
+            <th data-field="result">Result</th>
+            <th data-field="profit_units" class="num">+/- units</th>
+          </tr></thead>
+          <tbody data-draw="picks-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <div class="nb-grid">
+    <section class="nb-card" id="rankings">
+      <h2 class="nb-h2">Power rankings</h2>
+      <p class="nb-note">Expected goal difference per game against a league-average team on neutral ice. Recent games count more.</p>
+      <div class="nb-chart" data-draw="rank-chart" data-source="rankings">—</div>
+    </section>
+
+    <section class="nb-card" id="backtest">
+      <h2 class="nb-h2">How the model tested</h2>
+      <p class="nb-note">Tuned on 2024-25, then scored on every 2025-26 game it had never seen. Improvement is how much better its probabilities were than always guessing the league average (log loss). In hockey, 1–2% is solid. Totals showed almost no skill, so the model never bets them.</p>
+      <div class="nb-scroll">
+        <table class="nb-table" data-source="backtest" data-row-key="market">
+          <thead><tr>
+            <th data-field="market">Market</th>
+            <th data-field="model" class="num">Model</th>
+            <th data-field="baseline" class="num">Baseline</th>
+            <th data-field="improvement_pct" class="num">Improvement</th>
+          </tr></thead>
+          <tbody data-draw="bt-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  const ok = (id) => { const d = dash.data(id); return d.status === 'ok' ? d.data : null; };
+  const pct1 = (v) => (v === null || v === undefined || v === '') ? '' : `${Number(v) > 0 ? '+' : ''}${Number(v).toFixed(1)}%`;
+  const plain1 = (v) => (v === null || v === undefined || v === '') ? '' : `${Number(v).toFixed(1)}%`;
+  const signed = (v, digits = 2) => (v === null || v === undefined || v === '') ? '' : `${Number(v) > 0 ? '+' : ''}${Number(v).toFixed(digits)}`;
+
+  // Shared helpers for the other scripts
+  window.nbCell = (tr, text, cls) => { const td = document.createElement('td'); td.textContent = text ?? ''; if (cls) td.className = cls; tr.appendChild(td); return td; };
+  window.nbFmt = { pct1, plain1, signed };
+
+  // Picks-only / all-lines toggle (no dataset reads this parameter, so it just redraws)
+  document.querySelectorAll('.nb-show').forEach((b) => b.addEventListener('click', () => dash.setParams({ show: b.dataset.show })));
+
+  dash.onData(() => {
+    const show = dash.params().show || 'picks';
+    document.querySelectorAll('.nb-show').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.show === show)));
+    const lines = ok('lines');
+    const nPicks = lines ? lines.filter((r) => r.pick).length : 0;
+    document.querySelectorAll('.nb-none').forEach((p) => { p.hidden = !(lines && show === 'picks' && nPicks === 0); });
+    const picks = ok('picks');
+    document.querySelectorAll('.nb-nopicks').forEach((p) => { p.hidden = !(picks && picks.length === 0); });
+  });
+</script>
+
+<script>
+  const one = (id, field, fmt) => (el) => {
+    const rows = dash.data(id).status === 'ok' ? dash.data(id).data : null;
+    const r = rows && (id === 'performance' ? rows.find((x) => x.market === 'All') : rows[0]);
+    const v = r ? r[field] : null;
+    el.textContent = (v === null || v === undefined || v === '') ? '—' : (fmt ? fmt(v) : String(v));
+  };
+  dash.draw('picks-n', one('run_info', 'picks_today'));
+  dash.draw('games-n', one('run_info', 'games'));
+  dash.draw('run', one('run_info', 'run'));
+  dash.draw('updated', one('run_info', 'updated_label'));
+  dash.draw('t-record', one('performance', 'record'));
+  dash.draw('t-units', one('performance', 'units_profit', (v) => window.nbFmt.signed(v, 2)));
+  dash.draw('t-roi', one('performance', 'roi_pct', (v) => window.nbFmt.pct1(v)));
+  dash.draw('t-clv', one('performance', 'avg_clv_pct', (v) => window.nbFmt.signed(v, 2)));
+</script>
+
+<script>
+  dash.draw('lines-body', (tb) => {
+    const d = dash.data('lines');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const show = dash.params().show || 'picks';
+    const rows = d.data
+      .filter((r) => show === 'all' || r.pick)
+      .slice()
+      .sort((a, b) => (Number(b.pick) - Number(a.pick)) || (b.edge_pct - a.edge_pct));
+    const { pct1, plain1 } = window.nbFmt;
+    tb.replaceChildren(...rows.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.line_id;
+      if (r.pick) tr.className = 'is-pick';
+      nbCell(tr, r.matchup); nbCell(tr, r.start_et); nbCell(tr, r.selection);
+      nbCell(tr, r.price, 'num'); nbCell(tr, r.fair_price, 'num'); nbCell(tr, plain1(r.win_pct), 'num');
+      const td = nbCell(tr, '', 'num');
+      const s = document.createElement('span');
+      s.className = 'nb-edge ' + (r.edge_pct > 0 ? 'pos' : 'neg');
+      s.textContent = pct1(r.edge_pct);
+      td.appendChild(s);
+      nbCell(tr, r.units ? `${r.units}u` : '', 'num');
+      return tr;
+    }));
+  });
+
+  dash.draw('games-body', (tb) => {
+    const d = dash.data('games');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const { pct1, plain1 } = window.nbFmt;
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.game_id;
+      nbCell(tr, r.matchup); nbCell(tr, r.start_et);
+      nbCell(tr, Number(r.xg_away).toFixed(2), 'num'); nbCell(tr, Number(r.xg_home).toFixed(2), 'num');
+      nbCell(tr, plain1(r.home_win_pct), 'num'); nbCell(tr, r.best_line);
+      nbCell(tr, pct1(r.best_edge_pct), 'num');
+      return tr;
+    }));
+  });
+
+  dash.draw('perf-body', (tb) => {
+    const d = dash.data('performance');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const { pct1, plain1, signed } = window.nbFmt;
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.market;
+      nbCell(tr, r.market); nbCell(tr, String(r.bets), 'num'); nbCell(tr, r.record, 'num');
+      nbCell(tr, signed(r.units_profit), 'num'); nbCell(tr, pct1(r.roi_pct), 'num'); nbCell(tr, plain1(r.beat_close_pct), 'num');
+      return tr;
+    }));
+  });
+
+  dash.draw('picks-body', (tb) => {
+    const d = dash.data('picks');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const { signed } = window.nbFmt;
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.pick_id;
+      nbCell(tr, r.date); nbCell(tr, `${r.matchup}: ${r.selection}`); nbCell(tr, r.price, 'num'); nbCell(tr, r.close, 'num');
+      nbCell(tr, `${r.units}u`, 'num');
+      nbCell(tr, r.result || 'Pending', r.result ? `nb-res-${r.result}` : '');
+      nbCell(tr, signed(r.profit_units), 'num');
+      return tr;
+    }));
+  });
+
+  dash.draw('bt-body', (tb) => {
+    const d = dash.data('backtest');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const { pct1 } = window.nbFmt;
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.market;
+      nbCell(tr, r.market); nbCell(tr, Number(r.model).toFixed(4), 'num'); nbCell(tr, Number(r.baseline).toFixed(4), 'num');
+      nbCell(tr, pct1(r.improvement_pct), 'num');
+      return tr;
+    }));
+  });
+</script>
+
+<script>
+  dash.draw('rank-chart', (el) => {
+    const d = dash.data('rankings');
+    if (d.status !== 'ok' || !d.data.length) { el.replaceChildren(document.createTextNode('—')); return; }
+    const rows = d.data.slice().sort((a, b) => a.rank - b.rank);
+    const W = Math.max(280, el.clientWidth || 480);
+    const rowH = 17, top = 8, bottom = 24;
+    const H = top + rows.length * rowH + bottom;
+    el.replaceChildren();
+    el.style.minHeight = `${H}px`;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Power rankings: expected goal difference per game by team');
+    const measure = svg.append('text').attr('font-size', 11).text('WWW');
+    const labelW = measure.node().getComputedTextLength() + 26;
+    measure.remove();
+    const valW = 40;
+    const ext = d3.max(rows, (r) => Math.abs(r.net)) || 1;
+    const x = d3.scaleLinear([-ext, ext], [labelW, W - valW]).nice();
+    const y = d3.scaleBand(rows.map((r) => r.team), [top, top + rows.length * rowH]).padding(0.22);
+    const axis = svg.append('g').attr('transform', `translate(0,${top + rows.length * rowH + 4})`)
+      .call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - labelW - valW) / 70))).tickFormat(d3.format('+.1f')).tickSizeOuter(0))
+      .attr('font-size', null).attr('font-family', null);
+    axis.selectAll('text').style('fill', 'var(--color-fg-muted)').style('font-size', '11px');
+    axis.selectAll('line, path').style('stroke', 'var(--cds-chart-axis)');
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', top).attr('y2', top + rows.length * rowH)
+      .style('stroke', 'var(--cds-chart-reference)');
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('text').attr('x', 0).attr('y', (r) => y(r.team) + y.bandwidth() / 2).attr('dy', '0.35em')
+      .style('font-size', '11px').style('fill', 'var(--color-fg-muted)').text((r) => `${r.rank}`);
+    g.append('text').attr('x', 20).attr('y', (r) => y(r.team) + y.bandwidth() / 2).attr('dy', '0.35em')
+      .style('font-size', '11px').style('fill', 'var(--color-fg)').text((r) => r.team);
+    g.append('rect').attr('x', (r) => Math.min(x(0), x(r.net))).attr('y', (r) => y(r.team))
+      .attr('width', (r) => Math.max(1, Math.abs(x(r.net) - x(0)))).attr('height', y.bandwidth()).attr('rx', 2)
+      .style('fill', (r) => r.net >= 0 ? dash.colors[0] : 'var(--cds-chart-muted)');
+    g.append('text').attr('x', (r) => r.net >= 0 ? x(r.net) + 4 : x(0) + 4).attr('y', (r) => y(r.team) + y.bandwidth() / 2).attr('dy', '0.35em')
+      .style('font-size', '11px').style('fill', 'var(--color-fg-muted)').text((r) => d3.format('+.2f')(r.net));
+    const tip = d3.select(el).append('div').attr('class', 'nb-tip').style('display', 'none');
+    g.append('rect').attr('x', 0).attr('y', (r) => y(r.team) - 2).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('mousemove', (event, r) => {
+        const [mx, my] = d3.pointer(event, el);
+        tip.style('display', null).html('');
+        tip.append('div').attr('class', 'nb-tip-sub').text(`#${r.rank} ${r.team}`);
+        tip.append('div').text(`Net ${d3.format('+.2f')(r.net)} goals/game`);
+        tip.append('div').text(`For ${r.xgf.toFixed(2)} · Against ${r.xga.toFixed(2)}`);
+        const tw = tip.node().offsetWidth;
+        tip.style('left', `${Math.min(mx + 12, el.clientWidth - tw - 4)}px`).style('top', `${my + 12}px`);
+      })
+      .on('mouseleave', () => tip.style('display', 'none'));
+  });
+</script>
