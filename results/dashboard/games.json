@@ -3,33 +3,33 @@
 "game_id": "2026020214",
 "matchup": "NJD @ VGK",
 "start_et": "6:00 PM",
-"xg_away": 2.78,
-"xg_home": 3.12,
-"home_win_pct": 55.9,
+"xg_away": 2.83,
+"xg_home": 3.07,
+"home_win_pct": 54.4,
 "best_line": "VGK ML",
-"best_edge_pct": 0.3,
+"best_edge_pct": -0.8,
 "picks": 0
 },
 {
 "game_id": "2026020215",
 "matchup": "WPG @ FLA",
 "start_et": "7:00 PM",
-"xg_away": 2.73,
-"xg_home": 3.08,
-"home_win_pct": 56.3,
+"xg_away": 2.6,
+"xg_home": 3.21,
+"home_win_pct": 61.0,
 "best_line": "WPG +1.5",
-"best_edge_pct": 2.7,
+"best_edge_pct": -0.2,
 "picks": 0
 },
 {
 "game_id": "2026020216",
 "matchup": "SEA @ CGY",
 "start_et": "8:00 PM",
-"xg_away": 3.02,
-"xg_home": 3.04,
-"home_win_pct": 50.3,
-"best_line": "Wolf U 25.5 saves",
-"best_edge_pct": 10.6,
-"picks": 1
+"xg_away": 3.11,
+"xg_home": 3.01,
+"home_win_pct": 48.2,
+"best_line": "Wolf U 26.5 saves",
+"best_edge_pct": -0.1,
+"picks": 0
 }
 ]
