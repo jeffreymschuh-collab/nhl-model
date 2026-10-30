@@ -1,0 +1,78 @@
+{
+ "tuned_on": 20242025,
+ "tested_on": 20252026,
+ "test_games": 1312,
+ "params": {
+  "half_life_days": 120,
+  "season_carry": 0.6,
+  "alpha": 0.005,
+  "w_shots": 0.6,
+  "en_shift": 0.3,
+  "ot_k": 0.6
+ },
+ "test_log_loss": {
+  "Moneyline (home wins)": {
+   "model": 0.684,
+   "baseline": 0.6939,
+   "improvement_pct": 1.42
+  },
+  "Puck line (home -1.5)": {
+   "model": 0.6034,
+   "baseline": 0.616,
+   "improvement_pct": 2.05
+  },
+  "Total over 5.5": {
+   "model": 0.6811,
+   "baseline": 0.683,
+   "improvement_pct": 0.29
+  },
+  "Total over 6.5": {
+   "model": 0.6931,
+   "baseline": 0.6928,
+   "improvement_pct": -0.04
+  }
+ },
+ "ml_calibration_test": [
+  {
+   "pred": 0.395,
+   "actual": 0.433,
+   "n": 164
+  },
+  {
+   "pred": 0.46,
+   "actual": 0.476,
+   "n": 164
+  },
+  {
+   "pred": 0.49,
+   "actual": 0.5,
+   "n": 164
+  },
+  {
+   "pred": 0.514,
+   "actual": 0.5,
+   "n": 164
+  },
+  {
+   "pred": 0.538,
+   "actual": 0.524,
+   "n": 164
+  },
+  {
+   "pred": 0.564,
+   "actual": 0.537,
+   "n": 164
+  },
+  {
+   "pred": 0.592,
+   "actual": 0.53,
+   "n": 164
+  },
+  {
+   "pred": 0.657,
+   "actual": 0.677,
+   "n": 164
+  }
+ ],
+ "note": "Baseline = always predict the historical average rate. Positive improvement = model beats it. Betting markets are much tougher than this baseline; real edge is measured live via CLV."
+}

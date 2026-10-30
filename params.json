@@ -1,0 +1,13 @@
+{
+ "params": {
+  "half_life_days": 120,
+  "season_carry": 0.6,
+  "alpha": 0.005,
+  "w_shots": 0.6,
+  "en_shift": 0.3,
+  "ot_k": 0.6,
+  "w_model": 0.35
+ },
+ "source": "backtest",
+ "report": "results/backtest_report.json"
+}
