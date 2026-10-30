@@ -1,0 +1,10 @@
+EVENT New Jersey Devils @ Vegas Golden Knights status 200 remaining 485
+   draftkings player_total_saves [('Connor Hellebuyck', 'Over', 23.5, -120), ('Connor Hellebuyck', 'Under', 23.5, -115)]
+   fanduel player_total_saves [('Connor Hellebuyck', 'Over', 23.5, -112), ('Connor Hellebuyck', 'Under', 23.5, -118)]
+   hardrockbet player_total_saves [('Connor Hellebuyck', 'Over', 24.5, -120), ('Connor Hellebuyck', 'Under', 24.5, -170)]
+   pinnacle player_total_saves [('Connor Hellebuyck', 'Over', 23.5, -120), ('Connor Hellebuyck', 'Under', 23.5, -115)]
+EVENT Winnipeg Jets @ Florida Panthers status 200 remaining 484
+   draftkings player_total_saves [('Akira Schmid', 'Over', 21.5, -115), ('Akira Schmid', 'Under', 21.5, -115)]
+   fanduel player_total_saves [('Akira Schmid', 'Over', 21.5, -104), ('Akira Schmid', 'Under', 21.5, -128)]
+   hardrockbet player_total_saves [('Akira Schmid', 'Over', 22.5, -110), ('Akira Schmid', 'Under', 22.5, -175)]
+   pinnacle player_total_saves [('Akira Schmid', 'Over', 21.5, -125), ('Akira Schmid', 'Under', 21.5, -105)]
