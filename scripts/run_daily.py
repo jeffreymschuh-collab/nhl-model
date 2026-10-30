@@ -38,11 +38,14 @@ def main():
     by_pair = {(g["home"], g["away"]): g for g in slate}
 
     events, quota = odds.fetch_odds()
-    ev_by_pair = {}
+    ev_by_pair, odds_diag = {}, []
     for e in events:
         h, aw = odds.match_team(e["home_team"], short), odds.match_team(e["away_team"], short)
         if (h, aw) in by_pair:
             ev_by_pair[(h, aw)] = e
+        odds_diag.append({"event": f'{e["away_team"]} @ {e["home_team"]}', "commence": e.get("commence_time"),
+                          "matched": f"{aw} @ {h}" if (h, aw) in by_pair else None,
+                          "books": [b["key"] for b in e.get("bookmakers", [])]})
 
     out_games, new_picks, all_lines = [], [], {}
     for (h, aw), g in by_pair.items():
@@ -77,7 +80,7 @@ def main():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(), "date": day, "run": run,
-        "params": params, "odds_quota": quota, "games": out_games,
+        "params": params, "odds_quota": quota, "odds_events": odds_diag, "games": out_games,
         "power_rankings": R.table().to_dict(orient="records"), "performance": summ,
     }
     (RESULTS_DIR / "latest.json").write_text(json.dumps(payload, indent=1, default=str))
