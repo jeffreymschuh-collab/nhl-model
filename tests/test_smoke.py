@@ -66,7 +66,7 @@ def test_pipeline():
     lh, la = R.expected_goals(h, a)
     mp = probs.market_probs(lh, la, config.DEFAULT_PARAMS)
     ev = {"home_team": "Home City T01", "away_team": "Away City T02", "bookmakers": [
-        {"key": "hardrockbet_fl", "markets": [
+        {"key": "hardrockbet", "markets": [
             {"key": "h2h", "outcomes": [{"name": "Home City T01", "price": 150}, {"name": "Away City T02", "price": -170}]},
             {"key": "spreads", "outcomes": [{"name": "Home City T01", "price": -150, "point": 1.5}, {"name": "Away City T02", "price": 130, "point": -1.5}]},
             {"key": "totals", "outcomes": [{"name": "Over", "price": -110, "point": 6.5}, {"name": "Under", "price": -110, "point": 6.5}]}]},

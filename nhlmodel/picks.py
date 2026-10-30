@@ -1,8 +1,8 @@
 """Price every Hard Rock line, blend model with market, and size bets."""
 import math
 
-from .config import BET_MARKETS, BET_RULES, TARGET_BOOK
-from .odds import american_to_decimal, book_lines, decimal_to_american, market_consensus
+from .config import BET_MARKETS, BET_RULES
+from .odds import american_to_decimal, decimal_to_american, market_consensus, target_lines
 
 
 def _logit(p): p = min(max(p, 1e-6), 1 - 1e-6); return math.log(p / (1 - p))
@@ -25,7 +25,7 @@ def units_for(edge: float, dec: float) -> float:
 
 def price_event(event: dict, home_abbr: str, away_abbr: str, mp: dict, params: dict) -> list[dict]:
     """Return one row per Hard Rock line with model, market, blended prob and edge."""
-    L = book_lines(event, TARGET_BOOK)
+    book, L = target_lines(event)
     mkt = market_consensus(event)
     h, a = event["home_team"], event["away_team"]
     side_abbr = {h: home_abbr, a: away_abbr}
@@ -52,7 +52,7 @@ def price_event(event: dict, home_abbr: str, away_abbr: str, mp: dict, params: d
         dec = american_to_decimal(price)
         edge = (p * (dec - 1) - (1 - p)) * (1 - push)
         rows.append({
-            "market": market, "selection": label,
+            "book": book, "market": market, "selection": label,
             "side": "home" if key[1] == h else "away" if key[1] == a else key[1].lower(),
             "point": key[2] if len(key) > 2 else None,
             "price": price, "p_model": round(p_mod, 4), "p_market": round(p_mkt, 4) if p_mkt else None,

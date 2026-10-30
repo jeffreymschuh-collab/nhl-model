@@ -6,7 +6,7 @@ from .odds import american_to_decimal
 
 LOG = RESULTS_DIR / "picks_log.csv"
 COLS = ["date", "run", "game_id", "matchup", "start_utc", "market", "selection", "side", "point",
-        "price", "units", "p_final", "edge", "close_price", "clv_pct", "result", "profit_units"]
+        "price", "book", "units", "p_final", "edge", "close_price", "clv_pct", "result", "profit_units"]
 
 
 def load_log() -> pd.DataFrame:

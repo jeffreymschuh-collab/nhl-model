@@ -4,7 +4,7 @@ import unicodedata
 
 import requests
 
-from .config import ODDS_API, ODDS_SPORT, REFERENCE_BOOKS, TARGET_BOOK
+from .config import ODDS_API, ODDS_SPORT, REFERENCE_BOOKS, TARGET_BOOK, TARGET_BOOKS
 
 
 def american_to_decimal(a: float) -> float:
@@ -22,7 +22,7 @@ def fetch_odds() -> tuple[list, dict]:
         return [], {}
     r = requests.get(f"{ODDS_API}/sports/{ODDS_SPORT}/odds", timeout=30, params={
         "apiKey": key, "markets": "h2h,spreads,totals", "oddsFormat": "american",
-        "bookmakers": ",".join([TARGET_BOOK] + REFERENCE_BOOKS),
+        "bookmakers": ",".join(TARGET_BOOKS + REFERENCE_BOOKS),
     })
     r.raise_for_status()
     quota = {"remaining": r.headers.get("x-requests-remaining"), "used": r.headers.get("x-requests-used")}
@@ -70,7 +70,8 @@ def market_consensus(event: dict) -> dict:
     """Average no-vig probability across reference books (Pinnacle double-weighted when present)
     for each two-way market keyed like book_lines. Returns {key: prob}."""
     acc = {}
-    books = [b for b in REFERENCE_BOOKS if book_lines(event, b)] or [TARGET_BOOK]
+    books = [b for b in REFERENCE_BOOKS if book_lines(event, b)] or \
+        [b for b in TARGET_BOOKS if book_lines(event, b)][:1]
     for book in books:
         L = book_lines(event, book)
         if not L:
@@ -92,3 +93,11 @@ def market_consensus(event: dict) -> dict:
                 po, pu = no_vig_pair(L[k], L[u])
                 acc.setdefault(k, []).append((po, wt)); acc.setdefault(u, []).append((pu, wt))
     return {k: sum(p * w for p, w in v) / sum(w for _, w in v) for k, v in acc.items()}
+
+
+def target_lines(event: dict) -> tuple[str | None, dict]:
+    for b in TARGET_BOOKS:
+        L = book_lines(event, b)
+        if L:
+            return b, L
+    return None, {}

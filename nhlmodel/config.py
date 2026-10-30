@@ -14,8 +14,11 @@ ODDS_SPORT = "icehockey_nhl"
 
 # The book Jeff bets at, plus reference books used to build a no-vig "market" price.
 # All listed in one `bookmakers=` param = 1 region of quota cost (3 markets -> 3 credits per pull).
-TARGET_BOOK = "hardrockbet_fl"
-REFERENCE_BOOKS = ["pinnacle", "draftkings", "fanduel", "betmgm", "hardrockbet"]
+# Hard Rock FL first; if The Odds API has no FL feed for a game, fall back to Hard Rock's main feed
+# (Odds API notes it carries the same odds as several states).
+TARGET_BOOKS = ["hardrockbet_fl", "hardrockbet"]
+TARGET_BOOK = TARGET_BOOKS[0]
+REFERENCE_BOOKS = ["pinnacle", "draftkings", "fanduel", "betmgm"]
 
 FIRST_SEASON_START = "2023-10-01"  # history pulled from here (prior for 2024-25 backtest)
 
