@@ -1,0 +1,98 @@
+"""Pick log: lock picks, record closing price (CLV), grade results, summarize performance."""
+import pandas as pd
+
+from .config import RESULTS_DIR
+from .odds import american_to_decimal
+
+LOG = RESULTS_DIR / "picks_log.csv"
+COLS = ["date", "run", "game_id", "matchup", "start_utc", "market", "selection", "side", "point",
+        "price", "units", "p_final", "edge", "close_price", "clv_pct", "result", "profit_units"]
+
+
+def load_log() -> pd.DataFrame:
+    log = pd.read_csv(LOG) if LOG.exists() else pd.DataFrame(columns=COLS)
+    for c in ("result", "close_price", "clv_pct", "profit_units"):
+        if c in log.columns:
+            log[c] = log[c].astype(object)
+    return log
+
+
+def _key(r):
+    return (int(r["game_id"]), r["market"], r["side"])
+
+
+def record(day: str, run: str, picks: list[dict], all_lines: dict) -> pd.DataFrame:
+    """picks: new bets this run. all_lines: {(game_id, market, side, point): price} for every
+    current Hard Rock line, used to update the 'close' price of already-locked picks."""
+    log = load_log()
+    existing = {_key(r) for _, r in log.iterrows()}
+    for i, r in log.iterrows():
+        if pd.isna(r["result"]) or r["result"] == "":
+            k = (int(r["game_id"]), r["market"], r["side"],
+                 None if pd.isna(r["point"]) else float(r["point"]))
+            if k in all_lines:
+                cp = all_lines[k]
+                log.at[i, "close_price"] = cp
+                # CLV: how much better our locked price is than the latest price (implied prob terms)
+                log.at[i, "clv_pct"] = round((1 / american_to_decimal(cp) - 1 / american_to_decimal(r["price"])) * 100, 2)
+    new = [dict(p, date=day, run=run) for p in picks if _key(p) not in existing]
+    if new:
+        log = pd.concat([log, pd.DataFrame(new)[[c for c in COLS if c in pd.DataFrame(new).columns]]],
+                        ignore_index=True)
+    log = log.reindex(columns=COLS)
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    log.to_csv(LOG, index=False)
+    return log
+
+
+def _grade_one(r, g) -> tuple[str, float]:
+    hg, ag = int(g["home_goals"]), int(g["away_goals"])
+    m, side = r["market"], r["side"]
+    if m == "h2h":
+        won = (hg > ag) if side == "home" else (ag > hg)
+        res = "W" if won else "L"
+    elif m == "spreads":
+        margin = (hg - ag) if side == "home" else (ag - hg)
+        v = margin + float(r["point"])
+        res = "W" if v > 0 else "P" if v == 0 else "L"
+    else:
+        tot, line = hg + ag, float(r["point"])
+        v = (tot - line) if side == "over" else (line - tot)
+        res = "W" if v > 0 else "P" if v == 0 else "L"
+    u = float(r["units"])
+    profit = u * (american_to_decimal(float(r["price"])) - 1) if res == "W" else -u if res == "L" else 0.0
+    return res, round(profit, 3)
+
+
+def grade(games: pd.DataFrame) -> pd.DataFrame:
+    log = load_log()
+    if log.empty:
+        return log
+    fin = games[games["state"].isin(["OFF", "FINAL"])].set_index("game_id")
+    for i, r in log.iterrows():
+        if (pd.isna(r["result"]) or r["result"] == "") and int(r["game_id"]) in fin.index:
+            res, pr = _grade_one(r, fin.loc[int(r["game_id"])])
+            log.at[i, "result"] = res
+            log.at[i, "profit_units"] = pr
+    log.to_csv(LOG, index=False)
+    return log
+
+
+def summary(log: pd.DataFrame) -> dict:
+    g = log[log["result"].isin(["W", "L", "P"])].copy()
+    out = {"overall": _agg(g), "by_market": {m: _agg(d) for m, d in g.groupby("market")},
+           "pending": int((~log["result"].isin(["W", "L", "P"])).sum())}
+    return out
+
+
+def _agg(d: pd.DataFrame) -> dict:
+    if d.empty:
+        return {"bets": 0}
+    risked = d["units"].astype(float).sum()
+    profit = d["profit_units"].astype(float).sum()
+    clv = pd.to_numeric(d["clv_pct"], errors="coerce").dropna()
+    return {"bets": len(d), "W": int((d["result"] == "W").sum()), "L": int((d["result"] == "L").sum()),
+            "P": int((d["result"] == "P").sum()), "units_risked": round(risked, 2),
+            "units_profit": round(profit, 2), "roi_pct": round(100 * profit / risked, 2) if risked else None,
+            "avg_clv_pct": round(clv.mean(), 2) if len(clv) else None,
+            "beat_close_pct": round(100 * (clv > 0).mean(), 1) if len(clv) else None}
