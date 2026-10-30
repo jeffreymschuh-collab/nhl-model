@@ -1,0 +1,30 @@
+[
+{
+"market": "Moneyline (home wins)",
+"model": 0.6853,
+"baseline": 0.6939,
+"improvement_pct": 1.24,
+"test_games": 1312
+},
+{
+"market": "Puck line (home -1.5)",
+"model": 0.6037,
+"baseline": 0.616,
+"improvement_pct": 2.0,
+"test_games": 1312
+},
+{
+"market": "Total over 5.5",
+"model": 0.6806,
+"baseline": 0.683,
+"improvement_pct": 0.36,
+"test_games": 1312
+},
+{
+"market": "Total over 6.5",
+"model": 0.6921,
+"baseline": 0.6928,
+"improvement_pct": 0.1,
+"test_games": 1312
+}
+]

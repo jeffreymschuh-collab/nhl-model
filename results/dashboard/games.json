@@ -1,0 +1,35 @@
+[
+{
+"game_id": "2026020214",
+"matchup": "NJD @ VGK",
+"start_et": "6:00 PM",
+"xg_away": 2.78,
+"xg_home": 3.12,
+"home_win_pct": 55.9,
+"best_line": "VGK ML",
+"best_edge_pct": 0.3,
+"picks": 0
+},
+{
+"game_id": "2026020215",
+"matchup": "WPG @ FLA",
+"start_et": "7:00 PM",
+"xg_away": 2.73,
+"xg_home": 3.08,
+"home_win_pct": 56.3,
+"best_line": "WPG +1.5",
+"best_edge_pct": 2.9,
+"picks": 0
+},
+{
+"game_id": "2026020216",
+"matchup": "SEA @ CGY",
+"start_et": "8:00 PM",
+"xg_away": 3.02,
+"xg_home": 3.04,
+"home_win_pct": 50.3,
+"best_line": "CGY +1.5",
+"best_edge_pct": -3.2,
+"picks": 0
+}
+]
