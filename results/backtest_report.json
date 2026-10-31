@@ -6,86 +6,88 @@
   "rest": true,
   "half_life_days": 120,
   "season_carry": 1.0,
-  "alpha": 0.03,
-  "w_shots": 0.45,
+  "alpha": 0.02,
+  "w_shots": 0.5,
+  "w_xg": 0.0,
   "en_shift": 0.3,
   "ot_k": 0.7,
-  "goalie_k": 0.5
+  "goalie_k": 0.5,
+  "goalie_metric": "sv"
  },
  "test_log_loss": {
   "Moneyline (home wins)": {
-   "model": 0.6825,
+   "model": 0.6823,
    "baseline": 0.6939,
-   "previous_model": 0.6853,
-   "improvement_pct": 1.64,
-   "vs_previous_pct": 0.41
+   "previous_model": 0.6825,
+   "improvement_pct": 1.67,
+   "vs_previous_pct": 0.02
   },
   "Puck line (home -1.5)": {
-   "model": 0.6029,
+   "model": 0.6027,
    "baseline": 0.616,
-   "previous_model": 0.6037,
-   "improvement_pct": 2.14,
-   "vs_previous_pct": 0.15
+   "previous_model": 0.6029,
+   "improvement_pct": 2.17,
+   "vs_previous_pct": 0.03
   },
   "Total over 5.5": {
    "model": 0.679,
    "baseline": 0.683,
-   "previous_model": 0.6806,
+   "previous_model": 0.679,
    "improvement_pct": 0.59,
-   "vs_previous_pct": 0.24
+   "vs_previous_pct": -0.0
   },
   "Total over 6.5": {
-   "model": 0.6915,
+   "model": 0.6916,
    "baseline": 0.6928,
-   "previous_model": 0.6921,
-   "improvement_pct": 0.19,
-   "vs_previous_pct": 0.09
+   "previous_model": 0.6915,
+   "improvement_pct": 0.17,
+   "vs_previous_pct": -0.02
   }
  },
  "shipped": true,
  "back_to_back_effects": {
-  "own_goals_when_b2b": 0.948,
-  "goals_allowed_when_b2b": 1.014
+  "own_goals_when_b2b": 0.947,
+  "goals_allowed_when_b2b": 1.015
  },
  "ml_calibration_test": [
   {
-   "pred": 0.411,
-   "actual": 0.427,
+   "pred": 0.404,
+   "actual": 0.433,
    "n": 164
   },
   {
-   "pred": 0.469,
-   "actual": 0.488,
+   "pred": 0.465,
+   "actual": 0.482,
    "n": 164
   },
   {
-   "pred": 0.497,
-   "actual": 0.488,
+   "pred": 0.494,
+   "actual": 0.5,
    "n": 164
   },
   {
-   "pred": 0.518,
-   "actual": 0.476,
+   "pred": 0.517,
+   "actual": 0.457,
    "n": 164
   },
   {
    "pred": 0.541,
-   "actual": 0.506,
+   "actual": 0.53,
    "n": 164
   },
   {
-   "pred": 0.562,
-   "actual": 0.585,
-   "n": 164
-  },
-  {
-   "pred": 0.592,
+   "pred": 0.564,
    "actual": 0.543,
    "n": 164
   },
   {
-   "pred": 0.647,
-   "actual": 0.665,
+   "pred": 0.595,
+   "actual": 0.573,
+   "n": 164
+  },
+  {
+   "pred": 0.653,
+   "actual": 0.659,
    "n": 164
   }
  ],

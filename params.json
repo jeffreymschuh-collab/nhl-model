@@ -2,13 +2,15 @@
  "params": {
   "half_life_days": 120,
   "season_carry": 1.0,
-  "alpha": 0.03,
-  "w_shots": 0.45,
+  "alpha": 0.02,
+  "w_shots": 0.5,
   "en_shift": 0.3,
   "ot_k": 0.7,
   "w_model": 0.35,
   "rest": true,
-  "goalie_k": 0.5
+  "w_xg": 0.0,
+  "goalie_k": 0.5,
+  "goalie_metric": "sv"
  },
  "source": "backtest",
  "report": "results/backtest_report.json"
