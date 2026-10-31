@@ -1,4 +1,4 @@
-name: Probe goalie saves odds
+name: Probe skater file
 on: workflow_dispatch
 permissions:
   contents: write
@@ -7,10 +7,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install requests && python scripts/probe_props.py | tee results/probe_saves.txt
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       - run: |
-          git config user.name "nhl-model-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add results/probe_saves.txt && git commit -m "Probe output" && git pull --rebase && git push
+          out=results/probe_skaters.txt; : > $out
+          curl -s -A "Mozilla/5.0 (personal research)" -o /tmp/z.zip https://peter-tanner.com/moneypuck/downloads/seasonPlayersSummary/skaters/2026.zip
+          ls -la /tmp/z.zip >> $out
+          python3 -c "
+          import zipfile,csv,io
+          z=zipfile.ZipFile('/tmp/z.zip'); n=z.namelist(); print(n[:3])
+          f=io.TextIOWrapper(z.open(n[0])); r=csv.reader(f); h=next(r); print(len(h)); print(h)
+          row=next(r); print(dict(zip(h,row)))
+          sits=set()
+          for i,row in enumerate(r):
+              sits.add(row[h.index('situation')])
+              if i>20000: break
+          print(sits)" >> $out 2>&1
+          curl -s -A "Mozilla/5.0 (personal research)" "https://www.dailyfaceoff.com/teams/calgary-flames/line-combinations" -o /tmp/lc.html
+          python3 - >> $out <<'PY'
+          import re, json
+          h = open('/tmp/lc.html', encoding='utf-8', errors='ignore').read()
+          m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', h, re.S)
+          if not m: print("no next data", h[:300])
+          else:
+              d = json.loads(m.group(1)); pp = d["props"]["pageProps"]; print("LC keys", list(pp))
+              for k, v in pp.items():
+                  s = json.dumps(v)[:2500]; print("==", k, s)
+          PY
+          git config user.name "nhl-model-bot"; git config user.email "actions@users.noreply.github.com"
+          git add $out && git commit -m "Skater probe" && git pull --rebase && git push
