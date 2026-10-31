@@ -1,0 +1,28 @@
+{
+ "test_player_games": 23848,
+ "dispersion": 16.0,
+ "avg_loglik_model": -1.532,
+ "avg_loglik_baseline": -1.5868,
+ "mean_abs_error_model": 1.016,
+ "mean_abs_error_baseline": 1.051,
+ "lines": {
+  "over_1.5": {
+   "model_logloss": 0.6071,
+   "baseline_logloss": 0.641,
+   "improvement_pct": 5.29,
+   "actual_rate": 0.426
+  },
+  "over_2.5": {
+   "model_logloss": 0.4528,
+   "baseline_logloss": 0.4821,
+   "improvement_pct": 6.06,
+   "actual_rate": 0.218
+  },
+  "over_3.5": {
+   "model_logloss": 0.2767,
+   "baseline_logloss": 0.2963,
+   "improvement_pct": 6.62,
+   "actual_rate": 0.101
+  }
+ }
+}

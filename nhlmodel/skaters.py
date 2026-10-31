@@ -84,7 +84,8 @@ def player_ratings(sk: pd.DataFrame, as_of: str) -> pd.DataFrame:
 
 def regulars(sk: pd.DataFrame, team: str, before: str, last_n: int = 10, min_games: int = 6) -> pd.DataFrame:
     """Players who dressed in at least `min_games` of the team's last `last_n` games, with their average TOI."""
-    t = sk[(sk["playerTeam"] == team) & (sk["date"] < before)]
+    since = (pd.Timestamp(before) - pd.Timedelta(days=30)).strftime("%Y-%m-%d")   # no carry-over across the summer
+    t = sk[(sk["playerTeam"] == team) & (sk["date"] < before) & (sk["date"] >= since)]
     gids = t.drop_duplicates("game_id").sort_values("date")["game_id"].tail(last_n)
     t = t[t["game_id"].isin(gids)]
     c = t.groupby("playerId").agg(games=("game_id", "nunique"), toi=("icetime", "mean"))
