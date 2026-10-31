@@ -51,9 +51,9 @@
       <span class="nb-tile-note">All graded picks</span>
     </div>
     <div class="nb-tile">
-      <span class="nb-tile-label">Units won</span>
-      <span class="nb-tile-value" data-draw="t-units" data-source="performance" data-where="market=All" data-field="units_profit">—</span>
-      <span class="nb-tile-note">1 unit = 1% of bankroll</span>
+      <span class="nb-tile-label">Profit on model picks</span>
+      <span class="nb-tile-value" data-draw="t-units" data-source="performance" data-where="market=All" data-field="profit_usd">—</span>
+      <span class="nb-tile-note">1 unit = $20</span>
     </div>
     <div class="nb-tile">
       <span class="nb-tile-label">Return on units risked</span>
@@ -87,7 +87,7 @@
           <th data-field="fair_price" class="num">Fair price</th>
           <th data-field="win_pct" class="num">Win %</th>
           <th data-field="edge_pct" class="num">Edge</th>
-          <th data-field="units" class="num">Units</th>
+          <th data-field="units" class="num">Stake</th>
         </tr></thead>
         <tbody data-draw="lines-body"></tbody>
       </table>
@@ -196,7 +196,7 @@
             <th data-field="close" class="num">Close</th>
             <th data-field="units" class="num">Units</th>
             <th data-field="result">Result</th>
-            <th data-field="profit_units" class="num">+/- units</th>
+            <th data-field="profit_usd" class="num">+/- $</th>
           </tr></thead>
           <tbody data-draw="picks-body"></tbody>
         </table>
@@ -267,7 +267,7 @@
   dash.draw('run', one('run_info', 'run'));
   dash.draw('updated', one('run_info', 'updated_label'));
   dash.draw('t-record', one('performance', 'record'));
-  dash.draw('t-units', one('performance', 'units_profit', (v) => window.nbFmt.signed(v, 2)));
+  dash.draw('t-units', one('performance', 'profit_usd', (v) => `${Number(v) < 0 ? '-' : '+'}$${Math.abs(Number(v)).toFixed(2)}`));
   dash.draw('t-roi', one('performance', 'roi_pct', (v) => window.nbFmt.pct1(v)));
   dash.draw('t-clv', one('performance', 'avg_clv_pct', (v) => window.nbFmt.signed(v, 2)));
 </script>
@@ -293,7 +293,7 @@
       s.className = 'nb-edge ' + (r.edge_pct > 0 ? 'pos' : 'neg');
       s.textContent = pct1(r.edge_pct);
       td.appendChild(s);
-      nbCell(tr, r.units ? `${r.units}u` : '', 'num');
+      nbCell(tr, r.units ? `${r.units}u · $${Number(r.stake_usd).toFixed(0)}` : '', 'num');
       return tr;
     }));
   });
@@ -334,9 +334,9 @@
       const tr = document.createElement('tr');
       tr.dataset.key = r.pick_id;
       nbCell(tr, r.date); nbCell(tr, `${r.matchup}: ${r.selection}`); nbCell(tr, r.price, 'num'); nbCell(tr, r.close, 'num');
-      nbCell(tr, `${r.units}u`, 'num');
+      nbCell(tr, `${r.units}u · $${Number(r.stake_usd).toFixed(0)}`, 'num');
       nbCell(tr, r.result || 'Pending', r.result ? `nb-res-${r.result}` : '');
-      nbCell(tr, signed(r.profit_units), 'num');
+      nbCell(tr, r.profit_usd === null || r.profit_usd === undefined ? '' : `${r.profit_usd < 0 ? '-' : '+'}$${Math.abs(r.profit_usd).toFixed(2)}`, 'num');
       return tr;
     }));
   });

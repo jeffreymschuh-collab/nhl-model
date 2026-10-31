@@ -45,6 +45,7 @@ BET_RULES = {
     "max_units_by_market": {"saves": 1.0, "sog": 0.5},   # props are capped lower
     "kelly_fraction": 0.25,     # quarter Kelly
     "unit_pct": 0.01,           # 1 unit = 1% of bankroll
+    "unit_dollars": 20.0,       # Jeff's unit: $20 (set Oct 31, 2026)
     "min_units": 0.5,
     "max_units": 2.0,
     "max_odds": 250,            # skip longshots above +250

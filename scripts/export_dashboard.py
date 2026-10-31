@@ -8,7 +8,9 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nhlmodel.config import BET_MARKETS, RESULTS_DIR  # noqa: E402
+from nhlmodel.config import BET_MARKETS, BET_RULES, RESULTS_DIR  # noqa: E402
+
+UNIT = BET_RULES.get("unit_dollars", 20.0)
 
 ET = ZoneInfo("America/New_York")
 OUT = RESULTS_DIR / "dashboard"
@@ -48,6 +50,7 @@ def main():
                 "win_pct": round(100 * l["p_final"], 1), "edge_pct": round(100 * l["edge"], 1),
                 "bettable": l["market"] in BET_MARKETS,
                 "pick": k in bet_keys, "units": units.get(k),
+                "stake_usd": round(units[k] * UNIT, 2) if k in units else None,
             }
             lines.append(row)
             if row["bettable"] and (best is None or row["edge_pct"] > best["edge_pct"]):
@@ -68,6 +71,7 @@ def main():
     p = j["performance"]
     for name, d in [("All", p["overall"])] + [(MKT.get(m, m), d) for m, d in p["by_market"].items()]:
         perf.append({"market": name, "bets": d.get("bets", 0),
+                     "profit_usd": round(float(d.get("units_profit", 0.0) or 0.0) * UNIT, 2),
                      "record": f'{d.get("W", 0)}-{d.get("L", 0)}-{d.get("P", 0)}',
                      "units_profit": d.get("units_profit", 0.0), "roi_pct": d.get("roi_pct"),
                      "avg_clv_pct": d.get("avg_clv_pct"), "beat_close_pct": d.get("beat_close_pct")})
@@ -80,10 +84,12 @@ def main():
         for _, r in lg.iterrows():
             picks.append({"pick_id": f'{r["game_id"]}|{r["market"]}|{r["side"]}', "date": r["date"],
                           "matchup": r["matchup"], "selection": r["selection"], "price": amer(r["price"]),
-                          "units": float(r["units"]), "close": amer(r["close_price"]),
+                          "units": float(r["units"]), "stake_usd": round(float(r["units"]) * UNIT, 2),
+                          "close": amer(r["close_price"]),
                           "clv_pct": None if pd.isna(r["clv_pct"]) else float(r["clv_pct"]),
                           "result": "" if pd.isna(r["result"]) else r["result"],
-                          "profit_units": None if pd.isna(r["profit_units"]) else float(r["profit_units"])})
+                          "profit_units": None if pd.isna(r["profit_units"]) else float(r["profit_units"]),
+                          "profit_usd": None if pd.isna(r["profit_units"]) else round(float(r["profit_units"]) * UNIT, 2)})
         picks.sort(key=lambda x: x["date"], reverse=True)
 
     rankings = [{"rank": i + 1, "team": r["team"], "xgf": r["xgf"], "xga": r["xga"], "net": r["net"]}
