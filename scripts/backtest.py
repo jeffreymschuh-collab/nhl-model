@@ -20,8 +20,9 @@ from nhlmodel.config import DEFAULT_PARAMS, PARAMS_JSON, RESULTS_DIR  # noqa: E4
 from nhlmodel.probs import score_matrix  # noqa: E402
 
 TUNE, TEST = 20242025, 20252026
-FIT_GRID = {"rest": [True], "half_life_days": [90, 120, 180], "season_carry": [1.0], "alpha": [0.02, 0.03, 0.05]}
-CHEAP_GRID = {"w_shots": [0.2, 0.35, 0.5], "w_xg": [0.0, 0.25, 0.4], "en_shift": [0.3], "ot_k": [0.7],
+FIT_GRID = {"covs": [("b2b",), ("b2b", "3in4", "travel"), ("b2b", "st"), ("b2b", "3in4", "travel", "st")],
+            "half_life_days": [120], "season_carry": [1.0], "alpha": [0.02, 0.04]}
+CHEAP_GRID = {"w_shots": [0.35, 0.5], "w_xg": [0.0, 0.25], "en_shift": [0.3], "ot_k": [0.7],
               "goalie_k": [0.5, 1.0], "goalie_metric": ["sv", "gsax"]}
 
 
@@ -60,7 +61,7 @@ def walk(fin, season, fit_p):
                 if g["home"] not in R.teams or g["away"] not in R.teams:
                     continue
                 b = (int(g.get("home_b2b", 0)), int(g.get("away_b2b", 0)))
-                c = R.components(g["home"], g["away"], *b)
+                c = R.components(g["home"], g["away"], *b, ctx=g.to_dict())
                 lg = c["g"]; ls = c.get("s", lg); lx = c.get("x", lg)
                 out.append((g["game_id"], *lg, *ls, *lx))
         d = nxt
@@ -110,8 +111,9 @@ def calibration(p, y, bins=8):
 def main():
     games = nhl_api.update_games()
     mp = moneypuck.update()
-    fin = moneypuck.attach_xg(nhl_api.finals(features.add_rest(games)), mp)
-    gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp)
+    mpg = moneypuck.update_goalie_games()
+    fin = moneypuck.attach_xg(nhl_api.finals(features.add_context(games, mp)), mp)
+    gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp, mpg)
     print(f"{len(fin)} completed games ({fin['home_xg'].notna().mean():.0%} with MoneyPuck xG), {len(gl)} goalie appearances")
     sp = load_saves_params()
     ctxs = {m: features.GoalieContext(gl, dict(sp, goalie_metric=m)) for m in ("sv", "gsax")}
@@ -131,10 +133,10 @@ def main():
 
     # Current production model, scored on the test season for an apples-to-apples comparison
     old = json.loads(PARAMS_JSON.read_text())["params"] if PARAMS_JSON.exists() else dict(DEFAULT_PARAMS)
-    old_fp = {k: old[k] for k in ("half_life_days", "season_carry", "alpha")} | {"rest": False}
+    old_fp = {k: old[k] for k in ("half_life_days", "season_carry", "alpha")}
     old_cp = {k: old.get(k, 0.0) for k in ("w_shots", "en_shift", "ot_k", "goalie_k", "w_xg")} | {
         "goalie_metric": old.get("goalie_metric", "sv")}
-    old_fp["rest"] = bool(old.get("rest", False))
+    old_fp["covs"] = tuple(old.get("covs") or (["b2b"] if old.get("rest") else []))
     s_old, _, _ = score(run(TEST, old_fp), old_cp)
 
     best = None
@@ -177,6 +179,7 @@ def main():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     keep = {k: v for k, v in DEFAULT_PARAMS.items()}
     keep.update(fp); keep.update(cp)
+    keep["covs"] = list(fp["covs"]); keep.pop("rest", None)
     if ship:
         (RESULTS_DIR / "backtest_report.json").write_text(json.dumps(report, indent=1))
         PARAMS_JSON.write_text(json.dumps({"params": keep, "source": "backtest", "report": "results/backtest_report.json"}, indent=1))

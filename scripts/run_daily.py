@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import os  # noqa: E402
 
-from nhlmodel import combos, features, goalies, moneypuck, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
+from nhlmodel import combos, dailyfaceoff, features, goalies, moneypuck, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
 from nhlmodel.config import RESULTS_DIR, load_params  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
@@ -37,10 +37,12 @@ def main():
     except Exception as err:          # never let goalie data break the game-line run
         print(f"[goalies] update failed: {err}"); gl = None
     tracking.grade(games, gl)
-    mp = moneypuck.update()
+    mpk = moneypuck.update()
+    mpg = moneypuck.update_goalie_games()
     if gl is not None:
-        gl = moneypuck.attach_goalie_xga(gl, mp)
-    fin = moneypuck.attach_xg(nhl_api.finals(features.add_rest(games)), mp)
+        gl = moneypuck.attach_goalie_xga(gl, mpk, mpg)
+    fin = moneypuck.attach_xg(nhl_api.finals(features.add_context(games, mpk)), mpk)
+    dfo = dailyfaceoff.starters(day)
     R = ratings.fit(fin, day, params)
 
     slate = nhl_api.games_on(day)
@@ -81,11 +83,20 @@ def main():
             except Exception as err:
                 saves_diag.append({"game": f"{aw} @ {h}", "note": f"saves odds failed: {err}"})
         source = {t: ("books' expected starter" if t in starters else "usual starter") for t in (h, aw)}
+        # Daily Faceoff wins when it says Confirmed or Likely
+        if gl is not None:
+            for t in (h, aw):
+                d = dfo.get(t)
+                if d and d["status"] in ("Confirmed", "Likely"):
+                    pid, team = goalies.find_goalie(gl, d["name"], {h, aw}, day)
+                    if pid is not None and team == t:
+                        starters[t] = pid; source[t] = f"Daily Faceoff ({d['status']})"
         if gctx is not None:
             for t in (h, aw):
                 starters.setdefault(t, gctx.projected_starter(t, day))
         try:
-            lh, la = R.expected_goals(h, aw, b2b[h], b2b[aw])
+            ctx = features.context_today(games, mpk, h, aw, day)
+            lh, la = R.expected_goals(h, aw, b2b[h], b2b[aw], ctx=ctx)
         except KeyError as err:
             print(f"[skip] {aw}@{h}: {err}")
             continue
@@ -113,7 +124,7 @@ def main():
             lines = picks.price_event(e, h, aw, mp, params)
             if do_saves and props is not None:
                 try:
-                    srows, sd = saves_pricing.price_game(e, g, R, gl, mp, sp, day, by_book=props, b2b=b2b)
+                    srows, sd = saves_pricing.price_game(e, g, R, gl, mp, sp, day, by_book=props, b2b=b2b, ctx=ctx)
                     lines += srows; saves_diag += sd
                 except Exception as err:
                     saves_diag.append({"game": row["matchup"], "note": f"saves pricing failed: {err}"})

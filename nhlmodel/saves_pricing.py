@@ -71,7 +71,7 @@ def starters_from_props(by_book: dict, gl, teams: set, day: str) -> dict:
 
 
 def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str, by_book: dict | None = None,
-               b2b: dict | None = None) -> tuple[list, list]:
+               b2b: dict | None = None, ctx: dict | None = None) -> tuple[list, list]:
     """Returns (rows like picks.price_event, diagnostics)."""
     if by_book is None:
         by_book, _ = fetch_event_saves(event["id"])
@@ -89,7 +89,7 @@ def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str, by_
             continue
         opp = game["away"] if team == game["home"] else game["home"]
         mu = R.expected_shots(opp, team, shooter_home=(opp == game["home"]),
-                              att_b2b=b2b.get(opp, 0), def_b2b=b2b.get(team, 0))
+                              att_b2b=b2b.get(opp, 0), def_b2b=b2b.get(team, 0), ctx=ctx)
         sv, league, n_games = goalies.save_pct(gl, pid, day, sp)
         dist = goalies.simulate_saves(mu, sv, mp["p_tie_reg"], sp, seed=int(game["game_id"]) % 100000)
         mean = float(sum(k * p for k, p in enumerate(dist)))

@@ -39,9 +39,10 @@ def contexts(fin, gl, params):
                     continue
                 hb, ab = int(g.get("home_b2b", 0)), int(g.get("away_b2b", 0))
                 opp_b2b, own_b2b = (ab, hb) if bool(s["is_home"]) else (hb, ab)
+                ctx = g.to_dict()
                 mu = R.expected_shots(s["opp"], s["team"], shooter_home=not bool(s["is_home"]),
-                                      att_b2b=opp_b2b, def_b2b=own_b2b)
-                lh, la = R.expected_goals(g["home"], g["away"], hb, ab)
+                                      att_b2b=opp_b2b, def_b2b=own_b2b, ctx=ctx)
+                lh, la = R.expected_goals(g["home"], g["away"], hb, ab, ctx=ctx)
                 p_tie = probs.market_probs(lh, la, params)["p_tie_reg"]
                 out.append({"game_id": s["game_id"], "date": s["date"], "player_id": s["player_id"],
                             "mu": mu, "p_tie": p_tie, "saves": int(s["saves"])})
@@ -74,8 +75,9 @@ def evaluate(ctx, gl, sp):
 def main():
     games = nhl_api.update_games()
     mp = moneypuck.update()
-    gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp)
-    fin = moneypuck.attach_xg(nhl_api.finals(features.add_rest(games)), mp)
+    mpg = moneypuck.update_goalie_games()
+    gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp, mpg)
+    fin = moneypuck.attach_xg(nhl_api.finals(features.add_context(games, mp)), mp)
     params = load_params()
     ctx = contexts(fin, gl, params)
     mid = ctx["date"].sort_values().iloc[len(ctx) // 2]
