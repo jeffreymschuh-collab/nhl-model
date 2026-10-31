@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T20:21:07.218690+00:00",
+ "generated_at": "2026-10-31T20:23:48.003988+00:00",
  "date": "2026-10-31",
  "run": "am",
  "params": {
@@ -19,8 +19,8 @@
   "goalie_metric": "sv"
  },
  "odds_quota": {
-  "remaining": "460",
-  "used": "40"
+  "remaining": "457",
+  "used": "43"
  },
  "odds_events": [
   {
@@ -190,10 +190,7 @@
    "away_b2b": 0,
    "home_goalie": "J. Fowler",
    "away_goalie": "S. Murashov",
-   "home_missing": [
-    "Nick Suzuki",
-    "Juraj Slafkovsk"
-   ],
+   "home_missing": [],
    "away_missing": [
     "Bryan Rust"
    ],
@@ -299,14 +296,10 @@
    "home_goalie": "K. Lankinen",
    "away_goalie": "A. Stolarz",
    "home_missing": [
-    "Brendan Gallagher",
-    "Elias Pettersson",
-    "Filip Chytil",
-    "Jonathan Lekkerimki"
+    "Filip Chytil"
    ],
    "away_missing": [
-    "Kirill Marchenko",
-    "Nick Blankenburg"
+    "Kirill Marchenko"
    ],
    "home_goalie_source": "Daily Faceoff (Unconfirmed)",
    "away_goalie_source": "Daily Faceoff (Confirmed)",
@@ -412,10 +405,7 @@
    "home_missing": [
     "Radek Faksa"
    ],
-   "away_missing": [
-    "Carson Soucy",
-    "Dmitri Voronkov"
-   ],
+   "away_missing": [],
    "home_goalie_source": "Daily Faceoff (Confirmed)",
    "away_goalie_source": "Daily Faceoff (Confirmed)",
    "home_goalie_factor": 0.999,
