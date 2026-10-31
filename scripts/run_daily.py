@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import os  # noqa: E402
 
-from nhlmodel import features, goalies, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
+from nhlmodel import combos, features, goalies, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
 from nhlmodel.config import RESULTS_DIR, load_params  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
@@ -61,6 +61,8 @@ def main():
     saves_diag = []
     gctx = features.GoalieContext(gl, sp) if gl is not None else None
     goalie_k = float(params.get("goalie_k", 0.0))
+
+    lifts = combos.lift_by_line(games, gl) if gl is not None else {}
 
     out_games, new_picks, all_lines = [], [], {}
     for (h, aw), g in by_pair.items():
@@ -121,6 +123,7 @@ def main():
                 b.update(game_id=g["game_id"], matchup=row["matchup"], start_utc=g["start_utc"])
             row["bets"] = bets
             new_picks += bets
+            row["combos"] = combos.find(row, lifts)
         out_games.append(row)
 
     log = tracking.record(day, run, new_picks, all_lines)
@@ -132,7 +135,19 @@ def main():
         "params": params, "odds_quota": quota, "odds_events": odds_diag, "saves_priced": bool(do_saves), "saves_diag": saves_diag, "games": out_games,
         "power_rankings": R.table().to_dict(orient="records"), "performance": summ,
     }
-    (RESULTS_DIR / "latest.json").write_text(json.dumps(payload, indent=1, default=str))
+    prev = RESULTS_DIR / "latest.json"
+    keep_prev = False
+    if not out_games and prev.exists():
+        try:
+            keep_prev = json.loads(prev.read_text()).get("date") == day   # games already underway: keep the slate
+        except Exception:
+            pass
+    if keep_prev:
+        old = json.loads(prev.read_text()); old["performance"] = summ
+        prev.write_text(json.dumps(old, indent=1, default=str))
+        print("[done] no upcoming games left today; kept the earlier slate, refreshed results")
+        return
+    prev.write_text(json.dumps(payload, indent=1, default=str))
     hist = RESULTS_DIR / "history"; hist.mkdir(exist_ok=True)
     (hist / f"{day}_{run}.json").write_text(json.dumps(payload, indent=1, default=str))
     print(f"[done] {day} {run}: {len(out_games)} games, {len(new_picks)} new picks; record {summ['overall']}")

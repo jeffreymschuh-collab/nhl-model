@@ -1,0 +1,42 @@
+[
+{
+"bucket": "All bets",
+"bets": 15,
+"record": "7-8",
+"cash_staked": 219.74,
+"cash_profit": 138.94,
+"bonus_refunds": 50.0
+},
+{
+"bucket": "2-leg parlays",
+"bets": 6,
+"record": "4-2",
+"cash_staked": 125.0,
+"cash_profit": 117.03,
+"bonus_refunds": 25.0
+},
+{
+"bucket": "Details not captured",
+"bets": 3,
+"record": "1-2",
+"cash_staked": 55.89,
+"cash_profit": -4.17,
+"bonus_refunds": 25.0
+},
+{
+"bucket": "Long parlays (5+ legs)",
+"bets": 3,
+"record": "0-3",
+"cash_staked": 15.0,
+"cash_profit": -15.0,
+"bonus_refunds": 0.0
+},
+{
+"bucket": "Single bets",
+"bets": 3,
+"record": "2-1",
+"cash_staked": 23.85,
+"cash_profit": 41.08,
+"bonus_refunds": 0.0
+}
+]

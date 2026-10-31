@@ -1,0 +1,167 @@
+[
+{
+"bet_id": "578284653513933104",
+"placed": "2026-10-30",
+"bucket": "Long parlays (5+ legs)",
+"legs": "Golden Knights +1.5 | NJD @ VGK  \u2022  Jets +1.5 | WPG @ FLA  \u2022  Dustin Wolf U 26.5 saves | SEA @ CGY  \u2022  Under 6.5 goals | SEA @ CGY  \u2022  Flames +1.5 | SEA @ CGY",
+"odds": "+1139",
+"stake": "$5.00",
+"result": "L",
+"cash_profit": -5.0,
+"refund": 0.0
+},
+{
+"bet_id": "4708291670242885911",
+"placed": "2026-10-30",
+"bucket": "2-leg parlays",
+"legs": "Golden Knights +1.5 (-300) | NJD @ VGK  \u2022  Panthers ML (-225) | WPG @ FLA",
+"odds": "-108",
+"stake": "$25.00",
+"result": "L",
+"cash_profit": -25.0,
+"refund": 25.0
+},
+{
+"bet_id": "7142895020415254832",
+"placed": "2026-10-29",
+"bucket": "Single bets",
+"legs": "Yaroslav Askarov O 22.5 saves | VAN @ SJS",
+"odds": "-130",
+"stake": "$23.85",
+"result": "W",
+"cash_profit": 18.35,
+"refund": 0.0
+},
+{
+"bet_id": "5719128634694959378",
+"placed": "2026-10-29",
+"bucket": "2-leg parlays",
+"legs": "Packers ML | CAR @ GB  \u2022  Over 58.5 points | CAR @ GB",
+"odds": "+100",
+"stake": "$25.00",
+"result": "L",
+"cash_profit": -25.0,
+"refund": 0.0
+},
+{
+"bet_id": "1413760371013058834",
+"placed": "2026-10-29",
+"bucket": "Single bets",
+"legs": "Jesper Wallstedt O 22.5 saves | NYI @ MIN",
+"odds": "-120",
+"stake": "$25 bonus",
+"result": "L",
+"cash_profit": 0.0,
+"refund": 0.0
+},
+{
+"bet_id": "5943468505964871955",
+"placed": "2026-10-29",
+"bucket": "Long parlays (5+ legs)",
+"legs": "Penguins +1.5  \u2022  Hurricanes ML  \u2022  Lightning ML  \u2022  Wild ML  \u2022  Stars ML  \u2022  Over 5.5  \u2022  Predators +1.5  \u2022  Over 23.5  \u2022  Kings +1.5",
+"odds": "+4096",
+"stake": "$5.00",
+"result": "L",
+"cash_profit": -5.0,
+"refund": 0.0
+},
+{
+"bet_id": "3461916597965422897",
+"placed": "2026-10-29",
+"bucket": "2-leg parlays",
+"legs": "Hurricanes ML  \u2022  Over 23.5 (saves)",
+"odds": "+154",
+"stake": "$25.00",
+"result": "W",
+"cash_profit": 38.46,
+"refund": 0.0
+},
+{
+"bet_id": "4222427467459199251",
+"placed": "2026-10-28",
+"bucket": "Long parlays (5+ legs)",
+"legs": "Capitals ML  \u2022  Over 4.5  \u2022  Oilers ML  \u2022  Over 4.5  \u2022  Avalanche ML  \u2022  Kraken +2.5  \u2022  Hurricanes ML  \u2022  Lightning ML  \u2022  Mammoth ML  \u2022  Red Wings ML  \u2022  Stars ML  \u2022  Senators ML  \u2022  Sabres ML",
+"odds": "+19542",
+"stake": "$5.00",
+"result": "L",
+"cash_profit": -5.0,
+"refund": 0.0
+},
+{
+"bet_id": "2972066005448261937",
+"placed": "2026-10-28",
+"bucket": "2-leg parlays",
+"legs": "Capitals ML  \u2022  Over 22.5 (saves)",
+"odds": "+152",
+"stake": "$25.00",
+"result": "W",
+"cash_profit": 38.0,
+"refund": 0.0
+},
+{
+"bet_id": "3847319013407457584",
+"placed": "2026-10-27",
+"bucket": "Single bets",
+"legs": "Jeremy Swayman U 28.5 saves | BOS @ CAR",
+"odds": "-110",
+"stake": "$25 bonus",
+"result": "W",
+"cash_profit": 22.73,
+"refund": 0.0
+},
+{
+"bet_id": "2004439943597916439",
+"placed": "2026-10-27",
+"bucket": "2-leg parlays",
+"legs": "Panthers ML | FLA @ WPG  \u2022  Under 6.5 goals | FLA @ WPG",
+"odds": "+185",
+"stake": "$25 bonus",
+"result": "W",
+"cash_profit": 46.25,
+"refund": 0.0
+},
+{
+"bet_id": "7747841185867235632",
+"placed": "2026-10-27",
+"bucket": "2-leg parlays",
+"legs": "Hurricanes ML  \u2022  Panthers ML",
+"odds": "+177",
+"stake": "$25.00",
+"result": "W",
+"cash_profit": 44.32,
+"refund": 0.0
+},
+{
+"bet_id": "8347358567619232019",
+"placed": "2026-10-26",
+"bucket": "Details not captured",
+"legs": "(details not captured)",
+"odds": "",
+"stake": "$5.89",
+"result": "L",
+"cash_profit": -5.89,
+"refund": 0.0
+},
+{
+"bet_id": "2791353964019450161",
+"placed": "2026-10-26",
+"bucket": "Details not captured",
+"legs": "(details not captured)",
+"odds": "",
+"stake": "$25.00",
+"result": "L",
+"cash_profit": -25.0,
+"refund": 25.0
+},
+{
+"bet_id": "1978353625965134099",
+"placed": "2026-10-26",
+"bucket": "Details not captured",
+"legs": "(details not captured)",
+"odds": "",
+"stake": "$25.00",
+"result": "W",
+"cash_profit": 26.72,
+"refund": 0.0
+}
+]

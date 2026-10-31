@@ -25,6 +25,7 @@
   .nb-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
   .nb-table .num { text-align: right; }
   .nb-table tr.is-pick td { font-weight: 600; }
+  .nb-table td.wrap { white-space: normal; min-width: 18rem; }
   .nb-edge { display: inline-block; min-width: 3.5rem; text-align: right; }
   .nb-edge.pos { color: var(--color-ok); }
   .nb-edge.neg { color: var(--color-fg-muted); }
@@ -112,6 +113,57 @@
     </div>
   </section>
 
+
+  <section class="nb-card" id="combos">
+    <h2 class="nb-h2">Combo finder: team to win + its own goalie's saves over</h2>
+    <p class="nb-note">When a team wins, its own goalie goes over his saves line about 10% more often than usual, because the leading team gets outshot late and gives up fewer goals. A regular 2-leg parlay pays as if the legs were unrelated, so this pairing beats its price. Only works as a regular parlay. If Hard Rock forces it into a same-game parlay, the price is adjusted and the edge is gone. Never pair a team with the other goalie's saves over: that's about 10% worse than fair. Saves lines are priced at the pre-game run only.</p>
+    <p class="nb-note nb-nocombos" hidden>No combos priced yet today. They appear after the pre-game run, once Hard Rock posts saves lines.</p>
+    <div class="nb-scroll">
+      <table class="nb-table" data-source="combos" data-row-key="combo_id">
+        <thead><tr>
+          <th data-field="matchup">Game</th>
+          <th data-field="start_et">Start (ET)</th>
+          <th data-field="combo">Parlay</th>
+          <th data-field="price" class="num">Hard Rock</th>
+          <th data-field="fair_price" class="num">Fair price</th>
+          <th data-field="hit_pct" class="num">Hits</th>
+          <th data-field="ev_pct" class="num">Edge</th>
+        </tr></thead>
+        <tbody data-draw="combos-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="nb-card" id="my-bets">
+    <h2 class="nb-h2">Your Hard Rock bets</h2>
+    <p class="nb-note">Imported from your Hard Rock transaction export. Profit is cash only. Bonus-bet stakes count as $0 risked, and no-sweat refunds are listed separately. Send a fresh export, or say "sync my bets", to update.</p>
+    <div class="nb-scroll">
+      <table class="nb-table" data-source="my_bets_summary" data-row-key="bucket">
+        <thead><tr>
+          <th data-field="bucket">Bet type</th>
+          <th data-field="bets" class="num">Bets</th>
+          <th data-field="record" class="num">W-L</th>
+          <th data-field="cash_staked" class="num">Cash risked</th>
+          <th data-field="cash_profit" class="num">Cash profit</th>
+          <th data-field="bonus_refunds" class="num">Refunds</th>
+        </tr></thead>
+        <tbody data-draw="mysum-body"></tbody>
+      </table>
+    </div>
+    <div class="nb-scroll">
+      <table class="nb-table" data-source="my_bets" data-row-key="bet_id">
+        <thead><tr>
+          <th data-field="placed">Placed</th>
+          <th data-field="legs">Bet</th>
+          <th data-field="odds" class="num">Odds</th>
+          <th data-field="stake" class="num">Stake</th>
+          <th data-field="result">Result</th>
+          <th data-field="cash_profit" class="num">Cash +/-</th>
+        </tr></thead>
+        <tbody data-draw="mybets-body"></tbody>
+      </table>
+    </div>
+  </section>
   <div class="nb-grid">
     <section class="nb-card" id="by-market">
       <h2 class="nb-h2">Results by market</h2>
@@ -196,6 +248,8 @@
     const lines = ok('lines');
     const nPicks = lines ? lines.filter((r) => r.pick).length : 0;
     document.querySelectorAll('.nb-none').forEach((p) => { p.hidden = !(lines && show === 'picks' && nPicks === 0); });
+    const combos = ok('combos');
+    document.querySelectorAll('.nb-nocombos').forEach((p) => { p.hidden = !(combos && combos.length === 0); });
     const picks = ok('picks');
     document.querySelectorAll('.nb-nopicks').forEach((p) => { p.hidden = !(picks && picks.length === 0); });
   });
@@ -349,5 +403,54 @@
         tip.style('left', `${Math.min(mx + 12, el.clientWidth - tw - 4)}px`).style('top', `${my + 12}px`);
       })
       .on('mouseleave', () => tip.style('display', 'none'));
+  });
+</script>
+
+<script>
+  const money = (v) => (v === null || v === undefined || v === '') ? '' : `${Number(v) < 0 ? '-' : (Number(v) > 0 ? '+' : '')}$${Math.abs(Number(v)).toFixed(2)}`;
+  dash.draw('combos-body', (tb) => {
+    const d = dash.data('combos');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    const { pct1, plain1 } = window.nbFmt;
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.combo_id;
+      if (r.flag) tr.className = 'is-pick';
+      nbCell(tr, r.matchup); nbCell(tr, r.start_et); nbCell(tr, r.combo);
+      nbCell(tr, r.price, 'num'); nbCell(tr, r.fair_price, 'num'); nbCell(tr, plain1(r.hit_pct), 'num');
+      const td = nbCell(tr, '', 'num');
+      const s = document.createElement('span');
+      s.className = 'nb-edge ' + (r.ev_pct > 0 ? 'pos' : 'neg');
+      s.textContent = pct1(r.ev_pct);
+      td.appendChild(s);
+      return tr;
+    }));
+  });
+  dash.draw('mysum-body', (tb) => {
+    const d = dash.data('my_bets_summary');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.bucket;
+      if (r.bucket === 'All bets') tr.className = 'is-pick';
+      nbCell(tr, r.bucket); nbCell(tr, String(r.bets), 'num'); nbCell(tr, r.record, 'num');
+      nbCell(tr, `$${Number(r.cash_staked).toFixed(2)}`, 'num');
+      const td = nbCell(tr, money(r.cash_profit), 'num');
+      td.classList.add(r.cash_profit >= 0 ? 'nb-res-W' : 'nb-res-L');
+      nbCell(tr, r.bonus_refunds ? `$${Number(r.bonus_refunds).toFixed(0)}` : '', 'num');
+      return tr;
+    }));
+  });
+  dash.draw('mybets-body', (tb) => {
+    const d = dash.data('my_bets');
+    if (d.status !== 'ok') { tb.replaceChildren(); return; }
+    tb.replaceChildren(...d.data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.bet_id;
+      nbCell(tr, r.placed); nbCell(tr, r.legs, 'wrap'); nbCell(tr, r.odds, 'num'); nbCell(tr, r.stake, 'num');
+      nbCell(tr, r.result === 'W' ? 'Won' : r.result === 'L' ? (r.refund ? 'Lost (refunded)' : 'Lost') : r.result, r.result === 'W' || r.result === 'L' ? `nb-res-${r.result}` : '');
+      nbCell(tr, money(r.cash_profit), 'num');
+      return tr;
+    }));
   });
 </script>

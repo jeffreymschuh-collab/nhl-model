@@ -97,8 +97,45 @@ def main():
             bt.append({"market": name, "model": v["model"], "baseline": v["baseline"],
                        "improvement_pct": v["improvement_pct"], "test_games": b["test_games"]})
 
+    combos = []
+    for g in j["games"]:
+        for c in g.get("combos", []):
+            combos.append({"combo_id": f'{g["game_id"]}|{c["combo"]}', "matchup": c["matchup"],
+                           "start_et": et_time(c["start_utc"]), "combo": c["combo"], "price": amer(c["price"]),
+                           "fair_price": amer(c["fair_price"]), "hit_pct": c["hit_pct"], "ev_pct": c["ev_pct"],
+                           "flag": bool(c["flag"])})
+    combos.sort(key=lambda c: -c["ev_pct"])
+
+    my_bets, my_sum = [], []
+    mb_path = RESULTS_DIR.parent / "data" / "my_bets.csv"
+    if mb_path.exists():
+        mb = pd.read_csv(mb_path, dtype={"bet_id": str})
+
+        def bucket(r):
+            if r["type"] == "Single":
+                return "Single bets"
+            if pd.notna(r["n_legs"]) and r["n_legs"] >= 5:
+                return "Long parlays (5+ legs)"
+            if pd.notna(r["n_legs"]):
+                return "2-leg parlays"
+            return "Details not captured"
+        mb["bucket"] = mb.apply(bucket, axis=1)
+        for _, r in mb.iterrows():
+            stake = f'${r["stake_cash"]:.2f}' if r["stake_cash"] else f'${r["stake_bonus"]:.0f} bonus'
+            my_bets.append({"bet_id": r["bet_id"], "placed": r["placed"][:10], "bucket": r["bucket"], "legs": r["legs"],
+                            "odds": amer(r["odds"]) if pd.notna(r["odds"]) else "", "stake": stake,
+                            "result": r["result"], "cash_profit": None if pd.isna(r["cash_profit"]) else float(r["cash_profit"]),
+                            "refund": float(r["bonus_refund"] or 0)})
+        settled = mb[mb["result"].isin(["W", "L"])]
+        for name, d in [("All bets", settled)] + list(settled.groupby("bucket")):
+            my_sum.append({"bucket": name, "bets": int(len(d)), "record": f'{int((d.result == "W").sum())}-{int((d.result == "L").sum())}',
+                           "cash_staked": round(float(d["stake_cash"].sum()), 2),
+                           "cash_profit": round(float(d["cash_profit"].fillna(0).sum()), 2),
+                           "bonus_refunds": round(float(d["bonus_refund"].fillna(0).sum()), 2)})
+
     for name, rows in [("run_info", run_info), ("lines", lines), ("games", games), ("performance", perf),
-                       ("picks", picks), ("rankings", rankings), ("backtest", bt)]:
+                       ("picks", picks), ("rankings", rankings), ("backtest", bt), ("combos", combos),
+                       ("my_bets", my_bets), ("my_bets_summary", my_sum)]:
         (OUT / f"{name}.json").write_text(json.dumps(rows, indent=0))
     print(f"[export] {len(lines)} lines, {len(games)} games, {len(picks)} logged picks -> {OUT}")
 

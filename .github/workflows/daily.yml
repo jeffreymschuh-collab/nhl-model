@@ -28,8 +28,17 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+      - name: Skip backup run if a run already happened recently
+        id: guard
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f results/latest.json ]; then
+            age=$(python -c "import json,datetime as d;t=d.datetime.fromisoformat(json.load(open('results/latest.json'))['generated_at']);print(int((d.datetime.now(d.timezone.utc)-t).total_seconds()))")
+            if [ "$age" -lt 18000 ]; then echo "skip=1" >> $GITHUB_OUTPUT; echo "recent run ${age}s ago - skipping"; fi
+          fi
       - run: pip install -r requirements.txt
+        if: steps.guard.outputs.skip != '1'
       - name: Run model
+        if: steps.guard.outputs.skip != '1'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
@@ -40,6 +49,7 @@ jobs:
           fi
           python scripts/export_dashboard.py
       - name: Save results
+        if: steps.guard.outputs.skip != '1'
         run: |
           git config user.name "nhl-model-bot"
           git config user.email "actions@users.noreply.github.com"

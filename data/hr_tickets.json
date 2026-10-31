@@ -1,0 +1,142 @@
+{
+ "_note": "Ticket details copied from Hard Rock 'My Bets' (selections aren't in the transaction export). Keyed by Hard Rock bet ID.",
+ "4708291670242885911": {
+  "type": "Parlay",
+  "legs": [
+   "Golden Knights +1.5 (-300) | NJD @ VGK",
+   "Panthers ML (-225) | WPG @ FLA"
+  ],
+  "odds": -108,
+  "promo": "No Sweat Bet",
+  "sport": "NHL"
+ },
+ "578284653513933104": {
+  "type": "SGP Max",
+  "legs": [
+   "Golden Knights +1.5 | NJD @ VGK",
+   "Jets +1.5 | WPG @ FLA",
+   "Dustin Wolf U 26.5 saves | SEA @ CGY",
+   "Under 6.5 goals | SEA @ CGY",
+   "Flames +1.5 | SEA @ CGY"
+  ],
+  "odds": 1139,
+  "promo": "50% Profit Boost",
+  "sport": "NHL"
+ },
+ "7142895020415254832": {
+  "type": "Single",
+  "legs": [
+   "Yaroslav Askarov O 22.5 saves | VAN @ SJS"
+  ],
+  "odds": -130,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "5719128634694959378": {
+  "type": "SGP",
+  "legs": [
+   "Packers ML | CAR @ GB",
+   "Over 58.5 points | CAR @ GB"
+  ],
+  "odds": 100,
+  "promo": "10% Profit Boost",
+  "sport": "NFL"
+ },
+ "1413760371013058834": {
+  "type": "Single",
+  "legs": [
+   "Jesper Wallstedt O 22.5 saves | NYI @ MIN"
+  ],
+  "odds": -120,
+  "promo": "",
+  "sport": "NHL",
+  "result": "L"
+ },
+ "5943468505964871955": {
+  "type": "SGP Max",
+  "legs": [
+   "Penguins +1.5",
+   "Hurricanes ML",
+   "Lightning ML",
+   "Wild ML",
+   "Stars ML",
+   "Over 5.5",
+   "Predators +1.5",
+   "Over 23.5",
+   "Kings +1.5"
+  ],
+  "odds": 4096,
+  "promo": "15% Profit Boost",
+  "sport": "NHL"
+ },
+ "3461916597965422897": {
+  "type": "Parlay",
+  "legs": [
+   "Hurricanes ML",
+   "Over 23.5 (saves)"
+  ],
+  "odds": 154,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "4222427467459199251": {
+  "type": "SGP Max",
+  "legs": [
+   "Capitals ML",
+   "Over 4.5",
+   "Oilers ML",
+   "Over 4.5",
+   "Avalanche ML",
+   "Kraken +2.5",
+   "Hurricanes ML",
+   "Lightning ML",
+   "Mammoth ML",
+   "Red Wings ML",
+   "Stars ML",
+   "Senators ML",
+   "Sabres ML"
+  ],
+  "odds": 19542,
+  "promo": "15% Profit Boost",
+  "sport": "NHL"
+ },
+ "2972066005448261937": {
+  "type": "Parlay",
+  "legs": [
+   "Capitals ML",
+   "Over 22.5 (saves)"
+  ],
+  "odds": 152,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "3847319013407457584": {
+  "type": "Single",
+  "legs": [
+   "Jeremy Swayman U 28.5 saves | BOS @ CAR"
+  ],
+  "odds": -110,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "7747841185867235632": {
+  "type": "Parlay",
+  "legs": [
+   "Hurricanes ML",
+   "Panthers ML"
+  ],
+  "odds": 177,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "2004439943597916439": {
+  "type": "SGP",
+  "legs": [
+   "Panthers ML | FLA @ WPG",
+   "Under 6.5 goals | FLA @ WPG"
+  ],
+  "odds": 185,
+  "promo": "",
+  "sport": "NHL"
+ }
+}

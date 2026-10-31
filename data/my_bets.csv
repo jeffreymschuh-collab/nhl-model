@@ -1,0 +1,16 @@
+bet_id,placed,settled,type,sport,n_legs,legs,odds,promo,stake_cash,stake_bonus,payout,bonus_refund,result,cash_profit
+578284653513933104,2026-10-30 16:36,2026-10-30 20:39,SGP Max,NHL,5.0,Golden Knights +1.5 | NJD @ VGK  •  Jets +1.5 | WPG @ FLA  •  Dustin Wolf U 26.5 saves | SEA @ CGY  •  Under 6.5 goals | SEA @ CGY  •  Flames +1.5 | SEA @ CGY,1139.0,50% Profit Boost,5.0,0.0,0.0,0.0,L,-5.0
+4708291670242885911,2026-10-30 16:35,2026-10-30 20:39,Parlay,NHL,2.0,Golden Knights +1.5 (-300) | NJD @ VGK  •  Panthers ML (-225) | WPG @ FLA,-108.0,No Sweat Bet,25.0,0.0,0.0,25.0,L,-25.0
+7142895020415254832,2026-10-29 19:56,2026-10-30 00:51,Single,NHL,1.0,Yaroslav Askarov O 22.5 saves | VAN @ SJS,-130.0,,23.85,0.0,42.2,0.0,W,18.35
+5719128634694959378,2026-10-29 19:01,2026-10-29 23:31,SGP,NFL,2.0,Packers ML | CAR @ GB  •  Over 58.5 points | CAR @ GB,100.0,10% Profit Boost,25.0,0.0,0.0,0.0,L,-25.0
+1413760371013058834,2026-10-29 18:57,,Single,NHL,1.0,Jesper Wallstedt O 22.5 saves | NYI @ MIN,-120.0,,0.0,25.0,0.0,0.0,L,0.0
+5943468505964871955,2026-10-29 14:04,2026-10-29 22:39,SGP Max,NHL,9.0,Penguins +1.5  •  Hurricanes ML  •  Lightning ML  •  Wild ML  •  Stars ML  •  Over 5.5  •  Predators +1.5  •  Over 23.5  •  Kings +1.5,4096.0,15% Profit Boost,5.0,0.0,0.0,0.0,L,-5.0
+3461916597965422897,2026-10-29 13:57,2026-10-29 22:21,Parlay,NHL,2.0,Hurricanes ML  •  Over 23.5 (saves),154.0,,25.0,0.0,63.46,0.0,W,38.46
+4222427467459199251,2026-10-28 19:23,2026-10-28 23:14,SGP Max,NHL,13.0,Capitals ML  •  Over 4.5  •  Oilers ML  •  Over 4.5  •  Avalanche ML  •  Kraken +2.5  •  Hurricanes ML  •  Lightning ML  •  Mammoth ML  •  Red Wings ML  •  Stars ML  •  Senators ML  •  Sabres ML,19542.0,15% Profit Boost,5.0,0.0,0.0,0.0,L,-5.0
+2972066005448261937,2026-10-28 19:17,2026-10-28 23:01,Parlay,NHL,2.0,Capitals ML  •  Over 22.5 (saves),152.0,,25.0,0.0,63.0,0.0,W,38.0
+3847319013407457584,2026-10-27 17:33,2026-10-27 23:11,Single,NHL,1.0,Jeremy Swayman U 28.5 saves | BOS @ CAR,-110.0,,0.0,25.0,22.73,0.0,W,22.73
+2004439943597916439,2026-10-27 17:32,2026-10-27 22:42,SGP,NHL,2.0,Panthers ML | FLA @ WPG  •  Under 6.5 goals | FLA @ WPG,185.0,,0.0,25.0,46.25,0.0,W,46.25
+7747841185867235632,2026-10-27 17:32,2026-10-27 22:44,Parlay,NHL,2.0,Hurricanes ML  •  Panthers ML,177.0,,25.0,0.0,69.32,0.0,W,44.32
+8347358567619232019,2026-10-26 17:03,2026-10-26 23:17,Unknown,,,(details not captured),,,5.89,0.0,0.0,0.0,L,-5.89
+2791353964019450161,2026-10-26 17:01,2026-10-26 21:50,Unknown,,,(details not captured),,,25.0,0.0,0.0,25.0,L,-25.0
+1978353625965134099,2026-10-26 17:00,2026-10-26 23:21,Unknown,,,(details not captured),,,25.0,0.0,51.72,0.0,W,26.72
