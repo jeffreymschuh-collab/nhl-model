@@ -48,7 +48,8 @@ def price_event(event: dict, home_abbr: str, away_abbr: str, mp: dict, params: d
         else:
             continue
         p_mkt = mkt.get(key)
-        p = blend(p_mod, p_mkt, params["w_model"])
+        w = params.get("w_model_by_market", {}).get(market, params["w_model"])
+        p = blend(p_mod, p_mkt, w)
         dec = american_to_decimal(price)
         edge = (p * (dec - 1) - (1 - p)) * (1 - push)
         rows.append({
@@ -84,4 +85,14 @@ def select_bets(rows: list[dict]) -> list[dict]:
         if cap:
             y["units"] = min(y["units"], cap)
         out.append(y)
+    return out
+
+
+def consensus_by_side(event: dict, home_abbr: str, away_abbr: str) -> dict:
+    """{(market, side, point): no-vig reference-market probability} using the same side labels as price_event."""
+    h, a = event["home_team"], event["away_team"]
+    out = {}
+    for key, prob in market_consensus(event).items():
+        side = "home" if key[1] == h else "away" if key[1] == a else key[1].lower()
+        out[(key[0], side, key[2] if len(key) > 2 else None)] = prob
     return out

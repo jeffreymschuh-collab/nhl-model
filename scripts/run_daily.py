@@ -63,13 +63,17 @@ def main():
     do_saves = gl is not None and os.environ.get("ODDS_API_KEY") and (
         a.saves == "on" or (a.saves == "auto" and run == "pm"))
     sp = saves_pricing.load_saves_params()
+    if "saves" in params.get("w_model_by_market", {}):
+        sp["w_model"] = params["w_model_by_market"]["saves"]
     saves_diag = []
     gctx = features.GoalieContext(gl, dict(sp, goalie_metric=params.get("goalie_metric", "sv"))) if gl is not None else None
     goalie_k = float(params.get("goalie_k", 0.0))
 
     lifts = combos.lift_by_line(games, gl) if gl is not None else {}
 
-    out_games, new_picks, all_lines = [], [], {}
+    out_games, new_picks, all_lines, close_probs = [], [], {}, {}
+    prior = tracking.load_log()
+    open_picks = prior[~prior["result"].isin(["W", "L", "P", "V"])] if len(prior) else prior
     for (h, aw), g in by_pair.items():
         e = ev_by_pair.get((h, aw))
         b2b = {h: features.rest_today(games, h, day), aw: features.rest_today(games, aw, day)}
@@ -130,9 +134,19 @@ def main():
                "lines": [], "bets": []}
         if e:
             lines = picks.price_event(e, h, aw, mp, params)
+            for (mk, sd_, pt), prob in picks.consensus_by_side(e, h, aw).items():
+                close_probs[(g["game_id"], mk, sd_, None if pt is None else float(pt))] = prob
+            track = []
+            if len(open_picks):
+                op = open_picks[(open_picks["game_id"].astype(int) == int(g["game_id"])) & (open_picks["market"] == "saves")]
+                track = [(r["side"], float(r["point"])) for _, r in op.iterrows()]
             if do_saves and props is not None:
                 try:
-                    srows, sd = saves_pricing.price_game(e, g, R, gl, mp, sp, day, by_book=props, b2b=b2b, ctx=ctx)
+                    tout = {}
+                    srows, sd = saves_pricing.price_game(e, g, R, gl, mp, sp, day, by_book=props, b2b=b2b, ctx=ctx,
+                                                         track=track, track_out=tout)
+                    for (side_key, pt), prob in tout.items():
+                        close_probs[(g["game_id"], "saves", side_key, pt)] = prob
                     lines += srows; saves_diag += sd
                 except Exception as err:
                     saves_diag.append({"game": row["matchup"], "note": f"saves pricing failed: {err}"})
@@ -148,7 +162,7 @@ def main():
             row["combos"] = combos.find(row, lifts)
         out_games.append(row)
 
-    log = tracking.record(day, run, new_picks, all_lines)
+    log = tracking.record(day, run, new_picks, all_lines, close_probs)
     summ = tracking.summary(log)
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)

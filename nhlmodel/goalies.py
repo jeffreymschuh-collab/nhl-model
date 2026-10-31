@@ -30,6 +30,8 @@ SAVES_DEFAULTS = {
     "w_model": 0.35,          # model vs market blend for saves lines
     "goalie_metric": "sv",    # "sv" = shrunk save %, "gsax" = goals allowed vs MoneyPuck expected goals
     "gsax_prior_xg": 40.0,    # expected goals of league-average goaltending blended into each goalie (gsax mode)
+    "goalie_b2b_pen": 0.03,   # extra goals-against rate when the goalie also played yesterday
+                              # (measured +6% on 101 starts 2024-26; half applied because the sample is small)
 }
 
 

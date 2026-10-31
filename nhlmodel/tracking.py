@@ -6,12 +6,13 @@ from .odds import american_to_decimal
 
 LOG = RESULTS_DIR / "picks_log.csv"
 COLS = ["date", "run", "game_id", "matchup", "start_utc", "market", "selection", "side", "point",
-        "price", "book", "units", "p_final", "edge", "close_price", "clv_pct", "result", "profit_units"]
+        "price", "book", "units", "p_final", "edge", "p_market", "close_price", "clv_pct",
+        "close_p_market", "clv_ev_pct", "result", "profit_units"]
 
 
 def load_log() -> pd.DataFrame:
     log = pd.read_csv(LOG) if LOG.exists() else pd.DataFrame(columns=COLS)
-    for c in ("result", "close_price", "clv_pct", "profit_units"):
+    for c in ("result", "close_price", "clv_pct", "close_p_market", "clv_ev_pct", "profit_units"):
         if c in log.columns:
             log[c] = log[c].astype(object)
     return log
@@ -21,9 +22,12 @@ def _key(r):
     return (int(r["game_id"]), r["market"], r["side"])
 
 
-def record(day: str, run: str, picks: list[dict], all_lines: dict) -> pd.DataFrame:
+def record(day: str, run: str, picks: list[dict], all_lines: dict, close_probs: dict | None = None) -> pd.DataFrame:
     """picks: new bets this run. all_lines: {(game_id, market, side, point): price} for every
-    current Hard Rock line, used to update the 'close' price of already-locked picks."""
+    current Hard Rock line, used to update the 'close' price of already-locked picks.
+    close_probs: {(game_id, market, side, point): no-vig market probability at that exact point}, used for
+    closing-line value even when Hard Rock has moved its number (CLV = EV of our locked price at the later fair odds)."""
+    close_probs = close_probs or {}
     log = load_log()
     existing = {_key(r) for _, r in log.iterrows()}
     for i, r in log.iterrows():
@@ -35,6 +39,10 @@ def record(day: str, run: str, picks: list[dict], all_lines: dict) -> pd.DataFra
                 log.at[i, "close_price"] = cp
                 # CLV: how much better our locked price is than the latest price (implied prob terms)
                 log.at[i, "clv_pct"] = round((1 / american_to_decimal(cp) - 1 / american_to_decimal(r["price"])) * 100, 2)
+            if k in close_probs and close_probs[k] is not None:
+                pc = float(close_probs[k])
+                log.at[i, "close_p_market"] = round(pc, 4)
+                log.at[i, "clv_ev_pct"] = round(100 * (pc * american_to_decimal(float(r["price"])) - 1), 2)
     new = [dict(p, date=day, run=run) for p in picks if _key(p) not in existing]
     if new:
         log = pd.concat([log, pd.DataFrame(new)[[c for c in COLS if c in pd.DataFrame(new).columns]]],
@@ -104,7 +112,9 @@ def _agg(d: pd.DataFrame) -> dict:
         return {"bets": 0}
     risked = d["units"].astype(float).sum()
     profit = d["profit_units"].astype(float).sum()
-    clv = pd.to_numeric(d["clv_pct"], errors="coerce").dropna()
+    clv = pd.to_numeric(d.get("clv_ev_pct"), errors="coerce").dropna() if "clv_ev_pct" in d else pd.Series(dtype=float)
+    if clv.empty:
+        clv = pd.to_numeric(d["clv_pct"], errors="coerce").dropna()
     return {"bets": len(d), "W": int((d["result"] == "W").sum()), "L": int((d["result"] == "L").sum()),
             "P": int((d["result"] == "P").sum()), "units_risked": round(risked, 2),
             "units_profit": round(profit, 2), "roi_pct": round(100 * profit / risked, 2) if risked else None,

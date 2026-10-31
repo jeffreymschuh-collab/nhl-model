@@ -2,6 +2,7 @@
 import json
 import os
 
+import pandas as pd
 import requests
 
 from . import goalies
@@ -71,7 +72,8 @@ def starters_from_props(by_book: dict, gl, teams: set, day: str) -> dict:
 
 
 def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str, by_book: dict | None = None,
-               b2b: dict | None = None, ctx: dict | None = None) -> tuple[list, list]:
+               b2b: dict | None = None, ctx: dict | None = None, track: list | None = None,
+               track_out: dict | None = None) -> tuple[list, list]:
     """Returns (rows like picks.price_event, diagnostics)."""
     if by_book is None:
         by_book, _ = fetch_event_saves(event["id"])
@@ -91,10 +93,20 @@ def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str, by_
         mu = R.expected_shots(opp, team, shooter_home=(opp == game["home"]),
                               att_b2b=b2b.get(opp, 0), def_b2b=b2b.get(team, 0), ctx=ctx)
         sv, league, n_games = goalies.save_pct(gl, pid, day, sp)
+        y = (pd.Timestamp(day) - pd.Timedelta(days=1)).strftime("%Y-%m-%d")
+        tired = bool(((gl["player_id"] == pid) & (gl["date"] == y)).any())
+        if tired:
+            sv = 1 - (1 - sv) * (1 + sp.get("goalie_b2b_pen", 0.0))
         dist = goalies.simulate_saves(mu, sv, mp["p_tie_reg"], sp, seed=int(game["game_id"]) % 100000)
         mean = float(sum(k * p for k, p in enumerate(dist)))
         key = goalies.name_key(goalie)
         last = goalie.split()[-1]
+        # closing-line value for already-locked picks on this goalie, at their exact point
+        for (side_key, pt) in (track or []):
+            if side_key.split("|", 1)[1] == key and track_out is not None:
+                po = _market_over(by_book, goalie, float(pt), dist)
+                if po is not None:
+                    track_out[(side_key, float(pt))] = po if side_key.startswith("over") else 1 - po
         for (side, pt), price in L.items():
             over, push, under = goalies.over_under(dist, pt)
             p_mod = (over if side == "Over" else under) / (1 - push) if push < 1 else 0
@@ -109,6 +121,6 @@ def price_game(event: dict, game: dict, R, gl, mp: dict, sp: dict, day: str, by_
                          "p_final": round(p, 4), "fair_price": decimal_to_american(1 / p) if 0 < p < 1 else None,
                          "edge": round(edge, 4), "goalie": goalie, "team": team,
                          "exp_shots": round(mu, 1), "save_pct": round(sv, 4), "exp_saves": round(mean, 1)})
-        diag.append({"goalie": goalie, "team": team, "exp_shots": round(mu, 1), "save_pct": round(sv, 4),
+        diag.append({"goalie": goalie, "team": team, "exp_shots": round(mu, 1), "save_pct": round(sv, 4), "played_yesterday": tired,
                      "league_sv": round(league, 4), "games_in_history": n_games, "exp_saves": round(mean, 1)})
     return rows, diag

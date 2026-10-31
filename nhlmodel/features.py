@@ -61,13 +61,22 @@ class GoalieContext:
                 self._team[k] = float(sum(s * self.sv(int(p), day) for p, s in shots.items()) / shots.sum())
         return self._team[k]
 
+    def played_yesterday(self, pid: int | None, day: str) -> bool:
+        if pid is None:
+            return False
+        y = (pd.Timestamp(day) - pd.Timedelta(days=1)).strftime("%Y-%m-%d")
+        return bool(((self.gl["player_id"] == pid) & (self.gl["date"] == y)).any())
+
     def ratio(self, pid: int | None, team: str, day: str) -> float:
         if pid is None:
             return 1.0
         base = self.team_sv(team, day)
         if base is None:
             return 1.0
-        return float(np.clip((1 - self.sv(int(pid), day)) / (1 - base), 0.7, 1.4))
+        r = (1 - self.sv(int(pid), day)) / (1 - base)
+        if self.played_yesterday(int(pid), day):
+            r *= 1 + self.sp.get("goalie_b2b_pen", 0.0)   # tired goalie lets in a few more
+        return float(np.clip(r, 0.7, 1.45))
 
     def projected_starter(self, team: str, day: str, last_n: int = 10) -> int | None:
         """The goalie with the most starts in the team's last `last_n` games (morning-run fallback)."""
