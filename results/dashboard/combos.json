@@ -1,13 +1,68 @@
 [
 {
-"combo_id": "none",
-"matchup": "",
-"start_et": "",
-"combo": "No combos priced yet. They appear after the pre-game run, once Hard Rock posts saves lines.",
-"price": "",
-"fair_price": "",
-"hit_pct": null,
-"ev_pct": null,
+"combo_id": "2026020223|MTL ML + Fowler O 23.5 saves",
+"matchup": "PIT @ MTL",
+"start_et": "7:00 PM",
+"combo": "MTL ML + Fowler O 23.5 saves",
+"price": "+251",
+"fair_price": "+240",
+"hit_pct": 29.4,
+"ev_pct": 3.3,
+"flag": false
+},
+{
+"combo_id": "2026020226|COL ML + Blackwood O 21.5 saves",
+"matchup": "CGY @ COL",
+"start_et": "10:00 PM",
+"combo": "COL ML + Blackwood O 21.5 saves",
+"price": "+124",
+"fair_price": "+139",
+"hit_pct": 41.9,
+"ev_pct": -6.2,
+"flag": false
+},
+{
+"combo_id": "2026020224|TOR ML + Stolarz O 24.5 saves",
+"matchup": "TOR @ VAN",
+"start_et": "7:00 PM",
+"combo": "TOR ML + Stolarz O 24.5 saves",
+"price": "+201",
+"fair_price": "+225",
+"hit_pct": 30.7,
+"ev_pct": -7.6,
+"flag": false
+},
+{
+"combo_id": "2026020223|PIT ML + Murashov O 26.5 saves",
+"matchup": "PIT @ MTL",
+"start_et": "7:00 PM",
+"combo": "PIT ML + Murashov O 26.5 saves",
+"price": "+371",
+"fair_price": "+427",
+"hit_pct": 19.0,
+"ev_pct": -10.5,
+"flag": false
+},
+{
+"combo_id": "2026020225|CBJ ML + Greaves O 25.5 saves",
+"matchup": "CBJ @ DAL",
+"start_et": "8:00 PM",
+"combo": "CBJ ML + Greaves O 25.5 saves",
+"price": "+367",
+"fair_price": "+443",
+"hit_pct": 18.4,
+"ev_pct": -13.9,
+"flag": false
+},
+{
+"combo_id": "2026020225|DAL ML + Oettinger O 23.5 saves",
+"matchup": "CBJ @ DAL",
+"start_et": "8:00 PM",
+"combo": "DAL ML + Oettinger O 23.5 saves",
+"price": "+211",
+"fair_price": "+295",
+"hit_pct": 25.3,
+"ev_pct": -21.3,
 "flag": false
 }
 ]
