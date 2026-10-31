@@ -1,4 +1,4 @@
-name: Probe MoneyPuck links
+name: Probe data sources
 on: workflow_dispatch
 permissions:
   contents: write
@@ -8,9 +8,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          out=results/probe_moneypuck.txt
-          curl -s -A "Mozilla/5.0 (personal research)" https://moneypuck.com/data.htm -o /tmp/d.htm
-          grep -oE 'href="[^"]+\.(csv|zip|xlsx)"' /tmp/d.htm | sort -u > $out
-          for u in moneypuck/playerData/seasonSummary/2025/regular/goalies.csv; do :; done
+          out=results/probe_sources.txt; : > $out
+          UA="Mozilla/5.0 (X11; Linux x86_64) Chrome/124.0 (personal research)"
+          echo "== dailyfaceoff robots.txt" >> $out
+          curl -s -A "$UA" https://www.dailyfaceoff.com/robots.txt | head -60 >> $out
+          echo "== dailyfaceoff starting-goalies" >> $out
+          code=$(curl -s -A "$UA" -o /tmp/sg.html -w '%{http_code} %{size_download}' https://www.dailyfaceoff.com/starting-goalies)
+          echo "http $code" >> $out
+          python3 - >> $out <<'PY'
+          import re, json
+          h = open('/tmp/sg.html', encoding='utf-8', errors='ignore').read()
+          m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', h, re.S)
+          if not m:
+              print("no __NEXT_DATA__"); print(h[:500])
+          else:
+              d = json.loads(m.group(1))
+              pp = d.get("props", {}).get("pageProps", {})
+              print("pageProps keys:", list(pp)[:30])
+              for k, v in pp.items():
+                  if isinstance(v, list) and v and isinstance(v[0], dict):
+                      print("list", k, len(v), "item keys:", list(v[0])[:60])
+                      print(json.dumps(v[0])[:1500])
+                      break
+          PY
+          for z in shots_2026 seasonPlayersSummary/goalies/2026; do
+            echo "== moneypuck $z.zip" >> $out
+            curl -s -A "$UA" -o /tmp/z.zip "https://peter-tanner.com/moneypuck/downloads/$z.zip"
+            ls -la /tmp/z.zip >> $out
+            python3 -c "
+          import zipfile,io
+          z=zipfile.ZipFile('/tmp/z.zip'); print(z.namelist()[:5])
+          f=z.open(z.namelist()[0]); print(f.readline().decode()[:3000]); print(f.readline().decode()[:1500])" >> $out 2>&1
+          done
           git config user.name "nhl-model-bot"; git config user.email "actions@users.noreply.github.com"
-          git add $out && git commit -m "MoneyPuck links" && git pull --rebase && git push
+          git add $out && git commit -m "Data source probe" && git pull --rebase && git push
