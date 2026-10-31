@@ -1,27 +1,5 @@
 [
 {
-"game_id": "2026020221",
-"matchup": "BUF @ LAK",
-"start_et": "4:00 PM",
-"xg_away": 2.94,
-"xg_home": 2.9,
-"home_win_pct": 49.2,
-"best_line": "LAK ML",
-"best_edge_pct": -2.9,
-"picks": 0
-},
-{
-"game_id": "2026020222",
-"matchup": "OTT @ SJS",
-"start_et": "4:00 PM",
-"xg_away": 3.23,
-"xg_home": 2.85,
-"home_win_pct": 43.3,
-"best_line": "SJS +1.5",
-"best_edge_pct": -2.1,
-"picks": 0
-},
-{
 "game_id": "2026020223",
 "matchup": "PIT @ MTL",
 "start_et": "7:00 PM",
@@ -50,8 +28,8 @@
 "xg_away": 2.53,
 "xg_home": 2.88,
 "home_win_pct": 56.7,
-"best_line": "CBJ ML",
-"best_edge_pct": 0.1,
+"best_line": "CBJ +1.5",
+"best_edge_pct": -0.7,
 "picks": 0
 },
 {
