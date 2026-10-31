@@ -145,20 +145,21 @@ def _norm(s):
     return re.sub(r"[^a-z ]", "", s.replace("-", " ")).strip()
 
 
-def match_players(names: list[str], ratings: pd.DataFrame, team: str) -> dict:
-    """{name: playerId} matching projected-lineup names to MoneyPuck players on that team (full name, then last name)."""
+def match_players(names: list[str], ratings: pd.DataFrame, team: str, cutoff: float = 0.85) -> dict:
+    """{name: playerId} matching Daily Faceoff names to MoneyPuck players on that team.
+    Exact normalized match first, then closest spelling (MoneyPuck drops accented letters: 'Slafkovsk')."""
+    from difflib import SequenceMatcher
     pool = ratings[ratings["team"] == team]
-    full = {_norm(n): pid for pid, n in zip(pool["playerId"], pool["name"])}
-    last = {}
-    for pid, n in zip(pool["playerId"], pool["name"]):
-        last.setdefault(_norm(n).split()[-1] if _norm(n) else "", []).append(pid)
-    out = {}
+    cand = [(pid, _norm(n)) for pid, n in zip(pool["playerId"], pool["name"]) if isinstance(n, str)]
+    out, used = {}, set()
     for n in names:
         k = _norm(n)
-        if k in full:
-            out[n] = full[k]
-        elif k and len(last.get(k.split()[-1], [])) == 1:
-            out[n] = last[k.split()[-1]][0]
+        exact = [pid for pid, c in cand if c == k and pid not in used]
+        if exact:
+            out[n] = exact[0]; used.add(exact[0]); continue
+        best = max(((SequenceMatcher(None, k, c).ratio(), pid) for pid, c in cand if pid not in used), default=(0, None))
+        if best[0] >= cutoff:
+            out[n] = best[1]; used.add(best[1])
     return out
 
 

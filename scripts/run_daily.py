@@ -133,13 +133,9 @@ def main():
                 for t in (h, aw):
                     reg = skaters.regulars(sk, t, day)
                     lu = lineups.get(t)
-                    if lu:
-                        ids = skaters.match_players(lu["skaters"], P, t)
-                        playing = set(ids.values())
-                        if len(playing) < 15:            # too few name matches: don't trust it
-                            playing = set(reg.index)
-                    else:
-                        playing = set(reg.index)
+                    # Conservative: a regular counts as out only when Daily Faceoff explicitly lists him injured/out
+                    out_ids = set(skaters.match_players(lu["out"], P, t).values()) if lu else set()
+                    playing = set(reg.index) - out_ids
                     lost[t] = skaters.missing_impact(P, reg, playing)
                     gone = [p for p in reg.index if p not in playing]
                     missing[t] = P.set_index("playerId").reindex(gone)["name"].dropna().tolist()
