@@ -1,0 +1,508 @@
+[
+ {
+  "team": "MTL",
+  "updated": "2026-10-30T14:01:39.342Z",
+  "categories": [
+   [
+    "ev",
+    "d1"
+   ],
+   [
+    "ev",
+    "d2"
+   ],
+   [
+    "ev",
+    "d3"
+   ],
+   [
+    "ev",
+    "f1"
+   ],
+   [
+    "ev",
+    "f2"
+   ],
+   [
+    "ev",
+    "f3"
+   ],
+   [
+    "ev",
+    "f4"
+   ],
+   [
+    "ev",
+    "g"
+   ],
+   [
+    "oi",
+    "ir"
+   ],
+   [
+    "pk",
+    "pk1"
+   ],
+   [
+    "pk",
+    "pk2"
+   ],
+   [
+    "pp",
+    "pp1"
+   ],
+   [
+    "pp",
+    "pp2"
+   ]
+  ],
+  "dfo_dress": [
+   "Adam Engstrom",
+   "Alex Newhook",
+   "Alexandre Carrier",
+   "Alexandre Texier",
+   "Arber Xhekaj",
+   "Chris Kreider",
+   "Cole Caufield",
+   "Florian Xhekaj",
+   "Jake Evans",
+   "Josh Anderson",
+   "Juraj Slafkovsky",
+   "Kaiden Guhle",
+   "Kirby Dach",
+   "Lane Hutson",
+   "Noah Dobson",
+   "Oliver Kapanen",
+   "Phillip Danault",
+   "Zack Bolduc"
+  ],
+  "dfo_out": [
+   "Ivan Demidov",
+   "Mike Matheson",
+   "Sam Montembeault"
+  ],
+  "injured_flags": [
+   [
+    "Ivan Demidov",
+    "ir",
+    "oi"
+   ],
+   [
+    "Sam Montembeault",
+    "ir",
+    "oi"
+   ],
+   [
+    "Mike Matheson",
+    "dtd",
+    "oi"
+   ]
+  ],
+  "unmatched_dfo": [
+   "Juraj Slafkovsky"
+  ],
+  "regulars": [
+   "Chris Kreider",
+   "Phillip Danault",
+   "Josh Anderson",
+   "Jake Evans",
+   "Alexandre Carrier",
+   "Nick Suzuki",
+   "Alexandre Texier",
+   "Noah Dobson",
+   "Kirby Dach",
+   "Cole Caufield",
+   "Alex Newhook",
+   "Kaiden Guhle",
+   "Zachary Bolduc",
+   "Oliver Kapanen",
+   "Arber Xhekaj",
+   "Lane Hutson",
+   "Juraj Slafkovsk",
+   "Adam Engstrom"
+  ],
+  "regular_not_in_dfo": [
+   "Nick Suzuki",
+   "Juraj Slafkovsk"
+  ],
+  "mp_team_pool": [
+   "Chris Kreider",
+   "David Savard",
+   "Phillip Danault",
+   "Mike Matheson",
+   "Josh Anderson",
+   "Sammy Blais",
+   "Jake Evans",
+   "Alexandre Carrier",
+   "Brandon Gignac",
+   "Patrik Laine",
+   "Nick Suzuki",
+   "Alexandre Texier",
+   "Noah Dobson",
+   "Jesse Ylnen",
+   "Kirby Dach",
+   "Cole Caufield",
+   "Alex Newhook",
+   "Kaiden Guhle",
+   "Zachary Bolduc",
+   "Joshua Roy",
+   "Oliver Kapanen",
+   "Arber Xhekaj",
+   "Owen Beck",
+   "Lane Hutson",
+   "Juraj Slafkovsk",
+   "Lucas Condotta",
+   "Adam Engstrom",
+   "Jared Davidson",
+   "David Reinbacher",
+   "Florian Xhekaj",
+   "Ivan Demidov"
+  ]
+ },
+ {
+  "team": "TOR",
+  "updated": "2026-10-30T19:44:42.261Z",
+  "categories": [
+   [
+    "ev",
+    "d1"
+   ],
+   [
+    "ev",
+    "d2"
+   ],
+   [
+    "ev",
+    "d3"
+   ],
+   [
+    "ev",
+    "f1"
+   ],
+   [
+    "ev",
+    "f2"
+   ],
+   [
+    "ev",
+    "f3"
+   ],
+   [
+    "ev",
+    "f4"
+   ],
+   [
+    "ev",
+    "g"
+   ],
+   [
+    "oi",
+    "ir"
+   ],
+   [
+    "pk",
+    "pk1"
+   ],
+   [
+    "pk",
+    "pk2"
+   ],
+   [
+    "pp",
+    "pp1"
+   ],
+   [
+    "pp",
+    "pp2"
+   ]
+  ],
+  "dfo_dress": [
+   "Auston Matthews",
+   "Brandon Duhaime",
+   "Chris Tanev",
+   "Colton Sissons",
+   "Dakota Joshua",
+   "Darren Raddysh",
+   "Easton Cowan",
+   "Gavin McKenna",
+   "Jack Roslovic",
+   "Jake McCabe",
+   "Morgan Rielly",
+   "Nick Paul",
+   "Oliver Ekman-Larsson",
+   "Teddy Blueger",
+   "Troy Stecher",
+   "Vinni Lettieri",
+   "William Nylander",
+   "Zack MacEwen"
+  ],
+  "dfo_out": [
+   "Elvis Merzlikins",
+   "John Tavares",
+   "Kirill Marchenko",
+   "Marshall Rifai",
+   "Max Domi"
+  ],
+  "injured_flags": [
+   [
+    "Elvis Merzlikins",
+    "ir",
+    "oi"
+   ],
+   [
+    "Max Domi",
+    "ir",
+    "oi"
+   ],
+   [
+    "Dakota Joshua",
+    "ir",
+    "oi"
+   ],
+   [
+    "Kirill Marchenko",
+    "ir",
+    "oi"
+   ],
+   [
+    "Marshall Rifai",
+    "out",
+    "oi"
+   ],
+   [
+    "John Tavares",
+    "out",
+    "oi"
+   ]
+  ],
+  "unmatched_dfo": [],
+  "regulars": [
+   "Oliver Ekman-Larsson",
+   "Morgan Rielly",
+   "Colton Sissons",
+   "Teddy Blueger",
+   "Jake McCabe",
+   "Nick Paul",
+   "William Nylander",
+   "Darren Raddysh",
+   "Jack Roslovic",
+   "Auston Matthews",
+   "Troy Stecher",
+   "Brandon Duhaime",
+   "Zack MacEwen",
+   "Vinni Lettieri",
+   "Kirill Marchenko",
+   "Nick Blankenburg",
+   "Easton Cowan",
+   "Gavin McKenna"
+  ],
+  "regular_not_in_dfo": [
+   "Kirill Marchenko",
+   "Nick Blankenburg"
+  ],
+  "mp_team_pool": [
+   "Mark Giordano",
+   "Max Pacioretty",
+   "John Tavares",
+   "Oliver Ekman-Larsson",
+   "Chris Tanev",
+   "Calle Jarnkrok",
+   "Jani Hakanp",
+   "Morgan Rielly",
+   "Colton Sissons",
+   "Teddy Blueger",
+   "Jake McCabe",
+   "Matt Benning",
+   "Nick Paul",
+   "Max Domi",
+   "Dakota Mermis",
+   "William Nylander",
+   "Dakota Joshua",
+   "Darren Raddysh",
+   "Jack Roslovic",
+   "Steven Lorentz",
+   "Philippe Myers",
+   "Auston Matthews",
+   "Max Lajoie",
+   "Alex Nylander",
+   "Troy Stecher",
+   "Brandon Duhaime",
+   "Michael Pezzetta",
+   "Zack MacEwen",
+   "Vinni Lettieri",
+   "Bo Groulx",
+   "Kirill Marchenko",
+   "Henry Thrun",
+   "William Villeneuve",
+   "Ryan Tverberg",
+   "Marshall Rifai",
+   "Nick Blankenburg",
+   "Easton Cowan",
+   "Jacob Quillan",
+   "Luke Haymes",
+   "Gavin McKenna"
+  ]
+ },
+ {
+  "team": "VAN",
+  "updated": "2026-10-31T11:36:07.238Z",
+  "categories": [
+   [
+    "ev",
+    "d1"
+   ],
+   [
+    "ev",
+    "d2"
+   ],
+   [
+    "ev",
+    "d3"
+   ],
+   [
+    "ev",
+    "f1"
+   ],
+   [
+    "ev",
+    "f2"
+   ],
+   [
+    "ev",
+    "f3"
+   ],
+   [
+    "ev",
+    "f4"
+   ],
+   [
+    "ev",
+    "g"
+   ],
+   [
+    "oi",
+    "ir"
+   ],
+   [
+    "pk",
+    "pk1"
+   ],
+   [
+    "pk",
+    "pk2"
+   ],
+   [
+    "pp",
+    "pp1"
+   ],
+   [
+    "pp",
+    "pp2"
+   ]
+  ],
+  "dfo_dress": [
+   "Arshdeep Bains",
+   "Brock Boeser",
+   "Drew O'Connor",
+   "Elias Nils Pettersson",
+   "Elias Pettersson",
+   "Filip Hronek",
+   "Jacob Quillan",
+   "Jake DeBrusk",
+   "Jamie Oleksiak",
+   "Jonathan Lekkerimaki",
+   "Liam Ohgren",
+   "Linus Karlsson",
+   "Marco Rossi",
+   "Max Sasson",
+   "Paul Cotter",
+   "Tom Willander",
+   "Victor Mancini",
+   "Zeev Buium"
+  ],
+  "dfo_out": [
+   "Filip Chytil",
+   "Thatcher Demko"
+  ],
+  "injured_flags": [
+   [
+    "Thatcher Demko",
+    "ir",
+    "oi"
+   ],
+   [
+    "Filip Chytil",
+    "ir",
+    "oi"
+   ]
+  ],
+  "unmatched_dfo": [
+   "Elias Nils Pettersson",
+   "Jacob Quillan",
+   "Jonathan Lekkerimaki"
+  ],
+  "regulars": [
+   "Brendan Gallagher",
+   "Jamie Oleksiak",
+   "Brock Boeser",
+   "Jake DeBrusk",
+   "Filip Hronek",
+   "Elias Pettersson",
+   "Filip Chytil",
+   "Linus Karlsson",
+   "Paul Cotter",
+   "Drew O'Connor",
+   "Marco Rossi",
+   "Arshdeep Bains",
+   "Jonathan Lekkerimki",
+   "Liam Ohgren",
+   "Elias Pettersson",
+   "Max Sasson",
+   "Tom Willander",
+   "Zeev Buium"
+  ],
+  "regular_not_in_dfo": [
+   "Brendan Gallagher",
+   "Elias Pettersson",
+   "Filip Chytil",
+   "Jonathan Lekkerimki"
+  ],
+  "mp_team_pool": [
+   "Luke Schenn",
+   "Evander Kane",
+   "Derek Forbort",
+   "Brendan Gallagher",
+   "Joseph LaBate",
+   "Jamie Oleksiak",
+   "Phillip Di Giuseppe",
+   "Mackenzie MacEachern",
+   "Mark Friedman",
+   "Brock Boeser",
+   "Guillaume Brisebois",
+   "Jake DeBrusk",
+   "Filip Hronek",
+   "Elias Pettersson",
+   "Pierre-Olivier Joseph",
+   "Erik Brannstrom",
+   "Filip Chytil",
+   "Linus Karlsson",
+   "Paul Cotter",
+   "Drew O'Connor",
+   "Marco Rossi",
+   "Nils Aman",
+   "Aatu Rty",
+   "Arshdeep Bains",
+   "Kirill Kudryavtsev",
+   "Jonathan Lekkerimki",
+   "Liam Ohgren",
+   "Elias Pettersson",
+   "Victor Mancini",
+   "Max Sasson",
+   "Tom Willander",
+   "Akito Hirose",
+   "Ty Mueller",
+   "Zeev Buium",
+   "Braeden Cootes"
+  ]
+ }
+]
