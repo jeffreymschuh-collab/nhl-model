@@ -1,0 +1,44 @@
+== dailyfaceoff robots.txt
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /cms/
+
+# Host
+Host: https://www.dailyfaceoff.com
+
+# Main sitemap
+Sitemap: https://www.dailyfaceoff.com/sitemap.xml
+
+# Google News sitemap
+Sitemap: https://www.dailyfaceoff.com/googlenewssitemap
+
+# News sitemaps
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2026.xml
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2025.xml
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2024.xml
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2023.xml
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2022.xml
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2021.xml
+Sitemap: https://www.dailyfaceoff.com/news-sitemap-2020.xml
+
+== dailyfaceoff starting-goalies
+http 200 217481
+pageProps keys: ['data', 'date', 'specificDate', 'toolkitPosts', 'stubData']
+list data 10 item keys: ['homeTeamId', 'homeTeamName', 'homeTeamAbbreviation', 'homeTeamSlug', 'homeTeamFantasydataId', 'homeTeamLogoSvg', 'homeTeamPrimaryColor', 'homeTeamSecondaryColor', 'homeGoalieId', 'homeGoalieLegacyId', 'homeGoalieFantasydataId', 'homeGoaliePuckpediaUrlId', 'homeGoalieSlug', 'homeGoalieName', 'homeGoalieRating', 'homeGoaliePositionRank', 'homeGoaliePositionRankColor', 'homeGoalieFantasydataFaceUrl', 'homeGoalieHeadshotUrl', 'homeGoalieWins', 'homeGoalieLosses', 'homeGoalieOvertimeLosses', 'homeGoalieShutouts', 'homeGoalieSavePercentage', 'homeGoalieGoalsAgainstAvg', 'homeGoalieFantasySalary', 'homeGoalieCapHit', 'homeGoalieContractLength', 'homeGoalieContractExpiryYear', 'homeGoalieContractExpiresAs', 'homeNewsStrengthId', 'homeNewsStrengthName', 'homeNewsDetails', 'homeNewsFantasyDetails', 'homeNewsSourceName', 'homeNewsSourceUrl', 'homeNewsCreatedAt', 'awayTeamId', 'awayTeamName', 'awayTeamAbbreviation', 'awayTeamSlug', 'awayTeamFantasydataId', 'awayTeamLogoSvg', 'awayTeamPrimaryColor', 'awayTeamSecondaryColor', 'awayGoalieId', 'awayGoalieLegacyId', 'awayGoalieFantasydataId', 'awayGoaliePuckpediaUrlId', 'awayGoalieSlug', 'awayGoalieName', 'awayGoalieRating', 'awayGoaliePositionRank', 'awayGoaliePositionRankColor', 'awayGoalieFantasydataFaceUrl', 'awayGoalieHeadshotUrl', 'awayGoalieWins', 'awayGoalieLosses', 'awayGoalieOvertimeLosses', 'awayGoalieShutouts']
+{"homeTeamId": 11, "homeTeamName": "Detroit Red Wings", "homeTeamAbbreviation": "DET", "homeTeamSlug": "detroit-red-wings", "homeTeamFantasydataId": 3, "homeTeamLogoSvg": "https://api.dailyfaceoff.com/uploads/team/logo_svg/11/detroit-red-wings.svg", "homeTeamPrimaryColor": "#EC1F26", "homeTeamSecondaryColor": "#000000", "homeGoalieId": 1870, "homeGoalieLegacyId": 2257, "homeGoalieFantasydataId": 30000874, "homeGoaliePuckpediaUrlId": "john-gibson", "homeGoalieSlug": "1870-john-gibson", "homeGoalieName": "John Gibson", "homeGoalieRating": 68.55494436502451, "homeGoaliePositionRank": 25, "homeGoaliePositionRankColor": "#fff2d0", "homeGoalieFantasydataFaceUrl": "https://bctn-data.s3.amazonaws.com/headshots/nhl/200x200/4/468c9cd9-782e-40e1-a7da-9fe91acdafd9.jpg", "homeGoalieHeadshotUrl": "https://api.dailyfaceoff.com/uploads/player/headshot/1870/Gibson-John_DET-1_.png", "homeGoalieWins": 4, "homeGoalieLosses": 4, "homeGoalieOvertimeLosses": 1, "homeGoalieShutouts": 0, "homeGoalieSavePercentage": "0.87", "homeGoalieGoalsAgainstAvg": "3.09", "homeGoalieFantasySalary": null, "homeGoalieCapHit": 6400000, "homeGoalieContractLength": 8, "homeGoalieContractExpiryYear": 2027, "homeGoalieContractExpiresAs": "UFA", "homeNewsStrengthId": 2, "homeNewsStrengthName": "Confirmed", "homeNewsDetails": "Gibson will start vs. St. Louis on Saturday. ", "homeNewsFantasyDetails": "Amid team drama, primarily circulating around Dylan Larkin's trade request, the Red Wings have quietly put together a span 
+== moneypuck shots_2026.zip
+-rw-r--r-- 1 runner runner 2882196 Oct 31 19:16 /tmp/z.zip
+['shots_2026.csv']
+shotID,arenaAdjustedShotDistance,arenaAdjustedXCord,arenaAdjustedXCordABS,arenaAdjustedYCord,arenaAdjustedYCordAbs,averageRestDifference,awayEmptyNet,awayPenalty1Length,awayPenalty1TimeLeft,awaySkatersOnIce,awayTeamCode,awayTeamGoals,defendingTeamAverageTimeOnIce,defendingTeamAverageTimeOnIceOfDefencemen,defendingTeamAverageTimeOnIceOfDefencemenSinceFaceoff,defendingTeamAverageTimeOnIceOfForwards,defendingTeamAverageTimeOnIceOfForwardsSinceFaceoff,defendingTeamAverageTimeOnIceSinceFaceoff,defendingTeamDefencemenOnIce,defendingTeamForwardsOnIce,defendingTeamMaxTimeOnIce,defendingTeamMaxTimeOnIceOfDefencemen,defendingTeamMaxTimeOnIceOfDefencemenSinceFaceoff,defendingTeamMaxTimeOnIceOfForwards,defendingTeamMaxTimeOnIceOfForwardsSinceFaceoff,defendingTeamMaxTimeOnIceSinceFaceoff,defendingTeamMinTimeOnIce,defendingTeamMinTimeOnIceOfDefencemen,defendingTeamMinTimeOnIceOfDefencemenSinceFaceoff,defendingTeamMinTimeOnIceOfForwards,defendingTeamMinTimeOnIceOfForwardsSinceFaceoff,defendingTeamMinTimeOnIceSinceFaceoff,distanceFromLastEvent,event,game_id,goal,goalieIdForShot,goalieNameForShot,homeEmptyNet,homePenalty1Length,homePenalty1TimeLeft,homeSkatersOnIce,homeTeamCode,homeTeamGoals,homeTeamWon,id,isHomeTeam,isPlayoffGame,lastEventCategory,lastEventShotAngle,lastEventShotDistance,lastEventTeam,lastEventxCord,lastEventxCord_adjusted,lastEventyCord,lastEventyCord_adjusted,location,offWing,period,playerNumThatDidEvent,playerNumThatDidLastEvent,playerPositionThatDidEvent,season,shooterLeftRight,shooterName,shooterPlayerId,shooterTimeOnIce,shooterTimeOnIceSinceFaceoff,shootingTeamAverageTimeOnIce,shootingTeamAverageTimeOnIceOfDefencemen,shootingTeamAverageTimeOnIceOfDefencemenSinceFaceoff,shootingTeamAverageTimeOnIceOfForwards,shootingTeamAverageTimeOnIceOfForwardsSinceFaceoff,shootingTeamAverageTimeOnIceSinceFaceoff,shootingTeamDefencemenOnIce,shootingTeamForwardsOnIce,shootingTeamMaxTimeOnIce,shootingTeamMaxTimeOnIceOfDefencemen,shootingTeamMaxTimeOnIceOfDefencemenSinceFaceoff,shootingTeamMaxTimeOnIceOfForwards,shootingTeamMaxTimeOnIceOfForwardsSinceFaceoff,shootingTeamMaxTimeOnIceSinceFaceoff,shootingTeamMinTimeOnIce,shootingTeamMinTimeOnIceOfDefencemen,shootingTeamMinTimeOnIceOfDefencemenSinceFaceoff,shootingTeamMinTimeOnIceOfForwards,shootingTeamMinTimeOnIceOfForwardsSinceFaceoff,shootingTeamMinTimeOnIceSinceFaceoff,shotAngle,shotAngleAdjusted,shotAnglePlusRebound,shotAnglePlusReboundSpeed,shotAngleReboundRoyalRoad,shotDistance,shotGeneratedRebound,shotGoalieFroze,shotOnEmptyNet,shotPlayContinuedInZone,shotPlayContinuedOutsideZone,shotPlayStopped,shotRebound,shotRush,shotType,shotWasOnGoal,speedFromLastEvent,team,teamCode,time,timeDifferenceSinceChange,timeSinceFaceoff,timeSinceLastEvent,timeUntilNextEvent,xCord,xCordAdjusted,xFroze,xGoal,xPlayContinuedInZone,xPlayContinuedOutsideZone,xPlayStopped,xRebound,xShotWasOnGoal,yCord,yCordAdjusted
+
+0,78.0,12.0,12.0,-15.0,15.0,1.4,0,0,0,5,FLA,0,33.8,10.5,10.5,49.3333333333,27.0,20.4,2,3,54,11,11,54,27,27,10,10,10,47,27,10,105.076162853,SHOT,20001,0,8483548,Brandon Bussi,0,0,0,5,CAR,0,0,25,0.0,0,HIT,0.0,0.0,AWAY,-92,-92,-30,-30,Neu. Zone,0,1,13,0,C,2026,R,Sam Reinhart,8477933,47,27,38.6,24.0,14.0,48.3333333333,27.0,21.8,2,3,52,47,27,52,27,27,1,1,1,46,27,1,-11.0234559637,11.0234559637,0.0,0.0,0,78.4474346298,0,0,0,0,1,0,0,0,WRIST,1.0,15.0108804076,AWAY,FLA,263,-9,27,7,6,12,12,0.04471,0.00496,0.27933,0.66145,0.00026,0.00929,0.843807,-15,-15
+
+== moneypuck seasonPlayersSummary/goalies/2026.zip
+-rw-r--r-- 1 runner runner 96826 Oct 31 19:16 /tmp/z.zip
+['2026.csv']
+playerId,name,gameId,season,playerTeam,opposingTeam,home_or_away,gameDate,position,situation,icetime,xGoals,goals,unblocked_shot_attempts,xRebounds,rebounds,xFreeze,freeze,xOnGoal,ongoal,xPlayStopped,playStopped,xPlayContinuedInZone,playContinuedInZone,xPlayContinuedOutsideZone,playContinuedOutsideZone,flurryAdjustedxGoals,lowDangerShots,mediumDangerShots,highDangerShots,lowDangerxGoals,mediumDangerxGoals,highDangerxGoals,lowDangerGoals,mediumDangerGoals,highDangerGoals,blocked_shot_attempts,penalityMinutes,penalties
+
+8480843,Lukas Dostal,2026020021,2026,ANA,VGK,AWAY,20261002,G,other,185.0,0.412,0.0,7.0,0.706,0.0,0.648,1.0,4.127,3.0,0.0,0.0,2.277,4.0,0.942,0.0,0.392,2.0,3.0,0.0,0.028,0.385,0.0,0.0,0.0,0.0,2.0,0.0,0.0
+
