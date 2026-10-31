@@ -6,8 +6,8 @@
 "selection": "CGY +2.5",
 "price": "-120",
 "units": 2.0,
-"close": "",
-"clv_pct": null,
+"close": "-120",
+"clv_pct": 0.0,
 "result": "",
 "profit_units": null
 },
