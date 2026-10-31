@@ -1,0 +1,95 @@
+{
+ "tuned_on": 20242025,
+ "tested_on": 20252026,
+ "test_games": 1312,
+ "params": {
+  "rest": true,
+  "half_life_days": 120,
+  "season_carry": 1.0,
+  "alpha": 0.02,
+  "w_shots": 0.5,
+  "w_xg": 0.0,
+  "en_shift": 0.3,
+  "ot_k": 0.7,
+  "goalie_k": 0.5,
+  "goalie_metric": "sv"
+ },
+ "test_log_loss": {
+  "Moneyline (home wins)": {
+   "model": 0.6823,
+   "baseline": 0.6939,
+   "previous_model": 0.6823,
+   "improvement_pct": 1.67,
+   "vs_previous_pct": 0.0
+  },
+  "Puck line (home -1.5)": {
+   "model": 0.6027,
+   "baseline": 0.616,
+   "previous_model": 0.6027,
+   "improvement_pct": 2.17,
+   "vs_previous_pct": 0.0
+  },
+  "Total over 5.5": {
+   "model": 0.679,
+   "baseline": 0.683,
+   "previous_model": 0.679,
+   "improvement_pct": 0.59,
+   "vs_previous_pct": 0.0
+  },
+  "Total over 6.5": {
+   "model": 0.6916,
+   "baseline": 0.6928,
+   "previous_model": 0.6916,
+   "improvement_pct": 0.17,
+   "vs_previous_pct": 0.0
+  }
+ },
+ "shipped": false,
+ "back_to_back_effects": {
+  "own_goals_when_b2b": 0.947,
+  "goals_allowed_when_b2b": 1.015
+ },
+ "ml_calibration_test": [
+  {
+   "pred": 0.404,
+   "actual": 0.433,
+   "n": 164
+  },
+  {
+   "pred": 0.465,
+   "actual": 0.482,
+   "n": 164
+  },
+  {
+   "pred": 0.494,
+   "actual": 0.5,
+   "n": 164
+  },
+  {
+   "pred": 0.517,
+   "actual": 0.457,
+   "n": 164
+  },
+  {
+   "pred": 0.541,
+   "actual": 0.53,
+   "n": 164
+  },
+  {
+   "pred": 0.564,
+   "actual": 0.543,
+   "n": 164
+  },
+  {
+   "pred": 0.595,
+   "actual": 0.573,
+   "n": 164
+  },
+  {
+   "pred": 0.653,
+   "actual": 0.659,
+   "n": 164
+  }
+ ],
+ "note": "Baseline = always predict the historical average rate. previous_model = the model that was live before this run, scored on the same games. Goalie terms use the actual starter (the 5pm confirmed-starter situation). Real edge is measured live via CLV."
+}
