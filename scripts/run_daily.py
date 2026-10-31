@@ -91,6 +91,14 @@ def main():
                     pid, team = goalies.find_goalie(gl, d["name"], {h, aw}, day)
                     if pid is not None and team == t:
                         starters[t] = pid; source[t] = f"Daily Faceoff ({d['status']})"
+        # Next: Daily Faceoff's projection even when unconfirmed (it knows about injuries), then the usual starter
+        if gl is not None:
+            for t in (h, aw):
+                d = dfo.get(t)
+                if t not in starters and d:
+                    pid, team = goalies.find_goalie(gl, d["name"], {h, aw}, day)
+                    if pid is not None and team == t:
+                        starters[t] = pid; source[t] = f"Daily Faceoff ({d['status']})"
         if gctx is not None:
             for t in (h, aw):
                 starters.setdefault(t, gctx.projected_starter(t, day))
