@@ -5,57 +5,57 @@
  "params": {
   "sv_prior_shots": 1500,
   "sv_half_life": 365,
-  "shots_disp": 120.0,
+  "shots_disp": 60.0,
   "pull_ga": 3,
   "pull_p": 0.4,
   "ot_shots": 2.0,
   "w_model": 0.35,
-  "goalie_metric": "sv",
-  "gsax_prior_xg": 20.0
+  "goalie_metric": "gsax",
+  "gsax_prior_xg": 80.0
  },
  "test": {
-  "avg_log_likelihood_model": -3.3215,
-  "avg_log_likelihood_baseline": -3.3873,
-  "over_24_5_logloss_model": 0.6559,
-  "over_24_5_logloss_baseline": 0.6909,
-  "over_24_5_improvement_pct": 5.06,
-  "mean_abs_error_saves": 5.26
+  "avg_log_likelihood_model": -3.3172,
+  "avg_log_likelihood_baseline": -3.379,
+  "over_24_5_logloss_model": 0.6551,
+  "over_24_5_logloss_baseline": 0.6905,
+  "over_24_5_improvement_pct": 5.13,
+  "mean_abs_error_saves": 5.25
  },
  "over_24_5_calibration": [
   {
-   "pred": 0.316,
-   "actual": 0.251,
+   "pred": 0.307,
+   "actual": 0.247,
    "n": 219.0
   },
   {
-   "pred": 0.403,
-   "actual": 0.361,
+   "pred": 0.393,
+   "actual": 0.384,
    "n": 219.0
   },
   {
-   "pred": 0.457,
-   "actual": 0.429,
-   "n": 219.0
-  },
-  {
-   "pred": 0.502,
-   "actual": 0.555,
+   "pred": 0.447,
+   "actual": 0.413,
    "n": 218.0
   },
   {
-   "pred": 0.549,
-   "actual": 0.532,
+   "pred": 0.492,
+   "actual": 0.539,
+   "n": 219.0
+  },
+  {
+   "pred": 0.539,
+   "actual": 0.528,
    "n": 218.0
   },
   {
-   "pred": 0.626,
-   "actual": 0.626,
+   "pred": 0.617,
+   "actual": 0.644,
    "n": 219.0
   }
  ],
  "previous_model_test": {
-  "avg_log_likelihood": -3.3182,
-  "over_24_5_logloss": 0.6564
+  "avg_log_likelihood": -3.3135,
+  "over_24_5_logloss": 0.6546
  },
  "shipped": false,
  "note": "Baseline knows only league-average shots and save %. Tuned on the first half of 2025-26, tested on the second half."
