@@ -14,16 +14,16 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nhlmodel import features, goalies, moneypuck, nhl_api, ratings  # noqa: E402
+from nhlmodel import features, goalies, moneypuck, nhl_api, ratings, skaters  # noqa: E402
 from nhlmodel.saves_pricing import load_saves_params  # noqa: E402
 from nhlmodel.config import DEFAULT_PARAMS, PARAMS_JSON, RESULTS_DIR  # noqa: E402
 from nhlmodel.probs import score_matrix  # noqa: E402
 
 TUNE, TEST = 20242025, 20252026
-FIT_GRID = {"covs": [("b2b",), ("b2b", "3in4", "travel"), ("b2b", "st"), ("b2b", "3in4", "travel", "st")],
-            "half_life_days": [120], "season_carry": [1.0], "alpha": [0.02, 0.04]}
-CHEAP_GRID = {"w_shots": [0.35, 0.5], "w_xg": [0.0, 0.25], "en_shift": [0.3], "ot_k": [0.7],
-              "goalie_k": [0.5, 1.0], "goalie_metric": ["sv", "gsax"]}
+FIT_GRID = {"covs": [("b2b", "st"), ("b2b", "st", "lineup")],
+            "half_life_days": [120], "season_carry": [1.0], "alpha": [0.02, 0.03]}
+CHEAP_GRID = {"w_shots": [0.5], "w_xg": [0.0], "en_shift": [0.3], "ot_k": [0.7],
+              "goalie_k": [0.5, 0.75], "goalie_metric": ["sv"]}
 
 
 def outcomes(f):
@@ -113,6 +113,11 @@ def main():
     mp = moneypuck.update()
     mpg = moneypuck.update_goalie_games()
     fin = moneypuck.attach_xg(nhl_api.finals(features.add_context(games, mp)), mp)
+    sk = skaters.update_skater_games()
+    if sk is not None:
+        lt = skaters.lineup_table(sk, games[games["state"].isin(["OFF", "FINAL"])])
+        fin = skaters.add_lineup_covs(fin, lt)
+        print(f"lineup covariates for {len(lt)} team-games; mean offense lost {lt['off_lost'].mean():.3f}")
     gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp, mpg)
     print(f"{len(fin)} completed games ({fin['home_xg'].notna().mean():.0%} with MoneyPuck xG), {len(gl)} goalie appearances")
     sp = load_saves_params()

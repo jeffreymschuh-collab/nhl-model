@@ -13,8 +13,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import os  # noqa: E402
 
-from nhlmodel import combos, dailyfaceoff, features, goalies, moneypuck, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
-from nhlmodel.config import RESULTS_DIR, load_params  # noqa: E402
+from nhlmodel import combos, dailyfaceoff, features, skaters, goalies, moneypuck, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
+from nhlmodel.config import RESULTS_DIR, SOG_PROPS_ENABLED, load_params  # noqa: E402
+from nhlmodel import sog_pricing  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
 
@@ -43,10 +44,28 @@ def main():
         gl = moneypuck.attach_goalie_xga(gl, mpk, mpg)
     fin = moneypuck.attach_xg(nhl_api.finals(features.add_context(games, mpk)), mpk)
     dfo = dailyfaceoff.starters(day)
+    covs = params.get("covs") or []
+    use_lineup = "lineup" in covs
+    sk = P = None
+    lineups = {}
+    try:
+        sk = skaters.update_skater_games()
+        if sk is not None:
+            P = skaters.player_ratings(sk, day)
+            if use_lineup:
+                lt = skaters.lineup_table(sk, games[games["state"].isin(["OFF", "FINAL"])])
+                fin = skaters.add_lineup_covs(fin, lt)
+    except Exception as err:
+        print(f"[skaters] unavailable: {err}"); use_lineup = False
     R = ratings.fit(fin, day, params)
 
     slate = nhl_api.games_on(day)
     slate = [g for g in slate if g["state"] in ("FUT", "PRE")]
+    if sk is not None:
+        try:
+            lineups = dailyfaceoff.projected_lineups({g["home"] for g in slate} | {g["away"] for g in slate})
+        except Exception as err:
+            print(f"[dailyfaceoff] lineups failed: {err}")
     short = {g["home"]: g["home_name"] for g in slate} | {g["away"]: g["away_name"] for g in slate}
     by_pair = {(g["home"], g["away"]): g for g in slate}
 
@@ -108,6 +127,24 @@ def main():
                 starters.setdefault(t, gctx.projected_starter(t, day))
         try:
             ctx = features.context_today(games, mpk, h, aw, day)
+            missing = {}
+            if P is not None and len(P):
+                lost = {}
+                for t in (h, aw):
+                    reg = skaters.regulars(sk, t, day)
+                    lu = lineups.get(t)
+                    if lu:
+                        ids = skaters.match_players(lu["skaters"], P, t)
+                        playing = set(ids.values())
+                        if len(playing) < 15:            # too few name matches: don't trust it
+                            playing = set(reg.index)
+                    else:
+                        playing = set(reg.index)
+                    lost[t] = skaters.missing_impact(P, reg, playing)
+                    gone = [p for p in reg.index if p not in playing]
+                    missing[t] = P.set_index("playerId").reindex(gone)["name"].dropna().tolist()
+                ctx.update({"h_lineup_att": lost[h][0], "h_lineup_def": lost[aw][1],
+                            "a_lineup_att": lost[aw][0], "a_lineup_def": lost[h][1]})
             lh, la = R.expected_goals(h, aw, b2b[h], b2b[aw], ctx=ctx)
         except KeyError as err:
             print(f"[skip] {aw}@{h}: {err}")
@@ -129,7 +166,8 @@ def main():
                "start_utc": g["start_utc"], "xg_home": round(lh, 2), "xg_away": round(la, 2),
                "model_home_win": round(mp["ml_home"], 3), "model_over_6_5": round(o, 3),
                "home_b2b": b2b[h], "away_b2b": b2b[aw],
-               "home_goalie": names.get(h), "away_goalie": names.get(aw), "home_goalie_source": source[h], "away_goalie_source": source[aw],
+               "home_goalie": names.get(h), "away_goalie": names.get(aw),
+               "home_missing": missing.get(h, []), "away_missing": missing.get(aw, []), "home_goalie_source": source[h], "away_goalie_source": source[aw],
                "home_goalie_factor": round(r_h, 3), "away_goalie_factor": round(r_a, 3),
                "lines": [], "bets": []}
         if e:
@@ -150,6 +188,12 @@ def main():
                     lines += srows; saves_diag += sd
                 except Exception as err:
                     saves_diag.append({"game": row["matchup"], "note": f"saves pricing failed: {err}"})
+            if SOG_PROPS_ENABLED and do_saves and P is not None and len(P):
+                try:
+                    lg_ts = fin.tail(1000)[["home_sog", "away_sog"]].stack().mean()
+                    lines += sog_pricing.price_game(e, g, R, P, lineups, lg_ts)
+                except Exception as err:
+                    saves_diag.append({"game": row["matchup"], "note": f"shots-on-goal pricing failed: {err}"})
             row["lines"] = lines
             for ln in lines:
                 all_lines[(g["game_id"], ln["market"], ln["side"],
