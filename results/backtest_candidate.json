@@ -3,7 +3,10 @@
  "tested_on": 20252026,
  "test_games": 1312,
  "params": {
-  "rest": true,
+  "covs": [
+   "b2b",
+   "st"
+  ],
   "half_life_days": 120,
   "season_carry": 1.0,
   "alpha": 0.02,
@@ -16,78 +19,80 @@
  },
  "test_log_loss": {
   "Moneyline (home wins)": {
-   "model": 0.6823,
+   "model": 0.6816,
    "baseline": 0.6939,
-   "previous_model": 0.6823,
-   "improvement_pct": 1.67,
+   "previous_model": 0.6816,
+   "improvement_pct": 1.77,
    "vs_previous_pct": 0.0
   },
   "Puck line (home -1.5)": {
-   "model": 0.6027,
+   "model": 0.602,
    "baseline": 0.616,
-   "previous_model": 0.6027,
-   "improvement_pct": 2.17,
+   "previous_model": 0.602,
+   "improvement_pct": 2.27,
    "vs_previous_pct": 0.0
   },
   "Total over 5.5": {
-   "model": 0.679,
+   "model": 0.6784,
    "baseline": 0.683,
-   "previous_model": 0.679,
-   "improvement_pct": 0.59,
+   "previous_model": 0.6784,
+   "improvement_pct": 0.68,
    "vs_previous_pct": 0.0
   },
   "Total over 6.5": {
-   "model": 0.6916,
+   "model": 0.6911,
    "baseline": 0.6928,
-   "previous_model": 0.6916,
-   "improvement_pct": 0.17,
+   "previous_model": 0.6911,
+   "improvement_pct": 0.24,
    "vs_previous_pct": 0.0
   }
  },
  "shipped": false,
  "back_to_back_effects": {
-  "own_goals_when_b2b": 0.947,
-  "goals_allowed_when_b2b": 1.015
+  "b2b_own": 0.947,
+  "b2b_opp": 1.016,
+  "st_own": 0.938,
+  "st_opp": 0.921
  },
  "ml_calibration_test": [
   {
-   "pred": 0.404,
-   "actual": 0.433,
+   "pred": 0.403,
+   "actual": 0.439,
    "n": 164
   },
   {
    "pred": 0.465,
-   "actual": 0.482,
+   "actual": 0.439,
    "n": 164
   },
   {
    "pred": 0.494,
-   "actual": 0.5,
+   "actual": 0.518,
    "n": 164
   },
   {
    "pred": 0.517,
-   "actual": 0.457,
+   "actual": 0.451,
    "n": 164
   },
   {
    "pred": 0.541,
-   "actual": 0.53,
+   "actual": 0.567,
    "n": 164
   },
   {
    "pred": 0.564,
-   "actual": 0.543,
+   "actual": 0.524,
    "n": 164
   },
   {
-   "pred": 0.595,
+   "pred": 0.596,
    "actual": 0.573,
    "n": 164
   },
   {
-   "pred": 0.653,
-   "actual": 0.659,
+   "pred": 0.654,
+   "actual": 0.665,
    "n": 164
   }
  ],
