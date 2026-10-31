@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import os  # noqa: E402
 
-from nhlmodel import combos, features, goalies, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
+from nhlmodel import combos, features, goalies, moneypuck, nhl_api, odds, picks, probs, ratings, saves_pricing, tracking  # noqa: E402
 from nhlmodel.config import RESULTS_DIR, load_params  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
@@ -37,7 +37,10 @@ def main():
     except Exception as err:          # never let goalie data break the game-line run
         print(f"[goalies] update failed: {err}"); gl = None
     tracking.grade(games, gl)
-    fin = nhl_api.finals(features.add_rest(games))
+    mp = moneypuck.update()
+    if gl is not None:
+        gl = moneypuck.attach_goalie_xga(gl, mp)
+    fin = moneypuck.attach_xg(nhl_api.finals(features.add_rest(games)), mp)
     R = ratings.fit(fin, day, params)
 
     slate = nhl_api.games_on(day)
@@ -59,7 +62,7 @@ def main():
         a.saves == "on" or (a.saves == "auto" and run == "pm"))
     sp = saves_pricing.load_saves_params()
     saves_diag = []
-    gctx = features.GoalieContext(gl, sp) if gl is not None else None
+    gctx = features.GoalieContext(gl, dict(sp, goalie_metric=params.get("goalie_metric", "sv"))) if gl is not None else None
     goalie_k = float(params.get("goalie_k", 0.0))
 
     lifts = combos.lift_by_line(games, gl) if gl is not None else {}

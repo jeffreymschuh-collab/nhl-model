@@ -21,6 +21,9 @@ class Ratings:
     w_shots: float
     sh_pct: float | None = None
     rest: bool = False
+    coef_x: np.ndarray | None = None
+    icpt_x: float | None = None
+    w_xg: float = 0.0
 
     def expected_shots(self, shooter: str, defender: str, shooter_home: bool, att_b2b: int = 0, def_b2b: int = 0) -> float:
         """Shots on goal `shooter` is expected to take against `defender`."""
@@ -43,19 +46,35 @@ class Ratings:
         return {"own_goals_when_b2b": round(float(np.exp(self.coef_g[2 * n + 1])), 3),
                 "goals_allowed_when_b2b": round(float(np.exp(self.coef_g[2 * n + 2])), 3)}
 
-    def expected_goals(self, home: str, away: str, home_b2b: int = 0, away_b2b: int = 0) -> tuple[float, float]:
+    def components(self, home: str, away: str, home_b2b: int = 0, away_b2b: int = 0) -> dict:
+        """Expected goals from each sub-model: goals ('g'), shots ('s'), MoneyPuck xG ('x'), as (home, away)."""
         for t in (home, away):
             if t not in self.teams:
                 raise KeyError(f"no rating for {t}")
-        lh_g = self._lam(self.coef_g, self.icpt_g, home, away, 1, home_b2b, away_b2b)
-        la_g = self._lam(self.coef_g, self.icpt_g, away, home, 0, away_b2b, home_b2b)
-        if self.coef_s is None or self.w_shots == 0:
-            return lh_g, la_g
-        lh_s = self._lam(self.coef_s, self.icpt_s, home, away, 1, home_b2b, away_b2b)
-        la_s = self._lam(self.coef_s, self.icpt_s, away, home, 0, away_b2b, home_b2b)
-        w = self.w_shots
-        return float(np.exp((1 - w) * np.log(lh_g) + w * np.log(lh_s))), \
-            float(np.exp((1 - w) * np.log(la_g) + w * np.log(la_s)))
+        out = {"g": (self._lam(self.coef_g, self.icpt_g, home, away, 1, home_b2b, away_b2b),
+                     self._lam(self.coef_g, self.icpt_g, away, home, 0, away_b2b, home_b2b))}
+        if self.coef_s is not None:
+            out["s"] = (self._lam(self.coef_s, self.icpt_s, home, away, 1, home_b2b, away_b2b),
+                        self._lam(self.coef_s, self.icpt_s, away, home, 0, away_b2b, home_b2b))
+        if self.coef_x is not None:
+            out["x"] = (self._lam(self.coef_x, self.icpt_x, home, away, 1, home_b2b, away_b2b),
+                        self._lam(self.coef_x, self.icpt_x, away, home, 0, away_b2b, home_b2b))
+        return out
+
+    def expected_goals(self, home: str, away: str, home_b2b: int = 0, away_b2b: int = 0) -> tuple[float, float]:
+        c = self.components(home, away, home_b2b, away_b2b)
+        ws = self.w_shots if "s" in c else 0.0
+        wx = self.w_xg if "x" in c else 0.0
+        wg = 1.0 - ws - wx
+        res = []
+        for i in (0, 1):
+            z = wg * np.log(c["g"][i])
+            if ws:
+                z += ws * np.log(c["s"][i])
+            if wx:
+                z += wx * np.log(c["x"][i])
+            res.append(float(np.exp(z)))
+        return res[0], res[1]
 
     def table(self) -> pd.DataFrame:
         """Per-team expected goals for/against vs a league-average opponent at a neutral site."""
@@ -120,5 +139,16 @@ def fit(finals_df: pd.DataFrame, as_of: str, params: dict) -> Ratings:
         ms = PoissonRegressor(alpha=params["alpha"], max_iter=500).fit(
             _design(s, teams, rest), y_s, sample_weight=np.concatenate([sw, sw]))
         coef_s, icpt_s = ms.coef_, ms.intercept_
+    coef_x = icpt_x = None
+    w_xg = float(params.get("w_xg", 0.0))
+    if w_xg > 0 and "home_xg" in f:
+        x = f.dropna(subset=["home_xg", "away_xg"])
+        if len(x) > 0.6 * len(f):
+            xw = W[: len(f)][f.index.isin(x.index)]
+            y_x = np.concatenate([x["home_xg"].to_numpy(), x["away_xg"].to_numpy()]).astype(float)
+            mx = PoissonRegressor(alpha=params["alpha"], max_iter=500).fit(
+                _design(x, teams, rest), y_x, sample_weight=np.concatenate([xw, xw]))
+            coef_x, icpt_x = mx.coef_, mx.intercept_
     return Ratings(teams, mg.coef_, mg.intercept_, coef_s, icpt_s,
-                   params["w_shots"] if coef_s is not None else 0.0, sh_pct, rest)
+                   params["w_shots"] if coef_s is not None else 0.0, sh_pct, rest,
+                   coef_x, icpt_x, w_xg if coef_x is not None else 0.0)

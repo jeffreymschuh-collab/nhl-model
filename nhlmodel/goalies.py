@@ -28,6 +28,8 @@ SAVES_DEFAULTS = {
     "pull_p": 0.6,            # chance he is pulled once at that mark
     "ot_shots": 2.0,          # mean shots a goalie faces in OT when the game gets there
     "w_model": 0.35,          # model vs market blend for saves lines
+    "goalie_metric": "sv",    # "sv" = shrunk save %, "gsax" = goals allowed vs MoneyPuck expected goals
+    "gsax_prior_xg": 40.0,    # expected goals of league-average goaltending blended into each goalie (gsax mode)
 }
 
 
@@ -117,11 +119,24 @@ def find_goalie(gl: pd.DataFrame, full_name: str, teams: set, as_of: str):
 
 # ---------- model ----------
 def save_pct(gl: pd.DataFrame, player_id: int, as_of: str, p: dict) -> tuple[float, float, int]:
+    """Effective save % for a goalie as of a date: (goalie, league, games in history).
+
+    sv mode: shrunk raw save %.
+    gsax mode: shrunk goals-allowed / expected-goals ratio from MoneyPuck (shot quality aware),
+    turned back into a save % on league-average shot quality."""
     hist = gl[gl["date"] < as_of].dropna(subset=["shots_against", "saves"])
     ts = pd.Timestamp(as_of)
     w_all = 0.5 ** ((ts - pd.to_datetime(hist["date"])).dt.days / p["sv_half_life"])
     league = (hist["saves"] * w_all).sum() / (hist["shots_against"] * w_all).sum()
     mine = hist["player_id"] == player_id
+    if p.get("goalie_metric", "sv") == "gsax" and "xga" in hist and hist["xga"].notna().mean() > 0.6:
+        hx = hist.dropna(subset=["xga"]); wx = w_all[hx.index]; m = hx["player_id"] == player_id
+        ga_l = (hx["goals_against"] * wx).sum(); xg_l = (hx["xga"] * wx).sum()
+        r_l = ga_l / xg_l if xg_l else 1.0
+        ga = (hx.loc[m, "goals_against"] * wx[m]).sum(); xg = (hx.loc[m, "xga"] * wx[m]).sum()
+        k = p.get("gsax_prior_xg", 40.0)
+        q = (ga + k * r_l) / (xg + k)                    # goalie's goals per expected goal
+        return float(1 - (1 - league) * q / r_l), float(league), int(mine.sum())
     sa = (hist.loc[mine, "shots_against"] * w_all[mine]).sum()
     sv = (hist.loc[mine, "saves"] * w_all[mine]).sum()
     k = p["sv_prior_shots"]

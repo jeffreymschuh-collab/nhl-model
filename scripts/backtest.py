@@ -14,14 +14,15 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nhlmodel import features, goalies, nhl_api, ratings  # noqa: E402
+from nhlmodel import features, goalies, moneypuck, nhl_api, ratings  # noqa: E402
 from nhlmodel.saves_pricing import load_saves_params  # noqa: E402
 from nhlmodel.config import DEFAULT_PARAMS, PARAMS_JSON, RESULTS_DIR  # noqa: E402
 from nhlmodel.probs import score_matrix  # noqa: E402
 
 TUNE, TEST = 20242025, 20252026
-FIT_GRID = {"rest": [False, True], "half_life_days": [120, 180, 270], "season_carry": [0.8, 1.0], "alpha": [0.03, 0.06]}
-CHEAP_GRID = {"w_shots": [0.3, 0.45, 0.6], "en_shift": [0.2, 0.3], "ot_k": [0.5, 0.7], "goalie_k": [0.0, 0.5, 1.0]}
+FIT_GRID = {"rest": [True], "half_life_days": [90, 120, 180], "season_carry": [1.0], "alpha": [0.02, 0.03, 0.05]}
+CHEAP_GRID = {"w_shots": [0.2, 0.35, 0.5], "w_xg": [0.0, 0.25, 0.4], "en_shift": [0.3], "ot_k": [0.7],
+              "goalie_k": [0.5, 1.0], "goalie_metric": ["sv", "gsax"]}
 
 
 def outcomes(f):
@@ -54,20 +55,20 @@ def walk(fin, season, fit_p):
         nxt = d + timedelta(days=7)
         wk = test[(test["date"] >= d.strftime("%Y-%m-%d")) & (test["date"] < nxt.strftime("%Y-%m-%d"))]
         if len(wk):
-            R = ratings.fit(fin, d.strftime("%Y-%m-%d"), dict(DEFAULT_PARAMS, **fit_p, w_shots=0.5))
+            R = ratings.fit(fin, d.strftime("%Y-%m-%d"), dict(DEFAULT_PARAMS, **fit_p, w_shots=0.4, w_xg=0.3))
             for _, g in wk.iterrows():
                 if g["home"] not in R.teams or g["away"] not in R.teams:
                     continue
                 b = (int(g.get("home_b2b", 0)), int(g.get("away_b2b", 0)))
-                R.w_shots = 0.0; lg = R.expected_goals(g["home"], g["away"], *b)
-                R.w_shots = 1.0 if R.coef_s is not None else 0.0; ls = R.expected_goals(g["home"], g["away"], *b)
-                out.append((g["game_id"], *lg, *ls))
+                c = R.components(g["home"], g["away"], *b)
+                lg = c["g"]; ls = c.get("s", lg); lx = c.get("x", lg)
+                out.append((g["game_id"], *lg, *ls, *lx))
         d = nxt
-    x = pd.DataFrame(out, columns=["game_id", "lh_g", "la_g", "lh_s", "la_s"])
+    x = pd.DataFrame(out, columns=["game_id", "lh_g", "la_g", "lh_s", "la_s", "lh_x", "la_x"])
     return test.merge(x, on="game_id")
 
 
-def goalie_ratios(df, ctx, gl):
+def goalie_ratios(df, ctx, gl, suffix=""):
     """Actual starters' goaltending ratio vs their team's usual (confirmed-starter scenario, like the 5pm run)."""
     st = gl[gl["starter"].astype(bool)].set_index(["game_id", "team"])["player_id"]
     rh, ra = [], []
@@ -76,18 +77,19 @@ def goalie_ratios(df, ctx, gl):
         ph = int(ph.iloc[0]) if isinstance(ph, pd.Series) else (int(ph) if ph is not None else None)
         pa = int(pa.iloc[0]) if isinstance(pa, pd.Series) else (int(pa) if pa is not None else None)
         rh.append(ctx.ratio(ph, g.home, g.date)); ra.append(ctx.ratio(pa, g.away, g.date))
-    df = df.copy(); df["r_home_g"] = rh; df["r_away_g"] = ra
+    df = df.copy(); df["r_home_g" + suffix] = rh; df["r_away_g" + suffix] = ra
     return df
 
 
 def score(df, cp):
-    w = cp["w_shots"]
+    w = cp["w_shots"]; wx = cp.get("w_xg", 0.0); wg = 1 - w - wx
     k = cp.get("goalie_k", 0.0)
-    lh = np.exp((1 - w) * np.log(df["lh_g"]) + w * np.log(df["lh_s"]))
-    la = np.exp((1 - w) * np.log(df["la_g"]) + w * np.log(df["la_s"]))
-    if k and "r_home_g" in df:
-        lh = lh * df["r_away_g"] ** k      # away goalie weaker than usual -> home scores more
-        la = la * df["r_home_g"] ** k
+    lh = np.exp(wg * np.log(df["lh_g"]) + w * np.log(df["lh_s"]) + wx * np.log(df["lh_x"]))
+    la = np.exp(wg * np.log(df["la_g"]) + w * np.log(df["la_s"]) + wx * np.log(df["la_x"]))
+    sfx = "_" + cp.get("goalie_metric", "sv")
+    if k and "r_home_g" + sfx in df:
+        lh = lh * df["r_away_g" + sfx] ** k      # away goalie weaker than usual -> home scores more
+        la = la * df["r_home_g" + sfx] ** k
     preds = np.array([predict(a, b, cp["en_shift"], cp["ot_k"]) for a, b in zip(lh, la)])
     y = outcomes(df)
     res = {k: ll(preds[:, n], y[k]) for n, k in enumerate(["ml", "pl", "o55", "o65"])}
@@ -107,24 +109,32 @@ def calibration(p, y, bins=8):
 
 def main():
     games = nhl_api.update_games()
-    fin = nhl_api.finals(features.add_rest(games))
-    gl = goalies.update_goalies(games)
-    ctx = features.GoalieContext(gl, load_saves_params())
-    print(f"{len(fin)} completed games, {len(gl)} goalie appearances loaded")
+    mp = moneypuck.update()
+    fin = moneypuck.attach_xg(nhl_api.finals(features.add_rest(games)), mp)
+    gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp)
+    print(f"{len(fin)} completed games ({fin['home_xg'].notna().mean():.0%} with MoneyPuck xG), {len(gl)} goalie appearances")
+    sp = load_saves_params()
+    ctxs = {m: features.GoalieContext(gl, dict(sp, goalie_metric=m)) for m in ("sv", "gsax")}
 
     ratios = {}
     for season in (TUNE, TEST):
         base = fin[(fin["season"] == season) & (fin["game_type"] == 2)]
-        ratios[season] = goalie_ratios(base, ctx, gl)[["game_id", "r_home_g", "r_away_g"]]
+        r = base[["game_id", "home", "away", "date"]]
+        for m, ctx in ctxs.items():
+            r = goalie_ratios(r, ctx, gl, "_" + m)
+        ratios[season] = r[[c for c in r.columns if c.startswith("r_") or c == "game_id"]]
         print(f"goalie ratios ready for {season}")
 
     def run(season, fp):
-        return walk(fin, season, fp).merge(ratios[season], on="game_id", how="left").fillna({"r_home_g": 1.0, "r_away_g": 1.0})
+        d = walk(fin, season, fp).merge(ratios[season], on="game_id", how="left")
+        return d.fillna({c: 1.0 for c in d.columns if c.startswith("r_")})
 
     # Current production model, scored on the test season for an apples-to-apples comparison
     old = json.loads(PARAMS_JSON.read_text())["params"] if PARAMS_JSON.exists() else dict(DEFAULT_PARAMS)
     old_fp = {k: old[k] for k in ("half_life_days", "season_carry", "alpha")} | {"rest": False}
-    old_cp = {k: old[k] for k in ("w_shots", "en_shift", "ot_k")} | {"goalie_k": 0.0}
+    old_cp = {k: old.get(k, 0.0) for k in ("w_shots", "en_shift", "ot_k", "goalie_k", "w_xg")} | {
+        "goalie_metric": old.get("goalie_metric", "sv")}
+    old_fp["rest"] = bool(old.get("rest", False))
     s_old, _, _ = score(run(TEST, old_fp), old_cp)
 
     best = None
@@ -133,6 +143,8 @@ def main():
         tune = run(TUNE, fp)
         for cv in itertools.product(*CHEAP_GRID.values()):
             cp = dict(zip(CHEAP_GRID, cv))
+            if cp["w_shots"] + cp["w_xg"] > 0.9:
+                continue
             s, _, _ = score(tune, cp)
             print(fp, cp, round(s["total"], 4))
             if best is None or s["total"] < best[0]["total"]:

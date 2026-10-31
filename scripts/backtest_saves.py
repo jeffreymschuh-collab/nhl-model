@@ -11,12 +11,12 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nhlmodel import goalies, nhl_api, probs, ratings  # noqa: E402
+from nhlmodel import features, goalies, moneypuck, nhl_api, probs, ratings  # noqa: E402
 from nhlmodel.config import RESULTS_DIR, ROOT, load_params  # noqa: E402
 
 SEASON = 20252026
-GRID = {"sv_prior_shots": [600, 1500, 4000], "shots_disp": [12.0, 25.0, 60.0],
-        "pull_ga": [3, 4], "pull_p": [0.4, 0.7]}
+GRID = {"goalie_metric": ["sv", "gsax"], "sv_prior_shots": [1500], "gsax_prior_xg": [20.0, 40.0, 80.0],
+        "shots_disp": [60.0, 120.0], "pull_ga": [3], "pull_p": [0.3, 0.4]}
 N = 8000
 
 
@@ -37,8 +37,11 @@ def contexts(fin, gl, params):
                 g = games.loc[s["game_id"]]
                 if s["team"] not in R.teams or s["opp"] not in R.teams:
                     continue
-                mu = R.expected_shots(s["opp"], s["team"], shooter_home=not bool(s["is_home"]))
-                lh, la = R.expected_goals(g["home"], g["away"])
+                hb, ab = int(g.get("home_b2b", 0)), int(g.get("away_b2b", 0))
+                opp_b2b, own_b2b = (ab, hb) if bool(s["is_home"]) else (hb, ab)
+                mu = R.expected_shots(s["opp"], s["team"], shooter_home=not bool(s["is_home"]),
+                                      att_b2b=opp_b2b, def_b2b=own_b2b)
+                lh, la = R.expected_goals(g["home"], g["away"], hb, ab)
                 p_tie = probs.market_probs(lh, la, params)["p_tie_reg"]
                 out.append({"game_id": s["game_id"], "date": s["date"], "player_id": s["player_id"],
                             "mu": mu, "p_tie": p_tie, "saves": int(s["saves"])})
@@ -70,8 +73,9 @@ def evaluate(ctx, gl, sp):
 
 def main():
     games = nhl_api.update_games()
-    gl = goalies.update_goalies(games)
-    fin = nhl_api.finals(games)
+    mp = moneypuck.update()
+    gl = moneypuck.attach_goalie_xga(goalies.update_goalies(games), mp)
+    fin = moneypuck.attach_xg(nhl_api.finals(features.add_rest(games)), mp)
     params = load_params()
     ctx = contexts(fin, gl, params)
     mid = ctx["date"].sort_values().iloc[len(ctx) // 2]
@@ -87,6 +91,12 @@ def main():
             best = (r, sp)
     sp = best[1]
     t = evaluate(test, gl, sp)
+    old_sp = goalies.SAVES_DEFAULTS.copy()
+    oldf = ROOT / "params_saves.json"
+    if oldf.exists():
+        old_sp.update(json.loads(oldf.read_text())["params"])
+    t_old = evaluate(test, gl, old_sp)
+    ship = t["loglik"] > t_old["loglik"]
     q = pd.qcut(t["pred"], 6, duplicates="drop")
     calib = pd.DataFrame({"p": t["pred"], "y": t["y"], "b": q}).groupby("b", observed=True).agg(
         pred=("p", "mean"), actual=("y", "mean"), n=("y", "size"))
@@ -99,11 +109,17 @@ def main():
             "mean_abs_error_saves": round(t["mae"], 2),
         },
         "over_24_5_calibration": [{k: round(float(v), 3) for k, v in r.items()} for r in calib.to_dict(orient="records")],
+        "previous_model_test": {"avg_log_likelihood": round(t_old["loglik"], 4),
+                                "over_24_5_logloss": round(t_old["ou245_logloss"], 4)},
+        "shipped": bool(ship),
         "note": "Baseline knows only league-average shots and save %. Tuned on the first half of 2025-26, tested on the second half.",
     }
     RESULTS_DIR.mkdir(exist_ok=True)
-    (RESULTS_DIR / "backtest_saves.json").write_text(json.dumps(report, indent=1))
-    (ROOT / "params_saves.json").write_text(json.dumps({"params": sp}, indent=1))
+    if ship:
+        (RESULTS_DIR / "backtest_saves.json").write_text(json.dumps(report, indent=1))
+        (ROOT / "params_saves.json").write_text(json.dumps({"params": sp}, indent=1))
+    else:
+        (RESULTS_DIR / "backtest_saves_candidate.json").write_text(json.dumps(report, indent=1))
     print(json.dumps(report, indent=1))
 
 
