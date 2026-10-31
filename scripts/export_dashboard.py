@@ -105,6 +105,10 @@ def main():
                            "fair_price": amer(c["fair_price"]), "hit_pct": c["hit_pct"], "ev_pct": c["ev_pct"],
                            "flag": bool(c["flag"])})
     combos.sort(key=lambda c: -c["ev_pct"])
+    if not combos:   # the dashboard reads an empty file as a failed load, so say why it's empty
+        combos = [{"combo_id": "none", "matchup": "", "start_et": "",
+                   "combo": "No combos priced yet. They appear after the pre-game run, once Hard Rock posts saves lines.",
+                   "price": "", "fair_price": "", "hit_pct": None, "ev_pct": None, "flag": False}]
 
     my_bets, my_sum = [], []
     mb_path = RESULTS_DIR.parent / "data" / "my_bets.csv"
