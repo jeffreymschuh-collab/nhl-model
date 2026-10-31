@@ -1,10 +1,19 @@
 [
 {
 "market": "All",
-"bets": 0,
-"record": "0-0-0",
-"units_profit": 0.0,
-"roi_pct": null,
+"bets": 1,
+"record": "1-0-0",
+"units_profit": 0.95,
+"roi_pct": 95.2,
+"avg_clv_pct": null,
+"beat_close_pct": null
+},
+{
+"market": "Goalie saves",
+"bets": 1,
+"record": "1-0-0",
+"units_profit": 0.95,
+"roi_pct": 95.2,
 "avg_clv_pct": null,
 "beat_close_pct": null
 }

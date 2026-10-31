@@ -1,5 +1,17 @@
 [
 {
+"pick_id": "2026020226|spreads|away",
+"date": "2026-10-31",
+"matchup": "CGY @ COL",
+"selection": "CGY +2.5",
+"price": "-120",
+"units": 2.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null
+},
+{
 "pick_id": "2026020216|saves|under|d wolf",
 "date": "2026-10-30",
 "matchup": "SEA @ CGY",
@@ -8,7 +20,7 @@
 "units": 1.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null
+"result": "W",
+"profit_units": 0.952
 }
 ]
