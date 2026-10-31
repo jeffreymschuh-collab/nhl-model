@@ -15,6 +15,9 @@ from .config import DATA_DIR
 URL = "https://moneypuck.com/moneypuck/playerData/careers/gameByGame/all_teams.csv"
 MP_CSV = DATA_DIR / "mp_team_games.csv"
 STAMP = DATA_DIR / "mp_fetched_at.txt"
+STATUS = DATA_DIR / "mp_status.txt"
+HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 (personal research)",
+           "Accept": "text/csv,*/*"}
 TEAM_FIX = {"T.B": "TBL", "N.J": "NJD", "L.A": "LAK", "S.J": "SJS"}
 KEEP = ["gameId", "playerTeam", "opposingTeam", "home_or_away", "gameDate", "season", "situation",
         "xGoalsFor", "xGoalsAgainst", "scoreVenueAdjustedxGoalsFor", "scoreVenueAdjustedxGoalsAgainst",
@@ -36,27 +39,37 @@ def update(min_season=2023, max_age_hours=18, verbose=True) -> pd.DataFrame | No
         fresh = age < max_age_hours
     if not fresh:
         try:
+            r = None
             for i in range(3):
-                r = requests.get(URL, timeout=120, headers={"User-Agent": "nhl-model/1.0 (personal research)"})
+                r = requests.get(URL, timeout=180, headers=HEADERS)
                 if r.status_code == 200:
                     break
                 time.sleep(5 * (i + 1))
             r.raise_for_status()
-            usecols = lambda c: c in KEEP
-            df = pd.read_csv(io.BytesIO(r.content), usecols=usecols)
-            df = df[(df["season"] >= min_season) & (df["situation"] == "all")].copy()
-            for c in ("playerTeam", "opposingTeam"):
-                df[c] = df[c].replace(TEAM_FIX)
-            df["game_id"] = [_norm_id(g, s) for g, s in zip(df["gameId"], df["season"])]
-            df = df.drop(columns=["gameId", "situation"]).drop_duplicates(["game_id", "playerTeam"])
+            df = parse(r.content, min_season)
             MP_CSV.parent.mkdir(parents=True, exist_ok=True)
             df.to_csv(MP_CSV, index=False)
             STAMP.write_text(datetime.now(timezone.utc).isoformat())
+            STATUS.write_text(f"ok {datetime.now(timezone.utc).isoformat()} rows={len(df)}\n")
             if verbose:
                 print(f"[moneypuck] {len(df)} team-games (all situations) since {min_season}")
         except Exception as err:
-            print(f"[moneypuck] download failed ({err}); using cached extract if any")
+            msg = f"failed {datetime.now(timezone.utc).isoformat()} {type(err).__name__}: {err}"
+            if r is not None:
+                msg += f" | http {r.status_code} bytes {len(r.content)} start {r.content[:120]!r}"
+            STATUS.parent.mkdir(parents=True, exist_ok=True)
+            STATUS.write_text(msg + "\n")
+            print(f"[moneypuck] {msg}; using cached extract if any")
     return pd.read_csv(MP_CSV) if MP_CSV.exists() else None
+
+
+def parse(content: bytes, min_season=2023) -> pd.DataFrame:
+    df = pd.read_csv(io.BytesIO(content), usecols=lambda c: c in KEEP, low_memory=False)
+    df = df[(pd.to_numeric(df["season"], errors="coerce") >= min_season) & (df["situation"] == "all")].copy()
+    for c in ("playerTeam", "opposingTeam"):
+        df[c] = df[c].replace(TEAM_FIX)
+    df["game_id"] = [_norm_id(g, s) for g, s in zip(df["gameId"], df["season"])]
+    return df.drop(columns=["gameId", "situation"]).drop_duplicates(["game_id", "playerTeam"])
 
 
 def attach_xg(finals_df: pd.DataFrame, mp: pd.DataFrame | None) -> pd.DataFrame:
