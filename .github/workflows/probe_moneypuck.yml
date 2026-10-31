@@ -1,0 +1,16 @@
+name: Probe MoneyPuck links
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          out=results/probe_moneypuck.txt
+          curl -s -A "Mozilla/5.0 (personal research)" https://moneypuck.com/data.htm -o /tmp/d.htm
+          grep -oE 'href="[^"]+\.(csv|zip|xlsx)"' /tmp/d.htm | sort -u > $out
+          for u in moneypuck/playerData/seasonSummary/2025/regular/goalies.csv; do :; done
+          git config user.name "nhl-model-bot"; git config user.email "actions@users.noreply.github.com"
+          git add $out && git commit -m "MoneyPuck links" && git pull --rebase && git push
