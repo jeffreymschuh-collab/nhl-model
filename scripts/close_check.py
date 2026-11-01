@@ -1,6 +1,6 @@
 """Closing-line check: just before puck drop, record the market on open picks (closing-line value).
 
-Runs every 20 minutes in the evening. It only spends odds credits when an open pick's game starts within
+Runs every 30 minutes, late morning to midnight ET. It only spends odds credits when an open pick's game starts within
 WINDOW_MIN minutes and that pick has no pre-game capture yet: about 1 credit for a saves pick, 1 per game-line
 market. Finding the event id is free (The Odds API /events endpoint).
 """

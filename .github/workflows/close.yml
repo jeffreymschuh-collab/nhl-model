@@ -1,11 +1,10 @@
 name: Closing-line check
 
-# Every 20 minutes in the evening (ET). Exits in seconds unless an open pick's game starts within ~50 minutes
+# Every 30 minutes from late morning to midnight (ET). Exits in seconds unless an open pick's game starts within ~50 minutes
 # and hasn't had its pre-game capture; only then does it spend odds credits (about 1 per pick).
 on:
   schedule:
-    - cron: "30,50 22 * * *"
-    - cron: "*/20 23,0-4 * * *"
+    - cron: "*/30 16-23,0-4 * * *"
   workflow_dispatch:
 
 permissions:
