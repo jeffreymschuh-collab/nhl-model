@@ -101,6 +101,7 @@ def main():
     goalie_k = float(params.get("goalie_k", 0.0))
 
     lifts = combos.lift_by_line(games, gl) if gl is not None else {}
+    ulifts = combos.under_lifts(games, gl) if gl is not None else {}
 
     out_games, new_picks, all_lines, close_probs = [], [], {}, {}
     prior = tracking.load_log()
@@ -214,7 +215,7 @@ def main():
                 b.update(game_id=g["game_id"], matchup=row["matchup"], start_utc=g["start_utc"])
             row["bets"] = bets
             new_picks += bets
-            row["combos"] = combos.find(row, lifts)
+            row["combos"] = combos.find(row, lifts, ulifts)
         out_games.append(row)
 
     log = tracking.record(day, run, new_picks, all_lines, close_probs)
