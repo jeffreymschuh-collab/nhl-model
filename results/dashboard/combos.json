@@ -1,13 +1,24 @@
 [
 {
-"combo_id": "none",
-"matchup": "",
-"start_et": "",
-"combo": "No combos priced yet. They appear after the pre-game run, once Hard Rock posts saves lines.",
-"price": "",
-"fair_price": "",
-"hit_pct": null,
-"ev_pct": null,
+"combo_id": "2026020228|MIN ML + Wallstedt O 24.5 saves",
+"matchup": "MIN @ WSH",
+"start_et": "3:30 PM",
+"combo": "MIN ML + Wallstedt O 24.5 saves",
+"price": "+244",
+"fair_price": "+248",
+"hit_pct": 28.7,
+"ev_pct": -1.2,
+"flag": false
+},
+{
+"combo_id": "2026020227|CAR ML + Kochetkov O 20.5 saves",
+"matchup": "WPG @ CAR",
+"start_et": "1:00 PM",
+"combo": "CAR ML + Kochetkov O 20.5 saves",
+"price": "+141",
+"fair_price": "+203",
+"hit_pct": 33.0,
+"ev_pct": -20.3,
 "flag": false
 }
 ]

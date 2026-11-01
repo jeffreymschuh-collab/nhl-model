@@ -1,4 +1,5 @@
-date,run,game_id,matchup,start_utc,market,selection,side,point,price,book,units,p_final,edge,p_market,close_price,clv_pct,close_p_market,clv_ev_pct,result,profit_units
-2026-10-30,pm,2026020216,SEA @ CGY,2026-10-31T00:00:00Z,saves,Wolf U 25.5 saves,under|d wolf,25.5,-105,hardrockbet,1.0,0.5665,0.1061,,,,,,W,0.952
-2026-10-31,am,2026020226,CGY @ COL,2026-11-01T02:00:00Z,spreads,CGY +2.5,away,2.5,-120,hardrockbet,2.0,0.5846,0.0718,,-120.0,0.0,0.5216,-4.36,L,-2.0
-2026-10-31,pm,2026020225,CBJ @ DAL,2026-11-01T00:00:00Z,saves,Greaves U 25.5 saves,under|j greaves,25.5,-115,hardrockbet,1.0,0.5795,0.0834,0.5514,,,,,W,0.87
+date,run,game_id,matchup,start_utc,market,selection,side,point,price,book,units,p_final,edge,p_market,close_price,clv_pct,close_p_market,clv_ev_pct,result,profit_units,close_at
+2026-10-30,pm,2026020216,SEA @ CGY,2026-10-31T00:00:00Z,saves,Wolf U 25.5 saves,under|d wolf,25.5,-105,hardrockbet,1.0,0.5665,0.1061,,,,,,W,0.952,
+2026-10-31,am,2026020226,CGY @ COL,2026-11-01T02:00:00Z,spreads,CGY +2.5,away,2.5,-120,hardrockbet,2.0,0.5846,0.0718,,-120.0,0.0,0.5216,-4.36,L,-2.0,
+2026-10-31,pm,2026020225,CBJ @ DAL,2026-11-01T00:00:00Z,saves,Greaves U 25.5 saves,under|j greaves,25.5,-115,hardrockbet,1.0,0.5795,0.0834,0.5514,,,,,W,0.87,
+2026-11-01,am,2026020227,WPG @ CAR,2026-11-01T18:00:00Z,saves,Kochetkov U 20.5 saves,under|p kochetkov,20.5,100,hardrockbet,1.0,0.5672,0.1343,0.5747,,,,,,,

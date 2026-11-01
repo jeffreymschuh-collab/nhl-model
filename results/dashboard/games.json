@@ -6,9 +6,9 @@
 "xg_away": 2.36,
 "xg_home": 3.58,
 "home_win_pct": 71.1,
-"best_line": "CAR ML",
-"best_edge_pct": -3.1,
-"picks": 0
+"best_line": "Kochetkov U 20.5 saves",
+"best_edge_pct": 13.4,
+"picks": 1
 },
 {
 "game_id": "2026020228",
@@ -29,7 +29,7 @@
 "xg_home": 2.72,
 "home_win_pct": 47.0,
 "best_line": "PHI ML",
-"best_edge_pct": -0.8,
+"best_edge_pct": -1.6,
 "picks": 0
 },
 {
@@ -39,8 +39,8 @@
 "xg_away": 2.98,
 "xg_home": 3.13,
 "home_win_pct": 52.6,
-"best_line": "EDM ML",
-"best_edge_pct": -4.0,
+"best_line": "NYR ML",
+"best_edge_pct": -4.1,
 "picks": 0
 },
 {
