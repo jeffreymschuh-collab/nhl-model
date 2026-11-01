@@ -1,24 +1,13 @@
 [
 {
-"combo_id": "2026020228|MIN ML + Wallstedt O 24.5 saves",
-"matchup": "MIN @ WSH",
-"start_et": "3:30 PM",
-"combo": "MIN ML + Wallstedt O 24.5 saves",
-"price": "+244",
-"fair_price": "+248",
-"hit_pct": 28.7,
-"ev_pct": -1.2,
-"flag": false
-},
-{
-"combo_id": "2026020227|CAR ML + Kochetkov O 20.5 saves",
-"matchup": "WPG @ CAR",
-"start_et": "1:00 PM",
-"combo": "CAR ML + Kochetkov O 20.5 saves",
-"price": "+141",
-"fair_price": "+203",
-"hit_pct": 33.0,
-"ev_pct": -20.3,
+"combo_id": "2026020230|NYR ML + Garand O 24.5 saves",
+"matchup": "EDM @ NYR",
+"start_et": "6:00 PM",
+"combo": "NYR ML + Garand O 24.5 saves",
+"price": "+314",
+"fair_price": "+346",
+"hit_pct": 22.4,
+"ev_pct": -7.2,
 "flag": false
 }
 ]
