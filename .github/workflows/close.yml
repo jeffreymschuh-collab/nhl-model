@@ -4,7 +4,7 @@ name: Closing-line check
 # and hasn't had its pre-game capture; only then does it spend odds credits (about 1 per pick).
 on:
   schedule:
-    - cron: "*/30 16-23,0-4 * * *"
+    - cron: "7,37 16-23,0-4 * * *"   # off the :00/:30 rush; GitHub drops many top-of-hour runs
   workflow_dispatch:
 
 permissions:
@@ -30,9 +30,9 @@ jobs:
               for r in csv.DictReader(open("results/picks_log.csv")):
                   if r.get("result"): continue
                   st = d.datetime.fromisoformat(r["start_utc"].replace("Z", "+00:00"))
-                  if not (now < st <= now + d.timedelta(minutes=50)): continue
+                  if not (now < st <= now + d.timedelta(minutes=60)): continue
                   ca = r.get("close_at") or ""
-                  if ca and d.datetime.fromisoformat(ca) >= st - d.timedelta(minutes=60): continue
+                  if ca and d.datetime.fromisoformat(ca) >= st - d.timedelta(minutes=70): continue
                   due += 1
           print(f"due={due}")
           EOF

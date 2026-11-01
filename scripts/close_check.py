@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from nhlmodel import goalies, odds, picks, saves_pricing, tracking  # noqa: E402
 from nhlmodel.config import DATA_DIR, ODDS_API, ODDS_SPORT, REFERENCE_BOOKS, TARGET_BOOKS  # noqa: E402
 
-WINDOW_MIN = 50          # capture when puck drop is within this many minutes
+WINDOW_MIN = 60          # capture when puck drop is within this many minutes
 MIN_QUOTA = 60           # leave credits for the daily runs
 
 
