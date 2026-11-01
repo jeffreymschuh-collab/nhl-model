@@ -1,0 +1,61 @@
+name: Closing-line check
+
+# Every 20 minutes in the evening (ET). Exits in seconds unless an open pick's game starts within ~50 minutes
+# and hasn't had its pre-game capture; only then does it spend odds credits (about 1 per pick).
+on:
+  schedule:
+    - cron: "30,50 22 * * *"
+    - cron: "*/20 23,0-4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nhl-close          # separate from the daily run so it can never replace a queued daily run
+  cancel-in-progress: false
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Anything due?
+        id: due
+        run: |
+          python3 - <<'EOF' >> $GITHUB_OUTPUT
+          import csv, datetime as d, os
+          now = d.datetime.now(d.timezone.utc); due = 0
+          if os.path.exists("results/picks_log.csv"):
+              for r in csv.DictReader(open("results/picks_log.csv")):
+                  if r.get("result"): continue
+                  st = d.datetime.fromisoformat(r["start_utc"].replace("Z", "+00:00"))
+                  if not (now < st <= now + d.timedelta(minutes=50)): continue
+                  ca = r.get("close_at") or ""
+                  if ca and d.datetime.fromisoformat(ca) >= st - d.timedelta(minutes=60): continue
+                  due += 1
+          print(f"due={due}")
+          EOF
+      - uses: actions/setup-python@v5
+        if: steps.due.outputs.due != '0'
+        with:
+          python-version: "3.12"
+          cache: pip
+      - if: steps.due.outputs.due != '0'
+        run: pip install -r requirements.txt
+      - name: Capture closing lines
+        if: steps.due.outputs.due != '0'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/close_check.py
+      - name: Save
+        if: steps.due.outputs.due != '0'
+        run: |
+          git config user.name "nhl-model-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add results/picks_log.csv
+          git diff --cached --quiet && exit 0
+          git commit -m "Closing lines $(date -u +%F_%H%M)"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; git rebase --abort 2>/dev/null; sleep 20; done
+          echo "push failed (daily run busy) - next check will retry"

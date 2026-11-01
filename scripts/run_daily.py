@@ -81,6 +81,7 @@ def main():
 
     do_saves = gl is not None and os.environ.get("ODDS_API_KEY") and (
         a.saves == "on" or (a.saves == "auto" and run == "pm"))
+    do_saves_early = gl is not None and os.environ.get("ODDS_API_KEY") and a.saves == "auto" and run == "am"
     sp = saves_pricing.load_saves_params()
     if "saves" in params.get("w_model_by_market", {}):
         sp["w_model"] = params["w_model_by_market"]["saves"]
@@ -99,7 +100,10 @@ def main():
         # Starting goalies: the books' saves lines name them at the 5pm run; otherwise each team's usual starter
         props = None
         starters = {}
-        if do_saves and e:
+        # Morning run: also price saves for afternoon games that start before the pre-game run (weekends)
+        early = datetime.fromisoformat(g["start_utc"].replace("Z", "+00:00")).astimezone(ET).hour < 17
+        game_saves = bool(do_saves) or (bool(do_saves_early) and early)
+        if game_saves and e:
             try:
                 props, _ = saves_pricing.fetch_event_saves(e["id"])
                 starters = saves_pricing.starters_from_props(props, gl, {h, aw}, day)
@@ -174,7 +178,7 @@ def main():
             if len(open_picks):
                 op = open_picks[(open_picks["game_id"].astype(int) == int(g["game_id"])) & (open_picks["market"] == "saves")]
                 track = [(r["side"], float(r["point"])) for _, r in op.iterrows()]
-            if do_saves and props is not None:
+            if game_saves and props is not None:
                 try:
                     tout = {}
                     srows, sd = saves_pricing.price_game(e, g, R, gl, mp, sp, day, by_book=props, b2b=b2b, ctx=ctx,
@@ -184,7 +188,7 @@ def main():
                     lines += srows; saves_diag += sd
                 except Exception as err:
                     saves_diag.append({"game": row["matchup"], "note": f"saves pricing failed: {err}"})
-            if SOG_PROPS_ENABLED and do_saves and P is not None and len(P):
+            if SOG_PROPS_ENABLED and game_saves and P is not None and len(P):
                 try:
                     lg_ts = fin.tail(1000)[["home_sog", "away_sog"]].stack().mean()
                     lines += sog_pricing.price_game(e, g, R, P, lineups, lg_ts)
@@ -208,7 +212,7 @@ def main():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(), "date": day, "run": run,
-        "params": params, "odds_quota": quota, "odds_events": odds_diag, "saves_priced": bool(do_saves), "saves_diag": saves_diag, "games": out_games,
+        "params": params, "odds_quota": quota, "odds_events": odds_diag, "saves_priced": bool(do_saves) or any(l["market"] == "saves" for r in out_games for l in r["lines"]), "saves_diag": saves_diag, "games": out_games,
         "power_rankings": R.table().to_dict(orient="records"), "performance": summ,
     }
     prev = RESULTS_DIR / "latest.json"
