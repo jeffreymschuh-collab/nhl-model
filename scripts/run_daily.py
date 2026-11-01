@@ -26,6 +26,7 @@ def main():
     ap.add_argument("--date")
     ap.add_argument("--saves", choices=["auto", "on", "off"], default="auto",
                     help="price goalie saves (auto = pre-game run only, to save odds credits)")
+    ap.add_argument("--grade-only", action="store_true", help="grade finished picks only; no odds credits")
     a = ap.parse_args()
     now = datetime.now(ET)
     day = a.date or now.date().isoformat()
@@ -33,11 +34,21 @@ def main():
     params = load_params()
 
     games = nhl_api.update_games()
+    # Today's games that are already final (afternoon games) get graded today, not tomorrow
+    import pandas as pd
+    today_fin = [g for g in nhl_api.games_on(day) if g["state"] in nhl_api.FINAL_STATES]
+    games_g = pd.concat([games, pd.DataFrame(today_fin, columns=nhl_api.COLS)], ignore_index=True) if today_fin else games
     try:
-        gl = goalies.update_goalies(games)
+        gl = goalies.update_goalies(games_g)
     except Exception as err:          # never let goalie data break the game-line run
         print(f"[goalies] update failed: {err}"); gl = None
-    tracking.grade(games, gl)
+    tracking.grade(games_g, gl)
+    if a.grade_only:
+        prev = RESULTS_DIR / "latest.json"
+        if prev.exists():
+            old = json.loads(prev.read_text()); old["performance"] = tracking.summary(tracking.load_log())
+            prev.write_text(json.dumps(old, indent=1, default=str))
+        print("[done] graded only (no odds pulled)"); return
     mpk = moneypuck.update()
     mpg = moneypuck.update_goalie_games()
     if gl is not None:

@@ -10,6 +10,10 @@ on:
         description: "am or pm (blank = auto)"
         required: false
         default: ""
+      grade_only:
+        description: "grade finished picks only (no odds credits)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -42,7 +46,9 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
-          if [ -n "${{ github.event.inputs.run }}" ]; then
+          if [ "${{ github.event.inputs.grade_only }}" = "true" ]; then
+            python scripts/run_daily.py --grade-only
+          elif [ -n "${{ github.event.inputs.run }}" ]; then
             python scripts/run_daily.py --run "${{ github.event.inputs.run }}"
           else
             python scripts/run_daily.py
