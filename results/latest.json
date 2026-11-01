@@ -598,25 +598,25 @@
  ],
  "performance": {
   "overall": {
-   "bets": 3,
+   "bets": 4,
    "W": 2,
-   "L": 1,
+   "L": 2,
    "P": 0,
-   "units_risked": 4.0,
-   "units_profit": -0.18,
-   "roi_pct": -4.45,
+   "units_risked": 5.0,
+   "units_profit": -1.18,
+   "roi_pct": -23.56,
    "avg_clv_pct": -4.36,
    "beat_close_pct": 0.0
   },
   "by_market": {
    "saves": {
-    "bets": 2,
+    "bets": 3,
     "W": 2,
-    "L": 0,
+    "L": 1,
     "P": 0,
-    "units_risked": 2.0,
-    "units_profit": 1.82,
-    "roi_pct": 91.1,
+    "units_risked": 3.0,
+    "units_profit": 0.82,
+    "roi_pct": 27.4,
     "avg_clv_pct": null,
     "beat_close_pct": null
    },
@@ -632,6 +632,6 @@
     "beat_close_pct": 0.0
    }
   },
-  "pending": 1
+  "pending": 0
  }
 }
