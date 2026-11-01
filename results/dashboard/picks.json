@@ -6,10 +6,12 @@
 "selection": "CGY +2.5",
 "price": "-120",
 "units": 2.0,
+"stake_usd": 40.0,
 "close": "-120",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null
+"result": "L",
+"profit_units": -2.0,
+"profit_usd": -40.0
 },
 {
 "pick_id": "2026020225|saves|under|j greaves",
@@ -18,10 +20,12 @@
 "selection": "Greaves U 25.5 saves",
 "price": "-115",
 "units": 1.0,
+"stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null
+"result": "W",
+"profit_units": 0.87,
+"profit_usd": 17.4
 },
 {
 "pick_id": "2026020216|saves|under|d wolf",
@@ -30,9 +34,11 @@
 "selection": "Wolf U 25.5 saves",
 "price": "-105",
 "units": 1.0,
+"stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
 "result": "W",
-"profit_units": 0.952
+"profit_units": 0.952,
+"profit_usd": 19.04
 }
 ]

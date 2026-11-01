@@ -1,0 +1,845 @@
+{
+ "generated_at": "2026-11-01T15:58:00.053600+00:00",
+ "date": "2026-11-01",
+ "run": "am",
+ "params": {
+  "half_life_days": 120,
+  "season_carry": 1.0,
+  "alpha": 0.02,
+  "w_shots": 0.5,
+  "en_shift": 0.3,
+  "ot_k": 0.7,
+  "w_model": 0.35,
+  "covs": [
+   "b2b",
+   "st"
+  ],
+  "w_xg": 0.0,
+  "goalie_k": 0.5,
+  "goalie_metric": "sv"
+ },
+ "odds_quota": {
+  "remaining": "497",
+  "used": "3"
+ },
+ "odds_events": [
+  {
+   "event": "Winnipeg Jets @ Carolina Hurricanes",
+   "commence": "2026-11-01T18:10:00Z",
+   "matched": "WPG @ CAR",
+   "books": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "pinnacle",
+    "hardrockbet"
+   ]
+  },
+  {
+   "event": "Minnesota Wild @ Washington Capitals",
+   "commence": "2026-11-01T20:40:00Z",
+   "matched": "MIN @ WSH",
+   "books": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "pinnacle",
+    "hardrockbet"
+   ]
+  },
+  {
+   "event": "Utah Mammoth @ Philadelphia Flyers",
+   "commence": "2026-11-01T21:10:00Z",
+   "matched": "UTA @ PHI",
+   "books": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "pinnacle",
+    "hardrockbet"
+   ]
+  },
+  {
+   "event": "Edmonton Oilers @ New York Rangers",
+   "commence": "2026-11-01T23:10:00Z",
+   "matched": "EDM @ NYR",
+   "books": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "hardrockbet",
+    "pinnacle"
+   ]
+  },
+  {
+   "event": "Ottawa Senators @ Anaheim Ducks",
+   "commence": "2026-11-02T01:10:00Z",
+   "matched": "OTT @ ANA",
+   "books": [
+    "fanduel",
+    "draftkings",
+    "betmgm",
+    "hardrockbet",
+    "pinnacle"
+   ]
+  }
+ ],
+ "saves_priced": false,
+ "saves_diag": [],
+ "games": [
+  {
+   "game_id": 2026020227,
+   "matchup": "WPG @ CAR",
+   "home": "CAR",
+   "away": "WPG",
+   "start_utc": "2026-11-01T18:00:00Z",
+   "xg_home": 3.58,
+   "xg_away": 2.36,
+   "model_home_win": 0.711,
+   "model_over_6_5": 0.429,
+   "home_b2b": 0,
+   "away_b2b": 0,
+   "home_goalie": "P. Kochetkov",
+   "away_goalie": "S. Skinner",
+   "home_missing": [],
+   "away_missing": [],
+   "home_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "away_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "home_goalie_factor": 0.993,
+   "away_goalie_factor": 1.004,
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "CAR ML",
+     "side": "home",
+     "point": null,
+     "price": -275,
+     "p_model": 0.7105,
+     "p_market": 0.7104,
+     "p_final": 0.7104,
+     "fair_price": -245,
+     "edge": -0.0313
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "WPG ML",
+     "side": "away",
+     "point": null,
+     "price": 200,
+     "p_model": 0.2895,
+     "p_market": 0.2896,
+     "p_final": 0.2896,
+     "fair_price": 245,
+     "edge": -0.1312
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "CAR -1.5",
+     "side": "home",
+     "point": -1.5,
+     "price": -110,
+     "p_model": 0.4975,
+     "p_market": 0.5003,
+     "p_final": 0.4993,
+     "fair_price": 100,
+     "edge": -0.0467
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "WPG +1.5",
+     "side": "away",
+     "point": 1.5,
+     "price": -110,
+     "p_model": 0.5025,
+     "p_market": 0.4997,
+     "p_final": 0.5007,
+     "fair_price": -100,
+     "edge": -0.0442
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 5.5",
+     "side": "over",
+     "point": 5.5,
+     "price": -145,
+     "p_model": 0.5735,
+     "p_market": null,
+     "p_final": 0.5735,
+     "fair_price": -134,
+     "edge": -0.031
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 5.5",
+     "side": "under",
+     "point": 5.5,
+     "price": 115,
+     "p_model": 0.4265,
+     "p_market": null,
+     "p_final": 0.4265,
+     "fair_price": 134,
+     "edge": -0.083
+    }
+   ],
+   "bets": [],
+   "combos": []
+  },
+  {
+   "game_id": 2026020228,
+   "matchup": "MIN @ WSH",
+   "home": "WSH",
+   "away": "MIN",
+   "start_utc": "2026-11-01T20:30:00Z",
+   "xg_home": 3.0,
+   "xg_away": 3.03,
+   "model_home_win": 0.496,
+   "model_over_6_5": 0.449,
+   "home_b2b": 0,
+   "away_b2b": 0,
+   "home_goalie": "L. Thompson",
+   "away_goalie": "J. Wallstedt",
+   "home_missing": [
+    "Vincent Desharnais"
+   ],
+   "away_missing": [],
+   "home_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "away_goalie_source": "Daily Faceoff (Confirmed)",
+   "home_goalie_factor": 0.983,
+   "away_goalie_factor": 0.994,
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "MIN ML",
+     "side": "away",
+     "point": null,
+     "price": -110,
+     "p_model": 0.5041,
+     "p_market": 0.5009,
+     "p_final": 0.502,
+     "fair_price": -101,
+     "edge": -0.0416
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "WSH ML",
+     "side": "home",
+     "point": null,
+     "price": -110,
+     "p_model": 0.4959,
+     "p_market": 0.4991,
+     "p_final": 0.498,
+     "fair_price": 101,
+     "edge": -0.0493
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "MIN -1.5",
+     "side": "away",
+     "point": -1.5,
+     "price": 200,
+     "p_model": 0.314,
+     "p_market": 0.2923,
+     "p_final": 0.2998,
+     "fair_price": 234,
+     "edge": -0.1006
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "WSH +1.5",
+     "side": "home",
+     "point": 1.5,
+     "price": -300,
+     "p_model": 0.686,
+     "p_market": 0.7077,
+     "p_final": 0.7002,
+     "fair_price": -234,
+     "edge": -0.0664
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 6.5",
+     "side": "over",
+     "point": 6.5,
+     "price": 105,
+     "p_model": 0.4491,
+     "p_market": 0.4608,
+     "p_final": 0.4567,
+     "fair_price": 119,
+     "edge": -0.0638
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 6.5",
+     "side": "under",
+     "point": 6.5,
+     "price": -130,
+     "p_model": 0.5509,
+     "p_market": 0.5392,
+     "p_final": 0.5433,
+     "fair_price": -119,
+     "edge": -0.0388
+    }
+   ],
+   "bets": [],
+   "combos": []
+  },
+  {
+   "game_id": 2026020229,
+   "matchup": "UTA @ PHI",
+   "home": "PHI",
+   "away": "UTA",
+   "start_utc": "2026-11-01T21:00:00Z",
+   "xg_home": 2.72,
+   "xg_away": 2.88,
+   "model_home_win": 0.47,
+   "model_over_6_5": 0.38,
+   "home_b2b": 0,
+   "away_b2b": 0,
+   "home_goalie": "D. Vladar",
+   "away_goalie": "K. Vejmelka",
+   "home_missing": [],
+   "away_missing": [],
+   "home_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "away_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "home_goalie_factor": 0.991,
+   "away_goalie_factor": 0.998,
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "PHI ML",
+     "side": "home",
+     "point": null,
+     "price": 135,
+     "p_model": 0.4698,
+     "p_market": 0.3967,
+     "p_final": 0.4219,
+     "fair_price": 137,
+     "edge": -0.0084
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "UTA ML",
+     "side": "away",
+     "point": null,
+     "price": -160,
+     "p_model": 0.5302,
+     "p_market": 0.6033,
+     "p_final": 0.5781,
+     "fair_price": -137,
+     "edge": -0.0607
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "PHI +1.5",
+     "side": "home",
+     "point": 1.5,
+     "price": -185,
+     "p_model": 0.672,
+     "p_market": 0.6182,
+     "p_final": 0.6375,
+     "fair_price": -176,
+     "edge": -0.018
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "UTA -1.5",
+     "side": "away",
+     "point": -1.5,
+     "price": 140,
+     "p_model": 0.328,
+     "p_market": 0.3818,
+     "p_final": 0.3625,
+     "fair_price": 176,
+     "edge": -0.1299
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 5.5",
+     "side": "over",
+     "point": 5.5,
+     "price": -130,
+     "p_model": 0.5205,
+     "p_market": 0.5514,
+     "p_final": 0.5407,
+     "fair_price": -118,
+     "edge": -0.0435
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 5.5",
+     "side": "under",
+     "point": 5.5,
+     "price": 105,
+     "p_model": 0.4795,
+     "p_market": 0.4486,
+     "p_final": 0.4593,
+     "fair_price": 118,
+     "edge": -0.0583
+    }
+   ],
+   "bets": [],
+   "combos": []
+  },
+  {
+   "game_id": 2026020230,
+   "matchup": "EDM @ NYR",
+   "home": "NYR",
+   "away": "EDM",
+   "start_utc": "2026-11-01T23:00:00Z",
+   "xg_home": 3.13,
+   "xg_away": 2.98,
+   "model_home_win": 0.526,
+   "model_over_6_5": 0.461,
+   "home_b2b": 0,
+   "away_b2b": 1,
+   "home_goalie": "D. Garand",
+   "away_goalie": "T. Jarry",
+   "home_missing": [],
+   "away_missing": [
+    "Isaac Howard"
+   ],
+   "home_goalie_source": "Daily Faceoff (Confirmed)",
+   "away_goalie_source": "usual starter",
+   "home_goalie_factor": 1.004,
+   "away_goalie_factor": 1.014,
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "EDM ML",
+     "side": "away",
+     "point": null,
+     "price": 105,
+     "p_model": 0.4744,
+     "p_market": 0.4647,
+     "p_final": 0.4681,
+     "fair_price": 114,
+     "edge": -0.0404
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "NYR ML",
+     "side": "home",
+     "point": null,
+     "price": -125,
+     "p_model": 0.5256,
+     "p_market": 0.5353,
+     "p_final": 0.5319,
+     "fair_price": -114,
+     "edge": -0.0426
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "EDM +1.5",
+     "side": "away",
+     "point": 1.5,
+     "price": -230,
+     "p_model": 0.6676,
+     "p_market": 0.667,
+     "p_final": 0.6672,
+     "fair_price": -200,
+     "edge": -0.0427
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "NYR -1.5",
+     "side": "home",
+     "point": -1.5,
+     "price": 175,
+     "p_model": 0.3324,
+     "p_market": 0.333,
+     "p_final": 0.3328,
+     "fair_price": 200,
+     "edge": -0.0848
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 6.5",
+     "side": "over",
+     "point": 6.5,
+     "price": -115,
+     "p_model": 0.4608,
+     "p_market": 0.507,
+     "p_final": 0.4908,
+     "fair_price": 104,
+     "edge": -0.0823
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 6.5",
+     "side": "under",
+     "point": 6.5,
+     "price": -105,
+     "p_model": 0.5392,
+     "p_market": 0.493,
+     "p_final": 0.5092,
+     "fair_price": -104,
+     "edge": -0.0059
+    }
+   ],
+   "bets": [],
+   "combos": []
+  },
+  {
+   "game_id": 2026020231,
+   "matchup": "OTT @ ANA",
+   "home": "ANA",
+   "away": "OTT",
+   "start_utc": "2026-11-02T01:00:00Z",
+   "xg_home": 3.11,
+   "xg_away": 3.13,
+   "model_home_win": 0.497,
+   "model_over_6_5": 0.481,
+   "home_b2b": 0,
+   "away_b2b": 1,
+   "home_goalie": "L. Dostal",
+   "away_goalie": "J. Johansson",
+   "home_missing": [],
+   "away_missing": [
+    "Andre Burakovsky",
+    "Warren Foegele"
+   ],
+   "home_goalie_source": "usual starter",
+   "away_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "home_goalie_factor": 1.001,
+   "away_goalie_factor": 1.011,
+   "lines": [
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "ANA ML",
+     "side": "home",
+     "point": null,
+     "price": 100,
+     "p_model": 0.497,
+     "p_market": 0.4773,
+     "p_final": 0.4842,
+     "fair_price": 107,
+     "edge": -0.0316
+    },
+    {
+     "book": "hardrockbet",
+     "market": "h2h",
+     "selection": "OTT ML",
+     "side": "away",
+     "point": null,
+     "price": -120,
+     "p_model": 0.503,
+     "p_market": 0.5227,
+     "p_final": 0.5158,
+     "fair_price": -107,
+     "edge": -0.0544
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "ANA +1.5",
+     "side": "home",
+     "point": 1.5,
+     "price": -230,
+     "p_model": 0.684,
+     "p_market": 0.6776,
+     "p_final": 0.6798,
+     "fair_price": -212,
+     "edge": -0.0246
+    },
+    {
+     "book": "hardrockbet",
+     "market": "spreads",
+     "selection": "OTT -1.5",
+     "side": "away",
+     "point": -1.5,
+     "price": 175,
+     "p_model": 0.316,
+     "p_market": 0.3224,
+     "p_final": 0.3202,
+     "fair_price": 212,
+     "edge": -0.1196
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Over 6.5",
+     "side": "over",
+     "point": 6.5,
+     "price": -130,
+     "p_model": 0.4815,
+     "p_market": 0.5498,
+     "p_final": 0.526,
+     "fair_price": -111,
+     "edge": -0.0694
+    },
+    {
+     "book": "hardrockbet",
+     "market": "totals",
+     "selection": "Under 6.5",
+     "side": "under",
+     "point": 6.5,
+     "price": 105,
+     "p_model": 0.5185,
+     "p_market": 0.4502,
+     "p_final": 0.474,
+     "fair_price": 111,
+     "edge": -0.0283
+    }
+   ],
+   "bets": [],
+   "combos": []
+  }
+ ],
+ "power_rankings": [
+  {
+   "team": "CAR",
+   "xgf": 3.559,
+   "xga": 2.563,
+   "net": 0.996
+  },
+  {
+   "team": "COL",
+   "xgf": 3.529,
+   "xga": 2.764,
+   "net": 0.765
+  },
+  {
+   "team": "TBL",
+   "xgf": 3.273,
+   "xga": 2.799,
+   "net": 0.473
+  },
+  {
+   "team": "MIN",
+   "xgf": 3.241,
+   "xga": 2.778,
+   "net": 0.463
+  },
+  {
+   "team": "VGK",
+   "xgf": 3.16,
+   "xga": 2.749,
+   "net": 0.411
+  },
+  {
+   "team": "EDM",
+   "xgf": 3.298,
+   "xga": 2.913,
+   "net": 0.386
+  },
+  {
+   "team": "NJD",
+   "xgf": 3.21,
+   "xga": 2.836,
+   "net": 0.374
+  },
+  {
+   "team": "OTT",
+   "xgf": 3.129,
+   "xga": 2.783,
+   "net": 0.346
+  },
+  {
+   "team": "UTA",
+   "xgf": 3.221,
+   "xga": 2.892,
+   "net": 0.329
+  },
+  {
+   "team": "DAL",
+   "xgf": 2.938,
+   "xga": 2.621,
+   "net": 0.317
+  },
+  {
+   "team": "WSH",
+   "xgf": 3.18,
+   "xga": 2.905,
+   "net": 0.275
+  },
+  {
+   "team": "BUF",
+   "xgf": 3.207,
+   "xga": 2.937,
+   "net": 0.27
+  },
+  {
+   "team": "FLA",
+   "xgf": 3.137,
+   "xga": 2.89,
+   "net": 0.247
+  },
+  {
+   "team": "BOS",
+   "xgf": 3.098,
+   "xga": 2.895,
+   "net": 0.203
+  },
+  {
+   "team": "MTL",
+   "xgf": 3.053,
+   "xga": 2.875,
+   "net": 0.178
+  },
+  {
+   "team": "PIT",
+   "xgf": 3.173,
+   "xga": 3.068,
+   "net": 0.105
+  },
+  {
+   "team": "DET",
+   "xgf": 2.993,
+   "xga": 2.909,
+   "net": 0.084
+  },
+  {
+   "team": "STL",
+   "xgf": 2.966,
+   "xga": 2.895,
+   "net": 0.071
+  },
+  {
+   "team": "NYR",
+   "xgf": 2.997,
+   "xga": 2.94,
+   "net": 0.057
+  },
+  {
+   "team": "NYI",
+   "xgf": 2.883,
+   "xga": 2.863,
+   "net": 0.021
+  },
+  {
+   "team": "LAK",
+   "xgf": 2.866,
+   "xga": 2.865,
+   "net": 0.001
+  },
+  {
+   "team": "CBJ",
+   "xgf": 2.906,
+   "xga": 2.934,
+   "net": -0.028
+  },
+  {
+   "team": "PHI",
+   "xgf": 2.738,
+   "xga": 2.774,
+   "net": -0.036
+  },
+  {
+   "team": "NSH",
+   "xgf": 2.985,
+   "xga": 3.029,
+   "net": -0.044
+  },
+  {
+   "team": "ANA",
+   "xgf": 3.136,
+   "xga": 3.181,
+   "net": -0.045
+  },
+  {
+   "team": "TOR",
+   "xgf": 3.16,
+   "xga": 3.242,
+   "net": -0.082
+  },
+  {
+   "team": "WPG",
+   "xgf": 2.85,
+   "xga": 2.963,
+   "net": -0.113
+  },
+  {
+   "team": "SEA",
+   "xgf": 2.948,
+   "xga": 3.184,
+   "net": -0.236
+  },
+  {
+   "team": "CGY",
+   "xgf": 2.827,
+   "xga": 3.144,
+   "net": -0.317
+  },
+  {
+   "team": "SJS",
+   "xgf": 2.843,
+   "xga": 3.235,
+   "net": -0.391
+  },
+  {
+   "team": "CHI",
+   "xgf": 2.612,
+   "xga": 3.215,
+   "net": -0.602
+  },
+  {
+   "team": "VAN",
+   "xgf": 2.699,
+   "xga": 3.423,
+   "net": -0.724
+  }
+ ],
+ "performance": {
+  "overall": {
+   "bets": 3,
+   "W": 2,
+   "L": 1,
+   "P": 0,
+   "units_risked": 4.0,
+   "units_profit": -0.18,
+   "roi_pct": -4.45,
+   "avg_clv_pct": -4.36,
+   "beat_close_pct": 0.0
+  },
+  "by_market": {
+   "saves": {
+    "bets": 2,
+    "W": 2,
+    "L": 0,
+    "P": 0,
+    "units_risked": 2.0,
+    "units_profit": 1.82,
+    "roi_pct": 91.1,
+    "avg_clv_pct": null,
+    "beat_close_pct": null
+   },
+   "spreads": {
+    "bets": 1,
+    "W": 0,
+    "L": 1,
+    "P": 0,
+    "units_risked": 2.0,
+    "units_profit": -2.0,
+    "roi_pct": -100.0,
+    "avg_clv_pct": -4.36,
+    "beat_close_pct": 0.0
+   }
+  },
+  "pending": 0
+ }
+}
