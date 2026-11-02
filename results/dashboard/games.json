@@ -1,24 +1,46 @@
 [
 {
-"game_id": "2026020230",
-"matchup": "EDM @ NYR",
-"start_et": "6:00 PM",
-"xg_away": 2.98,
-"xg_home": 3.13,
-"home_win_pct": 52.6,
-"best_line": "Garand U 24.5 saves",
+"game_id": "2026020232",
+"matchup": "VGK @ BOS",
+"start_et": "7:00 PM",
+"xg_away": 2.96,
+"xg_home": 2.88,
+"home_win_pct": 48.5,
+"best_line": "VGK ML",
+"best_edge_pct": -3.1,
+"picks": 0
+},
+{
+"game_id": "2026020233",
+"matchup": "DET @ FLA",
+"start_et": "7:00 PM",
+"xg_away": 2.82,
+"xg_home": 3.09,
+"home_win_pct": 54.9,
+"best_line": "DET ML",
 "best_edge_pct": 0.1,
 "picks": 0
 },
 {
-"game_id": "2026020231",
-"matchup": "OTT @ ANA",
+"game_id": "2026020234",
+"matchup": "COL @ CHI",
 "start_et": "8:00 PM",
-"xg_away": 3.13,
-"xg_home": 3.11,
-"home_win_pct": 49.7,
-"best_line": "ANA +1.5",
-"best_edge_pct": -2.6,
+"xg_away": 3.65,
+"xg_home": 2.52,
+"home_win_pct": 30.9,
+"best_line": "COL ML",
+"best_edge_pct": -2.2,
+"picks": 0
+},
+{
+"game_id": "2026020235",
+"matchup": "CGY @ SJS",
+"start_et": "9:00 PM",
+"xg_away": 3.04,
+"xg_home": 3.08,
+"home_win_pct": 50.6,
+"best_line": "CGY ML",
+"best_edge_pct": -3.9,
 "picks": 0
 }
 ]
