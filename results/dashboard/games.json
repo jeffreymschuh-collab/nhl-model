@@ -7,7 +7,7 @@
 "xg_home": 2.88,
 "home_win_pct": 48.5,
 "best_line": "VGK ML",
-"best_edge_pct": -3.1,
+"best_edge_pct": -3.8,
 "picks": 0
 },
 {
@@ -17,8 +17,8 @@
 "xg_away": 2.82,
 "xg_home": 3.09,
 "home_win_pct": 54.9,
-"best_line": "DET ML",
-"best_edge_pct": 0.1,
+"best_line": "Markstrom U 23.5 saves",
+"best_edge_pct": 3.2,
 "picks": 0
 },
 {
@@ -26,10 +26,10 @@
 "matchup": "COL @ CHI",
 "start_et": "8:00 PM",
 "xg_away": 3.65,
-"xg_home": 2.52,
-"home_win_pct": 30.9,
+"xg_home": 2.48,
+"home_win_pct": 30.1,
 "best_line": "COL ML",
-"best_edge_pct": -2.2,
+"best_edge_pct": -2.4,
 "picks": 0
 },
 {
@@ -39,8 +39,8 @@
 "xg_away": 3.04,
 "xg_home": 3.08,
 "home_win_pct": 50.6,
-"best_line": "CGY ML",
-"best_edge_pct": -3.9,
+"best_line": "Wolf U 26.5 saves",
+"best_edge_pct": -1.9,
 "picks": 0
 }
 ]
