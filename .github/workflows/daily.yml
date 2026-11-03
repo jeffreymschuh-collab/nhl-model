@@ -37,7 +37,8 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "schedule" ] && [ -f results/latest.json ]; then
             age=$(python -c "import json,datetime as d;t=d.datetime.fromisoformat(json.load(open('results/latest.json'))['generated_at']);print(int((d.datetime.now(d.timezone.utc)-t).total_seconds()))")
-            if [ "$age" -lt 18000 ]; then echo "skip=1" >> $GITHUB_OUTPUT; echo "recent run ${age}s ago - skipping"; fi
+            hr=$(TZ=America/New_York date +%H)
+            if [ "$age" -lt 21600 ] || [ "$hr" -ge 19 ] || [ "$hr" -lt 9 ]; then echo "skip=1" >> $GITHUB_OUTPUT; echo "recent run ${age}s ago or late/early ET hour $hr - skipping backup"; fi
           fi
       - run: pip install -r requirements.txt
         if: steps.guard.outputs.skip != '1'
