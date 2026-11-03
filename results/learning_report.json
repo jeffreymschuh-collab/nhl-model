@@ -1,41 +1,41 @@
 {
- "generated_at": "2026-11-03T03:29:06.756927+00:00",
+ "generated_at": "2026-11-03T16:17:42.090785+00:00",
  "min_games": 300,
  "blend": {
   "h2h": {
-   "games": 11,
-   "lines": 22,
+   "games": 13,
+   "lines": 26,
    "current_weight": 0.35,
-   "note": "needs 289 more graded games before tuning"
+   "note": "needs 287 more graded games before tuning"
   },
   "spreads": {
-   "games": 11,
-   "lines": 22,
+   "games": 13,
+   "lines": 26,
    "current_weight": 0.35,
-   "note": "needs 289 more graded games before tuning"
+   "note": "needs 287 more graded games before tuning"
   },
   "totals": {
-   "games": 10,
-   "lines": 20,
-   "current_weight": 0.35,
-   "note": "needs 290 more graded games before tuning"
-  },
-  "saves": {
-   "games": 9,
+   "games": 12,
    "lines": 24,
    "current_weight": 0.35,
-   "note": "needs 291 more graded games before tuning"
+   "note": "needs 288 more graded games before tuning"
+  },
+  "saves": {
+   "games": 11,
+   "lines": 30,
+   "current_weight": 0.35,
+   "note": "needs 289 more graded games before tuning"
   }
  },
  "timing": {
   "spreads": {
-   "lines_compared": 14,
+   "lines_compared": 18,
    "morning_better_pct": 0.0,
    "pregame_better_pct": 0.0,
    "avg_move_pct_pts": 0.0
   },
   "totals": {
-   "lines_compared": 16,
+   "lines_compared": 20,
    "morning_better_pct": 0.0,
    "pregame_better_pct": 0.0,
    "avg_move_pct_pts": 0.0
