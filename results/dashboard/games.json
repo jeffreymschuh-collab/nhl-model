@@ -7,7 +7,7 @@
 "xg_home": 3.13,
 "home_win_pct": 44.5,
 "best_line": "Bobrovsky U 28.5 saves",
-"best_edge_pct": -0.5,
+"best_edge_pct": -1.0,
 "picks": 0
 },
 {
@@ -17,8 +17,8 @@
 "xg_away": 2.61,
 "xg_home": 3.14,
 "home_win_pct": 59.7,
-"best_line": "Fowler U 23.5 saves",
-"best_edge_pct": -3.9,
+"best_line": "MTL ML",
+"best_edge_pct": -4.3,
 "picks": 0
 },
 {
@@ -29,8 +29,8 @@
 "xg_home": 3.38,
 "home_win_pct": 63.4,
 "best_line": "DET +1.5",
-"best_edge_pct": 5.4,
-"picks": 2
+"best_edge_pct": 5.1,
+"picks": 1
 },
 {
 "game_id": "2026020240",
@@ -40,7 +40,7 @@
 "xg_home": 2.83,
 "home_win_pct": 49.6,
 "best_line": "Hofer U 24.5 saves",
-"best_edge_pct": 2.5,
+"best_edge_pct": 2.2,
 "picks": 0
 },
 {
@@ -51,8 +51,8 @@
 "xg_home": 2.61,
 "home_win_pct": 44.3,
 "best_line": "Vladar U 26.5 saves",
-"best_edge_pct": 4.9,
-"picks": 0
+"best_edge_pct": 5.4,
+"picks": 1
 },
 {
 "game_id": "2026020242",
@@ -62,7 +62,7 @@
 "xg_home": 3.13,
 "home_win_pct": 52.2,
 "best_line": "Silovs U 26.5 saves",
-"best_edge_pct": 6.3,
+"best_edge_pct": 8.1,
 "picks": 1
 },
 {
@@ -73,7 +73,7 @@
 "xg_home": 2.81,
 "home_win_pct": 51.2,
 "best_line": "Thompson U 23.5 saves",
-"best_edge_pct": 2.2,
+"best_edge_pct": 3.5,
 "picks": 0
 },
 {
@@ -95,7 +95,7 @@
 "xg_home": 3.14,
 "home_win_pct": 52.4,
 "best_line": "Hellebuyck U 24.5 saves",
-"best_edge_pct": 9.5,
+"best_edge_pct": 5.1,
 "picks": 1
 },
 {
@@ -117,7 +117,7 @@
 "xg_home": 2.91,
 "home_win_pct": 38.0,
 "best_line": "Lankinen U 26.5 saves",
-"best_edge_pct": 7.2,
+"best_edge_pct": 8.5,
 "picks": 1
 }
 ]

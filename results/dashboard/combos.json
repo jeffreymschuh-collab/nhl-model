@@ -4,21 +4,10 @@
 "matchup": "EDM @ NJD",
 "start_et": "7:30 PM",
 "combo": "EDM ML + Hellebuyck U 24.5 saves",
-"price": "+322",
-"fair_price": "+254",
-"hit_pct": 28.2,
-"ev_pct": 19.1,
-"flag": true
-},
-{
-"combo_id": "2026020246|ANA -1.5 + Lankinen U 26.5 saves",
-"matchup": "ANA @ VAN",
-"start_et": "9:00 PM",
-"combo": "ANA -1.5 + Lankinen U 26.5 saves",
-"price": "+358",
-"fair_price": "+293",
-"hit_pct": 25.4,
-"ev_pct": 16.5,
+"price": "+314",
+"fair_price": "+262",
+"hit_pct": 27.6,
+"ev_pct": 14.3,
 "flag": true
 },
 {
@@ -26,10 +15,43 @@
 "matchup": "ANA @ VAN",
 "start_et": "9:00 PM",
 "combo": "ANA ML + Lankinen U 26.5 saves",
-"price": "+218",
-"fair_price": "+178",
-"hit_pct": 36.0,
-"ev_pct": 14.5,
+"price": "+194",
+"fair_price": "+163",
+"hit_pct": 38.0,
+"ev_pct": 11.7,
+"flag": true
+},
+{
+"combo_id": "2026020246|ANA -1.5 + Lankinen U 26.5 saves",
+"matchup": "ANA @ VAN",
+"start_et": "9:00 PM",
+"combo": "ANA -1.5 + Lankinen U 26.5 saves",
+"price": "+310",
+"fair_price": "+272",
+"hit_pct": 26.9,
+"ev_pct": 10.4,
+"flag": true
+},
+{
+"combo_id": "2026020243|DAL ML + Thompson U 23.5 saves",
+"matchup": "DAL @ WSH",
+"start_et": "7:00 PM",
+"combo": "DAL ML + Thompson U 23.5 saves",
+"price": "+281",
+"fair_price": "+248",
+"hit_pct": 28.7,
+"ev_pct": 9.4,
+"flag": true
+},
+{
+"combo_id": "2026020242|VGK ML + Silovs U 26.5 saves",
+"matchup": "VGK @ PIT",
+"start_et": "7:00 PM",
+"combo": "VGK ML + Silovs U 26.5 saves",
+"price": "+225",
+"fair_price": "+198",
+"hit_pct": 33.5,
+"ev_pct": 9.1,
 "flag": true
 },
 {
@@ -38,19 +60,8 @@
 "start_et": "7:00 PM",
 "combo": "WSH -1.5 + Oettinger U 23.5 saves",
 "price": "+431",
-"fair_price": "+383",
-"hit_pct": 20.7,
-"ev_pct": 9.8,
-"flag": true
-},
-{
-"combo_id": "2026020241|PHI ML + Wallstedt U 23.5 saves",
-"matchup": "MIN @ PHI",
-"start_et": "7:00 PM",
-"combo": "PHI ML + Wallstedt U 23.5 saves",
-"price": "+350",
-"fair_price": "+314",
-"hit_pct": 24.2,
+"fair_price": "+388",
+"hit_pct": 20.5,
 "ev_pct": 8.8,
 "flag": true
 },
@@ -62,29 +73,7 @@
 "price": "+282",
 "fair_price": "+252",
 "hit_pct": 28.4,
-"ev_pct": 8.4,
-"flag": true
-},
-{
-"combo_id": "2026020243|DAL ML + Thompson U 23.5 saves",
-"matchup": "DAL @ WSH",
-"start_et": "7:00 PM",
-"combo": "DAL ML + Thompson U 23.5 saves",
-"price": "+281",
-"fair_price": "+253",
-"hit_pct": 28.3,
-"ev_pct": 8.0,
-"flag": true
-},
-{
-"combo_id": "2026020242|VGK ML + Silovs U 26.5 saves",
-"matchup": "VGK @ PIT",
-"start_et": "7:00 PM",
-"combo": "VGK ML + Silovs U 26.5 saves",
-"price": "+225",
-"fair_price": "+203",
-"hit_pct": 33.0,
-"ev_pct": 7.4,
+"ev_pct": 8.6,
 "flag": true
 },
 {
@@ -99,6 +88,17 @@
 "flag": true
 },
 {
+"combo_id": "2026020241|PHI ML + Wallstedt U 23.5 saves",
+"matchup": "MIN @ PHI",
+"start_et": "7:00 PM",
+"combo": "PHI ML + Wallstedt U 23.5 saves",
+"price": "+350",
+"fair_price": "+323",
+"hit_pct": 23.7,
+"ev_pct": 6.5,
+"flag": true
+},
+{
 "combo_id": "2026020244|CBJ ML + Wedgewood U 25.5 saves",
 "matchup": "COL @ CBJ",
 "start_et": "7:00 PM",
@@ -110,25 +110,14 @@
 "flag": true
 },
 {
-"combo_id": "2026020240|NYR -1.5 + Hofer U 24.5 saves",
-"matchup": "STL @ NYR",
+"combo_id": "2026020241|MIN -1.5 + Vladar U 26.5 saves",
+"matchup": "MIN @ PHI",
 "start_et": "7:00 PM",
-"combo": "NYR -1.5 + Hofer U 24.5 saves",
-"price": "+395",
-"fair_price": "+367",
-"hit_pct": 21.4,
+"combo": "MIN -1.5 + Vladar U 26.5 saves",
+"price": "+307",
+"fair_price": "+284",
+"hit_pct": 26.0,
 "ev_pct": 6.0,
-"flag": true
-},
-{
-"combo_id": "2026020240|NYR ML + Hofer U 24.5 saves",
-"matchup": "STL @ NYR",
-"start_et": "7:00 PM",
-"combo": "NYR ML + Hofer U 24.5 saves",
-"price": "+224",
-"fair_price": "+207",
-"hit_pct": 32.6,
-"ev_pct": 5.7,
 "flag": true
 },
 {
@@ -139,19 +128,41 @@
 "price": "+346",
 "fair_price": "+322",
 "hit_pct": 23.7,
-"ev_pct": 5.5,
+"ev_pct": 5.6,
 "flag": true
 },
 {
-"combo_id": "2026020241|MIN -1.5 + Vladar U 26.5 saves",
+"combo_id": "2026020240|NYR -1.5 + Hofer U 24.5 saves",
+"matchup": "STL @ NYR",
+"start_et": "7:00 PM",
+"combo": "NYR -1.5 + Hofer U 24.5 saves",
+"price": "+395",
+"fair_price": "+370",
+"hit_pct": 21.3,
+"ev_pct": 5.4,
+"flag": true
+},
+{
+"combo_id": "2026020240|NYR ML + Hofer U 24.5 saves",
+"matchup": "STL @ NYR",
+"start_et": "7:00 PM",
+"combo": "NYR ML + Hofer U 24.5 saves",
+"price": "+224",
+"fair_price": "+208",
+"hit_pct": 32.4,
+"ev_pct": 5.2,
+"flag": true
+},
+{
+"combo_id": "2026020241|MIN ML + Vladar U 26.5 saves",
 "matchup": "MIN @ PHI",
 "start_et": "7:00 PM",
-"combo": "MIN -1.5 + Vladar U 26.5 saves",
-"price": "+314",
-"fair_price": "+292",
-"hit_pct": 25.5,
-"ev_pct": 5.5,
-"flag": true
+"combo": "MIN ML + Vladar U 26.5 saves",
+"price": "+175",
+"fair_price": "+163",
+"hit_pct": 38.0,
+"ev_pct": 4.6,
+"flag": false
 },
 {
 "combo_id": "2026020245|CAR ML + Saros U 28.5 saves",
@@ -162,17 +173,6 @@
 "fair_price": "+164",
 "hit_pct": 37.9,
 "ev_pct": 4.3,
-"flag": false
-},
-{
-"combo_id": "2026020241|MIN ML + Vladar U 26.5 saves",
-"matchup": "MIN @ PHI",
-"start_et": "7:00 PM",
-"combo": "MIN ML + Vladar U 26.5 saves",
-"price": "+180",
-"fair_price": "+169",
-"hit_pct": 37.2,
-"ev_pct": 4.2,
 "flag": false
 },
 {
@@ -192,9 +192,20 @@
 "start_et": "7:00 PM",
 "combo": "WSH ML + Oettinger U 23.5 saves",
 "price": "+231",
-"fair_price": "+221",
-"hit_pct": 31.1,
-"ev_pct": 3.0,
+"fair_price": "+224",
+"hit_pct": 30.8,
+"ev_pct": 2.0,
+"flag": false
+},
+{
+"combo_id": "2026020236|TOR ML + Cossa U 23.5 saves",
+"matchup": "UTA @ TOR",
+"start_et": "7:00 PM",
+"combo": "TOR ML + Cossa U 23.5 saves",
+"price": "+262",
+"fair_price": "+258",
+"hit_pct": 27.9,
+"ev_pct": 1.1,
 "flag": false
 },
 {
@@ -202,10 +213,10 @@
 "matchup": "UTA @ TOR",
 "start_et": "7:00 PM",
 "combo": "UTA ML + Bobrovsky U 28.5 saves",
-"price": "+198",
+"price": "+194",
 "fair_price": "+193",
-"hit_pct": 34.2,
-"ev_pct": 1.9,
+"hit_pct": 34.1,
+"ev_pct": 0.3,
 "flag": false
 },
 {
@@ -214,9 +225,20 @@
 "start_et": "7:00 PM",
 "combo": "WPG ML + Fowler U 23.5 saves",
 "price": "+325",
-"fair_price": "+319",
-"hit_pct": 23.9,
-"ev_pct": 1.5,
+"fair_price": "+324",
+"hit_pct": 23.6,
+"ev_pct": 0.2,
+"flag": false
+},
+{
+"combo_id": "2026020245|CAR ML + Kochetkov O 21.5 saves",
+"matchup": "CAR @ NSH",
+"start_et": "8:00 PM",
+"combo": "CAR ML + Kochetkov O 21.5 saves",
+"price": "+185",
+"fair_price": "+186",
+"hit_pct": 35.0,
+"ev_pct": -0.2,
 "flag": false
 },
 {
@@ -231,36 +253,14 @@
 "flag": false
 },
 {
-"combo_id": "2026020245|CAR ML + Kochetkov O 21.5 saves",
-"matchup": "CAR @ NSH",
-"start_et": "8:00 PM",
-"combo": "CAR ML + Kochetkov O 21.5 saves",
-"price": "+185",
-"fair_price": "+187",
-"hit_pct": 34.9,
-"ev_pct": -0.5,
-"flag": false
-},
-{
-"combo_id": "2026020236|TOR ML + Cossa U 23.5 saves",
-"matchup": "UTA @ TOR",
-"start_et": "7:00 PM",
-"combo": "TOR ML + Cossa U 23.5 saves",
-"price": "+254",
-"fair_price": "+256",
-"hit_pct": 28.1,
-"ev_pct": -0.8,
-"flag": false
-},
-{
 "combo_id": "2026020239|NJD ML + Jarry U 28.5 saves",
 "matchup": "EDM @ NJD",
 "start_et": "7:30 PM",
 "combo": "NJD ML + Jarry U 28.5 saves",
 "price": "+174",
 "fair_price": "+176",
-"hit_pct": 36.2,
-"ev_pct": -0.8,
+"hit_pct": 36.3,
+"ev_pct": -0.5,
 "flag": false
 },
 {
@@ -269,9 +269,9 @@
 "start_et": "7:30 PM",
 "combo": "NJD -1.5 + Jarry U 28.5 saves",
 "price": "+295",
-"fair_price": "+306",
-"hit_pct": 24.6,
-"ev_pct": -2.7,
+"fair_price": "+305",
+"hit_pct": 24.7,
+"ev_pct": -2.5,
 "flag": false
 },
 {
@@ -291,9 +291,9 @@
 "start_et": "8:00 PM",
 "combo": "NSH ML + Kochetkov U 21.5 saves",
 "price": "+377",
-"fair_price": "+397",
+"fair_price": "+398",
 "hit_pct": 20.1,
-"ev_pct": -4.0,
+"ev_pct": -4.3,
 "flag": false
 },
 {
@@ -301,10 +301,21 @@
 "matchup": "WPG @ MTL",
 "start_et": "7:00 PM",
 "combo": "MTL ML + Fowler O 23.5 saves",
-"price": "+218",
-"fair_price": "+233",
-"hit_pct": 30.0,
-"ev_pct": -4.7,
+"price": "+210",
+"fair_price": "+229",
+"hit_pct": 30.4,
+"ev_pct": -5.6,
+"flag": false
+},
+{
+"combo_id": "2026020241|MIN ML + Wallstedt O 23.5 saves",
+"matchup": "MIN @ PHI",
+"start_et": "7:00 PM",
+"combo": "MIN ML + Wallstedt O 23.5 saves",
+"price": "+204",
+"fair_price": "+228",
+"hit_pct": 30.5,
+"ev_pct": -7.3,
 "flag": false
 },
 {
@@ -319,36 +330,14 @@
 "flag": false
 },
 {
-"combo_id": "2026020241|PHI ML + Vladar O 26.5 saves",
-"matchup": "MIN @ PHI",
-"start_et": "7:00 PM",
-"combo": "PHI ML + Vladar O 26.5 saves",
-"price": "+388",
-"fair_price": "+439",
-"hit_pct": 18.6,
-"ev_pct": -9.4,
-"flag": false
-},
-{
-"combo_id": "2026020241|MIN ML + Wallstedt O 23.5 saves",
-"matchup": "MIN @ PHI",
-"start_et": "7:00 PM",
-"combo": "MIN ML + Wallstedt O 23.5 saves",
-"price": "+204",
-"fair_price": "+236",
-"hit_pct": 29.8,
-"ev_pct": -9.6,
-"flag": false
-},
-{
 "combo_id": "2026020240|NYR ML + Garand O 22.5 saves",
 "matchup": "STL @ NYR",
 "start_et": "7:00 PM",
 "combo": "NYR ML + Garand O 22.5 saves",
 "price": "+236",
-"fair_price": "+275",
+"fair_price": "+276",
 "hit_pct": 26.6,
-"ev_pct": -10.5,
+"ev_pct": -10.7,
 "flag": false
 },
 {
@@ -357,9 +346,20 @@
 "start_et": "7:00 PM",
 "combo": "WSH ML + Thompson O 23.5 saves",
 "price": "+237",
-"fair_price": "+277",
-"hit_pct": 26.5,
-"ev_pct": -10.7,
+"fair_price": "+282",
+"hit_pct": 26.2,
+"ev_pct": -12.0,
+"flag": false
+},
+{
+"combo_id": "2026020241|PHI ML + Vladar O 26.5 saves",
+"matchup": "MIN @ PHI",
+"start_et": "7:00 PM",
+"combo": "PHI ML + Vladar O 26.5 saves",
+"price": "+388",
+"fair_price": "+456",
+"hit_pct": 18.0,
+"ev_pct": -12.1,
 "flag": false
 },
 {
@@ -379,20 +379,9 @@
 "start_et": "7:00 PM",
 "combo": "DAL ML + Oettinger O 23.5 saves",
 "price": "+251",
-"fair_price": "+318",
-"hit_pct": 23.9,
-"ev_pct": -15.8,
-"flag": false
-},
-{
-"combo_id": "2026020239|EDM ML + Jarry O 28.5 saves",
-"matchup": "EDM @ NJD",
-"start_et": "7:30 PM",
-"combo": "EDM ML + Jarry O 28.5 saves",
-"price": "+339",
-"fair_price": "+430",
-"hit_pct": 18.9,
-"ev_pct": -17.2,
+"fair_price": "+313",
+"hit_pct": 24.2,
+"ev_pct": -14.9,
 "flag": false
 },
 {
@@ -400,10 +389,10 @@
 "matchup": "ANA @ VAN",
 "start_et": "9:00 PM",
 "combo": "VAN ML + Lankinen O 26.5 saves",
-"price": "+322",
-"fair_price": "+416",
-"hit_pct": 19.4,
-"ev_pct": -18.2,
+"price": "+368",
+"fair_price": "+460",
+"hit_pct": 17.9,
+"ev_pct": -16.5,
 "flag": false
 },
 {
@@ -412,20 +401,31 @@
 "start_et": "7:30 PM",
 "combo": "NJD ML + Hellebuyck O 24.5 saves",
 "price": "+218",
-"fair_price": "+297",
-"hit_pct": 25.2,
-"ev_pct": -19.9,
+"fair_price": "+284",
+"hit_pct": 26.0,
+"ev_pct": -17.2,
 "flag": false
 },
 {
-"combo_id": "2026020236|UTA ML + Cossa O 23.5 saves",
+"combo_id": "2026020239|EDM ML + Jarry O 28.5 saves",
+"matchup": "EDM @ NJD",
+"start_et": "7:30 PM",
+"combo": "EDM ML + Jarry O 28.5 saves",
+"price": "+339",
+"fair_price": "+432",
+"hit_pct": 18.8,
+"ev_pct": -17.5,
+"flag": false
+},
+{
+"combo_id": "2026020236|TOR ML + Bobrovsky O 28.5 saves",
 "matchup": "UTA @ TOR",
 "start_et": "7:00 PM",
-"combo": "UTA ML + Cossa O 23.5 saves",
-"price": "+208",
-"fair_price": "+287",
-"hit_pct": 25.8,
-"ev_pct": -20.4,
+"combo": "TOR ML + Bobrovsky O 28.5 saves",
+"price": "+296",
+"fair_price": "+388",
+"hit_pct": 20.5,
+"ev_pct": -18.8,
 "flag": false
 },
 {
@@ -434,20 +434,20 @@
 "start_et": "7:00 PM",
 "combo": "STL ML + Hofer O 24.5 saves",
 "price": "+254",
-"fair_price": "+344",
-"hit_pct": 22.5,
-"ev_pct": -20.4,
+"fair_price": "+341",
+"hit_pct": 22.7,
+"ev_pct": -19.8,
 "flag": false
 },
 {
-"combo_id": "2026020236|TOR ML + Bobrovsky O 28.5 saves",
+"combo_id": "2026020236|UTA ML + Cossa O 23.5 saves",
 "matchup": "UTA @ TOR",
 "start_et": "7:00 PM",
-"combo": "TOR ML + Bobrovsky O 28.5 saves",
-"price": "+287",
-"fair_price": "+388",
-"hit_pct": 20.5,
-"ev_pct": -20.7,
+"combo": "UTA ML + Cossa O 23.5 saves",
+"price": "+203",
+"fair_price": "+286",
+"hit_pct": 25.9,
+"ev_pct": -21.5,
 "flag": false
 },
 {
@@ -456,9 +456,9 @@
 "start_et": "7:00 PM",
 "combo": "PIT ML + Silovs O 26.5 saves",
 "price": "+283",
-"fair_price": "+384",
-"hit_pct": 20.7,
-"ev_pct": -20.9,
+"fair_price": "+399",
+"hit_pct": 20.1,
+"ev_pct": -23.1,
 "flag": false
 }
 ]
