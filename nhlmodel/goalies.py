@@ -80,6 +80,7 @@ def update_goalies(games: pd.DataFrame, since="2024-09-01", verbose=True) -> pd.
     gl = pd.read_csv(GOALIE_CSV) if GOALIE_CSV.exists() else pd.DataFrame(columns=GCOLS)
     done = set(gl["game_id"].astype(int)) if len(gl) else set()
     todo = games[games["state"].isin(["OFF", "FINAL"]) & (games["date"] >= since) & ~games["game_id"].isin(done)]
+    todo = todo.drop_duplicates("game_id")
     rows = []
     for _, g in todo.iterrows():
         for r in boxscore_goalies(int(g["game_id"])):
@@ -89,6 +90,7 @@ def update_goalies(games: pd.DataFrame, since="2024-09-01", verbose=True) -> pd.
         print(f"[goalies] fetched {len(todo)} box scores")
     if rows:
         gl = pd.concat([gl, pd.DataFrame(rows)[GCOLS]], ignore_index=True).sort_values(["date", "game_id"])
+        gl = gl.drop_duplicates(["game_id", "player_id"], keep="last")
         gl.to_csv(GOALIE_CSV, index=False)
     return gl
 

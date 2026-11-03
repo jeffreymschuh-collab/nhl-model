@@ -37,7 +37,10 @@ def main():
     # Today's games that are already final (afternoon games) get graded today, not tomorrow
     import pandas as pd
     today_fin = [g for g in nhl_api.games_on(day) if g["state"] in nhl_api.FINAL_STATES]
-    games_g = pd.concat([games, pd.DataFrame(today_fin, columns=nhl_api.COLS)], ignore_index=True) if today_fin else games
+    games_g = games
+    if today_fin:
+        new = pd.DataFrame(today_fin, columns=nhl_api.COLS)
+        games_g = pd.concat([games[~games["game_id"].isin(new["game_id"])], new], ignore_index=True)
     try:
         gl = goalies.update_goalies(games_g)
     except Exception as err:          # never let goalie data break the game-line run
