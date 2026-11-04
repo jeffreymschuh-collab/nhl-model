@@ -9,9 +9,9 @@
 "stake_usd": 10.0,
 "close": "+225",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -0.5,
+"profit_usd": -10.0
 },
 {
 "pick_id": "2026020238|spreads|away",
@@ -23,9 +23,9 @@
 "stake_usd": 30.0,
 "close": "+100",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.5,
+"profit_usd": -30.0
 },
 {
 "pick_id": "2026020242|saves|under|a silovs",
@@ -37,9 +37,9 @@
 "stake_usd": 20.0,
 "close": "-150",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.667,
+"profit_usd": 13.34
 },
 {
 "pick_id": "2026020244|saves|under|s wedgewood",
@@ -51,9 +51,9 @@
 "stake_usd": 20.0,
 "close": "+100",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 1.0,
+"profit_usd": 20.0
 },
 {
 "pick_id": "2026020239|saves|under|c hellebuyck",
@@ -65,9 +65,9 @@
 "stake_usd": 20.0,
 "close": "-125",
 "clv_pct": 1.01,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.833,
+"profit_usd": 16.66
 },
 {
 "pick_id": "2026020246|saves|under|k lankinen",
@@ -79,9 +79,9 @@
 "stake_usd": 20.0,
 "close": "-110",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.909,
+"profit_usd": 18.18
 },
 {
 "pick_id": "2026020241|saves|under|d vladar",
@@ -93,9 +93,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.769,
+"profit_usd": 15.38
 },
 {
 "pick_id": "2026020227|saves|under|p kochetkov",
