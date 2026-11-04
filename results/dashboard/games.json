@@ -7,7 +7,7 @@
 "xg_home": 3.13,
 "home_win_pct": 52.3,
 "best_line": "Ersson U 25.5 saves",
-"best_edge_pct": 3.7,
+"best_edge_pct": 3.8,
 "picks": 0
 },
 {
@@ -18,7 +18,7 @@
 "xg_home": 3.38,
 "home_win_pct": 64.8,
 "best_line": "Markstrom U 20.5 saves",
-"best_edge_pct": 1.5,
+"best_edge_pct": 1.6,
 "picks": 0
 },
 {
@@ -28,8 +28,8 @@
 "xg_away": 2.67,
 "xg_home": 3.14,
 "home_win_pct": 58.5,
-"best_line": "Askarov U 27.5 saves",
-"best_edge_pct": -2.5,
+"best_line": "Askarov U 26.5 saves",
+"best_edge_pct": -2.6,
 "picks": 0
 },
 {
@@ -40,7 +40,7 @@
 "xg_home": 3.21,
 "home_win_pct": 54.6,
 "best_line": "Daccord U 25.5 saves",
-"best_edge_pct": 0.1,
+"best_edge_pct": -1.7,
 "picks": 0
 }
 ]
