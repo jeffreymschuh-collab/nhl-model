@@ -6,8 +6,8 @@
 "xg_away": 3.12,
 "xg_home": 3.06,
 "home_win_pct": 48.8,
-"best_line": "MTL ML",
-"best_edge_pct": -2.4,
+"best_line": "Cossa U 23.5 saves",
+"best_edge_pct": 1.0,
 "picks": 0
 },
 {
@@ -17,8 +17,8 @@
 "xg_away": 2.97,
 "xg_home": 2.76,
 "home_win_pct": 46.0,
-"best_line": "DET ML",
-"best_edge_pct": -2.5,
+"best_line": "Tarasov U 24.5 saves",
+"best_edge_pct": 2.0,
 "picks": 0
 },
 {
@@ -29,7 +29,7 @@
 "xg_home": 3.85,
 "home_win_pct": 75.9,
 "best_line": "CHI +2.5",
-"best_edge_pct": 7.1,
+"best_edge_pct": 9.2,
 "picks": 1
 },
 {
@@ -37,10 +37,10 @@
 "matchup": "STL @ NJD",
 "start_et": "7:00 PM",
 "xg_away": 2.71,
-"xg_home": 3.09,
-"home_win_pct": 56.8,
-"best_line": "STL +1.5",
-"best_edge_pct": 2.3,
+"xg_home": 3.29,
+"home_win_pct": 60.1,
+"best_line": "Binnington U 27.5 saves",
+"best_edge_pct": -1.2,
 "picks": 0
 },
 {
@@ -50,8 +50,8 @@
 "xg_away": 3.37,
 "xg_home": 2.55,
 "home_win_pct": 35.6,
-"best_line": "CAR ML",
-"best_edge_pct": -1.2,
+"best_line": "Bussi U 21.5 saves",
+"best_edge_pct": 3.8,
 "picks": 0
 },
 {
@@ -61,8 +61,8 @@
 "xg_away": 2.66,
 "xg_home": 2.79,
 "home_win_pct": 52.5,
-"best_line": "PHI ML",
-"best_edge_pct": -2.1,
+"best_line": "Garand U 22.5 saves",
+"best_edge_pct": -0.4,
 "picks": 0
 },
 {
@@ -72,8 +72,8 @@
 "xg_away": 3.12,
 "xg_home": 3.09,
 "home_win_pct": 49.5,
-"best_line": "BOS ML",
-"best_edge_pct": -3.9,
+"best_line": "Silovs O 24.5 saves",
+"best_edge_pct": 0.7,
 "picks": 0
 },
 {
@@ -81,11 +81,11 @@
 "matchup": "DAL @ CBJ",
 "start_et": "7:00 PM",
 "xg_away": 2.84,
-"xg_home": 2.67,
-"home_win_pct": 46.8,
-"best_line": "CBJ +1.5",
-"best_edge_pct": -3.6,
-"picks": 0
+"xg_home": 2.68,
+"home_win_pct": 46.9,
+"best_line": "Talbot U 23.5 saves",
+"best_edge_pct": 9.2,
+"picks": 1
 },
 {
 "game_id": "2026020259",
@@ -95,18 +95,18 @@
 "xg_home": 3.27,
 "home_win_pct": 60.1,
 "best_line": "VAN +1.5",
-"best_edge_pct": -2.2,
+"best_edge_pct": -2.3,
 "picks": 0
 },
 {
 "game_id": "2026020260",
 "matchup": "ANA @ EDM",
 "start_et": "8:00 PM",
-"xg_away": 3.02,
-"xg_home": 3.54,
+"xg_away": 2.98,
+"xg_home": 3.5,
 "home_win_pct": 58.8,
 "best_line": "ANA +1.5",
-"best_edge_pct": -0.2,
+"best_edge_pct": -0.3,
 "picks": 0
 },
 {
@@ -116,8 +116,8 @@
 "xg_away": 2.78,
 "xg_home": 3.57,
 "home_win_pct": 63.3,
-"best_line": "COL ML",
-"best_edge_pct": -5.3,
-"picks": 0
+"best_line": "Blackwood U 22.5 saves",
+"best_edge_pct": 5.5,
+"picks": 1
 }
 ]
