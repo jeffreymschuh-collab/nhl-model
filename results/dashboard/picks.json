@@ -1,5 +1,19 @@
 [
 {
+"pick_id": "2026020253|spreads|away",
+"date": "2026-11-05",
+"matchup": "CHI @ TBL",
+"selection": "CHI +2.5",
+"price": "-115",
+"units": 2.0,
+"stake_usd": 40.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
 "pick_id": "2026020238|h2h|away",
 "date": "2026-11-03",
 "matchup": "DET @ TBL",
