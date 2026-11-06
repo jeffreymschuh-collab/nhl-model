@@ -10,6 +10,10 @@ on:
         description: "am or pm (blank = auto)"
         required: false
         default: ""
+      saves:
+        description: "price goalie saves: auto, on, off"
+        required: false
+        default: "auto"
       grade_only:
         description: "grade finished picks only (no odds credits)"
         required: false
@@ -50,7 +54,7 @@ jobs:
           if [ "${{ github.event.inputs.grade_only }}" = "true" ]; then
             python scripts/run_daily.py --grade-only
           elif [ -n "${{ github.event.inputs.run }}" ]; then
-            python scripts/run_daily.py --run "${{ github.event.inputs.run }}"
+            python scripts/run_daily.py --run "${{ github.event.inputs.run }}" --saves "${{ github.event.inputs.saves || 'auto' }}"
           else
             python scripts/run_daily.py
           fi
