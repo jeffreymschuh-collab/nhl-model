@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T14:31:07.097373+00:00",
+ "generated_at": "2026-11-06T16:10:11.679745+00:00",
  "date": "2026-11-06",
  "run": "am",
  "params": {
@@ -19,8 +19,8 @@
   "goalie_metric": "sv"
  },
  "odds_quota": {
-  "remaining": "407",
-  "used": "93"
+  "remaining": "404",
+  "used": "96"
  },
  "odds_events": [
   {
@@ -60,21 +60,8 @@
    ]
   }
  ],
- "saves_priced": true,
- "saves_diag": [
-  {
-   "game": "CBJ @ BUF",
-   "note": "no Hard Rock saves lines"
-  },
-  {
-   "game": "SJS @ MIN",
-   "note": "no Hard Rock saves lines"
-  },
-  {
-   "game": "ANA @ CGY",
-   "note": "no Hard Rock saves lines"
-  }
- ],
+ "saves_priced": false,
+ "saves_diag": [],
  "games": [
   {
    "game_id": 2026020262,
@@ -107,10 +94,10 @@
      "point": null,
      "price": -170,
      "p_model": 0.5893,
-     "p_market": 0.6087,
-     "p_final": 0.6019,
-     "fair_price": -151,
-     "edge": -0.044
+     "p_market": 0.6107,
+     "p_final": 0.6032,
+     "fair_price": -152,
+     "edge": -0.0419
     },
     {
      "book": "hardrockbet",
@@ -120,10 +107,10 @@
      "point": null,
      "price": 140,
      "p_model": 0.4107,
-     "p_market": 0.3913,
-     "p_final": 0.3981,
-     "fair_price": 151,
-     "edge": -0.0447
+     "p_market": 0.3893,
+     "p_final": 0.3968,
+     "fair_price": 152,
+     "edge": -0.0478
     },
     {
      "book": "hardrockbet",
@@ -131,12 +118,12 @@
      "selection": "BUF -1.5",
      "side": "home",
      "point": -1.5,
-     "price": 140,
+     "price": 130,
      "p_model": 0.3828,
      "p_market": 0.3954,
      "p_final": 0.391,
      "fair_price": 156,
-     "edge": -0.0616
+     "edge": -0.1007
     },
     {
      "book": "hardrockbet",
@@ -144,12 +131,12 @@
      "selection": "CBJ +1.5",
      "side": "away",
      "point": 1.5,
-     "price": -185,
+     "price": -165,
      "p_model": 0.6172,
      "p_market": 0.6046,
      "p_final": 0.609,
      "fair_price": -156,
-     "edge": -0.0618
+     "edge": -0.0219
     },
     {
      "book": "hardrockbet",
@@ -208,12 +195,12 @@
      "selection": "MIN ML",
      "side": "home",
      "point": null,
-     "price": -260,
+     "price": -275,
      "p_model": 0.6868,
-     "p_market": 0.696,
-     "p_final": 0.6928,
-     "fair_price": -225,
-     "edge": -0.0408
+     "p_market": 0.6974,
+     "p_final": 0.6937,
+     "fair_price": -226,
+     "edge": -0.054
     },
     {
      "book": "hardrockbet",
@@ -221,12 +208,12 @@
      "selection": "SJS ML",
      "side": "away",
      "point": null,
-     "price": 195,
+     "price": 200,
      "p_model": 0.3132,
-     "p_market": 0.304,
-     "p_final": 0.3072,
-     "fair_price": 225,
-     "edge": -0.0937
+     "p_market": 0.3026,
+     "p_final": 0.3063,
+     "fair_price": 226,
+     "edge": -0.0811
     },
     {
      "book": "hardrockbet",
@@ -236,10 +223,10 @@
      "point": -1.5,
      "price": -105,
      "p_model": 0.4787,
-     "p_market": 0.4872,
-     "p_final": 0.4842,
-     "fair_price": 107,
-     "edge": -0.0547
+     "p_market": 0.489,
+     "p_final": 0.4854,
+     "fair_price": 106,
+     "edge": -0.0523
     },
     {
      "book": "hardrockbet",
@@ -249,10 +236,10 @@
      "point": 1.5,
      "price": -115,
      "p_model": 0.5213,
-     "p_market": 0.5128,
-     "p_final": 0.5158,
-     "fair_price": -107,
-     "edge": -0.0357
+     "p_market": 0.511,
+     "p_final": 0.5146,
+     "fair_price": -106,
+     "edge": -0.0379
     },
     {
      "book": "hardrockbet",
@@ -313,12 +300,12 @@
      "selection": "ANA ML",
      "side": "away",
      "point": null,
-     "price": 105,
+     "price": 120,
      "p_model": 0.4773,
-     "p_market": 0.454,
-     "p_final": 0.4621,
-     "fair_price": 116,
-     "edge": -0.0526
+     "p_market": 0.4283,
+     "p_final": 0.4454,
+     "fair_price": 125,
+     "edge": -0.0202
     },
     {
      "book": "hardrockbet",
@@ -326,12 +313,12 @@
      "selection": "CGY ML",
      "side": "home",
      "point": null,
-     "price": -125,
+     "price": -140,
      "p_model": 0.5227,
-     "p_market": 0.546,
-     "p_final": 0.5379,
-     "fair_price": -116,
-     "edge": -0.0318
+     "p_market": 0.5717,
+     "p_final": 0.5546,
+     "fair_price": -125,
+     "edge": -0.0492
     },
     {
      "book": "hardrockbet",
@@ -339,12 +326,12 @@
      "selection": "ANA +1.5",
      "side": "away",
      "point": 1.5,
-     "price": -230,
+     "price": -210,
      "p_model": 0.6675,
-     "p_market": 0.666,
-     "p_final": 0.6665,
-     "fair_price": -200,
-     "edge": -0.0437
+     "p_market": 0.6441,
+     "p_final": 0.6524,
+     "fair_price": -188,
+     "edge": -0.037
     },
     {
      "book": "hardrockbet",
@@ -352,12 +339,12 @@
      "selection": "CGY -1.5",
      "side": "home",
      "point": -1.5,
-     "price": 175,
+     "price": 160,
      "p_model": 0.3325,
-     "p_market": 0.334,
-     "p_final": 0.3335,
-     "fair_price": 200,
-     "edge": -0.0829
+     "p_market": 0.3559,
+     "p_final": 0.3476,
+     "fair_price": 188,
+     "edge": -0.0961
     },
     {
      "book": "hardrockbet",
@@ -370,7 +357,7 @@
      "p_market": 0.484,
      "p_final": 0.4849,
      "fair_price": 106,
-     "edge": -0.0303
+     "edge": -0.0302
     },
     {
      "book": "hardrockbet",
