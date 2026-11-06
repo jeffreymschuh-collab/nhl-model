@@ -4,10 +4,10 @@
 "matchup": "CBJ @ BUF",
 "start_et": "7:00 PM",
 "xg_away": 2.7,
-"xg_home": 3.2,
-"home_win_pct": 58.9,
-"best_line": "CBJ +1.5",
-"best_edge_pct": -2.2,
+"xg_home": 3.21,
+"home_win_pct": 59.0,
+"best_line": "Greaves U 26.5 saves",
+"best_edge_pct": 1.2,
 "picks": 0
 },
 {
@@ -18,7 +18,7 @@
 "xg_home": 3.65,
 "home_win_pct": 68.7,
 "best_line": "SJS +1.5",
-"best_edge_pct": -3.8,
+"best_edge_pct": 0.6,
 "picks": 0
 },
 {
@@ -27,9 +27,9 @@
 "start_et": "8:00 PM",
 "xg_away": 3.07,
 "xg_home": 3.2,
-"home_win_pct": 52.3,
-"best_line": "ANA ML",
-"best_edge_pct": -2.0,
-"picks": 0
+"home_win_pct": 52.2,
+"best_line": "Dostal O 24.5 saves",
+"best_edge_pct": 5.8,
+"picks": 1
 }
 ]
