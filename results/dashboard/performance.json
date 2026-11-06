@@ -1,13 +1,13 @@
 [
 {
 "market": "All",
-"bets": 11,
-"profit_usd": 20.0,
-"record": "7-4-0",
-"units_profit": 1.0,
-"roi_pct": 8.33,
-"avg_clv_pct": 0.45,
-"beat_close_pct": 57.1
+"bets": 14,
+"profit_usd": -21.0,
+"record": "8-6-0",
+"units_profit": -1.05,
+"roi_pct": -6.55,
+"avg_clv_pct": 0.15,
+"beat_close_pct": 50.0
 },
 {
 "market": "Moneyline",
@@ -21,22 +21,22 @@
 },
 {
 "market": "Goalie saves",
-"bets": 8,
-"profit_usd": 100.0,
-"record": "7-1-0",
-"units_profit": 5.0,
-"roi_pct": 62.5,
+"bets": 10,
+"profit_usd": 99.0,
+"record": "8-2-0",
+"units_profit": 4.95,
+"roi_pct": 49.52,
 "avg_clv_pct": 3.33,
 "beat_close_pct": 100.0
 },
 {
 "market": "Puck line",
-"bets": 2,
-"profit_usd": -70.0,
-"record": "0-2-0",
-"units_profit": -3.5,
+"bets": 3,
+"profit_usd": -110.0,
+"record": "0-3-0",
+"units_profit": -5.5,
 "roi_pct": -100.0,
-"avg_clv_pct": -2.37,
+"avg_clv_pct": -2.22,
 "beat_close_pct": 0.0
 }
 ]

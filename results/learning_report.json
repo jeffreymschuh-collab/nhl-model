@@ -1,44 +1,68 @@
 {
- "generated_at": "2026-11-05T22:07:23.580509+00:00",
+ "generated_at": "2026-11-06T14:31:07.739974+00:00",
  "min_games": 300,
  "blend": {
   "h2h": {
-   "games": 28,
-   "lines": 56,
+   "games": 39,
+   "lines": 78,
    "current_weight": 0.35,
-   "note": "needs 272 more graded games before tuning"
+   "best_weight": 0.1,
+   "loglik_best": -0.6287,
+   "loglik_current": -0.6312,
+   "loglik_market_only": -0.6278,
+   "holdout_weight": 0.7,
+   "holdout_ll_fitted": -0.6491,
+   "holdout_ll_current": -0.6388
   },
   "spreads": {
-   "games": 28,
-   "lines": 56,
+   "games": 39,
+   "lines": 78,
    "current_weight": 0.35,
-   "note": "needs 272 more graded games before tuning"
+   "best_weight": 0.1,
+   "loglik_best": -0.6208,
+   "loglik_current": -0.6262,
+   "loglik_market_only": -0.6189,
+   "holdout_weight": 0.1,
+   "holdout_ll_fitted": -0.6158,
+   "holdout_ll_current": -0.6217
   },
   "totals": {
-   "games": 27,
-   "lines": 54,
+   "games": 38,
+   "lines": 76,
    "current_weight": 0.35,
-   "note": "needs 273 more graded games before tuning"
+   "best_weight": 0.4,
+   "loglik_best": -0.676,
+   "loglik_current": -0.676,
+   "loglik_market_only": -0.6764,
+   "holdout_weight": 0.1,
+   "holdout_ll_fitted": -0.6827,
+   "holdout_ll_current": -0.682
   },
   "saves": {
-   "games": 25,
-   "lines": 80,
+   "games": 36,
+   "lines": 114,
    "current_weight": 0.35,
-   "note": "needs 275 more graded games before tuning"
+   "best_weight": 0.7,
+   "loglik_best": -0.6872,
+   "loglik_current": -0.6942,
+   "loglik_market_only": -0.7025,
+   "holdout_weight": 0.7,
+   "holdout_ll_fitted": -0.7007,
+   "holdout_ll_current": -0.7027
   }
  },
  "timing": {
   "spreads": {
-   "lines_compared": 48,
-   "morning_better_pct": 6.2,
-   "pregame_better_pct": 6.2,
-   "avg_move_pct_pts": -0.0
+   "lines_compared": 70,
+   "morning_better_pct": 8.6,
+   "pregame_better_pct": 8.6,
+   "avg_move_pct_pts": 0.03
   },
   "totals": {
-   "lines_compared": 50,
-   "morning_better_pct": 6.0,
-   "pregame_better_pct": 6.0,
-   "avg_move_pct_pts": -0.05
+   "lines_compared": 72,
+   "morning_better_pct": 8.3,
+   "pregame_better_pct": 8.3,
+   "avg_move_pct_pts": -0.04
   }
  }
 }

@@ -9,9 +9,9 @@
 "stake_usd": 40.0,
 "close": "-110",
 "clv_pct": -1.11,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -2.0,
+"profit_usd": -40.0
 },
 {
 "pick_id": "2026020258|saves|under|c talbot",
@@ -23,9 +23,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.0,
+"profit_usd": -20.0
 },
 {
 "pick_id": "2026020261|saves|under|m blackwood",
@@ -37,9 +37,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.952,
+"profit_usd": 19.04
 },
 {
 "pick_id": "2026020238|h2h|away",
