@@ -1,0 +1,178 @@
+date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,call_result,value_side,value_price,value_edge,tier,value_result,value_profit_1u,expected,actual,status
+2026-10-31,pm,2026020223,PIT @ MTL,h2h,,,MTL ML,0.5371,0.5283,W,PIT ML,105,-0.0393,pass,L,-1.0,0.21,1.0,graded
+2026-10-31,pm,2026020223,PIT @ MTL,spreads,,1.5,PIT +1.5,0.6585,0.669,W,PIT +1.5,-230,-0.0454,pass,W,0.435,0.21,1.0,graded
+2026-10-31,pm,2026020223,PIT @ MTL,totals,,6.5,Under 6.5,0.5425,0.4753,L,Under 6.5,105,0.0226,lean,L,-1.0,6.09,9.0,graded
+2026-10-31,pm,2026020223,PIT @ MTL,saves,Jacob Fowler,23.5,Fowler O 23.5 saves,0.5466,0.4854,W,Fowler O 23.5 saves,-105,-0.0105,pass,W,0.952,24.3,25.0,graded
+2026-10-31,pm,2026020223,PIT @ MTL,saves,Sergei Murashov,26.5,Murashov U 26.5 saves,0.6772,0.61,W,Murashov U 26.5 saves,-175,-0.0035,pass,W,0.571,23.5,22.0,graded
+2026-10-31,pm,2026020224,TOR @ VAN,h2h,,,TOR ML,0.6003,0.6316,W,VAN ML,155,-0.033,pass,L,-1.0,-0.6,-2.0,graded
+2026-10-31,pm,2026020224,TOR @ VAN,spreads,,1.5,VAN +1.5,0.5967,0.5828,L,VAN +1.5,-145,-0.007,pass,L,-1.0,-0.6,-2.0,graded
+2026-10-31,pm,2026020224,TOR @ VAN,totals,,6.5,Over 6.5,0.5299,0.5356,L,Under 6.5,105,-0.0439,pass,W,1.05,6.56,6.0,graded
+2026-10-31,pm,2026020224,TOR @ VAN,saves,Anthony Stolarz,24.5,Stolarz U 24.5 saves,0.5271,0.5627,L,Stolarz U 24.5 saves,-130,-0.0264,pass,L,-1.0,24.1,26.0,graded
+2026-10-31,pm,2026020225,CBJ @ DAL,h2h,,,DAL ML,0.5668,0.625,W,CBJ ML,150,-0.0124,pass,L,-1.0,0.35,2.0,graded
+2026-10-31,pm,2026020225,CBJ @ DAL,spreads,,1.5,CBJ +1.5,0.6456,0.6036,L,CBJ +1.5,-165,-0.0067,pass,L,-1.0,0.35,2.0,graded
+2026-10-31,pm,2026020225,CBJ @ DAL,totals,,5.5,Under 5.5,0.5116,0.519,W,Over 5.5,100,-0.0328,pass,L,-1.0,5.41,4.0,graded
+2026-10-31,pm,2026020225,CBJ @ DAL,saves,Jake Oettinger,23.5,Oettinger U 23.5 saves,0.6235,0.6129,L,Oettinger U 23.5 saves,-195,-0.0672,pass,L,-1.0,21.7,24.0,graded
+2026-10-31,pm,2026020225,CBJ @ DAL,saves,Jet Greaves,25.5,Greaves U 25.5 saves,0.6302,0.5514,W,Greaves U 25.5 saves,-115,0.0834,official,W,0.87,23.4,14.0,graded
+2026-10-31,pm,2026020226,CGY @ COL,h2h,,,COL ML,0.7317,0.7805,W,CGY ML,325,0.0021,lean,L,-1.0,1.43,3.0,graded
+2026-10-31,pm,2026020226,CGY @ COL,spreads,,2.5,CGY +2.5,0.6733,0.5216,L,CGY +2.5,-120,0.0574,official,L,-1.0,1.43,3.0,graded
+2026-10-31,pm,2026020226,CGY @ COL,totals,,6.5,Over 6.5,0.5022,0.5058,W,Over 6.5,-110,-0.0367,pass,W,0.909,6.41,7.0,graded
+2026-10-31,pm,2026020226,CGY @ COL,saves,Mackenzie Blackwood,21.5,Blackwood O 21.5 saves,0.5419,0.4884,W,Blackwood U 21.5 saves,-110,-0.0591,pass,L,-1.0,22.2,25.0,graded
+2026-11-01,pm,2026020230,EDM @ NYR,h2h,,,NYR ML,0.5256,0.5327,L,EDM ML,105,-0.037,pass,W,1.05,0.15,-3.0,graded
+2026-11-01,pm,2026020230,EDM @ NYR,spreads,,1.5,EDM +1.5,0.6676,0.6688,W,EDM +1.5,-230,-0.041,pass,W,0.435,0.15,-3.0,graded
+2026-11-01,pm,2026020230,EDM @ NYR,totals,,6.5,Under 6.5,0.5392,0.4859,W,Under 6.5,-105,-0.0149,pass,W,0.952,6.11,5.0,graded
+2026-11-01,pm,2026020230,EDM @ NYR,saves,Dylan Garand,24.5,Garand U 24.5 saves,0.6174,0.6148,W,Garand U 24.5 saves,-160,0.0005,lean,W,0.625,22.7,21.0,graded
+2026-11-01,pm,2026020231,OTT @ ANA,h2h,,,OTT ML,0.503,0.5227,L,ANA ML,100,-0.0316,pass,W,1.0,-0.02,3.0,graded
+2026-11-01,pm,2026020231,OTT @ ANA,spreads,,1.5,ANA +1.5,0.684,0.6757,W,ANA +1.5,-230,-0.0264,pass,W,0.435,-0.02,3.0,graded
+2026-11-01,pm,2026020231,OTT @ ANA,totals,,6.5,Under 6.5,0.5185,0.4553,L,Under 6.5,105,-0.0214,pass,L,-1.0,6.24,9.0,graded
+2026-11-02,pm,2026020232,VGK @ BOS,h2h,,,VGK ML,0.5146,0.5149,L,VGK ML,-115,-0.0376,pass,L,-1.0,-0.08,1.0,graded
+2026-11-02,pm,2026020232,VGK @ BOS,spreads,,1.5,VGK +1.5,0.7036,,W,VGK +1.5,-300,-0.0619,pass,W,0.333,-0.08,1.0,graded
+2026-11-02,pm,2026020232,VGK @ BOS,totals,,6.5,Under 6.5,0.5819,0.5372,W,Under 6.5,-130,-0.0217,pass,W,0.769,5.84,5.0,graded
+2026-11-02,pm,2026020232,VGK @ BOS,saves,Jeremy Swayman,25.5,Swayman U 25.5 saves,0.5517,0.4869,W,Swayman U 25.5 saves,-115,-0.0472,pass,W,0.87,24.6,21.0,graded
+2026-11-02,pm,2026020233,DET @ FLA,h2h,,,FLA ML,0.5491,0.6207,L,DET ML,145,-0.0103,pass,W,1.45,0.27,-2.0,graded
+2026-11-02,pm,2026020233,DET @ FLA,spreads,,1.5,DET +1.5,0.6513,0.6012,W,DET +1.5,-165,-0.0058,pass,W,0.606,0.27,-2.0,graded
+2026-11-02,pm,2026020233,DET @ FLA,totals,,5.5,Over 5.5,0.5712,0.5352,W,Over 5.5,-130,-0.0307,pass,W,0.769,5.91,8.0,graded
+2026-11-02,pm,2026020233,DET @ FLA,saves,Jacob Markstrom,23.5,Markstrom U 23.5 saves,0.5726,0.5235,L,Markstrom U 23.5 saves,-110,0.0324,lean,L,-1.0,22.4,24.0,graded
+2026-11-02,pm,2026020233,DET @ FLA,saves,Daniil Tarasov,24.5,Tarasov U 24.5 saves,0.5105,0.4653,W,Tarasov O 24.5 saves,-120,-0.0486,pass,L,-1.0,24.3,23.0,graded
+2026-11-02,pm,2026020234,COL @ CHI,h2h,,,COL ML,0.6988,0.6698,W,COL ML,-230,-0.0241,pass,W,0.435,-1.17,-3.0,graded
+2026-11-02,pm,2026020234,COL @ CHI,spreads,,1.5,CHI +1.5,0.5108,0.5407,L,COL -1.5,105,-0.037,pass,W,1.05,-1.17,-3.0,graded
+2026-11-02,pm,2026020234,COL @ CHI,totals,,6.5,Under 6.5,0.5422,0.5294,L,Over 6.5,105,-0.0444,pass,W,1.05,6.13,7.0,graded
+2026-11-02,pm,2026020234,COL @ CHI,saves,Spencer Knight,28.5,Knight U 28.5 saves,0.5458,0.5,W,Knight U 28.5 saves,-120,-0.0539,pass,W,0.833,27.4,24.0,graded
+2026-11-02,pm,2026020235,CGY @ SJS,h2h,,,SJS ML,0.5056,0.5267,L,CGY ML,100,-0.0386,pass,W,1.0,0.04,-1.0,graded
+2026-11-02,pm,2026020235,CGY @ SJS,spreads,,1.5,CGY +1.5,0.6836,0.6801,W,CGY +1.5,-250,-0.0462,pass,W,0.4,0.04,-1.0,graded
+2026-11-02,pm,2026020235,CGY @ SJS,totals,,6.5,Under 6.5,0.537,0.5217,W,Under 6.5,-120,-0.0338,pass,W,0.833,6.12,3.0,graded
+2026-11-02,pm,2026020235,CGY @ SJS,saves,Dustin Wolf,26.5,Wolf U 26.5 saves,0.6141,0.5494,W,Wolf U 26.5 saves,-140,-0.0188,pass,W,0.714,24.5,26.0,graded
+2026-11-02,pm,2026020235,CGY @ SJS,saves,Yaroslav Askarov,26.5,Askarov U 26.5 saves,0.5805,0.567,W,Askarov O 26.5 saves,125,-0.0364,pass,L,-1.0,24.9,20.0,graded
+2026-11-03,pm,2026020236,UTA @ TOR,h2h,,,UTA ML,0.5553,0.5677,W,UTA ML,-140,-0.0343,pass,W,0.714,-0.33,-1.0,graded
+2026-11-03,pm,2026020236,UTA @ TOR,spreads,,1.5,TOR +1.5,0.6356,0.6344,W,UTA -1.5,160,-0.0505,pass,L,-1.0,-0.33,-1.0,graded
+2026-11-03,pm,2026020236,UTA @ TOR,totals,,6.5,Over 6.5,0.5359,0.549,L,Under 6.5,115,-0.0205,pass,W,1.15,6.59,5.0,graded
+2026-11-03,pm,2026020236,UTA @ TOR,saves,Sergei Bobrovsky,28.5,Bobrovsky U 28.5 saves,0.6453,0.5393,L,Bobrovsky U 28.5 saves,-140,-0.0103,pass,L,-1.0,25.7,33.0,graded
+2026-11-03,pm,2026020236,UTA @ TOR,saves,Sebastian Cossa,23.5,Cossa U 23.5 saves,0.5653,0.5858,L,Cossa U 23.5 saves,-155,-0.048,pass,L,-1.0,22.5,27.0,graded
+2026-11-03,pm,2026020237,WPG @ MTL,h2h,,,MTL ML,0.5968,0.6053,L,MTL ML,-170,-0.0434,pass,L,-1.0,0.53,-1.0,graded
+2026-11-03,pm,2026020237,WPG @ MTL,spreads,,1.5,WPG +1.5,0.6135,0.6028,W,MTL -1.5,140,-0.0558,pass,L,-1.0,0.53,-1.0,graded
+2026-11-03,pm,2026020237,WPG @ MTL,totals,,5.5,Over 5.5,0.5449,0.5404,W,Over 5.5,-130,-0.0412,pass,W,0.769,5.75,9.0,graded
+2026-11-03,pm,2026020237,WPG @ MTL,saves,Jacob Fowler,23.5,Fowler U 23.5 saves,0.527,0.5418,L,Fowler U 23.5 saves,-130,-0.0506,pass,L,-1.0,23.1,42.0,graded
+2026-11-03,pm,2026020238,DET @ TBL,h2h,,,TBL ML,0.6338,0.709,W,DET ML,225,0.0278,official,L,-1.0,0.76,2.0,graded
+2026-11-03,pm,2026020238,DET @ TBL,spreads,,1.5,DET +1.5,0.5758,0.4981,L,DET +1.5,100,0.051,official,L,-1.0,0.76,2.0,graded
+2026-11-03,pm,2026020238,DET @ TBL,totals,,6.5,Under 6.5,0.5594,0.5343,W,Under 6.5,-130,-0.0392,pass,W,0.769,6.0,6.0,graded
+2026-11-03,pm,2026020240,STL @ NYR,h2h,,,STL ML,0.504,0.4782,L,STL ML,100,-0.0255,pass,L,-1.0,-0.03,2.0,graded
+2026-11-03,pm,2026020240,STL @ NYR,spreads,,1.5,STL +1.5,0.6976,0.6881,L,STL +1.5,-250,-0.032,pass,L,-1.0,-0.03,2.0,graded
+2026-11-03,pm,2026020240,STL @ NYR,totals,,5.5,Over 5.5,0.535,0.5444,L,Over 5.5,-130,-0.0427,pass,L,-1.0,5.69,4.0,graded
+2026-11-03,pm,2026020240,STL @ NYR,saves,Joel Hofer,24.5,Hofer U 24.5 saves,0.6157,0.5565,L,Hofer U 24.5 saves,-130,0.0217,lean,L,-1.0,22.7,28.0,graded
+2026-11-03,pm,2026020240,STL @ NYR,saves,Dylan Garand,22.5,Garand U 22.5 saves,0.5413,0.5107,L,Garand U 22.5 saves,-110,-0.0045,pass,L,-1.0,21.9,32.0,graded
+2026-11-03,pm,2026020241,MIN @ PHI,h2h,,,MIN ML,0.5567,0.6188,W,PHI ML,150,0.0066,lean,L,-1.0,-0.3,-2.0,graded
+2026-11-03,pm,2026020241,MIN @ PHI,spreads,,1.5,PHI +1.5,0.6518,0.5977,L,PHI +1.5,-165,-0.0091,pass,L,-1.0,-0.3,-2.0,graded
+2026-11-03,pm,2026020241,MIN @ PHI,totals,,5.5,Over 5.5,0.5076,0.5404,W,Under 5.5,105,-0.0343,pass,L,-1.0,5.52,6.0,graded
+2026-11-03,pm,2026020241,MIN @ PHI,saves,Jesper Wallstedt,23.5,Wallstedt U 23.5 saves,0.5176,0.539,W,Wallstedt U 23.5 saves,-125,-0.0432,pass,W,0.8,23.2,23.0,graded
+2026-11-03,pm,2026020241,MIN @ PHI,saves,Dan Vladar,26.5,Vladar U 26.5 saves,0.647,0.567,W,Vladar U 26.5 saves,-130,0.0538,official,W,0.769,24.0,18.0,graded
+2026-11-03,pm,2026020242,VGK @ PIT,h2h,,,PIT ML,0.5223,0.5131,L,PIT ML,-115,-0.0347,pass,L,-1.0,0.13,-1.0,graded
+2026-11-03,pm,2026020242,VGK @ PIT,spreads,,1.5,VGK +1.5,0.6699,0.6873,W,VGK +1.5,-250,-0.0462,pass,W,0.4,0.13,-1.0,graded
+2026-11-03,pm,2026020242,VGK @ PIT,totals,,6.5,Under 6.5,0.5358,0.478,W,Under 6.5,100,-0.0036,pass,W,1.0,6.13,5.0,graded
+2026-11-03,pm,2026020242,VGK @ PIT,saves,Arturs Silovs,26.5,Silovs U 26.5 saves,0.7101,0.613,W,Silovs U 26.5 saves,-150,0.0809,official,W,0.667,22.9,20.0,graded
+2026-11-03,pm,2026020243,DAL @ WSH,h2h,,,WSH ML,0.5121,0.5093,L,DAL ML,-105,-0.0439,pass,W,0.952,0.06,-1.0,graded
+2026-11-03,pm,2026020243,DAL @ WSH,spreads,,1.5,DAL +1.5,0.6872,0.6989,W,DAL +1.5,-300,-0.0735,pass,W,0.333,0.06,-1.0,graded
+2026-11-03,pm,2026020243,DAL @ WSH,totals,,5.5,Over 5.5,0.5126,0.5238,W,Under 5.5,100,-0.0398,pass,L,-1.0,5.56,11.0,graded
+2026-11-03,pm,2026020243,DAL @ WSH,saves,Logan Thompson,23.5,Thompson U 23.5 saves,0.5867,0.4989,W,Thompson U 23.5 saves,-105,0.0345,lean,W,0.952,22.2,7.0,graded
+2026-11-03,pm,2026020243,DAL @ WSH,saves,Jake Oettinger,23.5,Oettinger U 23.5 saves,0.5849,0.5255,W,Oettinger U 23.5 saves,-130,-0.0332,pass,W,0.769,22.3,20.0,graded
+2026-11-03,pm,2026020244,COL @ CBJ,h2h,,,COL ML,0.5752,0.5325,L,COL ML,-125,-0.0145,pass,L,-1.0,-0.43,5.0,graded
+2026-11-03,pm,2026020244,COL @ CBJ,spreads,,1.5,CBJ +1.5,0.6257,0.675,W,COL -1.5,180,-0.0427,pass,L,-1.0,-0.43,5.0,graded
+2026-11-03,pm,2026020244,COL @ CBJ,totals,,6.5,Under 6.5,0.5372,0.5243,L,Under 6.5,-120,-0.0305,pass,L,-1.0,6.13,9.0,graded
+2026-11-03,pm,2026020244,COL @ CBJ,saves,Cam Talbot,25.5,Talbot U 25.5 saves,0.5182,0.4864,L,Talbot O 25.5 saves,-115,-0.0606,pass,W,0.87,25.0,27.0,graded
+2026-11-03,pm,2026020244,COL @ CBJ,saves,Scott Wedgewood,25.5,Wedgewood U 25.5 saves,0.5419,0.5206,W,Wedgewood U 25.5 saves,100,0.0562,official,W,1.0,24.8,5.0,graded
+2026-11-03,pm,2026020239,EDM @ NJD,h2h,,,NJD ML,0.5242,0.5914,W,EDM ML,130,-0.0068,pass,L,-1.0,0.13,1.0,graded
+2026-11-03,pm,2026020239,EDM @ NJD,spreads,,1.5,EDM +1.5,0.668,0.6226,W,EDM +1.5,-185,-0.0159,pass,W,0.541,0.13,1.0,graded
+2026-11-03,pm,2026020239,EDM @ NJD,totals,,6.5,Under 6.5,0.5321,0.5404,L,Under 6.5,-130,-0.0491,pass,L,-1.0,6.15,7.0,graded
+2026-11-03,pm,2026020239,EDM @ NJD,saves,Connor Hellebuyck,24.5,Hellebuyck U 24.5 saves,0.6341,0.5561,W,Hellebuyck U 24.5 saves,-125,0.051,official,W,0.8,22.4,18.0,graded
+2026-11-03,pm,2026020239,EDM @ NJD,saves,Tristan Jarry,28.5,Jarry U 28.5 saves,0.658,0.5807,L,Jarry U 28.5 saves,-155,0.001,lean,L,-1.0,25.5,31.0,graded
+2026-11-03,pm,2026020245,CAR @ NSH,h2h,,,CAR ML,0.6627,0.6402,L,CAR ML,-190,-0.0108,pass,L,-1.0,-0.94,3.0,graded
+2026-11-03,pm,2026020245,CAR @ NSH,spreads,,1.5,NSH +1.5,0.546,0.5681,W,NSH +1.5,-145,-0.0532,pass,W,0.69,-0.94,3.0,graded
+2026-11-03,pm,2026020245,CAR @ NSH,totals,,6.5,Under 6.5,0.5377,0.5296,W,Under 6.5,-120,-0.0239,pass,W,0.833,6.14,5.0,graded
+2026-11-03,pm,2026020245,CAR @ NSH,saves,Pyotr Kochetkov,21.5,Kochetkov U 21.5 saves,0.5145,0.4924,W,Kochetkov O 21.5 saves,-115,-0.0655,pass,L,-1.0,21.3,16.0,graded
+2026-11-03,pm,2026020245,CAR @ NSH,saves,Juuse Saros,28.5,Saros U 28.5 saves,0.5527,0.5607,L,Saros U 28.5 saves,-125,0.0043,lean,L,-1.0,27.3,29.0,graded
+2026-11-03,pm,2026020246,ANA @ VAN,h2h,,,ANA ML,0.6203,0.6286,W,ANA ML,-185,-0.0361,pass,W,0.541,-0.72,-1.0,graded
+2026-11-03,pm,2026020246,ANA @ VAN,spreads,,1.5,VAN +1.5,0.5788,0.5894,W,VAN +1.5,-145,-0.0103,pass,W,0.69,-0.72,-1.0,graded
+2026-11-03,pm,2026020246,ANA @ VAN,totals,,6.5,Over 6.5,0.5261,0.5708,W,Under 6.5,115,-0.0437,pass,L,-1.0,6.54,9.0,graded
+2026-11-03,pm,2026020246,ANA @ VAN,saves,Kevin Lankinen,26.5,Lankinen U 26.5 saves,0.6014,0.5503,W,Lankinen U 26.5 saves,-110,0.0851,official,W,0.909,24.6,17.0,graded
+2026-11-04,pm,2026020247,OTT @ BUF,h2h,,,BUF ML,0.5233,0.5369,L,OTT ML,105,-0.0408,pass,W,1.05,0.13,-1.0,graded
+2026-11-04,pm,2026020247,OTT @ BUF,spreads,,1.5,OTT +1.5,0.669,0.6674,W,OTT +1.5,-230,-0.0416,pass,W,0.435,0.13,-1.0,graded
+2026-11-04,pm,2026020247,OTT @ BUF,totals,,6.5,Under 6.5,0.5345,0.478,W,Under 6.5,100,-0.0045,pass,W,1.0,6.13,3.0,graded
+2026-11-04,pm,2026020247,OTT @ BUF,saves,Colten Ellis,24.5,Ellis U 24.5 saves,0.5485,0.5911,L,Ellis U 24.5 saves,-145,-0.0262,pass,L,-1.0,23.7,28.0,graded
+2026-11-04,pm,2026020247,OTT @ BUF,saves,Samuel Ersson,25.5,Ersson U 25.5 saves,0.6585,0.5899,W,Ersson U 25.5 saves,-145,0.0383,lean,W,0.69,22.9,24.0,graded
+2026-11-04,pm,2026020248,CHI @ FLA,h2h,,,FLA ML,0.6485,0.6922,W,FLA ML,-250,-0.0518,pass,W,0.4,0.85,2.0,graded
+2026-11-04,pm,2026020248,CHI @ FLA,spreads,,1.5,CHI +1.5,0.5638,0.5288,L,CHI +1.5,-120,-0.008,pass,L,-1.0,0.85,2.0,graded
+2026-11-04,pm,2026020248,CHI @ FLA,totals,,5.5,Over 5.5,0.569,0.5612,W,Over 5.5,-145,-0.0471,pass,W,0.69,5.91,8.0,graded
+2026-11-04,pm,2026020248,CHI @ FLA,saves,Jacob Markstrom,20.5,Markstrom U 20.5 saves,0.5428,0.5085,W,Markstrom U 20.5 saves,-105,0.0162,lean,W,0.952,20.0,17.0,graded
+2026-11-04,pm,2026020248,CHI @ FLA,saves,Spencer Knight,27.5,Knight U 27.5 saves,0.5787,0.559,W,Knight U 27.5 saves,-130,0.0012,lean,W,0.769,26.0,25.0,graded
+2026-11-04,pm,2026020249,SJS @ LAK,h2h,,,LAK ML,0.585,0.5978,W,LAK ML,-160,-0.0359,pass,W,0.625,0.47,5.0,graded
+2026-11-04,pm,2026020249,SJS @ LAK,spreads,,1.5,SJS +1.5,0.6226,0.6177,L,SJS +1.5,-185,-0.0458,pass,L,-1.0,0.47,5.0,graded
+2026-11-04,pm,2026020249,SJS @ LAK,totals,,6.5,Under 6.5,0.5867,0.5332,L,Under 6.5,-130,-0.0233,pass,L,-1.0,5.81,9.0,graded
+2026-11-04,pm,2026020249,SJS @ LAK,saves,Darcy Kuemper,23.5,Kuemper U 23.5 saves,0.5603,0.4888,L,Kuemper O 23.5 saves,-110,-0.072,pass,W,0.909,22.6,30.0,graded
+2026-11-04,pm,2026020249,SJS @ LAK,saves,Yaroslav Askarov,26.5,Askarov U 26.5 saves,0.5439,0.4748,W,Askarov U 26.5 saves,-105,-0.0258,pass,W,0.952,25.6,20.0,graded
+2026-11-04,pm,2026020250,CGY @ SEA,h2h,,,SEA ML,0.546,0.5428,W,SEA ML,-130,-0.0377,pass,W,0.769,0.27,1.0,graded
+2026-11-04,pm,2026020250,CGY @ SEA,spreads,,1.5,CGY +1.5,0.65,0.6629,W,CGY +1.5,-230,-0.0553,pass,W,0.435,0.27,1.0,graded
+2026-11-04,pm,2026020250,CGY @ SEA,totals,,6.5,Under 6.5,0.5322,0.5276,W,Under 6.5,-120,-0.0298,pass,W,0.833,6.15,3.0,graded
+2026-11-04,pm,2026020250,CGY @ SEA,saves,Dustin Wolf,25.5,Wolf U 25.5 saves,0.5646,0.6205,L,Wolf U 25.5 saves,-180,-0.0648,pass,L,-1.0,24.4,27.0,graded
+2026-11-04,pm,2026020250,CGY @ SEA,saves,Joey Daccord,25.5,Daccord U 25.5 saves,0.5533,0.5424,W,Daccord U 25.5 saves,-125,-0.0168,pass,W,0.8,24.5,25.0,graded
+2026-11-05,pm,2026020251,UTA @ MTL,h2h,,,UTA ML,0.5118,0.5253,L,MTL ML,100,-0.0411,pass,W,1.0,-0.06,1.0,graded
+2026-11-05,pm,2026020251,UTA @ MTL,spreads,,1.5,MTL +1.5,0.6777,0.6766,W,MTL +1.5,-250,-0.0522,pass,W,0.4,-0.06,1.0,graded
+2026-11-05,pm,2026020251,UTA @ MTL,totals,,6.5,Under 6.5,0.5278,0.4741,L,Under 6.5,100,-0.0142,pass,L,-1.0,6.18,9.0,graded
+2026-11-05,pm,2026020251,UTA @ MTL,saves,Jakub Dobes,25.5,Dobes U 25.5 saves,0.5529,0.5719,W,Dobes U 25.5 saves,-130,0.0002,lean,W,0.769,24.6,16.0,graded
+2026-11-05,pm,2026020251,UTA @ MTL,saves,Sebastian Cossa,23.5,Cossa U 23.5 saves,0.574,0.5381,L,Cossa U 23.5 saves,-120,0.0096,lean,L,-1.0,22.4,30.0,graded
+2026-11-05,pm,2026020252,VGK @ DET,h2h,,,VGK ML,0.5398,0.5698,W,DET ML,125,-0.0086,pass,L,-1.0,-0.21,-1.0,graded
+2026-11-05,pm,2026020252,VGK @ DET,spreads,,1.5,DET +1.5,0.6621,0.6461,W,DET +1.5,-210,-0.0379,pass,W,0.476,-0.21,-1.0,graded
+2026-11-05,pm,2026020252,VGK @ DET,totals,,5.5,Over 5.5,0.5407,0.5529,L,Under 5.5,115,-0.0296,pass,W,1.15,5.73,3.0,graded
+2026-11-05,pm,2026020252,VGK @ DET,saves,Daniil Tarasov,24.5,Tarasov U 24.5 saves,0.5927,0.5363,L,Tarasov U 24.5 saves,-120,0.0197,lean,L,-1.0,23.0,32.0,graded
+2026-11-05,pm,2026020253,CHI @ TBL,h2h,,,TBL ML,0.759,0.7883,W,CHI ML,350,-0.0025,pass,L,-1.0,1.57,3.0,graded
+2026-11-05,pm,2026020253,CHI @ TBL,spreads,,2.5,CHI +2.5,0.6558,0.5246,L,CHI +2.5,-110,0.0918,official,L,-1.0,1.57,3.0,graded
+2026-11-05,pm,2026020253,CHI @ TBL,totals,,6.5,Under 6.5,0.5451,0.4981,W,Under 6.5,-115,-0.0379,pass,W,0.87,6.13,5.0,graded
+2026-11-05,pm,2026020253,CHI @ TBL,saves,Andrei Vasilevskiy,19.5,Vasilevskiy O 19.5 saves,0.5034,0.4316,W,Vasilevskiy U 19.5 saves,-110,0.0375,lean,L,-1.0,19.7,25.0,graded
+2026-11-05,pm,2026020253,CHI @ TBL,saves,Arvid Soderblom,28.5,Soderblom U 28.5 saves,0.5953,0.5483,L,Soderblom U 28.5 saves,-130,-0.0006,pass,L,-1.0,26.5,31.0,graded
+2026-11-05,pm,2026020254,STL @ NJD,h2h,,,NJD ML,0.6013,0.6632,W,NJD ML,-200,-0.037,pass,W,0.5,0.58,1.0,graded
+2026-11-05,pm,2026020254,STL @ NJD,spreads,,1.5,STL +1.5,0.605,0.5725,W,STL +1.5,-145,-0.0133,pass,W,0.69,0.58,1.0,graded
+2026-11-05,pm,2026020254,STL @ NJD,totals,,5.5,Over 5.5,0.5838,0.5404,W,Over 5.5,-130,-0.0169,pass,W,0.769,6.0,9.0,graded
+2026-11-05,pm,2026020254,STL @ NJD,saves,Connor Hellebuyck,21.5,Hellebuyck U 21.5 saves,0.5245,0.4734,L,Hellebuyck U 21.5 saves,-110,-0.0621,pass,L,-1.0,21.2,28.0,graded
+2026-11-05,pm,2026020254,STL @ NJD,saves,Jordan Binnington,27.5,Binnington U 27.5 saves,0.5882,0.4954,L,Binnington U 27.5 saves,-115,-0.0125,pass,L,-1.0,25.7,31.0,graded
+2026-11-05,pm,2026020255,CAR @ NYI,h2h,,,CAR ML,0.6443,0.6407,W,CAR ML,-185,-0.0111,pass,W,0.541,-0.82,-2.0,graded
+2026-11-05,pm,2026020255,CAR @ NYI,spreads,,1.5,NYI +1.5,0.5674,0.5865,L,CAR -1.5,130,-0.0336,pass,W,1.3,-0.82,-2.0,graded
+2026-11-05,pm,2026020255,CAR @ NYI,totals,,5.5,Over 5.5,0.5711,0.5514,W,Under 5.5,115,-0.0504,pass,L,-1.0,5.92,8.0,graded
+2026-11-05,pm,2026020255,CAR @ NYI,saves,Semyon Varlamov,25.5,Varlamov O 25.5 saves,0.5231,0.5449,W,Varlamov O 25.5 saves,-120,-0.015,pass,W,0.833,25.8,34.0,graded
+2026-11-05,pm,2026020255,CAR @ NYI,saves,Brandon Bussi,21.5,Bussi U 21.5 saves,0.5451,0.5246,L,Bussi U 21.5 saves,-105,0.0383,lean,L,-1.0,20.9,24.0,graded
+2026-11-05,pm,2026020256,PHI @ NYR,h2h,,,NYR ML,0.5251,0.5687,W,PHI ML,120,-0.0177,pass,L,-1.0,0.13,1.0,graded
+2026-11-05,pm,2026020256,PHI @ NYR,spreads,,1.5,PHI +1.5,0.6789,0.6424,W,PHI +1.5,-210,-0.0325,pass,W,0.476,0.13,1.0,graded
+2026-11-05,pm,2026020256,PHI @ NYR,totals,,5.5,Under 5.5,0.5059,0.4617,W,Under 5.5,105,-0.0219,pass,W,1.05,5.45,5.0,graded
+2026-11-05,pm,2026020256,PHI @ NYR,saves,Dylan Garand,22.5,Garand U 22.5 saves,0.5429,0.5733,L,Garand U 22.5 saves,-130,-0.0045,pass,L,-1.0,21.9,23.0,graded
+2026-11-05,pm,2026020257,BOS @ PIT,h2h,,,BOS ML,0.5048,0.5011,W,BOS ML,-110,-0.0409,pass,W,0.909,-0.03,-4.0,graded
+2026-11-05,pm,2026020257,BOS @ PIT,spreads,,1.5,PIT +1.5,0.6829,0.7002,L,PIT +1.5,-300,-0.0744,pass,L,-1.0,-0.03,-4.0,graded
+2026-11-05,pm,2026020257,BOS @ PIT,totals,,6.5,Under 6.5,0.5225,0.4945,L,Under 6.5,-105,-0.0153,pass,L,-1.0,6.21,8.0,graded
+2026-11-05,pm,2026020257,BOS @ PIT,saves,Arturs Silovs,24.5,Silovs U 24.5 saves,0.6144,0.5876,W,Silovs O 24.5 saves,150,0.0074,lean,L,-1.0,22.7,18.0,graded
+2026-11-05,pm,2026020258,DAL @ CBJ,h2h,,,DAL ML,0.5309,0.5406,L,DAL ML,-125,-0.0331,pass,L,-1.0,-0.16,1.0,graded
+2026-11-05,pm,2026020258,DAL @ CBJ,spreads,,1.5,CBJ +1.5,0.6728,0.6769,W,CBJ +1.5,-250,-0.0544,pass,W,0.4,-0.16,1.0,graded
+2026-11-05,pm,2026020258,DAL @ CBJ,totals,,5.5,Over 5.5,0.5074,0.5224,L,Under 5.5,100,-0.0343,pass,W,1.0,5.52,3.0,graded
+2026-11-05,pm,2026020258,DAL @ CBJ,saves,Cam Talbot,23.5,Talbot U 23.5 saves,0.6148,0.6186,L,Talbot U 23.5 saves,-130,0.0921,official,L,-1.0,21.8,27.0,graded
+2026-11-05,pm,2026020258,DAL @ CBJ,saves,Casey DeSmith,24.5,DeSmith U 24.5 saves,0.6369,0.6172,L,DeSmith U 24.5 saves,-185,-0.0385,pass,L,-1.0,22.4,29.0,graded
+2026-11-05,pm,2026020259,VAN @ WPG,h2h,,,WPG ML,0.6006,0.658,W,VAN ML,170,-0.0236,pass,L,-1.0,0.57,4.0,graded
+2026-11-05,pm,2026020259,VAN @ WPG,spreads,,1.5,VAN +1.5,0.6062,0.563,L,VAN +1.5,-145,-0.0229,pass,L,-1.0,0.57,4.0,graded
+2026-11-05,pm,2026020259,VAN @ WPG,totals,,6.5,Under 6.5,0.5626,0.5136,L,Under 6.5,-120,-0.0268,pass,L,-1.0,5.97,8.0,graded
+2026-11-05,pm,2026020259,VAN @ WPG,saves,Stuart Skinner,21.5,Skinner U 21.5 saves,0.53,0.5085,L,Skinner O 21.5 saves,-105,-0.0552,pass,W,0.952,21.1,24.0,graded
+2026-11-05,pm,2026020259,VAN @ WPG,saves,Leevi Merilainen,27.5,Merilainen U 27.5 saves,0.6343,0.5845,W,Merilainen U 27.5 saves,-170,-0.0436,pass,W,0.588,25.0,23.0,graded
+2026-11-05,pm,2026020260,ANA @ EDM,h2h,,,EDM ML,0.5882,0.6294,L,ANA ML,155,-0.0186,pass,W,1.55,0.52,-1.0,graded
+2026-11-05,pm,2026020260,ANA @ EDM,spreads,,1.5,ANA +1.5,0.6086,0.5801,W,ANA +1.5,-145,-0.0029,pass,W,0.69,0.52,-1.0,graded
+2026-11-05,pm,2026020260,ANA @ EDM,totals,,6.5,Over 6.5,0.5186,0.5751,W,Under 6.5,115,-0.0442,pass,L,-1.0,6.48,9.0,graded
+2026-11-05,pm,2026020260,ANA @ EDM,saves,Laurent Brossoit,27.5,Brossoit U 27.5 saves,0.6835,0.5867,W,Brossoit U 27.5 saves,-180,-0.0327,pass,W,0.556,24.2,23.0,graded
+2026-11-05,pm,2026020261,NSH @ COL,h2h,,,COL ML,0.633,0.6584,L,COL ML,-200,-0.0256,pass,L,-1.0,0.79,-1.0,graded
+2026-11-05,pm,2026020261,NSH @ COL,spreads,,1.5,NSH +1.5,0.5702,0.5607,W,NSH +1.5,-145,-0.047,pass,W,0.69,0.79,-1.0,graded
+2026-11-05,pm,2026020261,NSH @ COL,totals,,6.5,Under 6.5,0.5031,0.5074,W,Over 6.5,-105,-0.0353,pass,L,-1.0,6.35,5.0,graded
+2026-11-05,pm,2026020261,NSH @ COL,saves,Mackenzie Blackwood,22.5,Blackwood U 22.5 saves,0.526,0.5477,W,Blackwood U 22.5 saves,-105,0.0545,official,W,0.952,22.2,22.0,graded
+2026-11-06,pm,2026020262,CBJ @ BUF,h2h,,,BUF ML,0.5902,0.6074,,CBJ ML,140,-0.0434,pass,,,0.51,,pending
+2026-11-06,pm,2026020262,CBJ @ BUF,spreads,,1.5,CBJ +1.5,0.6163,0.6084,,CBJ +1.5,-165,-0.0184,pass,,,0.51,,pending
+2026-11-06,pm,2026020262,CBJ @ BUF,totals,,6.5,Under 6.5,0.5714,0.5238,,Under 6.5,-120,-0.009,pass,,,5.91,,pending
+2026-11-06,pm,2026020262,CBJ @ BUF,saves,Jet Greaves,26.5,Greaves U 26.5 saves,0.5533,0.567,,Greaves U 26.5 saves,-125,0.0119,lean,,,25.5,,pending
+2026-11-06,pm,2026020263,SJS @ MIN,h2h,,,MIN ML,0.6868,0.7112,,SJS ML,225,-0.0341,pass,,,1.1,,pending
+2026-11-06,pm,2026020263,SJS @ MIN,spreads,,1.5,SJS +1.5,0.5213,0.493,,SJS +1.5,100,0.0058,lean,,,1.1,,pending
+2026-11-06,pm,2026020263,SJS @ MIN,totals,,6.5,Under 6.5,0.5289,0.5017,,Under 6.5,-115,-0.0442,pass,,,6.2,,pending
+2026-11-06,pm,2026020263,SJS @ MIN,saves,Jesper Wallstedt,22.5,Wallstedt O 22.5 saves,0.5338,0.4662,,Wallstedt U 22.5 saves,-120,-0.0646,pass,,,23.1,,pending
+2026-11-06,pm,2026020263,SJS @ MIN,saves,Yaroslav Askarov,28.5,Askarov U 28.5 saves,0.5807,0.5526,,Askarov U 28.5 saves,-130,-0.0049,pass,,,26.7,,pending
+2026-11-06,pm,2026020264,ANA @ CGY,h2h,,,CGY ML,0.5225,0.5708,,ANA ML,120,-0.0189,pass,,,0.13,,pending
+2026-11-06,pm,2026020264,ANA @ CGY,spreads,,1.5,ANA +1.5,0.6677,0.6441,,ANA +1.5,-210,-0.0368,pass,,,0.13,,pending
+2026-11-06,pm,2026020264,ANA @ CGY,totals,,6.5,Under 6.5,0.5134,0.5003,,Under 6.5,-110,-0.0361,pass,,,6.27,,pending
+2026-11-06,pm,2026020264,ANA @ CGY,saves,Dustin Wolf,24.5,Wolf U 24.5 saves,0.5111,0.5293,,Wolf U 24.5 saves,-115,-0.0224,pass,,,24.3,,pending
+2026-11-06,pm,2026020264,ANA @ CGY,saves,Lukas Dostal,24.5,Dostal O 24.5 saves,0.5193,0.5145,,Dostal O 24.5 saves,105,0.0582,official,,,24.7,,pending

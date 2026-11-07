@@ -8,7 +8,7 @@
 5. Blends the model with the no-vig market price and flags lines where the edge clears the threshold. Bets are sized by quarter-Kelly, from 0.5 to 2 units, where 1 unit = 1% of bankroll.
 6. Locks picks in `results/picks_log.csv`. The 5pm run records the later price as a closing-line-value check, and finished games are graded automatically.
 
-**Outputs:** `results/latest.json` holds today's slate, every line priced, the picks, power rankings and the running record. `results/history/` keeps every run.
+**Outputs:** `results/latest.json` holds today's slate, every line priced, the picks, power rankings and the running record. `results/history/` keeps every run. `results/reads_log.csv` grades every read the model made (every moneyline, puck line, total and goalie saves line, not just the picks), and `results/reads_summary.json` rolls it up by market for the last game day, the last 7 days and the season.
 
 **Setup:** add the repository secret `ODDS_API_KEY` (Settings → Secrets and variables → Actions). Without the key, the model still runs and prices games, but it makes no picks.
 

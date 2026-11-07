@@ -59,6 +59,7 @@ jobs:
             python scripts/run_daily.py
           fi
           python scripts/learn.py || echo "learning step skipped"
+          python scripts/grade_reads.py || echo "reads grading skipped"
           python scripts/export_dashboard.py
       - name: Save results
         if: steps.guard.outputs.skip != '1'
