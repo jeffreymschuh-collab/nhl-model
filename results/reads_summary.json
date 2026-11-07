@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-07T16:07:09.450465+00:00",
+ "generated_at": "2026-11-07T22:07:00.147435+00:00",
  "first_date": "2026-10-31",
  "last_graded_date": "2026-11-06",
- "pending_reads": 38,
+ "pending_reads": 45,
  "season": {
   "all": {
    "reads": 177,
@@ -15,9 +15,9 @@
    "bias_actual_minus_expected": 0.35,
    "value_side_flat_1u": {
     "official_bets": {
-     "record": "8-7-0",
-     "units": -2.05,
-     "roi_pct": -12.0
+     "record": "8-8-0",
+     "units": -3.05,
+     "roi_pct": -16.9
     },
     "lean": {
      "record": "6-14-0",
@@ -119,9 +119,9 @@
     "bias_actual_minus_expected": 0.33,
     "value_side_flat_1u": {
      "official_bets": {
-      "record": "8-3-0",
-      "units": 3.95,
-      "roi_pct": 35.9
+      "record": "8-4-0",
+      "units": 2.95,
+      "roi_pct": 24.6
      },
      "lean": {
       "record": "6-10-0",
@@ -149,9 +149,9 @@
    "bias_actual_minus_expected": 0.35,
    "value_side_flat_1u": {
     "official_bets": {
-     "record": "7-7-0",
-     "units": -3.0,
-     "roi_pct": -18.8
+     "record": "7-8-0",
+     "units": -4.0,
+     "roi_pct": -23.5
     },
     "lean": {
      "record": "6-14-0",
@@ -253,9 +253,9 @@
     "bias_actual_minus_expected": 0.33,
     "value_side_flat_1u": {
      "official_bets": {
-      "record": "7-3-0",
-      "units": 3.0,
-      "roi_pct": 30.0
+      "record": "7-4-0",
+      "units": 2.0,
+      "roi_pct": 18.2
      },
      "lean": {
       "record": "6-10-0",
@@ -283,8 +283,8 @@
    "bias_actual_minus_expected": -0.44,
    "value_side_flat_1u": {
     "official_bets": {
-     "record": "0-1-0",
-     "units": -1.0,
+     "record": "0-2-0",
+     "units": -2.0,
      "roi_pct": -100.0
     },
     "lean": {
@@ -367,8 +367,8 @@
     "bias_actual_minus_expected": -2.46,
     "value_side_flat_1u": {
      "official_bets": {
-      "record": "0-1-0",
-      "units": -1.0,
+      "record": "0-2-0",
+      "units": -2.0,
       "roi_pct": -100.0
      },
      "lean": {

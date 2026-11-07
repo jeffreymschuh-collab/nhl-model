@@ -9,9 +9,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.0,
+"profit_usd": -20.0
 },
 {
 "pick_id": "2026020271|spreads|away",
@@ -21,8 +21,8 @@
 "price": "-115",
 "units": 1.5,
 "stake_usd": 30.0,
-"close": "",
-"clv_pct": null,
+"close": "-115",
+"clv_pct": 0.0,
 "result": "",
 "profit_units": null,
 "profit_usd": null
@@ -35,6 +35,34 @@
 "price": "-130",
 "units": 2.0,
 "stake_usd": 40.0,
+"close": "-130",
+"clv_pct": 0.0,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020267|saves|under|j daccord",
+"date": "2026-11-07",
+"matchup": "NYR @ SEA",
+"selection": "Daccord U 25.5 saves",
+"price": "-120",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020275|saves|under|d kuemper",
+"date": "2026-11-07",
+"matchup": "PIT @ LAK",
+"selection": "Kuemper U 24.5 saves",
+"price": "-105",
+"units": 1.0,
+"stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
 "result": "",

@@ -1,11 +1,11 @@
 [
 {
 "market": "All",
-"bets": 15,
-"profit_usd": -41.0,
-"record": "8-7-0",
-"units_profit": -2.05,
-"roi_pct": -12.05,
+"bets": 16,
+"profit_usd": -61.0,
+"record": "8-8-0",
+"units_profit": -3.05,
+"roi_pct": -16.93,
 "avg_clv_pct": 0.15,
 "beat_close_pct": 50.0
 },
@@ -21,11 +21,11 @@
 },
 {
 "market": "Goalie saves",
-"bets": 11,
-"profit_usd": 79.0,
-"record": "8-3-0",
-"units_profit": 3.95,
-"roi_pct": 35.93,
+"bets": 12,
+"profit_usd": 59.0,
+"record": "8-4-0",
+"units_profit": 2.95,
+"roi_pct": 24.6,
 "avg_clv_pct": 3.33,
 "beat_close_pct": 100.0
 },
