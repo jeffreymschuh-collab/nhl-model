@@ -1,5 +1,47 @@
 [
 {
+"pick_id": "2026020265|saves|under|a schmid",
+"date": "2026-11-07",
+"matchup": "FLA @ WSH",
+"selection": "Schmid U 25.5 saves",
+"price": "-105",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020271|spreads|away",
+"date": "2026-11-07",
+"matchup": "CHI @ CAR",
+"selection": "CHI +2.5",
+"price": "-115",
+"units": 1.5,
+"stake_usd": 30.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020276|spreads|away",
+"date": "2026-11-07",
+"matchup": "VAN @ EDM",
+"selection": "VAN +2.5",
+"price": "-130",
+"units": 2.0,
+"stake_usd": 40.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
 "pick_id": "2026020264|saves|over|l dostal",
 "date": "2026-11-06",
 "matchup": "ANA @ CGY",
@@ -9,9 +51,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.0,
+"profit_usd": -20.0
 },
 {
 "pick_id": "2026020253|spreads|away",

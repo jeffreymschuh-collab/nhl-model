@@ -162,17 +162,55 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-05,pm,2026020261,NSH @ COL,spreads,,1.5,NSH +1.5,0.5702,0.5607,W,NSH +1.5,-145,-0.047,pass,W,0.69,0.79,-1.0,graded
 2026-11-05,pm,2026020261,NSH @ COL,totals,,6.5,Under 6.5,0.5031,0.5074,W,Over 6.5,-105,-0.0353,pass,L,-1.0,6.35,5.0,graded
 2026-11-05,pm,2026020261,NSH @ COL,saves,Mackenzie Blackwood,22.5,Blackwood U 22.5 saves,0.526,0.5477,W,Blackwood U 22.5 saves,-105,0.0545,official,W,0.952,22.2,22.0,graded
-2026-11-06,pm,2026020262,CBJ @ BUF,h2h,,,BUF ML,0.5902,0.6074,,CBJ ML,140,-0.0434,pass,,,0.51,,pending
-2026-11-06,pm,2026020262,CBJ @ BUF,spreads,,1.5,CBJ +1.5,0.6163,0.6084,,CBJ +1.5,-165,-0.0184,pass,,,0.51,,pending
-2026-11-06,pm,2026020262,CBJ @ BUF,totals,,6.5,Under 6.5,0.5714,0.5238,,Under 6.5,-120,-0.009,pass,,,5.91,,pending
-2026-11-06,pm,2026020262,CBJ @ BUF,saves,Jet Greaves,26.5,Greaves U 26.5 saves,0.5533,0.567,,Greaves U 26.5 saves,-125,0.0119,lean,,,25.5,,pending
-2026-11-06,pm,2026020263,SJS @ MIN,h2h,,,MIN ML,0.6868,0.7112,,SJS ML,225,-0.0341,pass,,,1.1,,pending
-2026-11-06,pm,2026020263,SJS @ MIN,spreads,,1.5,SJS +1.5,0.5213,0.493,,SJS +1.5,100,0.0058,lean,,,1.1,,pending
-2026-11-06,pm,2026020263,SJS @ MIN,totals,,6.5,Under 6.5,0.5289,0.5017,,Under 6.5,-115,-0.0442,pass,,,6.2,,pending
-2026-11-06,pm,2026020263,SJS @ MIN,saves,Jesper Wallstedt,22.5,Wallstedt O 22.5 saves,0.5338,0.4662,,Wallstedt U 22.5 saves,-120,-0.0646,pass,,,23.1,,pending
-2026-11-06,pm,2026020263,SJS @ MIN,saves,Yaroslav Askarov,28.5,Askarov U 28.5 saves,0.5807,0.5526,,Askarov U 28.5 saves,-130,-0.0049,pass,,,26.7,,pending
-2026-11-06,pm,2026020264,ANA @ CGY,h2h,,,CGY ML,0.5225,0.5708,,ANA ML,120,-0.0189,pass,,,0.13,,pending
-2026-11-06,pm,2026020264,ANA @ CGY,spreads,,1.5,ANA +1.5,0.6677,0.6441,,ANA +1.5,-210,-0.0368,pass,,,0.13,,pending
-2026-11-06,pm,2026020264,ANA @ CGY,totals,,6.5,Under 6.5,0.5134,0.5003,,Under 6.5,-110,-0.0361,pass,,,6.27,,pending
-2026-11-06,pm,2026020264,ANA @ CGY,saves,Dustin Wolf,24.5,Wolf U 24.5 saves,0.5111,0.5293,,Wolf U 24.5 saves,-115,-0.0224,pass,,,24.3,,pending
-2026-11-06,pm,2026020264,ANA @ CGY,saves,Lukas Dostal,24.5,Dostal O 24.5 saves,0.5193,0.5145,,Dostal O 24.5 saves,105,0.0582,official,,,24.7,,pending
+2026-11-06,pm,2026020262,CBJ @ BUF,h2h,,,BUF ML,0.5902,0.6074,W,CBJ ML,140,-0.0434,pass,L,-1.0,0.51,3.0,graded
+2026-11-06,pm,2026020262,CBJ @ BUF,spreads,,1.5,CBJ +1.5,0.6163,0.6084,L,CBJ +1.5,-165,-0.0184,pass,L,-1.0,0.51,3.0,graded
+2026-11-06,pm,2026020262,CBJ @ BUF,totals,,6.5,Under 6.5,0.5714,0.5238,L,Under 6.5,-120,-0.009,pass,L,-1.0,5.91,7.0,graded
+2026-11-06,pm,2026020262,CBJ @ BUF,saves,Jet Greaves,26.5,Greaves U 26.5 saves,0.5533,0.567,L,Greaves U 26.5 saves,-125,0.0119,lean,L,-1.0,25.5,32.0,graded
+2026-11-06,pm,2026020263,SJS @ MIN,h2h,,,MIN ML,0.6868,0.7112,W,SJS ML,225,-0.0341,pass,L,-1.0,1.1,3.0,graded
+2026-11-06,pm,2026020263,SJS @ MIN,spreads,,1.5,SJS +1.5,0.5213,0.493,L,SJS +1.5,100,0.0058,lean,L,-1.0,1.1,3.0,graded
+2026-11-06,pm,2026020263,SJS @ MIN,totals,,6.5,Under 6.5,0.5289,0.5017,W,Under 6.5,-115,-0.0442,pass,W,0.87,6.2,5.0,graded
+2026-11-06,pm,2026020263,SJS @ MIN,saves,Jesper Wallstedt,22.5,Wallstedt O 22.5 saves,0.5338,0.4662,W,Wallstedt U 22.5 saves,-120,-0.0646,pass,L,-1.0,23.1,23.0,graded
+2026-11-06,pm,2026020263,SJS @ MIN,saves,Yaroslav Askarov,28.5,Askarov U 28.5 saves,0.5807,0.5526,W,Askarov U 28.5 saves,-130,-0.0049,pass,W,0.769,26.7,25.0,graded
+2026-11-06,pm,2026020264,ANA @ CGY,h2h,,,CGY ML,0.5225,0.5708,L,ANA ML,120,-0.0189,pass,W,1.2,0.13,-2.0,graded
+2026-11-06,pm,2026020264,ANA @ CGY,spreads,,1.5,ANA +1.5,0.6677,0.6441,W,ANA +1.5,-210,-0.0368,pass,W,0.476,0.13,-2.0,graded
+2026-11-06,pm,2026020264,ANA @ CGY,totals,,6.5,Under 6.5,0.5134,0.5003,L,Under 6.5,-110,-0.0361,pass,L,-1.0,6.27,8.0,graded
+2026-11-06,pm,2026020264,ANA @ CGY,saves,Dustin Wolf,24.5,Wolf U 24.5 saves,0.5111,0.5293,W,Wolf U 24.5 saves,-115,-0.0224,pass,W,0.87,24.3,24.0,graded
+2026-11-06,pm,2026020264,ANA @ CGY,saves,Lukas Dostal,24.5,Dostal O 24.5 saves,0.5193,0.5145,L,Dostal O 24.5 saves,105,0.0582,official,L,-1.0,24.7,8.0,graded
+2026-11-07,am,2026020265,FLA @ WSH,h2h,,,WSH ML,0.5279,0.5261,,WSH ML,-120,-0.0343,pass,,,0.15,,pending
+2026-11-07,am,2026020265,FLA @ WSH,spreads,,1.5,FLA +1.5,0.6651,0.6728,,FLA +1.5,-250,-0.0618,pass,,,0.15,,pending
+2026-11-07,am,2026020265,FLA @ WSH,totals,,6.5,Under 6.5,0.5324,0.5241,,Under 6.5,-120,-0.0338,pass,,,6.15,,pending
+2026-11-07,am,2026020265,FLA @ WSH,saves,Logan Thompson,24.5,Thompson U 24.5 saves,0.5326,0.5396,,Thompson U 24.5 saves,-105,0.0487,lean,,,24.0,,pending
+2026-11-07,am,2026020265,FLA @ WSH,saves,Akira Schmid,25.5,Schmid U 25.5 saves,0.645,0.6058,,Schmid U 25.5 saves,-105,0.2099,official,,,23.1,,pending
+2026-11-07,am,2026020266,STL @ NSH,h2h,,,NSH ML,0.5022,0.4949,,STL ML,-110,-0.0406,pass,,,0.01,,pending
+2026-11-07,am,2026020266,STL @ NSH,spreads,,1.5,NSH +1.5,0.6944,0.699,,NSH +1.5,-300,-0.0702,pass,,,0.01,,pending
+2026-11-07,am,2026020266,STL @ NSH,totals,,5.5,Over 5.5,0.5547,0.5191,,Over 5.5,-120,-0.0254,pass,,,5.81,,pending
+2026-11-07,am,2026020267,NYR @ SEA,h2h,,,NYR ML,0.5193,0.5509,,SEA ML,110,-0.0337,pass,,,-0.11,,pending
+2026-11-07,am,2026020267,NYR @ SEA,spreads,,1.5,SEA +1.5,0.6744,0.6603,,SEA +1.5,-230,-0.0455,pass,,,-0.11,,pending
+2026-11-07,am,2026020267,NYR @ SEA,totals,,6.5,Under 6.5,0.5569,0.5238,,Under 6.5,-120,-0.0184,pass,,,5.99,,pending
+2026-11-07,am,2026020268,MTL @ TOR,h2h,,,MTL ML,0.5368,0.527,,MTL ML,-120,-0.0275,pass,,,-0.21,,pending
+2026-11-07,am,2026020268,MTL @ TOR,spreads,,1.5,TOR +1.5,0.6541,0.6774,,TOR +1.5,-250,-0.0629,pass,,,-0.21,,pending
+2026-11-07,am,2026020268,MTL @ TOR,totals,,6.5,Over 6.5,0.505,0.5163,,Over 6.5,-115,-0.0422,pass,,,6.39,,pending
+2026-11-07,am,2026020269,UTA @ OTT,h2h,,,OTT ML,0.5233,0.48,,OTT ML,100,-0.0097,pass,,,0.13,,pending
+2026-11-07,am,2026020269,UTA @ OTT,spreads,,1.5,OTT +1.5,0.7062,0.6811,,OTT +1.5,-250,-0.034,pass,,,0.13,,pending
+2026-11-07,am,2026020269,UTA @ OTT,totals,,6.5,Under 6.5,0.5349,0.4921,,Under 6.5,-105,-0.01,pass,,,6.13,,pending
+2026-11-07,am,2026020270,NJD @ NYI,h2h,,,NJD ML,0.534,0.5816,,NYI ML,125,-0.0214,pass,,,-0.19,,pending
+2026-11-07,am,2026020270,NJD @ NYI,spreads,,1.5,NYI +1.5,0.6653,0.6355,,NYI +1.5,-210,-0.0463,pass,,,-0.19,,pending
+2026-11-07,am,2026020270,NJD @ NYI,totals,,5.5,Over 5.5,0.555,0.5404,,Over 5.5,-130,-0.0349,pass,,,5.81,,pending
+2026-11-07,am,2026020271,CHI @ CAR,h2h,,,CAR ML,0.7767,0.7905,,CHI ML,350,-0.036,pass,,,1.69,,pending
+2026-11-07,am,2026020271,CHI @ CAR,spreads,,2.5,CHI +2.5,0.6393,0.5144,,CHI +2.5,-115,0.0454,official,,,1.69,,pending
+2026-11-07,am,2026020271,CHI @ CAR,totals,,6.5,Under 6.5,0.556,0.5284,,Under 6.5,-130,-0.048,pass,,,6.07,,pending
+2026-11-07,am,2026020272,SJS @ DAL,h2h,,,DAL ML,0.6871,0.7226,,SJS ML,250,0.0134,lean,,,1.04,,pending
+2026-11-07,am,2026020272,SJS @ DAL,spreads,,1.5,SJS +1.5,0.5325,0.4831,,SJS +1.5,100,0.0008,lean,,,1.04,,pending
+2026-11-07,am,2026020272,SJS @ DAL,totals,,6.5,Under 6.5,0.6191,0.5372,,Under 6.5,-130,0.002,lean,,,5.64,,pending
+2026-11-07,am,2026020273,TBL @ MIN,h2h,,,TBL ML,0.5569,0.5637,,MIN ML,120,-0.0349,pass,,,-0.32,,pending
+2026-11-07,am,2026020273,TBL @ MIN,spreads,,1.5,MIN +1.5,0.6407,0.6453,,MIN +1.5,-210,-0.0498,pass,,,-0.32,,pending
+2026-11-07,am,2026020273,TBL @ MIN,totals,,6.5,Under 6.5,0.5307,0.5159,,Over 6.5,100,-0.0422,pass,,,6.16,,pending
+2026-11-07,am,2026020274,DET @ COL,h2h,,,COL ML,0.6232,0.6628,,DET ML,170,-0.0527,pass,,,0.71,,pending
+2026-11-07,am,2026020274,DET @ COL,spreads,,1.5,DET +1.5,0.5819,0.5561,,DET +1.5,-130,-0.0001,pass,,,0.71,,pending
+2026-11-07,am,2026020274,DET @ COL,totals,,6.5,Under 6.5,0.5273,0.5154,,Over 6.5,100,-0.0392,pass,,,6.19,,pending
+2026-11-07,am,2026020275,PIT @ LAK,h2h,,,LAK ML,0.5146,0.5287,,PIT ML,105,-0.0237,pass,,,0.08,,pending
+2026-11-07,am,2026020275,PIT @ LAK,spreads,,1.5,PIT +1.5,0.6781,0.6732,,PIT +1.5,-250,-0.0551,pass,,,0.08,,pending
+2026-11-07,am,2026020275,PIT @ LAK,totals,,6.5,Under 6.5,0.5557,0.5211,,Under 6.5,-120,-0.0224,pass,,,6.0,,pending
+2026-11-07,am,2026020276,VAN @ EDM,h2h,,,EDM ML,0.7122,0.7468,,VAN ML,275,-0.0064,pass,,,1.3,,pending
+2026-11-07,am,2026020276,VAN @ EDM,spreads,,2.5,VAN +2.5,0.6892,0.5609,,VAN +2.5,-130,0.0753,official,,,1.3,,pending
+2026-11-07,am,2026020276,VAN @ EDM,totals,,6.5,Over 6.5,0.5155,0.5734,,Under 6.5,115,-0.0395,pass,,,6.5,,pending
