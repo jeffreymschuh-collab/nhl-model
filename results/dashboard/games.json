@@ -6,8 +6,8 @@
 "xg_away": 2.75,
 "xg_home": 3.3,
 "home_win_pct": 59.6,
-"best_line": "BOS ML",
-"best_edge_pct": -0.1,
+"best_line": "Markstrom U 23.5 saves",
+"best_edge_pct": 2.4,
 "picks": 0
 },
 {
@@ -29,7 +29,7 @@
 "xg_home": 2.84,
 "home_win_pct": 46.1,
 "best_line": "WPG ML",
-"best_edge_pct": -0.7,
+"best_edge_pct": -1.6,
 "picks": 0
 },
 {
@@ -40,7 +40,7 @@
 "xg_home": 3.01,
 "home_win_pct": 43.7,
 "best_line": "TOR ML",
-"best_edge_pct": -3.0,
+"best_edge_pct": -2.4,
 "picks": 0
 },
 {
@@ -51,7 +51,7 @@
 "xg_home": 2.62,
 "home_win_pct": 47.0,
 "best_line": "PHI ML",
-"best_edge_pct": -2.3,
+"best_edge_pct": -3.6,
 "picks": 0
 },
 {
@@ -62,7 +62,7 @@
 "xg_home": 3.57,
 "home_win_pct": 58.0,
 "best_line": "ANA ML",
-"best_edge_pct": -0.6,
+"best_edge_pct": -0.4,
 "picks": 0
 }
 ]

@@ -221,21 +221,22 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-07,pm,2026020276,VAN @ EDM,totals,,6.5,Under 6.5,0.5008,0.4266,W,Under 6.5,115,-0.0273,pass,W,1.15,6.38,6.0,graded
 2026-11-07,pm,2026020276,VAN @ EDM,saves,Devon Levi,21.5,Levi U 21.5 saves,0.5709,0.5277,W,Levi U 21.5 saves,-120,-0.0048,pass,W,0.833,20.5,20.0,graded
 2026-11-07,pm,2026020276,VAN @ EDM,saves,Leevi Merilainen,25.5,Merilainen U 25.5 saves,0.5112,0.4893,L,Merilainen U 25.5 saves,-110,-0.0513,pass,L,-1.0,25.1,26.0,graded
-2026-11-08,am,2026020277,FLA @ BOS,h2h,,,BOS ML,0.5961,0.5615,,BOS ML,-135,-0.0014,pass,,,0.55,,pending
-2026-11-08,am,2026020277,FLA @ BOS,spreads,,1.5,FLA +1.5,0.6087,0.6546,,FLA +1.5,-210,-0.057,pass,,,0.55,,pending
-2026-11-08,am,2026020277,FLA @ BOS,totals,,6.5,Under 6.5,0.5495,0.5392,,Under 6.5,-130,-0.0396,pass,,,6.05,,pending
+2026-11-08,am,2026020277,FLA @ BOS,h2h,,,BOS ML,0.5961,0.5655,,BOS ML,-140,-0.012,pass,,,0.55,,pending
+2026-11-08,am,2026020277,FLA @ BOS,spreads,,1.5,FLA +1.5,0.6087,0.6492,,BOS -1.5,160,-0.0516,pass,,,0.55,,pending
+2026-11-08,am,2026020277,FLA @ BOS,totals,,6.5,Under 6.5,0.5495,0.5427,,Under 6.5,-130,-0.0357,pass,,,6.05,,pending
+2026-11-08,am,2026020277,FLA @ BOS,saves,Jacob Markstrom,23.5,Markstrom U 23.5 saves,0.5211,0.5265,,Markstrom U 23.5 saves,-105,0.0242,lean,,,23.1,,pending
 2026-11-08,am,2026020278,VGK @ BUF,h2h,,,BUF ML,0.5002,0.5004,,VGK ML,-105,-0.0244,pass,,,0.0,,pending
-2026-11-08,am,2026020278,VGK @ BUF,spreads,,1.5,VGK +1.5,0.6908,0.703,,VGK +1.5,-250,-0.0217,pass,,,0.0,,pending
+2026-11-08,am,2026020278,VGK @ BUF,spreads,,1.5,VGK +1.5,0.6908,0.7021,,VGK +1.5,-250,-0.0225,pass,,,0.0,,pending
 2026-11-08,am,2026020278,VGK @ BUF,totals,,6.5,Under 6.5,0.569,0.5154,,Under 6.5,-115,-0.0011,pass,,,5.92,,pending
-2026-11-08,am,2026020280,TBL @ WPG,h2h,,,TBL ML,0.5393,0.5687,,WPG ML,125,-0.0065,pass,,,-0.22,,pending
-2026-11-08,am,2026020280,TBL @ WPG,spreads,,1.5,WPG +1.5,0.6595,0.6429,,WPG +1.5,-210,-0.0423,pass,,,-0.22,,pending
-2026-11-08,am,2026020280,TBL @ WPG,totals,,6.5,Under 6.5,0.5714,0.5238,,Under 6.5,-120,-0.009,pass,,,5.9,,pending
-2026-11-08,am,2026020279,NJD @ TOR,h2h,,,NJD ML,0.5629,0.5862,,TOR ML,130,-0.0297,pass,,,-0.36,,pending
-2026-11-08,am,2026020279,NJD @ TOR,spreads,,1.5,TOR +1.5,0.6322,0.6281,,TOR +1.5,-185,-0.0302,pass,,,-0.36,,pending
-2026-11-08,am,2026020279,NJD @ TOR,totals,,6.5,Over 6.5,0.5034,0.4706,,Over 6.5,105,-0.0117,pass,,,6.38,,pending
-2026-11-08,am,2026020281,PHI @ CGY,h2h,,,PHI ML,0.5299,0.5183,,PHI ML,-115,-0.0234,pass,,,-0.16,,pending
-2026-11-08,am,2026020281,PHI @ CGY,spreads,,1.5,CGY +1.5,0.6759,0.6943,,PHI -1.5,200,-0.0637,pass,,,-0.16,,pending
+2026-11-08,am,2026020280,TBL @ WPG,h2h,,,TBL ML,0.5393,0.5752,,WPG ML,125,-0.0161,pass,,,-0.22,,pending
+2026-11-08,am,2026020280,TBL @ WPG,spreads,,1.5,WPG +1.5,0.6595,0.6376,,WPG +1.5,-210,-0.0474,pass,,,-0.22,,pending
+2026-11-08,am,2026020280,TBL @ WPG,totals,,6.5,Under 6.5,0.5714,0.5229,,Under 6.5,-120,-0.01,pass,,,5.9,,pending
+2026-11-08,am,2026020279,NJD @ TOR,h2h,,,NJD ML,0.5629,0.5822,,TOR ML,130,-0.0237,pass,,,-0.36,,pending
+2026-11-08,am,2026020279,NJD @ TOR,spreads,,1.5,TOR +1.5,0.6322,0.6314,,TOR +1.5,-185,-0.0269,pass,,,-0.36,,pending
+2026-11-08,am,2026020279,NJD @ TOR,totals,,6.5,Over 6.5,0.5034,0.4711,,Over 6.5,100,-0.0352,pass,,,6.38,,pending
+2026-11-08,am,2026020281,PHI @ CGY,h2h,,,PHI ML,0.5299,0.5235,,PHI ML,-120,-0.0361,pass,,,-0.16,,pending
+2026-11-08,am,2026020281,PHI @ CGY,spreads,,1.5,CGY +1.5,0.6759,0.6924,,CGY +1.5,-250,-0.0386,pass,,,-0.16,,pending
 2026-11-08,am,2026020281,PHI @ CGY,totals,,5.5,Under 5.5,0.5141,0.4789,,Under 5.5,100,-0.0176,pass,,,5.4,,pending
-2026-11-08,am,2026020282,PIT @ ANA,h2h,,,ANA ML,0.5801,0.5218,,ANA ML,-120,-0.0057,pass,,,0.48,,pending
-2026-11-08,am,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.613,0.6724,,ANA -1.5,175,-0.0434,pass,,,0.48,,pending
+2026-11-08,am,2026020282,PIT @ ANA,h2h,,,ANA ML,0.5801,0.5235,,ANA ML,-120,-0.0036,pass,,,0.48,,pending
+2026-11-08,am,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.613,0.6712,,ANA -1.5,175,-0.0412,pass,,,0.48,,pending
 2026-11-08,am,2026020282,PIT @ ANA,totals,,6.5,Over 6.5,0.5462,0.5716,,Over 6.5,-145,-0.0491,pass,,,6.66,,pending
