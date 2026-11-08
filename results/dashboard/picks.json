@@ -23,9 +23,9 @@
 "stake_usd": 30.0,
 "close": "-115",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.5,
+"profit_usd": -30.0
 },
 {
 "pick_id": "2026020276|spreads|away",
@@ -37,9 +37,9 @@
 "stake_usd": 40.0,
 "close": "-130",
 "clv_pct": 0.0,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 1.538,
+"profit_usd": 30.76
 },
 {
 "pick_id": "2026020267|saves|under|j daccord",
@@ -51,9 +51,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.833,
+"profit_usd": 16.66
 },
 {
 "pick_id": "2026020275|saves|under|d kuemper",
@@ -65,9 +65,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.952,
+"profit_usd": 19.04
 },
 {
 "pick_id": "2026020264|saves|over|l dostal",
