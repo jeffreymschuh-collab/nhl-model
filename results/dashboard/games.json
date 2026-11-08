@@ -1,35 +1,13 @@
 [
 {
-"game_id": "2026020277",
-"matchup": "FLA @ BOS",
-"start_et": "1:00 PM",
-"xg_away": 2.75,
-"xg_home": 3.3,
-"home_win_pct": 59.6,
-"best_line": "Markstrom U 23.5 saves",
-"best_edge_pct": 2.4,
-"picks": 0
-},
-{
-"game_id": "2026020278",
-"matchup": "VGK @ BUF",
-"start_et": "3:30 PM",
-"xg_away": 2.96,
-"xg_home": 2.96,
-"home_win_pct": 50.0,
-"best_line": "VGK +1.5",
-"best_edge_pct": -2.2,
-"picks": 0
-},
-{
 "game_id": "2026020280",
 "matchup": "TBL @ WPG",
 "start_et": "6:00 PM",
 "xg_away": 3.06,
 "xg_home": 2.84,
 "home_win_pct": 46.1,
-"best_line": "WPG ML",
-"best_edge_pct": -1.6,
+"best_line": "Vasilevskiy U 23.5 saves",
+"best_edge_pct": 2.9,
 "picks": 0
 },
 {
@@ -39,8 +17,8 @@
 "xg_away": 3.37,
 "xg_home": 3.01,
 "home_win_pct": 43.7,
-"best_line": "TOR ML",
-"best_edge_pct": -2.4,
+"best_line": "NJD ML",
+"best_edge_pct": -2.8,
 "picks": 0
 },
 {
@@ -50,19 +28,19 @@
 "xg_away": 2.78,
 "xg_home": 2.62,
 "home_win_pct": 47.0,
-"best_line": "PHI ML",
-"best_edge_pct": -3.6,
-"picks": 0
+"best_line": "Cooley U 24.5 saves",
+"best_edge_pct": 7.8,
+"picks": 1
 },
 {
 "game_id": "2026020282",
 "matchup": "PIT @ ANA",
 "start_et": "8:00 PM",
-"xg_away": 3.09,
+"xg_away": 3.08,
 "xg_home": 3.57,
-"home_win_pct": 58.0,
+"home_win_pct": 58.1,
 "best_line": "ANA ML",
-"best_edge_pct": -0.4,
+"best_edge_pct": -0.5,
 "picks": 0
 }
 ]

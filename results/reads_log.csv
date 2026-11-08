@@ -221,22 +221,21 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-07,pm,2026020276,VAN @ EDM,totals,,6.5,Under 6.5,0.5008,0.4266,W,Under 6.5,115,-0.0273,pass,W,1.15,6.38,6.0,graded
 2026-11-07,pm,2026020276,VAN @ EDM,saves,Devon Levi,21.5,Levi U 21.5 saves,0.5709,0.5277,W,Levi U 21.5 saves,-120,-0.0048,pass,W,0.833,20.5,20.0,graded
 2026-11-07,pm,2026020276,VAN @ EDM,saves,Leevi Merilainen,25.5,Merilainen U 25.5 saves,0.5112,0.4893,L,Merilainen U 25.5 saves,-110,-0.0513,pass,L,-1.0,25.1,26.0,graded
-2026-11-08,am,2026020277,FLA @ BOS,h2h,,,BOS ML,0.5961,0.5655,,BOS ML,-140,-0.012,pass,,,0.55,,pending
-2026-11-08,am,2026020277,FLA @ BOS,spreads,,1.5,FLA +1.5,0.6087,0.6492,,BOS -1.5,160,-0.0516,pass,,,0.55,,pending
-2026-11-08,am,2026020277,FLA @ BOS,totals,,6.5,Under 6.5,0.5495,0.5427,,Under 6.5,-130,-0.0357,pass,,,6.05,,pending
-2026-11-08,am,2026020277,FLA @ BOS,saves,Jacob Markstrom,23.5,Markstrom U 23.5 saves,0.5211,0.5265,,Markstrom U 23.5 saves,-105,0.0242,lean,,,23.1,,pending
-2026-11-08,am,2026020278,VGK @ BUF,h2h,,,BUF ML,0.5002,0.5004,,VGK ML,-105,-0.0244,pass,,,0.0,,pending
-2026-11-08,am,2026020278,VGK @ BUF,spreads,,1.5,VGK +1.5,0.6908,0.7021,,VGK +1.5,-250,-0.0225,pass,,,0.0,,pending
-2026-11-08,am,2026020278,VGK @ BUF,totals,,6.5,Under 6.5,0.569,0.5154,,Under 6.5,-115,-0.0011,pass,,,5.92,,pending
-2026-11-08,am,2026020280,TBL @ WPG,h2h,,,TBL ML,0.5393,0.5752,,WPG ML,125,-0.0161,pass,,,-0.22,,pending
-2026-11-08,am,2026020280,TBL @ WPG,spreads,,1.5,WPG +1.5,0.6595,0.6376,,WPG +1.5,-210,-0.0474,pass,,,-0.22,,pending
-2026-11-08,am,2026020280,TBL @ WPG,totals,,6.5,Under 6.5,0.5714,0.5229,,Under 6.5,-120,-0.01,pass,,,5.9,,pending
-2026-11-08,am,2026020279,NJD @ TOR,h2h,,,NJD ML,0.5629,0.5822,,TOR ML,130,-0.0237,pass,,,-0.36,,pending
-2026-11-08,am,2026020279,NJD @ TOR,spreads,,1.5,TOR +1.5,0.6322,0.6314,,TOR +1.5,-185,-0.0269,pass,,,-0.36,,pending
-2026-11-08,am,2026020279,NJD @ TOR,totals,,6.5,Over 6.5,0.5034,0.4711,,Over 6.5,100,-0.0352,pass,,,6.38,,pending
-2026-11-08,am,2026020281,PHI @ CGY,h2h,,,PHI ML,0.5299,0.5235,,PHI ML,-120,-0.0361,pass,,,-0.16,,pending
-2026-11-08,am,2026020281,PHI @ CGY,spreads,,1.5,CGY +1.5,0.6759,0.6924,,CGY +1.5,-250,-0.0386,pass,,,-0.16,,pending
-2026-11-08,am,2026020281,PHI @ CGY,totals,,5.5,Under 5.5,0.5141,0.4789,,Under 5.5,100,-0.0176,pass,,,5.4,,pending
-2026-11-08,am,2026020282,PIT @ ANA,h2h,,,ANA ML,0.5801,0.5235,,ANA ML,-120,-0.0036,pass,,,0.48,,pending
-2026-11-08,am,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.613,0.6712,,ANA -1.5,175,-0.0412,pass,,,0.48,,pending
-2026-11-08,am,2026020282,PIT @ ANA,totals,,6.5,Over 6.5,0.5462,0.5716,,Over 6.5,-145,-0.0491,pass,,,6.66,,pending
+2026-11-08,pm,2026020280,TBL @ WPG,h2h,,,TBL ML,0.5393,0.5804,,WPG ML,125,-0.0237,pass,,,-0.22,,pending
+2026-11-08,pm,2026020280,TBL @ WPG,spreads,,1.5,WPG +1.5,0.6595,0.6333,,WPG +1.5,-210,-0.0514,pass,,,-0.22,,pending
+2026-11-08,pm,2026020280,TBL @ WPG,totals,,6.5,Under 6.5,0.5714,0.5238,,Under 6.5,-120,-0.0089,pass,,,5.9,,pending
+2026-11-08,pm,2026020280,TBL @ WPG,saves,Stuart Skinner,23.5,Skinner U 23.5 saves,0.5067,0.4999,,Skinner U 23.5 saves,-105,-0.0194,pass,,,23.4,,pending
+2026-11-08,pm,2026020280,TBL @ WPG,saves,Andrei Vasilevskiy,23.5,Vasilevskiy O 23.5 saves,0.5102,0.4534,,Vasilevskiy U 23.5 saves,-105,0.0285,lean,,,23.7,,pending
+2026-11-08,pm,2026020279,NJD @ TOR,h2h,,,NJD ML,0.5629,0.5937,,NJD ML,-150,-0.0283,pass,,,-0.36,,pending
+2026-11-08,pm,2026020279,NJD @ TOR,spreads,,1.5,TOR +1.5,0.6322,0.625,,TOR +1.5,-185,-0.0333,pass,,,-0.36,,pending
+2026-11-08,pm,2026020279,NJD @ TOR,totals,,6.5,Over 6.5,0.5034,0.4731,,Over 6.5,100,-0.0326,pass,,,6.38,,pending
+2026-11-08,pm,2026020279,NJD @ TOR,saves,Connor Hellebuyck,23.5,Hellebuyck U 23.5 saves,0.5409,0.4858,,Hellebuyck U 23.5 saves,-115,-0.0557,pass,,,22.9,,pending
+2026-11-08,pm,2026020281,PHI @ CGY,h2h,,,PHI ML,0.5299,0.5239,,PHI ML,-120,-0.0356,pass,,,-0.16,,pending
+2026-11-08,pm,2026020281,PHI @ CGY,spreads,,1.5,CGY +1.5,0.6759,0.6914,,CGY +1.5,-250,-0.0396,pass,,,-0.16,,pending
+2026-11-08,pm,2026020281,PHI @ CGY,totals,,5.5,Under 5.5,0.5141,0.4802,,Under 5.5,100,-0.0158,pass,,,5.4,,pending
+2026-11-08,pm,2026020281,PHI @ CGY,saves,Devin Cooley,24.5,Cooley U 24.5 saves,0.5861,0.5889,,Cooley U 24.5 saves,-120,0.0778,official,,,23.2,,pending
+2026-11-08,pm,2026020281,PHI @ CGY,saves,Dan Vladar,25.5,Vladar U 25.5 saves,0.6317,0.5235,,Vladar U 25.5 saves,-125,0.0119,lean,,,23.4,,pending
+2026-11-08,pm,2026020282,PIT @ ANA,h2h,,,ANA ML,0.5813,0.5218,,ANA ML,-120,-0.005,pass,,,0.49,,pending
+2026-11-08,pm,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.6121,0.6724,,ANA -1.5,175,-0.0426,pass,,,0.49,,pending
+2026-11-08,pm,2026020282,PIT @ ANA,totals,,6.5,Over 6.5,0.5452,0.5771,,Under 6.5,130,-0.0018,pass,,,6.65,,pending
+2026-11-08,pm,2026020282,PIT @ ANA,saves,Arturs Silovs,24.5,Silovs O 24.5 saves,0.5394,0.4952,,Silovs O 24.5 saves,-130,-0.0964,pass,,,25.1,,pending
