@@ -1,68 +1,68 @@
 {
- "generated_at": "2026-11-08T22:06:48.708292+00:00",
+ "generated_at": "2026-11-09T16:08:37.128746+00:00",
  "min_games": 300,
  "blend": {
   "h2h": {
-   "games": 54,
-   "lines": 108,
+   "games": 60,
+   "lines": 120,
    "current_weight": 0.35,
    "best_weight": 0.1,
-   "loglik_best": -0.6052,
-   "loglik_current": -0.6077,
-   "loglik_market_only": -0.6043,
+   "loglik_best": -0.6118,
+   "loglik_current": -0.6132,
+   "loglik_market_only": -0.6113,
    "holdout_weight": 0.1,
-   "holdout_ll_fitted": -0.5786,
-   "holdout_ll_current": -0.5811
+   "holdout_ll_fitted": -0.594,
+   "holdout_ll_current": -0.5948
   },
   "spreads": {
-   "games": 54,
-   "lines": 108,
+   "games": 60,
+   "lines": 120,
    "current_weight": 0.35,
    "best_weight": 0.1,
-   "loglik_best": -0.6122,
-   "loglik_current": -0.6153,
-   "loglik_market_only": -0.6111,
+   "loglik_best": -0.6225,
+   "loglik_current": -0.6243,
+   "loglik_market_only": -0.622,
    "holdout_weight": 0.1,
-   "holdout_ll_fitted": -0.6131,
-   "holdout_ll_current": -0.6136
+   "holdout_ll_fitted": -0.6302,
+   "holdout_ll_current": -0.6288
   },
   "totals": {
-   "games": 53,
-   "lines": 106,
+   "games": 59,
+   "lines": 118,
    "current_weight": 0.35,
    "best_weight": 0.1,
-   "loglik_best": -0.6899,
-   "loglik_current": -0.6911,
-   "loglik_market_only": -0.6895,
+   "loglik_best": -0.6854,
+   "loglik_current": -0.6872,
+   "loglik_market_only": -0.6848,
    "holdout_weight": 0.5,
-   "holdout_ll_fitted": -0.7068,
-   "holdout_ll_current": -0.7051
+   "holdout_ll_fitted": -0.6986,
+   "holdout_ll_current": -0.6965
   },
   "saves": {
-   "games": 49,
-   "lines": 158,
+   "games": 54,
+   "lines": 172,
    "current_weight": 0.35,
    "best_weight": 0.7,
-   "loglik_best": -0.689,
-   "loglik_current": -0.6948,
-   "loglik_market_only": -0.702,
+   "loglik_best": -0.6898,
+   "loglik_current": -0.6956,
+   "loglik_market_only": -0.7028,
    "holdout_weight": 0.7,
-   "holdout_ll_fitted": -0.7011,
-   "holdout_ll_current": -0.703
+   "holdout_ll_fitted": -0.7008,
+   "holdout_ll_current": -0.7032
   }
  },
  "timing": {
   "spreads": {
-   "lines_compared": 96,
-   "morning_better_pct": 9.4,
-   "pregame_better_pct": 9.4,
+   "lines_compared": 104,
+   "morning_better_pct": 8.7,
+   "pregame_better_pct": 8.7,
    "avg_move_pct_pts": 0.04
   },
   "totals": {
-   "lines_compared": 96,
-   "morning_better_pct": 9.4,
-   "pregame_better_pct": 9.4,
-   "avg_move_pct_pts": -0.03
+   "lines_compared": 104,
+   "morning_better_pct": 9.6,
+   "pregame_better_pct": 9.6,
+   "avg_move_pct_pts": -0.02
   }
  }
 }

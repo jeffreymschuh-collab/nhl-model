@@ -1,46 +1,35 @@
 [
 {
-"game_id": "2026020280",
-"matchup": "TBL @ WPG",
-"start_et": "6:00 PM",
-"xg_away": 3.06,
-"xg_home": 2.84,
-"home_win_pct": 46.1,
-"best_line": "Vasilevskiy U 23.5 saves",
-"best_edge_pct": 2.9,
-"picks": 0
-},
-{
-"game_id": "2026020279",
-"matchup": "NJD @ TOR",
-"start_et": "7:00 PM",
-"xg_away": 3.37,
-"xg_home": 3.01,
-"home_win_pct": 43.7,
-"best_line": "NJD ML",
-"best_edge_pct": -2.8,
-"picks": 0
-},
-{
-"game_id": "2026020281",
-"matchup": "PHI @ CGY",
-"start_et": "7:00 PM",
-"xg_away": 2.78,
-"xg_home": 2.62,
-"home_win_pct": 47.0,
-"best_line": "Cooley U 24.5 saves",
-"best_edge_pct": 7.8,
-"picks": 1
-},
-{
-"game_id": "2026020282",
-"matchup": "PIT @ ANA",
+"game_id": "2026020283",
+"matchup": "NYR @ EDM",
 "start_et": "8:00 PM",
-"xg_away": 3.08,
-"xg_home": 3.57,
-"home_win_pct": 58.1,
-"best_line": "ANA ML",
-"best_edge_pct": -0.5,
+"xg_away": 2.82,
+"xg_home": 3.22,
+"home_win_pct": 57.2,
+"best_line": "NYR ML",
+"best_edge_pct": -2.5,
+"picks": 0
+},
+{
+"game_id": "2026020284",
+"matchup": "PHI @ VAN",
+"start_et": "9:30 PM",
+"xg_away": 3.02,
+"xg_home": 2.71,
+"home_win_pct": 44.3,
+"best_line": "PHI ML",
+"best_edge_pct": -3.3,
+"picks": 0
+},
+{
+"game_id": "2026020285",
+"matchup": "NYI @ SJS",
+"start_et": "10:00 PM",
+"xg_away": 3.14,
+"xg_home": 2.81,
+"home_win_pct": 44.1,
+"best_line": "NYI ML",
+"best_edge_pct": -2.0,
 "picks": 0
 }
 ]

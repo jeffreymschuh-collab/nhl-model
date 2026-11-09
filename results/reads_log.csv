@@ -221,21 +221,30 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-07,pm,2026020276,VAN @ EDM,totals,,6.5,Under 6.5,0.5008,0.4266,W,Under 6.5,115,-0.0273,pass,W,1.15,6.38,6.0,graded
 2026-11-07,pm,2026020276,VAN @ EDM,saves,Devon Levi,21.5,Levi U 21.5 saves,0.5709,0.5277,W,Levi U 21.5 saves,-120,-0.0048,pass,W,0.833,20.5,20.0,graded
 2026-11-07,pm,2026020276,VAN @ EDM,saves,Leevi Merilainen,25.5,Merilainen U 25.5 saves,0.5112,0.4893,L,Merilainen U 25.5 saves,-110,-0.0513,pass,L,-1.0,25.1,26.0,graded
-2026-11-08,pm,2026020280,TBL @ WPG,h2h,,,TBL ML,0.5393,0.5804,,WPG ML,125,-0.0237,pass,,,-0.22,,pending
-2026-11-08,pm,2026020280,TBL @ WPG,spreads,,1.5,WPG +1.5,0.6595,0.6333,,WPG +1.5,-210,-0.0514,pass,,,-0.22,,pending
-2026-11-08,pm,2026020280,TBL @ WPG,totals,,6.5,Under 6.5,0.5714,0.5238,,Under 6.5,-120,-0.0089,pass,,,5.9,,pending
-2026-11-08,pm,2026020280,TBL @ WPG,saves,Stuart Skinner,23.5,Skinner U 23.5 saves,0.5067,0.4999,,Skinner U 23.5 saves,-105,-0.0194,pass,,,23.4,,pending
-2026-11-08,pm,2026020280,TBL @ WPG,saves,Andrei Vasilevskiy,23.5,Vasilevskiy O 23.5 saves,0.5102,0.4534,,Vasilevskiy U 23.5 saves,-105,0.0285,lean,,,23.7,,pending
-2026-11-08,pm,2026020279,NJD @ TOR,h2h,,,NJD ML,0.5629,0.5937,,NJD ML,-150,-0.0283,pass,,,-0.36,,pending
-2026-11-08,pm,2026020279,NJD @ TOR,spreads,,1.5,TOR +1.5,0.6322,0.625,,TOR +1.5,-185,-0.0333,pass,,,-0.36,,pending
-2026-11-08,pm,2026020279,NJD @ TOR,totals,,6.5,Over 6.5,0.5034,0.4731,,Over 6.5,100,-0.0326,pass,,,6.38,,pending
-2026-11-08,pm,2026020279,NJD @ TOR,saves,Connor Hellebuyck,23.5,Hellebuyck U 23.5 saves,0.5409,0.4858,,Hellebuyck U 23.5 saves,-115,-0.0557,pass,,,22.9,,pending
-2026-11-08,pm,2026020281,PHI @ CGY,h2h,,,PHI ML,0.5299,0.5239,,PHI ML,-120,-0.0356,pass,,,-0.16,,pending
-2026-11-08,pm,2026020281,PHI @ CGY,spreads,,1.5,CGY +1.5,0.6759,0.6914,,CGY +1.5,-250,-0.0396,pass,,,-0.16,,pending
-2026-11-08,pm,2026020281,PHI @ CGY,totals,,5.5,Under 5.5,0.5141,0.4802,,Under 5.5,100,-0.0158,pass,,,5.4,,pending
-2026-11-08,pm,2026020281,PHI @ CGY,saves,Devin Cooley,24.5,Cooley U 24.5 saves,0.5861,0.5889,,Cooley U 24.5 saves,-120,0.0778,official,,,23.2,,pending
-2026-11-08,pm,2026020281,PHI @ CGY,saves,Dan Vladar,25.5,Vladar U 25.5 saves,0.6317,0.5235,,Vladar U 25.5 saves,-125,0.0119,lean,,,23.4,,pending
-2026-11-08,pm,2026020282,PIT @ ANA,h2h,,,ANA ML,0.5813,0.5218,,ANA ML,-120,-0.005,pass,,,0.49,,pending
-2026-11-08,pm,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.6121,0.6724,,ANA -1.5,175,-0.0426,pass,,,0.49,,pending
-2026-11-08,pm,2026020282,PIT @ ANA,totals,,6.5,Over 6.5,0.5452,0.5771,,Under 6.5,130,-0.0018,pass,,,6.65,,pending
-2026-11-08,pm,2026020282,PIT @ ANA,saves,Arturs Silovs,24.5,Silovs O 24.5 saves,0.5394,0.4952,,Silovs O 24.5 saves,-130,-0.0964,pass,,,25.1,,pending
+2026-11-08,pm,2026020280,TBL @ WPG,h2h,,,TBL ML,0.5393,0.5804,L,WPG ML,125,-0.0237,pass,W,1.25,-0.22,1.0,graded
+2026-11-08,pm,2026020280,TBL @ WPG,spreads,,1.5,WPG +1.5,0.6595,0.6333,W,WPG +1.5,-210,-0.0514,pass,W,0.476,-0.22,1.0,graded
+2026-11-08,pm,2026020280,TBL @ WPG,totals,,6.5,Under 6.5,0.5714,0.5238,L,Under 6.5,-120,-0.0089,pass,L,-1.0,5.9,7.0,graded
+2026-11-08,pm,2026020280,TBL @ WPG,saves,Stuart Skinner,23.5,Skinner U 23.5 saves,0.5067,0.4999,W,Skinner U 23.5 saves,-105,-0.0194,pass,W,0.952,23.4,18.0,graded
+2026-11-08,pm,2026020280,TBL @ WPG,saves,Andrei Vasilevskiy,23.5,Vasilevskiy O 23.5 saves,0.5102,0.4534,L,Vasilevskiy U 23.5 saves,-105,0.0285,lean,W,0.952,23.7,21.0,graded
+2026-11-08,pm,2026020279,NJD @ TOR,h2h,,,NJD ML,0.5629,0.5937,W,NJD ML,-150,-0.0283,pass,W,0.667,-0.36,-4.0,graded
+2026-11-08,pm,2026020279,NJD @ TOR,spreads,,1.5,TOR +1.5,0.6322,0.625,L,TOR +1.5,-185,-0.0333,pass,L,-1.0,-0.36,-4.0,graded
+2026-11-08,pm,2026020279,NJD @ TOR,totals,,6.5,Over 6.5,0.5034,0.4731,L,Over 6.5,100,-0.0326,pass,L,-1.0,6.38,4.0,graded
+2026-11-08,pm,2026020279,NJD @ TOR,saves,Connor Hellebuyck,23.5,Hellebuyck U 23.5 saves,0.5409,0.4858,W,Hellebuyck U 23.5 saves,-115,-0.0557,pass,W,0.87,22.9,23.0,graded
+2026-11-08,pm,2026020281,PHI @ CGY,h2h,,,PHI ML,0.5299,0.5239,L,PHI ML,-120,-0.0356,pass,L,-1.0,-0.16,1.0,graded
+2026-11-08,pm,2026020281,PHI @ CGY,spreads,,1.5,CGY +1.5,0.6759,0.6914,W,CGY +1.5,-250,-0.0396,pass,W,0.4,-0.16,1.0,graded
+2026-11-08,pm,2026020281,PHI @ CGY,totals,,5.5,Under 5.5,0.5141,0.4802,L,Under 5.5,100,-0.0158,pass,L,-1.0,5.4,7.0,graded
+2026-11-08,pm,2026020281,PHI @ CGY,saves,Devin Cooley,24.5,Cooley U 24.5 saves,0.5861,0.5889,L,Cooley U 24.5 saves,-120,0.0778,official,L,-1.0,23.2,32.0,graded
+2026-11-08,pm,2026020281,PHI @ CGY,saves,Dan Vladar,25.5,Vladar U 25.5 saves,0.6317,0.5235,W,Vladar U 25.5 saves,-125,0.0119,lean,W,0.8,23.4,22.0,graded
+2026-11-08,pm,2026020282,PIT @ ANA,h2h,,,ANA ML,0.5813,0.5218,W,ANA ML,-120,-0.005,pass,W,0.833,0.49,3.0,graded
+2026-11-08,pm,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.6121,0.6724,L,ANA -1.5,175,-0.0426,pass,W,1.75,0.49,3.0,graded
+2026-11-08,pm,2026020282,PIT @ ANA,totals,,6.5,Over 6.5,0.5452,0.5771,W,Under 6.5,130,-0.0018,pass,L,-1.0,6.65,7.0,graded
+2026-11-08,pm,2026020282,PIT @ ANA,saves,Arturs Silovs,24.5,Silovs O 24.5 saves,0.5394,0.4952,L,Silovs O 24.5 saves,-130,-0.0964,pass,L,-1.0,25.1,20.0,graded
+2026-11-09,am,2026020283,NYR @ EDM,h2h,,,EDM ML,0.572,0.5922,,NYR ML,135,-0.0252,pass,,,0.4,,pending
+2026-11-09,am,2026020283,NYR @ EDM,spreads,,1.5,NYR +1.5,0.6298,0.6191,,NYR +1.5,-185,-0.0404,pass,,,0.4,,pending
+2026-11-09,am,2026020283,NYR @ EDM,totals,,6.5,Under 6.5,0.55,0.4991,,Under 6.5,-110,-0.013,pass,,,6.04,,pending
+2026-11-09,am,2026020284,PHI @ VAN,h2h,,,PHI ML,0.5566,0.5548,,PHI ML,-135,-0.0331,pass,,,-0.31,,pending
+2026-11-09,am,2026020284,PHI @ VAN,spreads,,1.5,VAN +1.5,0.6483,0.6552,,VAN +1.5,-210,-0.0363,pass,,,-0.31,,pending
+2026-11-09,am,2026020284,PHI @ VAN,totals,,6.5,Under 6.5,0.6015,0.5383,,Under 6.5,-130,-0.008,pass,,,5.73,,pending
+2026-11-09,am,2026020285,NYI @ SJS,h2h,,,NYI ML,0.5592,0.5646,,NYI ML,-135,-0.0204,pass,,,-0.33,,pending
+2026-11-09,am,2026020285,NYI @ SJS,spreads,,1.5,SJS +1.5,0.6423,0.6508,,SJS +1.5,-210,-0.0437,pass,,,-0.33,,pending
+2026-11-09,am,2026020285,NYI @ SJS,totals,,6.5,Under 6.5,0.5652,0.5229,,Under 6.5,-120,-0.014,pass,,,5.95,,pending

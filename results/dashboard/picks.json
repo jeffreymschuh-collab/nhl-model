@@ -9,9 +9,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.0,
+"profit_usd": -20.0
 },
 {
 "pick_id": "2026020265|saves|under|a schmid",

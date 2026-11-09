@@ -1,45 +1,45 @@
 {
- "generated_at": "2026-11-08T22:06:49.089646+00:00",
+ "generated_at": "2026-11-09T16:08:37.443696+00:00",
  "first_date": "2026-10-31",
- "last_graded_date": "2026-11-07",
- "pending_reads": 18,
+ "last_graded_date": "2026-11-08",
+ "pending_reads": 9,
  "season": {
   "all": {
-   "reads": 222,
-   "call_record": "134-88",
-   "call_hit_pct": 60.4,
-   "brier_model": 0.2326,
-   "brier_market": 0.2318,
+   "reads": 240,
+   "call_record": "142-98",
+   "call_hit_pct": 59.2,
+   "brier_model": 0.2338,
+   "brier_market": 0.2333,
    "model_beats_market": false,
-   "avg_miss": 2.89,
-   "bias_actual_minus_expected": 0.3,
+   "avg_miss": 2.87,
+   "bias_actual_minus_expected": 0.27,
    "value_side_flat_1u": {
     "official_bets": {
-     "record": "11-9-0",
-     "units": -1.22,
-     "roi_pct": -5.2
+     "record": "11-10-0",
+     "units": -2.22,
+     "roi_pct": -9.1
     },
     "lean": {
-     "record": "10-18-0",
-     "flat_units": -9.51,
-     "roi_pct": -33.9
+     "record": "12-18-0",
+     "flat_units": -7.75,
+     "roi_pct": -25.8
     },
     "pass": {
-     "record": "93-84-0",
-     "flat_units": -12.08,
-     "roi_pct": -6.8
+     "record": "101-91-0",
+     "flat_units": -11.88,
+     "roi_pct": -6.2
     }
    }
   },
   "by_market": {
    "Moneyline": {
-    "reads": 49,
-    "call_record": "31-18",
-    "call_hit_pct": 63.3,
-    "brier_model": 0.2128,
-    "brier_market": 0.2053,
+    "reads": 53,
+    "call_record": "33-20",
+    "call_hit_pct": 62.3,
+    "brier_model": 0.2144,
+    "brier_market": 0.2088,
     "model_beats_market": false,
-    "avg_miss": 1.8,
+    "avg_miss": 1.82,
     "bias_actual_minus_expected": 0.33,
     "value_side_flat_1u": {
      "official_bets": {
@@ -53,20 +53,20 @@
       "roi_pct": -100.0
      },
      "pass": {
-      "record": "21-24-0",
-      "flat_units": -5.48,
-      "roi_pct": -12.2
+      "record": "24-25-0",
+      "flat_units": -3.73,
+      "roi_pct": -7.6
      }
     }
    },
    "Puck line": {
-    "reads": 49,
-    "call_record": "31-18",
-    "call_hit_pct": 63.3,
-    "brier_model": 0.2212,
-    "brier_market": 0.2116,
+    "reads": 53,
+    "call_record": "33-20",
+    "call_hit_pct": 62.3,
+    "brier_model": 0.2233,
+    "brier_market": 0.2159,
     "model_beats_market": false,
-    "avg_miss": 1.8,
+    "avg_miss": 1.82,
     "bias_actual_minus_expected": 0.33,
     "value_side_flat_1u": {
      "official_bets": {
@@ -80,21 +80,21 @@
       "roi_pct": 2.5
      },
      "pass": {
-      "record": "27-15-0",
-      "flat_units": -0.43,
-      "roi_pct": -1.0
+      "record": "30-16-0",
+      "flat_units": 1.19,
+      "roi_pct": 2.6
      }
     }
    },
    "Total": {
-    "reads": 49,
-    "call_record": "28-21",
-    "call_hit_pct": 57.1,
-    "brier_model": 0.2482,
-    "brier_market": 0.2481,
+    "reads": 53,
+    "call_record": "29-24",
+    "call_hit_pct": 54.7,
+    "brier_model": 0.2493,
+    "brier_market": 0.2464,
     "model_beats_market": false,
-    "avg_miss": 1.85,
-    "bias_actual_minus_expected": 0.57,
+    "avg_miss": 1.81,
+    "bias_actual_minus_expected": 0.54,
     "value_side_flat_1u": {
      "lean": {
       "record": "0-2-0",
@@ -102,36 +102,36 @@
       "roi_pct": -100.0
      },
      "pass": {
-      "record": "24-23-0",
-      "flat_units": -1.04,
-      "roi_pct": -2.2
+      "record": "24-27-0",
+      "flat_units": -5.04,
+      "roi_pct": -9.9
      }
     }
    },
    "Goalie saves": {
-    "reads": 75,
-    "call_record": "44-31",
-    "call_hit_pct": 58.7,
-    "brier_model": 0.2428,
-    "brier_market": 0.2516,
+    "reads": 81,
+    "call_record": "47-34",
+    "call_hit_pct": 58.0,
+    "brier_model": 0.2431,
+    "brier_market": 0.252,
     "model_beats_market": true,
-    "avg_miss": 5.01,
-    "bias_actual_minus_expected": 0.09,
+    "avg_miss": 4.93,
+    "bias_actual_minus_expected": 0.01,
     "value_side_flat_1u": {
      "official_bets": {
-      "record": "10-4-0",
-      "units": 4.74,
-      "roi_pct": 33.8
+      "record": "10-5-0",
+      "units": 3.74,
+      "roi_pct": 24.9
      },
      "lean": {
-      "record": "9-12-0",
-      "flat_units": -4.56,
-      "roi_pct": -21.7
+      "record": "11-12-0",
+      "flat_units": -2.8,
+      "roi_pct": -12.2
      },
      "pass": {
-      "record": "21-22-0",
-      "flat_units": -5.12,
-      "roi_pct": -11.9
+      "record": "23-23-0",
+      "flat_units": -4.3,
+      "roi_pct": -9.4
      }
     }
    }
@@ -139,14 +139,14 @@
  },
  "last_7_days": {
   "all": {
-   "reads": 204,
-   "call_record": "123-81",
-   "call_hit_pct": 60.3,
-   "brier_model": 0.2317,
-   "brier_market": 0.2317,
-   "model_beats_market": false,
-   "avg_miss": 2.98,
-   "bias_actual_minus_expected": 0.31,
+   "reads": 215,
+   "call_record": "127-88",
+   "call_hit_pct": 59.1,
+   "brier_model": 0.2343,
+   "brier_market": 0.2344,
+   "model_beats_market": true,
+   "avg_miss": 2.96,
+   "bias_actual_minus_expected": 0.28,
    "value_side_flat_1u": {
     "official_bets": {
      "record": "9-8-0",
@@ -154,27 +154,27 @@
      "roi_pct": -5.4
     },
     "lean": {
-     "record": "10-16-0",
-     "flat_units": -7.51,
-     "roi_pct": -28.9
+     "record": "11-16-0",
+     "flat_units": -6.38,
+     "roi_pct": -23.6
     },
     "pass": {
-     "record": "88-75-0",
-     "flat_units": -7.0,
-     "roi_pct": -4.3
+     "record": "91-81-0",
+     "flat_units": -9.67,
+     "roi_pct": -5.6
     }
    }
   },
   "by_market": {
    "Moneyline": {
-    "reads": 45,
-    "call_record": "27-18",
-    "call_hit_pct": 60.0,
-    "brier_model": 0.2176,
-    "brier_market": 0.2114,
+    "reads": 47,
+    "call_record": "29-18",
+    "call_hit_pct": 61.7,
+    "brier_model": 0.217,
+    "brier_market": 0.212,
     "model_beats_market": false,
-    "avg_miss": 1.84,
-    "bias_actual_minus_expected": 0.3,
+    "avg_miss": 1.81,
+    "bias_actual_minus_expected": 0.32,
     "value_side_flat_1u": {
      "official_bets": {
       "record": "0-1-0",
@@ -187,21 +187,21 @@
       "roi_pct": -100.0
      },
      "pass": {
-      "record": "21-21-0",
-      "flat_units": -2.48,
-      "roi_pct": -5.9
+      "record": "22-22-0",
+      "flat_units": -2.78,
+      "roi_pct": -6.3
      }
     }
    },
    "Puck line": {
-    "reads": 45,
-    "call_record": "30-15",
-    "call_hit_pct": 66.7,
-    "brier_model": 0.2108,
-    "brier_market": 0.2061,
+    "reads": 47,
+    "call_record": "30-17",
+    "call_hit_pct": 63.8,
+    "brier_model": 0.2187,
+    "brier_market": 0.2158,
     "model_beats_market": false,
-    "avg_miss": 1.84,
-    "bias_actual_minus_expected": 0.3,
+    "avg_miss": 1.81,
+    "bias_actual_minus_expected": 0.32,
     "value_side_flat_1u": {
      "official_bets": {
       "record": "1-3-0",
@@ -214,21 +214,21 @@
       "roi_pct": 2.5
      },
      "pass": {
-      "record": "26-13-0",
-      "flat_units": 1.13,
-      "roi_pct": 2.9
+      "record": "27-14-0",
+      "flat_units": 1.89,
+      "roi_pct": 4.6
      }
     }
    },
    "Total": {
-    "reads": 45,
-    "call_record": "26-19",
-    "call_hit_pct": 57.8,
-    "brier_model": 0.2466,
-    "brier_market": 0.2481,
-    "model_beats_market": true,
-    "avg_miss": 1.89,
-    "bias_actual_minus_expected": 0.58,
+    "reads": 47,
+    "call_record": "26-21",
+    "call_hit_pct": 55.3,
+    "brier_model": 0.2483,
+    "brier_market": 0.2468,
+    "model_beats_market": false,
+    "avg_miss": 1.84,
+    "bias_actual_minus_expected": 0.54,
     "value_side_flat_1u": {
      "lean": {
       "record": "0-1-0",
@@ -236,21 +236,21 @@
       "roi_pct": -100.0
      },
      "pass": {
-      "record": "22-22-0",
-      "flat_units": -2.0,
-      "roi_pct": -4.6
+      "record": "21-25-0",
+      "flat_units": -5.96,
+      "roi_pct": -12.9
      }
     }
    },
    "Goalie saves": {
-    "reads": 69,
-    "call_record": "40-29",
-    "call_hit_pct": 58.0,
-    "brier_model": 0.2447,
-    "brier_market": 0.2507,
+    "reads": 74,
+    "call_record": "42-32",
+    "call_hit_pct": 56.8,
+    "brier_model": 0.2463,
+    "brier_market": 0.2526,
     "model_beats_market": true,
-    "avg_miss": 5.18,
-    "bias_actual_minus_expected": 0.14,
+    "avg_miss": 5.12,
+    "bias_actual_minus_expected": 0.08,
     "value_side_flat_1u": {
      "official_bets": {
       "record": "8-4-0",
@@ -258,14 +258,14 @@
       "roi_pct": 24.3
      },
      "lean": {
-      "record": "9-12-0",
-      "flat_units": -4.56,
-      "roi_pct": -21.7
+      "record": "10-12-0",
+      "flat_units": -3.43,
+      "roi_pct": -15.6
      },
      "pass": {
-      "record": "19-19-0",
-      "flat_units": -3.65,
-      "roi_pct": -9.6
+      "record": "21-20-0",
+      "flat_units": -2.83,
+      "roi_pct": -6.9
      }
     }
    }
@@ -273,805 +273,375 @@
  },
  "last_day": {
   "all": {
-   "reads": 45,
-   "call_record": "31-14",
-   "call_hit_pct": 68.9,
-   "brier_model": 0.2198,
-   "brier_market": 0.2208,
+   "reads": 18,
+   "call_record": "8-10",
+   "call_hit_pct": 44.4,
+   "brier_model": 0.2483,
+   "brier_market": 0.2514,
    "model_beats_market": true,
-   "avg_miss": 3.1,
-   "bias_actual_minus_expected": 0.09,
+   "avg_miss": 2.56,
+   "bias_actual_minus_expected": -0.14,
    "value_side_flat_1u": {
     "official_bets": {
-     "record": "3-2-0",
-     "units": 0.82,
-     "roi_pct": 12.7
+     "record": "0-1-0",
+     "units": -1.0,
+     "roi_pct": -100.0
     },
     "lean": {
-     "record": "4-4-0",
-     "flat_units": -0.26,
-     "roi_pct": -3.3
+     "record": "2-0-0",
+     "flat_units": 1.75,
+     "roi_pct": 87.6
     },
     "pass": {
-     "record": "14-19-0",
-     "flat_units": -8.28,
-     "roi_pct": -25.1
+     "record": "8-7-0",
+     "flat_units": 0.2,
+     "roi_pct": 1.3
     }
    }
   },
   "by_market": {
    "Moneyline": {
-    "reads": 10,
-    "call_record": "9-1",
-    "call_hit_pct": 90.0,
-    "brier_model": 0.1745,
-    "brier_market": 0.1648,
-    "model_beats_market": false,
-    "avg_miss": 1.86,
-    "bias_actual_minus_expected": 0.39,
+    "reads": 4,
+    "call_record": "2-2",
+    "call_hit_pct": 50.0,
+    "brier_model": 0.2345,
+    "brier_market": 0.2513,
+    "model_beats_market": true,
+    "avg_miss": 2.13,
+    "bias_actual_minus_expected": 0.31,
     "value_side_flat_1u": {
-     "lean": {
-      "record": "0-1-0",
-      "flat_units": -1.0,
-      "roi_pct": -100.0
-     },
      "pass": {
-      "record": "3-6-0",
-      "flat_units": -3.17,
-      "roi_pct": -35.2
+      "record": "3-1-0",
+      "flat_units": 1.75,
+      "roi_pct": 43.8
      }
     }
    },
    "Puck line": {
-    "reads": 10,
-    "call_record": "7-3",
-    "call_hit_pct": 70.0,
-    "brier_model": 0.201,
-    "brier_market": 0.2073,
+    "reads": 4,
+    "call_record": "2-2",
+    "call_hit_pct": 50.0,
+    "brier_model": 0.2488,
+    "brier_market": 0.2681,
     "model_beats_market": true,
-    "avg_miss": 1.86,
-    "bias_actual_minus_expected": 0.39,
+    "avg_miss": 2.13,
+    "bias_actual_minus_expected": 0.31,
     "value_side_flat_1u": {
-     "official_bets": {
-      "record": "1-1-0",
-      "units": 0.04,
-      "roi_pct": 1.1
-     },
-     "lean": {
-      "record": "1-0-0",
-      "flat_units": 1.05,
-      "roi_pct": 105.0
-     },
      "pass": {
-      "record": "4-3-0",
-      "flat_units": -1.25,
-      "roi_pct": -17.8
+      "record": "3-1-0",
+      "flat_units": 1.63,
+      "roi_pct": 40.6
      }
     }
    },
    "Total": {
-    "reads": 10,
-    "call_record": "5-5",
-    "call_hit_pct": 50.0,
-    "brier_model": 0.26,
-    "brier_market": 0.2627,
-    "model_beats_market": true,
-    "avg_miss": 1.53,
-    "bias_actual_minus_expected": 0.92,
+    "reads": 4,
+    "call_record": "1-3",
+    "call_hit_pct": 25.0,
+    "brier_model": 0.2628,
+    "brier_market": 0.2269,
+    "model_beats_market": false,
+    "avg_miss": 1.36,
+    "bias_actual_minus_expected": 0.17,
     "value_side_flat_1u": {
-     "lean": {
-      "record": "0-1-0",
-      "flat_units": -1.0,
-      "roi_pct": -100.0
-     },
      "pass": {
-      "record": "3-6-0",
-      "flat_units": -3.13,
-      "roi_pct": -34.8
+      "record": "0-4-0",
+      "flat_units": -4.0,
+      "roi_pct": -100.0
      }
     }
    },
    "Goalie saves": {
-    "reads": 15,
-    "call_record": "10-5",
-    "call_hit_pct": 66.7,
-    "brier_model": 0.2385,
-    "brier_market": 0.2419,
+    "reads": 6,
+    "call_record": "3-3",
+    "call_hit_pct": 50.0,
+    "brier_model": 0.2474,
+    "brier_market": 0.2565,
     "model_beats_market": true,
-    "avg_miss": 5.8,
-    "bias_actual_minus_expected": -0.85,
+    "avg_miss": 3.92,
+    "bias_actual_minus_expected": -0.95,
     "value_side_flat_1u": {
      "official_bets": {
-      "record": "2-1-0",
-      "units": 0.78,
-      "roi_pct": 26.2
+      "record": "0-1-0",
+      "units": -1.0,
+      "roi_pct": -100.0
      },
      "lean": {
-      "record": "3-2-0",
-      "flat_units": 0.69,
-      "roi_pct": 13.8
+      "record": "2-0-0",
+      "flat_units": 1.75,
+      "roi_pct": 87.6
      },
      "pass": {
-      "record": "4-4-0",
-      "flat_units": -0.73,
-      "roi_pct": -9.2
+      "record": "2-1-0",
+      "flat_units": 0.82,
+      "roi_pct": 27.4
      }
     }
    }
   },
   "official_bets_list": [
    {
-    "matchup": "FLA @ WSH",
-    "selection": "Schmid U 25.5 saves",
-    "price": -105,
+    "matchup": "PHI @ CGY",
+    "selection": "Cooley U 24.5 saves",
+    "price": -120,
     "units": 1.0,
     "result": "L",
     "profit_units": -1.0
-   },
-   {
-    "matchup": "CHI @ CAR",
-    "selection": "CHI +2.5",
-    "price": -115,
-    "units": 1.5,
-    "result": "L",
-    "profit_units": -1.5
-   },
-   {
-    "matchup": "VAN @ EDM",
-    "selection": "VAN +2.5",
-    "price": -130,
-    "units": 2.0,
-    "result": "W",
-    "profit_units": 1.538
-   },
-   {
-    "matchup": "NYR @ SEA",
-    "selection": "Daccord U 25.5 saves",
-    "price": -120,
-    "units": 1.0,
-    "result": "W",
-    "profit_units": 0.833
-   },
-   {
-    "matchup": "PIT @ LAK",
-    "selection": "Kuemper U 24.5 saves",
-    "price": -105,
-    "units": 1.0,
-    "result": "W",
-    "profit_units": 0.952
    }
   ]
  },
  "last_day_reads": [
   {
-   "matchup": "NYR @ SEA",
+   "matchup": "TBL @ WPG",
    "market": "h2h",
-   "call": "NYR ML",
-   "call_result": "W",
-   "value_side": "SEA ML",
-   "value_price": 110,
-   "value_edge": -0.0379,
+   "call": "TBL ML",
+   "call_result": "L",
+   "value_side": "WPG ML",
+   "value_price": 125,
+   "value_edge": -0.0237,
    "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": -0.11,
-   "actual": -1.0
+   "value_result": "W",
+   "value_profit_1u": 1.25,
+   "expected": -0.22,
+   "actual": 1.0
   },
   {
-   "matchup": "NYR @ SEA",
+   "matchup": "TBL @ WPG",
    "market": "spreads",
-   "call": "SEA +1.5",
+   "call": "WPG +1.5",
    "call_result": "W",
-   "value_side": "NYR -1.5",
-   "value_price": 180,
-   "value_edge": -0.0643,
+   "value_side": "WPG +1.5",
+   "value_price": -210,
+   "value_edge": -0.0514,
    "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": -0.11,
-   "actual": -1.0
+   "value_result": "W",
+   "value_profit_1u": 0.476,
+   "expected": -0.22,
+   "actual": 1.0
   },
   {
-   "matchup": "NYR @ SEA",
+   "matchup": "TBL @ WPG",
    "market": "totals",
    "call": "Under 6.5",
    "call_result": "L",
    "value_side": "Under 6.5",
    "value_price": -120,
-   "value_edge": -0.0206,
+   "value_edge": -0.0089,
    "tier": "pass",
    "value_result": "L",
    "value_profit_1u": -1.0,
-   "expected": 5.99,
+   "expected": 5.9,
    "actual": 7.0
   },
   {
-   "matchup": "NYR @ SEA",
+   "matchup": "TBL @ WPG",
    "market": "saves",
-   "call": "Daccord U 25.5 saves",
+   "call": "Skinner U 23.5 saves",
    "call_result": "W",
-   "value_side": "Daccord U 25.5 saves",
-   "value_price": -120,
-   "value_edge": 0.0857,
-   "tier": "official",
-   "value_result": "W",
-   "value_profit_1u": 0.833,
-   "expected": 23.2,
-   "actual": 7.0
-  },
-  {
-   "matchup": "MTL @ TOR",
-   "market": "h2h",
-   "call": "MTL ML",
-   "call_result": "W",
-   "value_side": "MTL ML",
-   "value_price": -120,
-   "value_edge": -0.0285,
+   "value_side": "Skinner U 23.5 saves",
+   "value_price": -105,
+   "value_edge": -0.0194,
    "tier": "pass",
    "value_result": "W",
-   "value_profit_1u": 0.833,
-   "expected": -0.21,
-   "actual": -2.0
+   "value_profit_1u": 0.952,
+   "expected": 23.4,
+   "actual": 18.0
   },
   {
-   "matchup": "MTL @ TOR",
+   "matchup": "TBL @ WPG",
+   "market": "saves",
+   "call": "Vasilevskiy O 23.5 saves",
+   "call_result": "L",
+   "value_side": "Vasilevskiy U 23.5 saves",
+   "value_price": -105,
+   "value_edge": 0.0285,
+   "tier": "lean",
+   "value_result": "W",
+   "value_profit_1u": 0.952,
+   "expected": 23.7,
+   "actual": 21.0
+  },
+  {
+   "matchup": "NJD @ TOR",
+   "market": "h2h",
+   "call": "NJD ML",
+   "call_result": "W",
+   "value_side": "NJD ML",
+   "value_price": -150,
+   "value_edge": -0.0283,
+   "tier": "pass",
+   "value_result": "W",
+   "value_profit_1u": 0.667,
+   "expected": -0.36,
+   "actual": -4.0
+  },
+  {
+   "matchup": "NJD @ TOR",
    "market": "spreads",
    "call": "TOR +1.5",
    "call_result": "L",
    "value_side": "TOR +1.5",
-   "value_price": -250,
-   "value_edge": -0.0635,
+   "value_price": -185,
+   "value_edge": -0.0333,
    "tier": "pass",
    "value_result": "L",
    "value_profit_1u": -1.0,
-   "expected": -0.21,
-   "actual": -2.0
+   "expected": -0.36,
+   "actual": -4.0
   },
   {
-   "matchup": "MTL @ TOR",
+   "matchup": "NJD @ TOR",
    "market": "totals",
    "call": "Over 6.5",
    "call_result": "L",
    "value_side": "Over 6.5",
-   "value_price": -115,
-   "value_edge": -0.041,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 6.39,
-   "actual": 6.0
-  },
-  {
-   "matchup": "MTL @ TOR",
-   "market": "saves",
-   "call": "Fowler U 25.5 saves",
-   "call_result": "L",
-   "value_side": "Fowler U 25.5 saves",
-   "value_price": -120,
-   "value_edge": -0.0192,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 24.4,
-   "actual": 26.0
-  },
-  {
-   "matchup": "MTL @ TOR",
-   "market": "saves",
-   "call": "Bobrovsky U 25.5 saves",
-   "call_result": "W",
-   "value_side": "Bobrovsky U 25.5 saves",
-   "value_price": -135,
-   "value_edge": -0.0525,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.741,
-   "expected": 24.5,
-   "actual": 24.0
-  },
-  {
-   "matchup": "UTA @ OTT",
-   "market": "h2h",
-   "call": "OTT ML",
-   "call_result": "W",
-   "value_side": "OTT ML",
    "value_price": 100,
-   "value_edge": -0.0151,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 1.0,
-   "expected": 0.13,
-   "actual": 2.0
-  },
-  {
-   "matchup": "UTA @ OTT",
-   "market": "spreads",
-   "call": "OTT +1.5",
-   "call_result": "W",
-   "value_side": "OTT +1.5",
-   "value_price": -250,
-   "value_edge": -0.036,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.4,
-   "expected": 0.13,
-   "actual": 2.0
-  },
-  {
-   "matchup": "UTA @ OTT",
-   "market": "totals",
-   "call": "Under 6.5",
-   "call_result": "W",
-   "value_side": "Under 6.5",
-   "value_price": -105,
-   "value_edge": -0.0201,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.952,
-   "expected": 6.13,
-   "actual": 6.0
-  },
-  {
-   "matchup": "UTA @ OTT",
-   "market": "saves",
-   "call": "Ersson U 24.5 saves",
-   "call_result": "L",
-   "value_side": "Ersson U 24.5 saves",
-   "value_price": -145,
-   "value_edge": -0.0259,
+   "value_edge": -0.0326,
    "tier": "pass",
    "value_result": "L",
    "value_profit_1u": -1.0,
-   "expected": 22.2,
-   "actual": 30.0
+   "expected": 6.38,
+   "actual": 4.0
   },
   {
-   "matchup": "NJD @ NYI",
-   "market": "h2h",
-   "call": "NJD ML",
-   "call_result": "W",
-   "value_side": "NYI ML",
-   "value_price": 120,
-   "value_edge": -0.0252,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": -0.19,
-   "actual": -1.0
-  },
-  {
-   "matchup": "NJD @ NYI",
-   "market": "spreads",
-   "call": "NYI +1.5",
-   "call_result": "W",
-   "value_side": "NYI +1.5",
-   "value_price": -210,
-   "value_edge": -0.0388,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.476,
-   "expected": -0.19,
-   "actual": -1.0
-  },
-  {
-   "matchup": "NJD @ NYI",
-   "market": "totals",
-   "call": "Over 5.5",
-   "call_result": "W",
-   "value_side": "Over 5.5",
-   "value_price": -130,
-   "value_edge": -0.0253,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.769,
-   "expected": 5.81,
-   "actual": 9.0
-  },
-  {
-   "matchup": "NJD @ NYI",
+   "matchup": "NJD @ TOR",
    "market": "saves",
-   "call": "Sorokin U 26.5 saves",
-   "call_result": "L",
-   "value_side": "Sorokin U 26.5 saves",
-   "value_price": -120,
-   "value_edge": -0.0412,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 25.4,
-   "actual": 45.0
-  },
-  {
-   "matchup": "NJD @ NYI",
-   "market": "saves",
-   "call": "Allen U 24.5 saves",
+   "call": "Hellebuyck U 23.5 saves",
    "call_result": "W",
-   "value_side": "Allen U 24.5 saves",
+   "value_side": "Hellebuyck U 23.5 saves",
    "value_price": -115,
-   "value_edge": 0.0359,
-   "tier": "lean",
+   "value_edge": -0.0557,
+   "tier": "pass",
    "value_result": "W",
    "value_profit_1u": 0.87,
-   "expected": 23.0,
-   "actual": 19.0
-  },
-  {
-   "matchup": "CHI @ CAR",
-   "market": "h2h",
-   "call": "CAR ML",
-   "call_result": "W",
-   "value_side": "CHI ML",
-   "value_price": 350,
-   "value_edge": -0.0344,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 1.69,
-   "actual": 7.0
-  },
-  {
-   "matchup": "CHI @ CAR",
-   "market": "spreads",
-   "call": "CHI +2.5",
-   "call_result": "L",
-   "value_side": "CHI +2.5",
-   "value_price": -115,
-   "value_edge": 0.0567,
-   "tier": "official",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 1.69,
-   "actual": 7.0
-  },
-  {
-   "matchup": "CHI @ CAR",
-   "market": "totals",
-   "call": "Under 6.5",
-   "call_result": "L",
-   "value_side": "Under 6.5",
-   "value_price": -130,
-   "value_edge": -0.043,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 6.07,
-   "actual": 11.0
-  },
-  {
-   "matchup": "CHI @ CAR",
-   "market": "saves",
-   "call": "Kochetkov U 19.5 saves",
-   "call_result": "W",
-   "value_side": "Kochetkov U 19.5 saves",
-   "value_price": -135,
-   "value_edge": -0.0489,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.741,
-   "expected": 18.8,
-   "actual": 18.0
-  },
-  {
-   "matchup": "CHI @ CAR",
-   "market": "saves",
-   "call": "Knight U 29.5 saves",
-   "call_result": "W",
-   "value_side": "Knight U 29.5 saves",
-   "value_price": -110,
-   "value_edge": 0.0106,
-   "tier": "lean",
-   "value_result": "W",
-   "value_profit_1u": 0.909,
-   "expected": 28.9,
-   "actual": 11.0
-  },
-  {
-   "matchup": "SJS @ DAL",
-   "market": "h2h",
-   "call": "DAL ML",
-   "call_result": "W",
-   "value_side": "SJS ML",
-   "value_price": 250,
-   "value_edge": 0.0117,
-   "tier": "lean",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 1.04,
-   "actual": 1.0
-  },
-  {
-   "matchup": "SJS @ DAL",
-   "market": "spreads",
-   "call": "SJS +1.5",
-   "call_result": "W",
-   "value_side": "SJS +1.5",
-   "value_price": 105,
-   "value_edge": 0.0233,
-   "tier": "lean",
-   "value_result": "W",
-   "value_profit_1u": 1.05,
-   "expected": 1.04,
-   "actual": 1.0
-  },
-  {
-   "matchup": "SJS @ DAL",
-   "market": "totals",
-   "call": "Over 5.5",
-   "call_result": "W",
-   "value_side": "Under 5.5",
-   "value_price": 115,
-   "value_edge": 0.0227,
-   "tier": "lean",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 5.64,
-   "actual": 7.0
-  },
-  {
-   "matchup": "SJS @ DAL",
-   "market": "saves",
-   "call": "Oettinger U 21.5 saves",
-   "call_result": "W",
-   "value_side": "Oettinger U 21.5 saves",
-   "value_price": -105,
-   "value_edge": -0.0203,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.952,
-   "expected": 20.3,
-   "actual": 20.0
-  },
-  {
-   "matchup": "SJS @ DAL",
-   "market": "saves",
-   "call": "Nedeljkovic O 24.5 saves",
-   "call_result": "W",
-   "value_side": "Nedeljkovic U 24.5 saves",
-   "value_price": -105,
-   "value_edge": 0.0152,
-   "tier": "lean",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 24.9,
-   "actual": 26.0
-  },
-  {
-   "matchup": "TBL @ MIN",
-   "market": "h2h",
-   "call": "TBL ML",
-   "call_result": "W",
-   "value_side": "MIN ML",
-   "value_price": 115,
-   "value_edge": -0.0336,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": -0.25,
-   "actual": -1.0
-  },
-  {
-   "matchup": "TBL @ MIN",
-   "market": "spreads",
-   "call": "MIN +1.5",
-   "call_result": "W",
-   "value_side": "MIN +1.5",
-   "value_price": -210,
-   "value_edge": -0.0362,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 0.476,
-   "expected": -0.25,
-   "actual": -1.0
-  },
-  {
-   "matchup": "TBL @ MIN",
-   "market": "totals",
-   "call": "Under 6.5",
-   "call_result": "L",
-   "value_side": "Under 6.5",
-   "value_price": -105,
-   "value_edge": -0.0238,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 6.23,
-   "actual": 7.0
-  },
-  {
-   "matchup": "DET @ COL",
-   "market": "h2h",
-   "call": "COL ML",
-   "call_result": "W",
-   "value_side": "DET ML",
-   "value_price": 175,
-   "value_edge": -0.0435,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 0.71,
-   "actual": 4.0
-  },
-  {
-   "matchup": "DET @ COL",
-   "market": "spreads",
-   "call": "DET +1.5",
-   "call_result": "L",
-   "value_side": "DET +1.5",
-   "value_price": -130,
-   "value_edge": -0.009,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 0.71,
-   "actual": 4.0
-  },
-  {
-   "matchup": "DET @ COL",
-   "market": "totals",
-   "call": "Under 6.5",
-   "call_result": "W",
-   "value_side": "Over 6.5",
-   "value_price": 100,
-   "value_edge": -0.0409,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 6.19,
-   "actual": 4.0
-  },
-  {
-   "matchup": "DET @ COL",
-   "market": "saves",
-   "call": "Blackwood O 22.5 saves",
-   "call_result": "W",
-   "value_side": "Blackwood O 22.5 saves",
-   "value_price": -110,
-   "value_edge": 0.0051,
-   "tier": "lean",
-   "value_result": "W",
-   "value_profit_1u": 0.909,
    "expected": 22.9,
-   "actual": 27.0
+   "actual": 23.0
   },
   {
-   "matchup": "PIT @ LAK",
+   "matchup": "PHI @ CGY",
    "market": "h2h",
-   "call": "LAK ML",
+   "call": "PHI ML",
    "call_result": "L",
-   "value_side": "PIT ML",
-   "value_price": 100,
-   "value_edge": -0.0407,
+   "value_side": "PHI ML",
+   "value_price": -120,
+   "value_edge": -0.0356,
    "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 1.0,
-   "expected": 0.08,
-   "actual": -3.0
+   "value_result": "L",
+   "value_profit_1u": -1.0,
+   "expected": -0.16,
+   "actual": 1.0
   },
   {
-   "matchup": "PIT @ LAK",
+   "matchup": "PHI @ CGY",
    "market": "spreads",
-   "call": "PIT +1.5",
+   "call": "CGY +1.5",
    "call_result": "W",
-   "value_side": "PIT +1.5",
+   "value_side": "CGY +1.5",
    "value_price": -250,
-   "value_edge": -0.0488,
+   "value_edge": -0.0396,
    "tier": "pass",
    "value_result": "W",
    "value_profit_1u": 0.4,
-   "expected": 0.08,
-   "actual": -3.0
+   "expected": -0.16,
+   "actual": 1.0
   },
   {
-   "matchup": "PIT @ LAK",
+   "matchup": "PHI @ CGY",
    "market": "totals",
-   "call": "Under 6.5",
+   "call": "Under 5.5",
    "call_result": "L",
-   "value_side": "Under 6.5",
-   "value_price": -120,
-   "value_edge": -0.0258,
+   "value_side": "Under 5.5",
+   "value_price": 100,
+   "value_edge": -0.0158,
    "tier": "pass",
    "value_result": "L",
    "value_profit_1u": -1.0,
-   "expected": 6.0,
+   "expected": 5.4,
    "actual": 7.0
   },
   {
-   "matchup": "PIT @ LAK",
+   "matchup": "PHI @ CGY",
    "market": "saves",
-   "call": "Murashov U 25.5 saves",
+   "call": "Cooley U 24.5 saves",
    "call_result": "L",
-   "value_side": "Murashov U 25.5 saves",
-   "value_price": -110,
-   "value_edge": 0.0522,
-   "tier": "lean",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 24.0,
-   "actual": 26.0
-  },
-  {
-   "matchup": "PIT @ LAK",
-   "market": "saves",
-   "call": "Kuemper U 24.5 saves",
-   "call_result": "W",
-   "value_side": "Kuemper U 24.5 saves",
-   "value_price": -105,
-   "value_edge": 0.0717,
-   "tier": "official",
-   "value_result": "W",
-   "value_profit_1u": 0.952,
-   "expected": 23.7,
-   "actual": 14.0
-  },
-  {
-   "matchup": "VAN @ EDM",
-   "market": "h2h",
-   "call": "EDM ML",
-   "call_result": "W",
-   "value_side": "VAN ML",
-   "value_price": 260,
-   "value_edge": -0.0496,
-   "tier": "pass",
-   "value_result": "L",
-   "value_profit_1u": -1.0,
-   "expected": 1.18,
-   "actual": 2.0
-  },
-  {
-   "matchup": "VAN @ EDM",
-   "market": "spreads",
-   "call": "VAN +2.5",
-   "call_result": "W",
-   "value_side": "VAN +2.5",
-   "value_price": -130,
-   "value_edge": 0.0742,
-   "tier": "official",
-   "value_result": "W",
-   "value_profit_1u": 0.769,
-   "expected": 1.18,
-   "actual": 2.0
-  },
-  {
-   "matchup": "VAN @ EDM",
-   "market": "totals",
-   "call": "Under 6.5",
-   "call_result": "W",
-   "value_side": "Under 6.5",
-   "value_price": 115,
-   "value_edge": -0.0273,
-   "tier": "pass",
-   "value_result": "W",
-   "value_profit_1u": 1.15,
-   "expected": 6.38,
-   "actual": 6.0
-  },
-  {
-   "matchup": "VAN @ EDM",
-   "market": "saves",
-   "call": "Levi U 21.5 saves",
-   "call_result": "W",
-   "value_side": "Levi U 21.5 saves",
+   "value_side": "Cooley U 24.5 saves",
    "value_price": -120,
-   "value_edge": -0.0048,
+   "value_edge": 0.0778,
+   "tier": "official",
+   "value_result": "L",
+   "value_profit_1u": -1.0,
+   "expected": 23.2,
+   "actual": 32.0
+  },
+  {
+   "matchup": "PHI @ CGY",
+   "market": "saves",
+   "call": "Vladar U 25.5 saves",
+   "call_result": "W",
+   "value_side": "Vladar U 25.5 saves",
+   "value_price": -125,
+   "value_edge": 0.0119,
+   "tier": "lean",
+   "value_result": "W",
+   "value_profit_1u": 0.8,
+   "expected": 23.4,
+   "actual": 22.0
+  },
+  {
+   "matchup": "PIT @ ANA",
+   "market": "h2h",
+   "call": "ANA ML",
+   "call_result": "W",
+   "value_side": "ANA ML",
+   "value_price": -120,
+   "value_edge": -0.005,
    "tier": "pass",
    "value_result": "W",
    "value_profit_1u": 0.833,
-   "expected": 20.5,
-   "actual": 20.0
+   "expected": 0.49,
+   "actual": 3.0
   },
   {
-   "matchup": "VAN @ EDM",
-   "market": "saves",
-   "call": "Merilainen U 25.5 saves",
+   "matchup": "PIT @ ANA",
+   "market": "spreads",
+   "call": "PIT +1.5",
    "call_result": "L",
-   "value_side": "Merilainen U 25.5 saves",
-   "value_price": -110,
-   "value_edge": -0.0513,
+   "value_side": "ANA -1.5",
+   "value_price": 175,
+   "value_edge": -0.0426,
+   "tier": "pass",
+   "value_result": "W",
+   "value_profit_1u": 1.75,
+   "expected": 0.49,
+   "actual": 3.0
+  },
+  {
+   "matchup": "PIT @ ANA",
+   "market": "totals",
+   "call": "Over 6.5",
+   "call_result": "W",
+   "value_side": "Under 6.5",
+   "value_price": 130,
+   "value_edge": -0.0018,
+   "tier": "pass",
+   "value_result": "L",
+   "value_profit_1u": -1.0,
+   "expected": 6.65,
+   "actual": 7.0
+  },
+  {
+   "matchup": "PIT @ ANA",
+   "market": "saves",
+   "call": "Silovs O 24.5 saves",
+   "call_result": "L",
+   "value_side": "Silovs O 24.5 saves",
+   "value_price": -130,
+   "value_edge": -0.0964,
    "tier": "pass",
    "value_result": "L",
    "value_profit_1u": -1.0,
    "expected": 25.1,
-   "actual": 26.0
+   "actual": 20.0
   }
  ]
 }
