@@ -6,19 +6,19 @@
 "xg_away": 2.82,
 "xg_home": 3.22,
 "home_win_pct": 57.2,
-"best_line": "NYR ML",
-"best_edge_pct": -2.5,
+"best_line": "Garand U 26.5 saves",
+"best_edge_pct": 0.9,
 "picks": 0
 },
 {
 "game_id": "2026020284",
 "matchup": "PHI @ VAN",
 "start_et": "9:30 PM",
-"xg_away": 3.02,
+"xg_away": 2.92,
 "xg_home": 2.71,
-"home_win_pct": 44.3,
-"best_line": "PHI ML",
-"best_edge_pct": -3.3,
+"home_win_pct": 46.0,
+"best_line": "Woll U 23.5 saves",
+"best_edge_pct": 4.7,
 "picks": 0
 },
 {
@@ -28,8 +28,8 @@
 "xg_away": 3.14,
 "xg_home": 2.81,
 "home_win_pct": 44.1,
-"best_line": "NYI ML",
-"best_edge_pct": -2.0,
+"best_line": "Sorokin U 24.5 saves",
+"best_edge_pct": -1.4,
 "picks": 0
 }
 ]

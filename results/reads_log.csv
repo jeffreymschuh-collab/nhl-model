@@ -239,12 +239,17 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-08,pm,2026020282,PIT @ ANA,spreads,,1.5,PIT +1.5,0.6121,0.6724,L,ANA -1.5,175,-0.0426,pass,W,1.75,0.49,3.0,graded
 2026-11-08,pm,2026020282,PIT @ ANA,totals,,6.5,Over 6.5,0.5452,0.5771,W,Under 6.5,130,-0.0018,pass,L,-1.0,6.65,7.0,graded
 2026-11-08,pm,2026020282,PIT @ ANA,saves,Arturs Silovs,24.5,Silovs O 24.5 saves,0.5394,0.4952,L,Silovs O 24.5 saves,-130,-0.0964,pass,L,-1.0,25.1,20.0,graded
-2026-11-09,am,2026020283,NYR @ EDM,h2h,,,EDM ML,0.572,0.5922,,NYR ML,135,-0.0252,pass,,,0.4,,pending
-2026-11-09,am,2026020283,NYR @ EDM,spreads,,1.5,NYR +1.5,0.6298,0.6191,,NYR +1.5,-185,-0.0404,pass,,,0.4,,pending
-2026-11-09,am,2026020283,NYR @ EDM,totals,,6.5,Under 6.5,0.55,0.4991,,Under 6.5,-110,-0.013,pass,,,6.04,,pending
-2026-11-09,am,2026020284,PHI @ VAN,h2h,,,PHI ML,0.5566,0.5548,,PHI ML,-135,-0.0331,pass,,,-0.31,,pending
-2026-11-09,am,2026020284,PHI @ VAN,spreads,,1.5,VAN +1.5,0.6483,0.6552,,VAN +1.5,-210,-0.0363,pass,,,-0.31,,pending
-2026-11-09,am,2026020284,PHI @ VAN,totals,,6.5,Under 6.5,0.6015,0.5383,,Under 6.5,-130,-0.008,pass,,,5.73,,pending
-2026-11-09,am,2026020285,NYI @ SJS,h2h,,,NYI ML,0.5592,0.5646,,NYI ML,-135,-0.0204,pass,,,-0.33,,pending
-2026-11-09,am,2026020285,NYI @ SJS,spreads,,1.5,SJS +1.5,0.6423,0.6508,,SJS +1.5,-210,-0.0437,pass,,,-0.33,,pending
-2026-11-09,am,2026020285,NYI @ SJS,totals,,6.5,Under 6.5,0.5652,0.5229,,Under 6.5,-120,-0.014,pass,,,5.95,,pending
+2026-11-09,pm,2026020283,NYR @ EDM,h2h,,,EDM ML,0.5721,0.5996,,NYR ML,135,-0.0365,pass,,,0.4,,pending
+2026-11-09,pm,2026020283,NYR @ EDM,spreads,,1.5,NYR +1.5,0.6298,0.6147,,NYR +1.5,-185,-0.0449,pass,,,0.4,,pending
+2026-11-09,pm,2026020283,NYR @ EDM,totals,,6.5,Under 6.5,0.55,0.4991,,Under 6.5,-110,-0.0131,pass,,,6.04,,pending
+2026-11-09,pm,2026020283,NYR @ EDM,saves,Dylan Garand,26.5,Garand U 26.5 saves,0.6186,0.5984,,Garand U 26.5 saves,-150,0.0092,lean,,,24.4,,pending
+2026-11-09,pm,2026020284,PHI @ VAN,h2h,,,PHI ML,0.5403,0.5552,,VAN ML,115,-0.0325,pass,,,-0.21,,pending
+2026-11-09,pm,2026020284,PHI @ VAN,spreads,,1.5,VAN +1.5,0.6633,0.6576,,VAN +1.5,-230,-0.0536,pass,,,-0.21,,pending
+2026-11-09,pm,2026020284,PHI @ VAN,totals,,6.5,Under 6.5,0.616,0.5328,,Under 6.5,-130,-0.0051,pass,,,5.63,,pending
+2026-11-09,pm,2026020284,PHI @ VAN,saves,Joseph Woll,23.5,Woll U 23.5 saves,0.6204,0.5764,,Woll U 23.5 saves,-130,0.0473,lean,,,21.7,,pending
+2026-11-09,pm,2026020284,PHI @ VAN,saves,Leevi Merilainen,24.5,Merilainen U 24.5 saves,0.6368,0.562,,Merilainen U 24.5 saves,-135,0.0248,lean,,,22.3,,pending
+2026-11-09,pm,2026020285,NYI @ SJS,h2h,,,NYI ML,0.5592,0.5638,,NYI ML,-135,-0.0214,pass,,,-0.33,,pending
+2026-11-09,pm,2026020285,NYI @ SJS,spreads,,1.5,SJS +1.5,0.6423,0.6519,,SJS +1.5,-210,-0.0427,pass,,,-0.33,,pending
+2026-11-09,pm,2026020285,NYI @ SJS,totals,,6.5,Under 6.5,0.5653,0.5172,,Under 6.5,-120,-0.0208,pass,,,5.95,,pending
+2026-11-09,pm,2026020285,NYI @ SJS,saves,Ilya Sorokin,24.5,Sorokin U 24.5 saves,0.5387,0.5527,,Sorokin U 24.5 saves,-125,-0.0139,pass,,,23.9,,pending
+2026-11-09,pm,2026020285,NYI @ SJS,saves,Yaroslav Askarov,25.5,Askarov U 25.5 saves,0.581,0.5925,,Askarov U 25.5 saves,-150,-0.0192,pass,,,24.0,,pending
