@@ -76,6 +76,17 @@ def main():
                      "units_profit": d.get("units_profit", 0.0), "roi_pct": d.get("roi_pct"),
                      "avg_clv_pct": d.get("avg_clv_pct"), "beat_close_pct": d.get("beat_close_pct")})
     run_info[0]["pending"] = p.get("pending", 0)
+    # Lean tracker rows (not bets): flat 1u per lean, so Jeff can see when leans earn promotion
+    rs_path = RESULTS_DIR / "reads_summary.json"
+    if rs_path.exists():
+        lt = json.loads(rs_path.read_text()).get("lean_tracker", {}).get("markets", {})
+        for name in ("Goalie saves", "All markets"):
+            d = lt.get(name)
+            if d:
+                perf.append({"market": f"Leans, not bet: {name} ({d['progress']}, {d['status']})", "bets": d["leans"],
+                             "profit_usd": round(d["flat_units"] * UNIT, 2), "record": d["record"],
+                             "units_profit": d["flat_units"], "roi_pct": d["roi_pct"],
+                             "avg_clv_pct": None, "beat_close_pct": None})
 
     log_path = RESULTS_DIR / "picks_log.csv"
     picks = []

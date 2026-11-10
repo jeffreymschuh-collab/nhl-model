@@ -13,7 +13,10 @@
   ],
   "w_xg": 0.0,
   "goalie_k": 0.5,
-  "goalie_metric": "sv"
+  "goalie_metric": "sv",
+  "w_model_by_market": {
+   "saves": 0.5
+  }
  },
  "source": "backtest",
  "report": "results/backtest_report.json"

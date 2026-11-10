@@ -53,6 +53,15 @@ BET_RULES = {
 }
 
 
+# Leans: lines with a real but sub-pick edge. Not bet; tracked at a flat 1 unit until they earn promotion.
+# Goalie saves is the priority market (Nov 10, 2026): it's the only market with a positive live record and CLV.
+LEAN_RULES = {
+    "min_edge": 0.02,           # edge from 2% up to the market's pick threshold = lean; 0-2% = "slight"
+    "ready_n": 100,             # graded leans needed before the record means much
+    "ready_roi_pct": 3.0,       # ...and the flat-1u ROI they need to hold to be worth betting
+}
+
+
 def load_params() -> dict:
     p = dict(DEFAULT_PARAMS)
     if PARAMS_JSON.exists():

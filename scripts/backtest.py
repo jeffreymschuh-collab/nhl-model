@@ -185,6 +185,8 @@ def main():
     keep = {k: v for k, v in DEFAULT_PARAMS.items()}
     keep.update(fp); keep.update(cp)
     keep["covs"] = list(fp["covs"]); keep.pop("rest", None)
+    if old.get("w_model_by_market"):      # keep the live-learned per-market blend weights (e.g. saves)
+        keep["w_model_by_market"] = old["w_model_by_market"]
     if ship:
         (RESULTS_DIR / "backtest_report.json").write_text(json.dumps(report, indent=1))
         PARAMS_JSON.write_text(json.dumps({"params": keep, "source": "backtest", "report": "results/backtest_report.json"}, indent=1))

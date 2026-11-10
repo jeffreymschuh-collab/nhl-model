@@ -20,6 +20,8 @@ from nhlmodel.config import GAMES_CSV, PARAMS_JSON, RESULTS_DIR, load_params  # 
 from nhlmodel.goalies import GOALIE_CSV, name_key  # noqa: E402
 
 MIN_GAMES = 300
+# Saves get two goalies and several lines per game, so they carry more signal per game: tune sooner.
+MIN_GAMES_BY_MARKET = {"saves": 150}
 MARKETS = ("h2h", "spreads", "totals", "saves")
 
 
@@ -109,6 +111,7 @@ def main():
             dm = last[last["market"] == m]
             n_games = dm["game_id"].nunique()
             cur_w = float(current.get(m, params["w_model"] if m != "saves" else 0.35))
+            min_games = MIN_GAMES_BY_MARKET.get(m, MIN_GAMES)
             entry = {"games": int(n_games), "lines": int(len(dm)), "current_weight": cur_w}
             if n_games >= 30:
                 w, ll = fit_blend(dm)
@@ -123,12 +126,12 @@ def main():
                         w_tr, _ = fit_blend(tr)
                         entry.update(holdout_weight=w_tr, holdout_ll_fitted=round(loglik(te, w_tr), 4),
                                      holdout_ll_current=round(loglik(te, cur_w), 4))
-                if n_games >= MIN_GAMES and entry.get("holdout_ll_fitted", -9) > entry.get("holdout_ll_current", 0) \
+                if n_games >= min_games and entry.get("holdout_ll_fitted", -9) > entry.get("holdout_ll_current", 0) \
                         and abs(w - cur_w) >= 0.05:
                     changed[m] = w
                     entry["applied"] = True
             else:
-                entry["note"] = f"needs {MIN_GAMES - n_games} more graded games before tuning"
+                entry["note"] = f"needs {min_games - n_games} more graded games before tuning"
             report["blend"][m] = entry
         # timing: same line (game, market, side, point) priced at both runs on the same day
         piv = d.pivot_table(index=["date", "game_id", "market", "side", "point"], columns="run", values="price",

@@ -5,14 +5,15 @@ last priced run (pre-game if it ran, otherwise morning) from results/history/ an
 
 * the CALL: the side the model thinks is more likely (p_model > 50%). Graded straight up (hit or miss).
 * the VALUE SIDE: the side with the better edge against the Hard Rock price. Graded at a flat 1 unit,
-  and tiered as official (in picks_log.csv), lean (edge > 0 but not a pick) or pass (edge <= 0).
+  and tiered as official (in picks_log.csv), lean (edge >= 2% but not a pick), slight (edge 0-2%) or pass (edge <= 0).
 
 It also compares the model's number with what actually happened: expected vs actual total goals and margin,
 and expected vs actual saves for goalies. It also checks whether the model or the no-vig market had the
 better probability (Brier score; lower is better).
 
 Writes results/reads_log.csv (one row per read) and results/reads_summary.json
-(last game day, last 7 days and season, broken out by market and tier).
+(last game day, last 7 days and season, broken out by market and tier), plus a lean tracker that says when
+leans have earned a long enough, profitable enough record to be worth betting (config.LEAN_RULES).
 """
 import json
 import sys
@@ -22,7 +23,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nhlmodel.config import GAMES_CSV, RESULTS_DIR  # noqa: E402
+from nhlmodel.config import GAMES_CSV, LEAN_RULES, RESULTS_DIR  # noqa: E402
 from nhlmodel.goalies import GOALIE_CSV, name_key  # noqa: E402
 from nhlmodel.odds import american_to_decimal  # noqa: E402
 
@@ -107,7 +108,8 @@ def build():
                     status = "graded"
                 is_off = any((gid, m, x["side"]) in official for x in lns)
                 edge = val.get("edge")
-                tier = "official" if is_off else "lean" if (edge is not None and edge > 0) else "pass"
+                tier = ("official" if is_off else "pass" if (edge is None or edge <= 0)
+                        else "lean" if edge >= LEAN_RULES["min_edge"] else "slight")
                 price = float(val["price"])
                 profit = None
                 if status == "graded":
@@ -181,7 +183,7 @@ def _agg(d, picks=None, market=None):
     off = _official(picks, market)
     if off:
         tiers["official_bets"] = off
-    for t in ("lean", "pass"):
+    for t in ("lean", "slight", "pass"):
         dt = g[g["tier"] == t]
         if len(dt):
             w, lo = int((dt["value_result"] == "W").sum()), int((dt["value_result"] == "L").sum())
@@ -190,6 +192,39 @@ def _agg(d, picks=None, market=None):
             tiers[t] = {"record": f"{w}-{lo}-{p}", "flat_units": round(u, 2),
                         "roi_pct": round(100 * u / len(dt), 1)}
     out["value_side_flat_1u"] = tiers
+    return out
+
+
+def _flat(d):
+    w, lo, p = (int((d["value_result"] == x).sum()) for x in ("W", "L", "P"))
+    u = float(d["value_profit_1u"].astype(float).sum())
+    return {"leans": int(len(d)), "record": f"{w}-{lo}-{p}", "flat_units": round(u, 2),
+            "roi_pct": round(100 * u / len(d), 1) if len(d) else None}
+
+
+def lean_tracker(log):
+    """Leans (edge >= LEAN_RULES min_edge, not an official pick) graded at a flat 1 unit, all time, with a verdict:
+    'ready' once there are ready_n graded leans holding at least ready_roi_pct ROI, otherwise 'watching'."""
+    r = LEAN_RULES
+    g = log[(log["status"] == "graded") & (log["tier"] == "lean")].sort_values("date")
+    sv = g[g["market"] == "saves"]
+    groups = [("All markets", g)] + [(NAMES[m], g[g["market"] == m]) for m in MARKETS]
+    groups += [("Goalie saves: Under", sv[sv["value_side"].str.contains(" U ")]),
+               ("Goalie saves: Over", sv[sv["value_side"].str.contains(" O ")])]
+    out = {"rule": {"lean_min_edge_pct": round(100 * r["min_edge"], 1), "ready_n": r["ready_n"],
+                    "ready_roi_pct": r["ready_roi_pct"]}, "markets": {}}
+    for name, d in groups:
+        if d.empty:
+            continue
+        e = _flat(d)
+        e["last_30"] = _flat(d.tail(30)) if len(d) > 30 else None
+        ready = e["leans"] >= r["ready_n"] and (e["roi_pct"] or -99) >= r["ready_roi_pct"]
+        e["status"] = "ready" if ready else "watching"
+        e["progress"] = f'{min(e["leans"], r["ready_n"])}/{r["ready_n"]} leans'
+        out["markets"][name] = e
+    sl = log[(log["status"] == "graded") & (log["tier"] == "slight") & (log["market"] == "saves")]
+    if len(sl):
+        out["goalie_saves_slight_edge_0_2pct"] = _flat(sl)
     return out
 
 
@@ -211,7 +246,8 @@ def summarize(log):
     out = {"generated_at": pd.Timestamp.now("UTC").isoformat(),
            "first_date": log["date"].min(), "last_graded_date": last_day,
            "pending_reads": int((log["status"] == "pending").sum()),
-           "season": block(log), "last_7_days": block(log[log["date"] >= wk_start], wk_start)}
+           "season": block(log), "last_7_days": block(log[log["date"] >= wk_start], wk_start),
+           "lean_tracker": lean_tracker(log)}
     if last_day:
         d = log[log["date"] == last_day]
         out["last_day"] = block(d, last_day)
