@@ -1,5 +1,47 @@
 [
 {
+"pick_id": "2026020286|saves|under|m blackwood",
+"date": "2026-11-10",
+"matchup": "COL @ TOR",
+"selection": "Blackwood U 24.5 saves",
+"price": "-110",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020291|saves|under|j allen",
+"date": "2026-11-10",
+"matchup": "NJD @ WPG",
+"selection": "Allen U 25.5 saves",
+"price": "-145",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020292|saves|under|a forsberg",
+"date": "2026-11-10",
+"matchup": "NSH @ LAK",
+"selection": "Forsberg U 24.5 saves",
+"price": "-105",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
 "pick_id": "2026020281|saves|under|d cooley",
 "date": "2026-11-08",
 "matchup": "PHI @ CGY",

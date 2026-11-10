@@ -38,5 +38,25 @@
 "roi_pct": -60.69,
 "avg_clv_pct": -2.34,
 "beat_close_pct": 0.0
+},
+{
+"market": "Leans, not bet: Goalie saves (11/100 leans, watching)",
+"bets": 11,
+"profit_usd": -0.6,
+"record": "6-5-0",
+"units_profit": -0.03,
+"roi_pct": -0.2,
+"avg_clv_pct": null,
+"beat_close_pct": null
+},
+{
+"market": "Leans, not bet: All markets (14/100 leans, watching)",
+"bets": 14,
+"profit_usd": -19.6,
+"record": "7-7-0",
+"units_profit": -0.98,
+"roi_pct": -7.0,
+"avg_clv_pct": null,
+"beat_close_pct": null
 }
 ]

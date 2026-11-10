@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-10T16:08:19.761664+00:00",
+ "generated_at": "2026-11-10T22:12:29.073386+00:00",
  "first_date": "2026-10-31",
  "last_graded_date": "2026-11-09",
- "pending_reads": 21,
+ "pending_reads": 34,
  "season": {
   "all": {
    "reads": 254,
@@ -20,9 +20,14 @@
      "roi_pct": -9.1
     },
     "lean": {
-     "record": "15-18-0",
-     "flat_units": -5.58,
-     "roi_pct": -16.9
+     "record": "7-7-0",
+     "flat_units": -0.98,
+     "roi_pct": -7.0
+    },
+    "slight": {
+     "record": "8-11-0",
+     "flat_units": -4.6,
+     "roi_pct": -24.2
     },
     "pass": {
      "record": "105-98-0",
@@ -47,7 +52,7 @@
       "units": -0.5,
       "roi_pct": -100.0
      },
-     "lean": {
+     "slight": {
       "record": "0-3-0",
       "flat_units": -3.0,
       "roi_pct": -100.0
@@ -75,9 +80,14 @@
       "roi_pct": -60.7
      },
      "lean": {
-      "record": "1-1-0",
-      "flat_units": 0.05,
-      "roi_pct": 2.5
+      "record": "1-0-0",
+      "flat_units": 1.05,
+      "roi_pct": 105.0
+     },
+     "slight": {
+      "record": "0-1-0",
+      "flat_units": -1.0,
+      "roi_pct": -100.0
      },
      "pass": {
       "record": "31-18-0",
@@ -124,9 +134,14 @@
       "roi_pct": 24.9
      },
      "lean": {
-      "record": "14-12-0",
-      "flat_units": -0.63,
-      "roi_pct": -2.4
+      "record": "6-5-0",
+      "flat_units": -0.03,
+      "roi_pct": -0.2
+     },
+     "slight": {
+      "record": "8-7-0",
+      "flat_units": -0.6,
+      "roi_pct": -4.0
      },
      "pass": {
       "record": "23-25-0",
@@ -154,9 +169,14 @@
      "roi_pct": -5.4
     },
     "lean": {
-     "record": "14-15-0",
-     "flat_units": -3.2,
-     "roi_pct": -11.0
+     "record": "7-5-0",
+     "flat_units": 1.02,
+     "roi_pct": 8.5
+    },
+    "slight": {
+     "record": "7-10-0",
+     "flat_units": -4.23,
+     "roi_pct": -24.9
     },
     "pass": {
      "record": "81-85-0",
@@ -181,7 +201,7 @@
       "units": -0.5,
       "roi_pct": -100.0
      },
-     "lean": {
+     "slight": {
       "record": "0-2-0",
       "flat_units": -2.0,
       "roi_pct": -100.0
@@ -209,9 +229,14 @@
       "roi_pct": -49.5
      },
      "lean": {
-      "record": "1-1-0",
-      "flat_units": 0.05,
-      "roi_pct": 2.5
+      "record": "1-0-0",
+      "flat_units": 1.05,
+      "roi_pct": 105.0
+     },
+     "slight": {
+      "record": "0-1-0",
+      "flat_units": -1.0,
+      "roi_pct": -100.0
      },
      "pass": {
       "record": "24-16-0",
@@ -258,9 +283,14 @@
       "roi_pct": 24.3
      },
      "lean": {
-      "record": "13-11-0",
-      "flat_units": -0.25,
-      "roi_pct": -1.0
+      "record": "6-4-0",
+      "flat_units": 0.97,
+      "roi_pct": 9.7
+     },
+     "slight": {
+      "record": "7-7-0",
+      "flat_units": -1.23,
+      "roi_pct": -8.8
      },
      "pass": {
       "record": "18-20-0",
@@ -269,6 +299,66 @@
      }
     }
    }
+  }
+ },
+ "lean_tracker": {
+  "rule": {
+   "lean_min_edge_pct": 2.0,
+   "ready_n": 100,
+   "ready_roi_pct": 3.0
+  },
+  "markets": {
+   "All markets": {
+    "leans": 14,
+    "record": "7-7-0",
+    "flat_units": -0.98,
+    "roi_pct": -7.0,
+    "last_30": null,
+    "status": "watching",
+    "progress": "14/100 leans"
+   },
+   "Puck line": {
+    "leans": 1,
+    "record": "1-0-0",
+    "flat_units": 1.05,
+    "roi_pct": 105.0,
+    "last_30": null,
+    "status": "watching",
+    "progress": "1/100 leans"
+   },
+   "Total": {
+    "leans": 2,
+    "record": "0-2-0",
+    "flat_units": -2.0,
+    "roi_pct": -100.0,
+    "last_30": null,
+    "status": "watching",
+    "progress": "2/100 leans"
+   },
+   "Goalie saves": {
+    "leans": 11,
+    "record": "6-5-0",
+    "flat_units": -0.03,
+    "roi_pct": -0.2,
+    "last_30": null,
+    "status": "watching",
+    "progress": "11/100 leans"
+   },
+   "Goalie saves: Under": {
+    "leans": 11,
+    "record": "6-5-0",
+    "flat_units": -0.03,
+    "roi_pct": -0.2,
+    "last_30": null,
+    "status": "watching",
+    "progress": "11/100 leans"
+   }
+  },
+  "goalie_saves_slight_edge_0_2pct": {
+   "leans": 15,
+   "record": "8-7-0",
+   "flat_units": -0.6,
+   "roi_pct": -4.0
   }
  },
  "last_day": {
@@ -283,9 +373,14 @@
    "bias_actual_minus_expected": -0.19,
    "value_side_flat_1u": {
     "lean": {
-     "record": "3-0-0",
-     "flat_units": 2.18,
-     "roi_pct": 72.6
+     "record": "2-0-0",
+     "flat_units": 1.51,
+     "roi_pct": 75.5
+    },
+    "slight": {
+     "record": "1-0-0",
+     "flat_units": 0.67,
+     "roi_pct": 66.7
     },
     "pass": {
      "record": "4-7-0",
@@ -357,9 +452,14 @@
     "bias_actual_minus_expected": -0.06,
     "value_side_flat_1u": {
      "lean": {
-      "record": "3-0-0",
-      "flat_units": 2.18,
-      "roi_pct": 72.6
+      "record": "2-0-0",
+      "flat_units": 1.51,
+      "roi_pct": 75.5
+     },
+     "slight": {
+      "record": "1-0-0",
+      "flat_units": 0.67,
+      "roi_pct": 66.7
      },
      "pass": {
       "record": "0-2-0",
@@ -422,7 +522,7 @@
    "value_side": "Garand U 26.5 saves",
    "value_price": -150,
    "value_edge": 0.0092,
-   "tier": "lean",
+   "tier": "slight",
    "value_result": "W",
    "value_profit_1u": 0.667,
    "expected": 24.4,

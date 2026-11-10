@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T16:08:19.361659+00:00",
+ "generated_at": "2026-11-10T22:12:28.577147+00:00",
  "min_games": 300,
  "blend": {
   "h2h": {
@@ -41,14 +41,14 @@
   "saves": {
    "games": 57,
    "lines": 182,
-   "current_weight": 0.35,
+   "current_weight": 0.5,
    "best_weight": 0.7,
    "loglik_best": -0.6863,
-   "loglik_current": -0.6929,
+   "loglik_current": -0.6899,
    "loglik_market_only": -0.7009,
    "holdout_weight": 0.7,
    "holdout_ll_fitted": -0.6986,
-   "holdout_ll_current": -0.7
+   "holdout_ll_current": -0.6992
   }
  },
  "timing": {
