@@ -9,9 +9,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.0,
+"profit_usd": -20.0
 },
 {
 "pick_id": "2026020291|saves|under|j allen",
@@ -23,9 +23,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.69,
+"profit_usd": 13.8
 },
 {
 "pick_id": "2026020292|saves|under|a forsberg",
@@ -37,9 +37,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "L",
+"profit_units": -1.0,
+"profit_usd": -20.0
 },
 {
 "pick_id": "2026020281|saves|under|d cooley",
