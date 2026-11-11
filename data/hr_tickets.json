@@ -178,5 +178,14 @@
   "odds": -110,
   "promo": "",
   "sport": "NHL"
+ },
+ "8482600005888131377": {
+  "type": "Single",
+  "legs": [
+   "Jake Allen U 25.5 saves | NJD @ WPG"
+  ],
+  "odds": -145,
+  "promo": "",
+  "sport": "NHL"
  }
 }
