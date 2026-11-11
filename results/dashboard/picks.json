@@ -1,5 +1,47 @@
 [
 {
+"pick_id": "2026020295|saves|under|d vladar",
+"date": "2026-11-11",
+"matchup": "PHI @ EDM",
+"selection": "Vladar U 25.5 saves",
+"price": "-130",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020296|saves|under|s cossa",
+"date": "2026-11-11",
+"matchup": "UTA @ VGK",
+"selection": "Cossa U 25.5 saves",
+"price": "-125",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020297|saves|under|l brossoit",
+"date": "2026-11-11",
+"matchup": "NSH @ ANA",
+"selection": "Brossoit U 23.5 saves",
+"price": "+100",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
 "pick_id": "2026020286|saves|under|m blackwood",
 "date": "2026-11-10",
 "matchup": "COL @ TOR",

@@ -6,31 +6,31 @@
 "xg_away": 3.14,
 "xg_home": 2.99,
 "home_win_pct": 47.3,
-"best_line": "BUF +1.5",
-"best_edge_pct": -2.2,
+"best_line": "TBL ML",
+"best_edge_pct": -3.2,
 "picks": 0
 },
 {
 "game_id": "2026020294",
 "matchup": "NYR @ CGY",
 "start_et": "7:30 PM",
-"xg_away": 3.03,
+"xg_away": 2.97,
 "xg_home": 2.83,
-"home_win_pct": 46.3,
-"best_line": "CGY ML",
-"best_edge_pct": -1.2,
+"home_win_pct": 47.3,
+"best_line": "Cooley U 24.5 saves",
+"best_edge_pct": 0.0,
 "picks": 0
 },
 {
 "game_id": "2026020295",
 "matchup": "PHI @ EDM",
 "start_et": "9:00 PM",
-"xg_away": 2.64,
+"xg_away": 2.63,
 "xg_home": 3.01,
 "home_win_pct": 56.9,
-"best_line": "PHI +1.5",
-"best_edge_pct": -0.2,
-"picks": 0
+"best_line": "Vladar U 25.5 saves",
+"best_edge_pct": 7.4,
+"picks": 1
 },
 {
 "game_id": "2026020296",
@@ -39,9 +39,9 @@
 "xg_away": 2.79,
 "xg_home": 3.14,
 "home_win_pct": 56.2,
-"best_line": "VGK ML",
-"best_edge_pct": -2.1,
-"picks": 0
+"best_line": "Cossa U 25.5 saves",
+"best_edge_pct": 7.5,
+"picks": 1
 },
 {
 "game_id": "2026020297",
@@ -50,9 +50,9 @@
 "xg_away": 2.9,
 "xg_home": 3.39,
 "home_win_pct": 58.5,
-"best_line": "ANA ML",
-"best_edge_pct": -2.4,
-"picks": 0
+"best_line": "Brossoit U 23.5 saves",
+"best_edge_pct": 13.0,
+"picks": 1
 },
 {
 "game_id": "2026020298",
@@ -62,7 +62,7 @@
 "xg_home": 2.96,
 "home_win_pct": 42.7,
 "best_line": "PIT ML",
-"best_edge_pct": -1.9,
+"best_edge_pct": -2.3,
 "picks": 0
 }
 ]
