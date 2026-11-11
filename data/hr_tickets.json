@@ -138,5 +138,45 @@
   "odds": 185,
   "promo": "",
   "sport": "NHL"
+ },
+ "199741659546779953": {
+  "type": "Single",
+  "legs": [
+   "Anton Forsberg U 25.5 saves | NSH @ LAK"
+  ],
+  "odds": -125,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "1163511979804066097": {
+  "type": "Single",
+  "legs": [
+   "Panthers ML | FLA @ CBJ"
+  ],
+  "odds": -120,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "4766391681700462897": {
+  "type": "SGP Max",
+  "legs": [
+   "Avalanche ML | COL @ TOR",
+   "Mackenzie Blackwood U 24.5 saves | COL @ TOR",
+   "Jake Allen U 25.5 saves | NJD @ WPG",
+   "Panthers ML | FLA @ CBJ",
+   "Anton Forsberg U 25.5 saves | NSH @ LAK"
+  ],
+  "odds": 1629,
+  "promo": "",
+  "sport": "NHL"
+ },
+ "5892291588543086897": {
+  "type": "Single",
+  "legs": [
+   "Mackenzie Blackwood U 24.5 saves | COL @ TOR"
+  ],
+  "odds": -110,
+  "promo": "",
+  "sport": "NHL"
  }
 }
