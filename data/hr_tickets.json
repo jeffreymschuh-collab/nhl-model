@@ -1,191 +1,1485 @@
 {
- "_note": "Ticket details copied from Hard Rock 'My Bets' (selections aren't in the transaction export). Keyed by Hard Rock bet ID.",
- "4708291670242885911": {
-  "type": "Parlay",
-  "legs": [
-   "Golden Knights +1.5 (-300) | NJD @ VGK",
-   "Panthers ML (-225) | WPG @ FLA"
-  ],
-  "odds": -108,
-  "promo": "No Sweat Bet",
-  "sport": "NHL"
- },
- "578284653513933104": {
-  "type": "SGP Max",
-  "legs": [
-   "Golden Knights +1.5 | NJD @ VGK",
-   "Jets +1.5 | WPG @ FLA",
-   "Dustin Wolf U 26.5 saves | SEA @ CGY",
-   "Under 6.5 goals | SEA @ CGY",
-   "Flames +1.5 | SEA @ CGY"
-  ],
-  "odds": 1139,
-  "promo": "50% Profit Boost",
-  "sport": "NHL"
- },
- "7142895020415254832": {
-  "type": "Single",
-  "legs": [
-   "Yaroslav Askarov O 22.5 saves | VAN @ SJS"
-  ],
-  "odds": -130,
-  "promo": "",
-  "sport": "NHL"
- },
- "5719128634694959378": {
-  "type": "SGP",
-  "legs": [
-   "Packers ML | CAR @ GB",
-   "Over 58.5 points | CAR @ GB"
-  ],
-  "odds": 100,
-  "promo": "10% Profit Boost",
-  "sport": "NFL"
- },
- "1413760371013058834": {
-  "type": "Single",
-  "legs": [
-   "Jesper Wallstedt O 22.5 saves | NYI @ MIN"
-  ],
-  "odds": -120,
-  "promo": "",
-  "sport": "NHL",
-  "result": "L"
- },
- "5943468505964871955": {
-  "type": "SGP Max",
-  "legs": [
-   "Penguins +1.5",
-   "Hurricanes ML",
-   "Lightning ML",
-   "Wild ML",
-   "Stars ML",
-   "Over 5.5",
-   "Predators +1.5",
-   "Over 23.5",
-   "Kings +1.5"
-  ],
-  "odds": 4096,
-  "promo": "15% Profit Boost",
-  "sport": "NHL"
- },
- "3461916597965422897": {
-  "type": "Parlay",
-  "legs": [
-   "Hurricanes ML",
-   "Over 23.5 (saves)"
-  ],
-  "odds": 154,
-  "promo": "",
-  "sport": "NHL"
- },
- "4222427467459199251": {
-  "type": "SGP Max",
-  "legs": [
-   "Capitals ML",
-   "Over 4.5",
-   "Oilers ML",
-   "Over 4.5",
-   "Avalanche ML",
-   "Kraken +2.5",
-   "Hurricanes ML",
-   "Lightning ML",
-   "Mammoth ML",
-   "Red Wings ML",
-   "Stars ML",
-   "Senators ML",
-   "Sabres ML"
-  ],
-  "odds": 19542,
-  "promo": "15% Profit Boost",
-  "sport": "NHL"
- },
- "2972066005448261937": {
-  "type": "Parlay",
-  "legs": [
-   "Capitals ML",
-   "Over 22.5 (saves)"
-  ],
-  "odds": 152,
-  "promo": "",
-  "sport": "NHL"
- },
- "3847319013407457584": {
-  "type": "Single",
-  "legs": [
-   "Jeremy Swayman U 28.5 saves | BOS @ CAR"
-  ],
-  "odds": -110,
-  "promo": "",
-  "sport": "NHL"
- },
- "7747841185867235632": {
-  "type": "Parlay",
-  "legs": [
-   "Hurricanes ML",
-   "Panthers ML"
-  ],
-  "odds": 177,
-  "promo": "",
-  "sport": "NHL"
- },
- "2004439943597916439": {
-  "type": "SGP",
-  "legs": [
-   "Panthers ML | FLA @ WPG",
-   "Under 6.5 goals | FLA @ WPG"
-  ],
-  "odds": 185,
-  "promo": "",
-  "sport": "NHL"
- },
- "199741659546779953": {
-  "type": "Single",
-  "legs": [
-   "Anton Forsberg U 25.5 saves | NSH @ LAK"
-  ],
-  "odds": -125,
-  "promo": "",
-  "sport": "NHL"
- },
- "1163511979804066097": {
-  "type": "Single",
-  "legs": [
-   "Panthers ML | FLA @ CBJ"
-  ],
-  "odds": -120,
-  "promo": "",
-  "sport": "NHL"
- },
- "4766391681700462897": {
-  "type": "SGP Max",
-  "legs": [
-   "Avalanche ML | COL @ TOR",
-   "Mackenzie Blackwood U 24.5 saves | COL @ TOR",
-   "Jake Allen U 25.5 saves | NJD @ WPG",
-   "Panthers ML | FLA @ CBJ",
-   "Anton Forsberg U 25.5 saves | NSH @ LAK"
-  ],
-  "odds": 1629,
-  "promo": "",
-  "sport": "NHL"
- },
- "5892291588543086897": {
-  "type": "Single",
-  "legs": [
-   "Mackenzie Blackwood U 24.5 saves | COL @ TOR"
-  ],
-  "odds": -110,
-  "promo": "",
-  "sport": "NHL"
- },
- "8482600005888131377": {
-  "type": "Single",
-  "legs": [
-   "Jake Allen U 25.5 saves | NJD @ WPG"
-  ],
-  "odds": -145,
-  "promo": "",
-  "sport": "NHL"
- }
+  "_note": "Ticket details copied from Hard Rock 'My Bets' (selections aren't in the transaction export). Keyed by Hard Rock bet ID.",
+  "4708291670242885911": {
+    "type": "Parlay",
+    "legs": [
+      "Golden Knights +1.5 (-300) | NJD @ VGK",
+      "Panthers ML (-225) | WPG @ FLA"
+    ],
+    "odds": -108,
+    "promo": "No Sweat Bet",
+    "sport": "NHL"
+  },
+  "578284653513933104": {
+    "type": "SGP Max",
+    "legs": [
+      "Golden Knights +1.5 | NJD @ VGK",
+      "Jets +1.5 | WPG @ FLA",
+      "Dustin Wolf U 26.5 saves | SEA @ CGY",
+      "Under 6.5 goals | SEA @ CGY",
+      "Flames +1.5 | SEA @ CGY"
+    ],
+    "odds": 1139,
+    "promo": "50% Profit Boost",
+    "sport": "NHL"
+  },
+  "7142895020415254832": {
+    "type": "Single",
+    "legs": [
+      "Yaroslav Askarov O 22.5 saves | VAN @ SJS"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5719128634694959378": {
+    "type": "SGP",
+    "legs": [
+      "Packers ML | CAR @ GB",
+      "Over 58.5 points | CAR @ GB"
+    ],
+    "odds": 100,
+    "promo": "10% Profit Boost",
+    "sport": "NFL"
+  },
+  "1413760371013058834": {
+    "type": "Single",
+    "legs": [
+      "Jesper Wallstedt O 22.5 saves | NYI @ MIN"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL",
+    "result": "L"
+  },
+  "5943468505964871955": {
+    "type": "SGP Max",
+    "legs": [
+      "Penguins +1.5",
+      "Hurricanes ML",
+      "Lightning ML",
+      "Wild ML",
+      "Stars ML",
+      "Over 5.5",
+      "Predators +1.5",
+      "Over 23.5",
+      "Kings +1.5"
+    ],
+    "odds": 4096,
+    "promo": "15% Profit Boost",
+    "sport": "NHL"
+  },
+  "3461916597965422897": {
+    "type": "Parlay",
+    "legs": [
+      "Hurricanes ML",
+      "Over 23.5 (saves)"
+    ],
+    "odds": 154,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4222427467459199251": {
+    "type": "SGP Max",
+    "legs": [
+      "Capitals ML",
+      "Over 4.5",
+      "Oilers ML",
+      "Over 4.5",
+      "Avalanche ML",
+      "Kraken +2.5",
+      "Hurricanes ML",
+      "Lightning ML",
+      "Mammoth ML",
+      "Red Wings ML",
+      "Stars ML",
+      "Senators ML",
+      "Sabres ML"
+    ],
+    "odds": 19542,
+    "promo": "15% Profit Boost",
+    "sport": "NHL"
+  },
+  "2972066005448261937": {
+    "type": "Parlay",
+    "legs": [
+      "Capitals ML",
+      "Over 22.5 (saves)"
+    ],
+    "odds": 152,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3847319013407457584": {
+    "type": "Single",
+    "legs": [
+      "Jeremy Swayman U 28.5 saves | BOS @ CAR"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "7747841185867235632": {
+    "type": "Parlay",
+    "legs": [
+      "Hurricanes ML",
+      "Panthers ML"
+    ],
+    "odds": 177,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2004439943597916439": {
+    "type": "SGP",
+    "legs": [
+      "Panthers ML | FLA @ WPG",
+      "Under 6.5 goals | FLA @ WPG"
+    ],
+    "odds": 185,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "199741659546779953": {
+    "type": "Single",
+    "legs": [
+      "Anton Forsberg U 25.5 saves | NSH @ LAK"
+    ],
+    "odds": -125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1163511979804066097": {
+    "type": "Single",
+    "legs": [
+      "Panthers ML | FLA @ CBJ"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4766391681700462897": {
+    "type": "SGP Max",
+    "legs": [
+      "Avalanche ML | COL @ TOR",
+      "Mackenzie Blackwood U 24.5 saves | COL @ TOR",
+      "Jake Allen U 25.5 saves | NJD @ WPG",
+      "Panthers ML | FLA @ CBJ",
+      "Anton Forsberg U 25.5 saves | NSH @ LAK"
+    ],
+    "odds": 1629,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5892291588543086897": {
+    "type": "Single",
+    "legs": [
+      "Mackenzie Blackwood U 24.5 saves | COL @ TOR"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8482600005888131377": {
+    "type": "Single",
+    "legs": [
+      "Jake Allen U 25.5 saves | NJD @ WPG"
+    ],
+    "odds": -145,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5082077602200551699": {
+    "type": "SGP Max",
+    "legs": [
+      "Connor Hellebuyck U 23.5 saves | Devils vs. Capitals",
+      "Akira Schmid U 23.5 saves | Panthers vs. Red Wings",
+      "Jake Oettinger U 22.5 saves | Stars vs. Jets",
+      "Karel Vejmelka U 23.5 saves | Mammoth vs. Blues",
+      "Blues ML | Mammoth vs. Blues"
+    ],
+    "odds": 2136,
+    "promo": "10% Profit Boost",
+    "sport": "NHL"
+  },
+  "4937962414124695827": {
+    "type": "Single",
+    "legs": [
+      "Karel Vejmelka U 23.5 saves | Mammoth vs. Blues"
+    ],
+    "odds": -105,
+    "promo": "10% Profit Boost",
+    "sport": "NHL"
+  },
+  "506420380792127763": {
+    "type": "Single",
+    "legs": [
+      "Jake Oettinger U 22.5 saves | Stars vs. Jets"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4109300082688524563": {
+    "type": "Single",
+    "legs": [
+      "Connor Hellebuyck U 23.5 saves | Devils vs. Capitals"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2310013298308940051": {
+    "type": "SGP Max",
+    "legs": [
+      "Oilers ML | Oilers vs. Flyers",
+      "Dan Vladar U 25.5 saves | Oilers vs. Flyers",
+      "Sebastian Cossa U 25.5 saves | Golden Knights vs. Mammoth",
+      "Golden Knights ML | Golden Knights vs. Mammoth",
+      "Laurent Brossoit U 23.5 saves | Ducks vs. Predators"
+    ],
+    "odds": 1495,
+    "promo": "10% Profit Boost",
+    "sport": "NHL"
+  },
+  "1438566770412749075": {
+    "type": "Single",
+    "legs": [
+      "Laurent Brossoit U 23.5 saves | Ducks vs. Predators"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2447373086943740179": {
+    "type": "Single",
+    "legs": [
+      "Sebastian Cossa U 25.5 saves | Golden Knights vs. Mammoth"
+    ],
+    "odds": -125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "213587671767974163": {
+    "type": "Single",
+    "legs": [
+      "Dan Vladar U 25.5 saves | Oilers vs. Flyers"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "848260005888131377": {
+    "type": "Single",
+    "legs": [
+      "Jake Allen U 25.5 saves | Jets vs. Devils"
+    ],
+    "odds": -145,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8053103644672917779": {
+    "type": "Parlay",
+    "legs": [
+      "Hurricanes ML | Islanders vs. Hurricanes",
+      "Red Wings ML | Red Wings vs. Golden Knights",
+      "Blackhawks +2.5 | Lightning vs. Blackhawks",
+      "Blues +1.5 | Devils vs. Blues",
+      "Ducks +1.5 | Oilers vs. Ducks"
+    ],
+    "odds": 1861,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "421012524220154131": {
+    "type": "SGP",
+    "legs": [
+      "Stars ML | Blue Jackets vs. Stars",
+      "Cam Talbot U 23.5 saves | Blue Jackets vs. Stars"
+    ],
+    "odds": 185,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2881146151868956977": {
+    "type": "Single",
+    "legs": [
+      "Mackenzie Blackwood U 22.5 saves | Avalanche vs. Predators"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5331104349158506801": {
+    "type": "Single",
+    "legs": [
+      "Cam Talbot U 23.5 saves | Blue Jackets vs. Stars"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5190556255969739026": {
+    "type": "Single",
+    "legs": [
+      "Blackhawks +2.5 | Lightning vs. Blackhawks"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3763000048015769874": {
+    "type": "SGP",
+    "legs": [
+      "Sabres -1.5 | Sabres vs. Senators",
+      "Samuel Ersson U 25.5 saves | Sabres vs. Senators"
+    ],
+    "odds": 350,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8392969200519479571": {
+    "type": "SGP",
+    "legs": [
+      "Connor Hellebuyck U 24.5 saves | Devils vs. Oilers",
+      "Oilers ML | Devils vs. Oilers"
+    ],
+    "odds": 275,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4947355069105438994": {
+    "type": "Single",
+    "legs": [
+      "Dan Vladar U 26.5 saves | Flyers vs. Wild"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6280420558807105810": {
+    "type": "Single",
+    "legs": [
+      "Arturs Silovs U 26.5 saves | Penguins vs. Golden Knights"
+    ],
+    "odds": -149,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6136305370731249938": {
+    "type": "Single",
+    "legs": [
+      "Scott Wedgewood U 25.5 saves | Blue Jackets vs. Avalanche"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "7361284469376024850": {
+    "type": "Single",
+    "legs": [
+      "Connor Hellebuyck U 24.5 saves | Devils vs. Oilers"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3330748813618053394": {
+    "type": "Parlay",
+    "legs": [
+      "Over 5.5 goals | Rangers vs. Blues",
+      "Avalanche ML | Blue Jackets vs. Avalanche",
+      "Lightning -1.5 | Lightning vs. Red Wings",
+      "Oilers +2.5 | Devils vs. Oilers"
+    ],
+    "odds": 640,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6364577428173619479": {
+    "type": "Parlay",
+    "legs": [
+      "Jacob Markstrom U 23.5 saves | Panthers vs. Red Wings",
+      "Avalanche ML | Blackhawks vs. Avalanche"
+    ],
+    "odds": 180,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1651228119866147094": {
+    "type": "SGP Max",
+    "legs": [
+      "Hurricanes team total Over 2.5 | Hurricanes vs. Jets",
+      "Pyotr Kochetkov U 20.5 saves | Hurricanes vs. Jets",
+      "Hurricanes -1.5 | Hurricanes vs. Jets",
+      "Over 4.5 goals | Hurricanes vs. Jets",
+      "Under 6.5 goals | Rangers vs. Oilers"
+    ],
+    "odds": 730,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6646669981587210544": {
+    "type": "Single",
+    "legs": [
+      "Pyotr Kochetkov U 20.5 saves | Hurricanes vs. Jets"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5285698046032740656": {
+    "type": "SGP",
+    "legs": [
+      "Blue Jackets +1.5 | Stars vs. Blue Jackets",
+      "Stars ML | Stars vs. Blue Jackets",
+      "Under 5.5 goals | Stars vs. Blue Jackets",
+      "Jake Oettinger U 23.5 saves | Stars vs. Blue Jackets",
+      "Jet Greaves U 25.5 saves | Stars vs. Blue Jackets"
+    ],
+    "odds": 1500,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5847674938642792752": {
+    "type": "Single",
+    "legs": [
+      "Flames +2.5 | Avalanche vs. Flames"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8626148755709755697": {
+    "type": "Parlay",
+    "legs": [
+      "Red Wings ML | Flames vs. Red Wings",
+      "Avalanche ML | Predators vs. Avalanche"
+    ],
+    "odds": 151,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5318896896549454099": {
+    "type": "Parlay",
+    "legs": [
+      "Hurricanes ML | Blues vs. Hurricanes",
+      "Panthers ML | Blackhawks vs. Panthers",
+      "Stars ML | Stars vs. Islanders",
+      "Avalanche ML | Predators vs. Avalanche"
+    ],
+    "odds": 461,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4415455576717394195": {
+    "type": "Parlay",
+    "legs": [
+      "Ducks ML | Flyers vs. Ducks",
+      "Devils ML | Devils vs. Kings",
+      "Oilers ML | Oilers vs. Maple Leafs",
+      "Hurricanes ML | Blues vs. Hurricanes",
+      "Red Wings ML | Flames vs. Red Wings"
+    ],
+    "odds": 797,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5120356741892145426": {
+    "type": "Single",
+    "legs": [
+      "Jeremy Swayman O 22.5 saves | Bruins vs. Sharks"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5519496583588217110": {
+    "type": "Single",
+    "legs": [
+      "Andrei Vasilevskiy U 27.5 saves | Avalanche vs. Lightning"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2980172142777336087": {
+    "type": "Parlay",
+    "legs": [
+      "Canadiens ML | Blackhawks vs. Canadiens",
+      "Avalanche ML | Avalanche vs. Lightning"
+    ],
+    "odds": 192,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5157889319167459632": {
+    "type": "Parlay",
+    "legs": [
+      "Stars ML | Stars vs. Jets",
+      "Hurricanes ML | Oilers vs. Hurricanes"
+    ],
+    "odds": 175,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2422454996583973143": {
+    "type": "Single",
+    "legs": [
+      "Jake Oettinger O 20.5 saves | Stars vs. Jets"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1534059480034181394": {
+    "type": "Parlay",
+    "legs": [
+      "Panthers +1.5 | Senators vs. Panthers",
+      "Sabres ML | Sabres vs. Flyers"
+    ],
+    "odds": 104,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3088534175976915249": {
+    "type": "SGP",
+    "legs": [
+      "Sabres ML | Sabres vs. Flyers",
+      "Sabres team total Under 4.5 | Sabres vs. Flyers"
+    ],
+    "odds": 140,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2347164546571043090": {
+    "type": "Single",
+    "legs": [
+      "Akira Schmid U 24.5 saves | Senators vs. Panthers"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4648976659721093394": {
+    "type": "Single",
+    "legs": [
+      "Ilya Sorokin O 22.5 saves | Islanders vs. Ducks"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2650225749100986643": {
+    "type": "Parlay",
+    "legs": [
+      "Under 6.5 goals | Blue Jackets vs. Maple Leafs",
+      "Joel Hofer O 21.5 saves | Blues vs. Jets"
+    ],
+    "odds": 250,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8883207633381753107": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Blue Jackets vs. Maple Leafs"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "668641913057968403": {
+    "type": "Single",
+    "legs": [
+      "Joel Hofer O 21.5 saves | Blues vs. Jets"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4428496123824570672": {
+    "type": "Single",
+    "legs": [
+      "Hurricanes -1.5 | Flames vs. Hurricanes"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "568593161648210198": {
+    "type": "Single",
+    "legs": [
+      "Ukko-Pekka Luukkonen U 26.5 saves | Canadiens vs. Sabres"
+    ],
+    "odds": -125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6445875496675836182": {
+    "type": "Parlay",
+    "legs": [
+      "Hurricanes ML | Jets vs. Hurricanes",
+      "Lightning ML | Lightning vs. Canucks",
+      "Panthers ML | Panthers vs. Kraken",
+      "Stars ML | Blackhawks vs. Stars",
+      "Golden Knights ML | Golden Knights vs. Penguins"
+    ],
+    "odds": 550,
+    "promo": "50% Profit Boost",
+    "sport": "NHL"
+  },
+  "7588256498703270167": {
+    "type": "Single",
+    "legs": [
+      "Canadiens team total Under 3.5 | Canadiens vs. Sabres"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8236774845044621591": {
+    "type": "Single",
+    "legs": [
+      "Golden Knights team total Under 3.5 | Golden Knights vs. Penguins"
+    ],
+    "odds": 110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4633895143148224791": {
+    "type": "Single",
+    "legs": [
+      "Lightning team total Under 3.5 | Lightning vs. Canucks"
+    ],
+    "odds": 155,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1992774754741911831": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Red Wings vs. Sharks"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4154502575879749911": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Golden Knights vs. Penguins"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6532403179131371799": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Mammoth vs. Oilers"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5048172226638119191": {
+    "type": "Single",
+    "legs": [
+      "Spencer Knight U 25.5 saves | Blackhawks vs. Stars"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6056978543169110295": {
+    "type": "Single",
+    "legs": [
+      "Logan Thompson O 25.5 saves | Capitals vs. Devils"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8644296529093460247": {
+    "type": "Single",
+    "legs": [
+      "Jake Allen U 25.5 saves | Capitals vs. Devils"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "7202685023483461911": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Ducks vs. Bruins"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8211491340014453015": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Avalanche vs. Penguins"
+    ],
+    "odds": 105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5401245172535263511": {
+    "type": "Single",
+    "legs": [
+      "Mackenzie Blackwood O 22.5 saves | Avalanche vs. Penguins"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4104208479852560663": {
+    "type": "Single",
+    "legs": [
+      "Arturs Silovs U 27.5 saves | Avalanche vs. Penguins"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6734310662236930327": {
+    "type": "Single",
+    "legs": [
+      "Avalanche team total Under 3.5 | Avalanche vs. Penguins"
+    ],
+    "odds": 120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "105012010747560215": {
+    "type": "Single",
+    "legs": [
+      "Ducks team total Under 3.5 | Ducks vs. Bruins"
+    ],
+    "odds": -149,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5808695208610758934": {
+    "type": "SGP Max",
+    "legs": [
+      "Lightning team total Under 3.5 | Lightning vs. Kraken",
+      "Under 6.5 goals | Maple Leafs vs. Sabres",
+      "Ukko-Pekka Luukkonen U 25.5 saves | Maple Leafs vs. Sabres"
+    ],
+    "odds": 706,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3106535432188461334": {
+    "type": "Single",
+    "legs": [
+      "Ukko-Pekka Luukkonen U 25.5 saves | Maple Leafs vs. Sabres"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5268263253326299414": {
+    "type": "Single",
+    "legs": [
+      "Lightning team total Under 3.5 | Lightning vs. Kraken"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4763860095060803862": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Maple Leafs vs. Sabres"
+    ],
+    "odds": 105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6701641740958433554": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Capitals vs. Canadiens"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1346107106721399058": {
+    "type": "Single",
+    "legs": [
+      "Jakub Dobes U 25.5 saves | Capitals vs. Canadiens"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1308154829268451603": {
+    "type": "Single",
+    "legs": [
+      "Casey DeSmith O 26.5 saves | Avalanche vs. Stars"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "9207468575676301587": {
+    "type": "Single",
+    "legs": [
+      "Capitals team total Under 3.5 | Capitals vs. Canadiens"
+    ],
+    "odds": -135,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6652748520723972374": {
+    "type": "Single",
+    "legs": [
+      "Predators team total Under 2.5 | Predators vs. Golden Knights"
+    ],
+    "odds": 125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "23449869234602262": {
+    "type": "Single",
+    "legs": [
+      "Stars team total Under 2.5 | Stars vs. Avalanche"
+    ],
+    "odds": 135,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2290064741500059953": {
+    "type": "Single",
+    "legs": [
+      "Calvin Pickard U 26.5 saves | Jets vs. Wild"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3497264393526313235": {
+    "type": "Single",
+    "legs": [
+      "Cam Talbot U 24.5 saves | Blue Jackets vs. Panthers"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8289094397048520979": {
+    "type": "Single",
+    "legs": [
+      "Canadiens team total Under 3.5 | Canadiens vs. Sabres"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4170740769927332115": {
+    "type": "Single",
+    "legs": [
+      "Linus Ullmark O 24.5 saves | Devils vs. Senators"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4179522706737332529": {
+    "type": "Single",
+    "legs": [
+      "Panthers ML | Sabres vs. Panthers"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4584695506994856210": {
+    "type": "Single",
+    "legs": [
+      "Kevin Lankinen O 24.5 saves | Rangers vs. Canucks"
+    ],
+    "odds": -115,
+    "promo": "Cashed out",
+    "sport": "NHL"
+  },
+  "1414161369326027026": {
+    "type": "Single",
+    "legs": [
+      "Hurricanes -1.5 | Flyers vs. Hurricanes"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8187575208891253010": {
+    "type": "Single",
+    "legs": [
+      "Capitals team total Under 3.5 | Capitals vs. Kraken"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "814630256295149843": {
+    "type": "Single",
+    "legs": [
+      "Jake Oettinger O 21.5 saves | Penguins vs. Stars"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8164504848163799315": {
+    "type": "Single",
+    "legs": [
+      "Jacob Markstrom O 23.5 saves | Panthers vs. Wild"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4918596577070809363": {
+    "type": "Parlay",
+    "legs": [
+      "Devils -1.5 | Devils vs. Canucks",
+      "Panthers ML | Panthers vs. Wild",
+      "Hurricanes -1.5 | Blackhawks vs. Hurricanes"
+    ],
+    "odds": 549,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3343034897374773553": {
+    "type": "Single",
+    "legs": [
+      "Panthers ML | Panthers vs. Wild"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6431648082970149169": {
+    "type": "Single",
+    "legs": [
+      "Jacob Fowler O 21.5 saves | Canadiens vs. Red Wings"
+    ],
+    "odds": -125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1691373664412500272": {
+    "type": "Single",
+    "legs": [
+      "Scott Wedgewood O 21.5 saves | Flames vs. Avalanche"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2064282791138427158": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Flames vs. Avalanche"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "990196270243119383": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Flames vs. Avalanche"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5023829520302604562": {
+    "type": "Parlay",
+    "legs": [
+      "Under 6.5 goals | Jets vs. Avalanche",
+      "Penguins +1.5 | Capitals vs. Penguins",
+      "Ducks +1.5 | Ducks vs. Oilers"
+    ],
+    "odds": 334,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5502257798693650706": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Capitals vs. Penguins"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6324394803496878355": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Jets vs. Avalanche"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3512570592287129874": {
+    "type": "Single",
+    "legs": [
+      "Red Wings ML | Red Wings vs. Senators"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3573294158472937747": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Devils vs. Mammoth"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2159359700217495857": {
+    "type": "Parlay",
+    "legs": [
+      "Under 6.5 goals | Devils vs. Mammoth",
+      "Under 6.5 goals | Sabres vs. Wild",
+      "Under 5.5 goals | Blackhawks vs. Blues"
+    ],
+    "odds": 549,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "331908290374140209": {
+    "type": "Single",
+    "legs": [
+      "Under 5.5 goals | Blackhawks vs. Blues"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2469804698954236209": {
+    "type": "Single",
+    "legs": [
+      "Sergei Murashov U 23.5 saves | Penguins vs. Jets"
+    ],
+    "odds": -145,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2913828721641259312": {
+    "type": "Parlay",
+    "legs": [
+      "Under 5.5 goals | Lightning vs. Flyers",
+      "Under 6.5 goals | Penguins vs. Jets",
+      "Under 6.5 goals | Stars vs. Sharks"
+    ],
+    "odds": 603,
+    "promo": "33% Profit Boost",
+    "sport": "NHL"
+  },
+  "842172893050831152": {
+    "type": "Single",
+    "legs": [
+      "Under 6.5 goals | Stars vs. Sharks"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5513928758895182103": {
+    "type": "SGP Max",
+    "legs": [
+      "Under 5.5 goals | Rangers vs. Mammoth",
+      "Igor Shesterkin O 23.5 saves | Rangers vs. Mammoth",
+      "Golden Knights -1.5 | Canucks vs. Golden Knights"
+    ],
+    "odds": 542,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6906404985014190384": {
+    "type": "Single",
+    "legs": [
+      "Igor Shesterkin O 23.5 saves | Rangers vs. Mammoth"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "9068132806152028464": {
+    "type": "Single",
+    "legs": [
+      "Under 5.5 goals | Rangers vs. Mammoth"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "199050155696193810": {
+    "type": "Parlay",
+    "legs": [
+      "Kraken +1.5 | Oilers vs. Kraken",
+      "Under 5.5 goals | Islanders vs. Devils",
+      "Jesper Wallstedt O 22.5 saves | Wild vs. Bruins"
+    ],
+    "odds": 548,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6610778442713661715": {
+    "type": "Single",
+    "legs": [
+      "Jesper Wallstedt O 22.5 saves | Wild vs. Bruins"
+    ],
+    "odds": -115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "413825355451859219": {
+    "type": "Single",
+    "legs": [
+      "Kraken +1.5 | Oilers vs. Kraken"
+    ],
+    "odds": -145,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4353886644919730451": {
+    "type": "Single",
+    "legs": [
+      "Jeremy Swayman O 24.5 saves | Jets vs. Bruins"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2901231398633472274": {
+    "type": "Single",
+    "legs": [
+      "Under 5.5 goals | Red Wings vs. Rangers"
+    ],
+    "odds": 105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4545977795586687280": {
+    "type": "Single",
+    "legs": [
+      "Over 6.5 goals | Canucks vs. Oilers"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "222522153311011120": {
+    "type": "Single",
+    "legs": [
+      "Mammoth -1.5 | Mammoth vs. Blackhawks"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8533808063239553302": {
+    "type": "Single",
+    "legs": [
+      "Under 5.5 goals | Flames vs. Kraken"
+    ],
+    "odds": 105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6294701805414777106": {
+    "type": "Single",
+    "legs": [
+      "Dan Vladar O 22.5 saves | Flyers vs. Penguins"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8473461336544772401": {
+    "type": "Single",
+    "legs": [
+      "Anthony Stolarz O 25.5 saves | Maple Leafs vs. Islanders"
+    ],
+    "odds": -125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5839932113855578387": {
+    "type": "Parlay",
+    "legs": [
+      "Islanders ML | Maple Leafs vs. Islanders",
+      "Avalanche ML | Avalanche vs. Kings"
+    ],
+    "odds": 224,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "7377016384137593106": {
+    "type": "Single",
+    "legs": [
+      "Islanders ML | Maple Leafs vs. Islanders"
+    ],
+    "odds": 110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6079979691454890258": {
+    "type": "Single",
+    "legs": [
+      "Avalanche -1.5 | Avalanche vs. Kings"
+    ],
+    "odds": 130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1401166374490997011": {
+    "type": "Single",
+    "legs": [
+      "Jeremy Swayman O 23.5 saves | Bruins vs. Rangers"
+    ],
+    "odds": -105,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "5868737204842529043": {
+    "type": "Single",
+    "legs": [
+      "Igor Shesterkin O 23.5 saves | Bruins vs. Rangers"
+    ],
+    "odds": -125,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "995899994949157138": {
+    "type": "Single",
+    "legs": [
+      "Golden Knights -1.5 | Golden Knights vs. Blackhawks"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2814131764174389553": {
+    "type": "Parlay",
+    "legs": [
+      "Blues ML | Blackhawks vs. Blues",
+      "Devils ML | Islanders vs. Devils"
+    ],
+    "odds": 174,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8434624099132768561": {
+    "type": "Single",
+    "legs": [
+      "Devils ML | Islanders vs. Devils"
+    ],
+    "odds": -149,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3894995674743308593": {
+    "type": "Single",
+    "legs": [
+      "Blues ML | Blackhawks vs. Blues"
+    ],
+    "odds": -154,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1316614944531284247": {
+    "type": "Single",
+    "legs": [
+      "Penguins ML | Sabres vs. Penguins"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8710532454093553968": {
+    "type": "Parlay",
+    "legs": [
+      "Rangers ML | Islanders vs. Rangers",
+      "Avalanche ML | Avalanche vs. Jets"
+    ],
+    "odds": 112,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6896929805518897431": {
+    "type": "Single",
+    "legs": [
+      "Avalanche -1.5 | Avalanche vs. Jets"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "6752814617443041559": {
+    "type": "Single",
+    "legs": [
+      "Rangers -1.5 | Islanders vs. Rangers"
+    ],
+    "odds": 115,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3145586158348665137": {
+    "type": "Parlay",
+    "legs": [
+      "Red Wings ML | Red Wings vs. Sabres",
+      "Blue Jackets -1.5 | Blue Jackets vs. Penguins"
+    ],
+    "odds": 149,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1972649144069783857": {
+    "type": "Single",
+    "legs": [
+      "Red Wings -1.5 | Red Wings vs. Sabres"
+    ],
+    "odds": -110,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8746062983635009841": {
+    "type": "Single",
+    "legs": [
+      "Blue Jackets -1.5 | Blue Jackets vs. Penguins"
+    ],
+    "odds": -115,
+    "promo": "20% Profit Boost",
+    "sport": "NHL"
+  },
+  "2397035360266879250": {
+    "type": "Parlay",
+    "legs": [
+      "Maple Leafs ML | Maple Leafs vs. Senators",
+      "Stars -1.5 | Stars vs. Wild"
+    ],
+    "odds": 218,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4342590399290933522": {
+    "type": "Single",
+    "legs": [
+      "Stars -1.5 | Stars vs. Wild"
+    ],
+    "odds": 130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2426279896335646999": {
+    "type": "Parlay",
+    "legs": [
+      "Sabres -1.5 | Sabres vs. Blue Jackets",
+      "Bruins -1.5 | Bruins vs. Flyers"
+    ],
+    "odds": 267,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1476401355739496752": {
+    "type": "Single",
+    "legs": [
+      "Bruins -1.5 | Bruins vs. Flyers"
+    ],
+    "odds": 100,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "1710588536362762544": {
+    "type": "Single",
+    "legs": [
+      "Sabres -1.5 | Sabres vs. Blue Jackets"
+    ],
+    "odds": -120,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "3872316357500600624": {
+    "type": "Single",
+    "legs": [
+      "Panthers -1.5 | Hurricanes vs. Panthers"
+    ],
+    "odds": -130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8556059969965916464": {
+    "type": "Single",
+    "legs": [
+      "Penguins -1.5 | Penguins vs. Red Wings"
+    ],
+    "odds": 130,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "233751317993095473": {
+    "type": "Parlay",
+    "legs": [
+      "Devils ML | Devils vs. Rangers",
+      "Penguins -1.5 | Penguins vs. Sabres"
+    ],
+    "odds": 223,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2395479139130933553": {
+    "type": "Single",
+    "legs": [
+      "Penguins -1.5 | Penguins vs. Sabres"
+    ],
+    "odds": 155,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "4888737603534323986": {
+    "type": "Parlay",
+    "legs": [
+      "Lightning -1.5 | Lightning vs. Predators",
+      "Panthers -1.5 | Panthers vs. Hurricanes"
+    ],
+    "odds": 216,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "8347358567619232019": {
+    "type": "Parlay",
+    "legs": [
+      "Maple Leafs ML | Flames vs. Maple Leafs",
+      "Panthers ML | Jets vs. Panthers",
+      "Stars ML | Stars vs. Devils",
+      "Sabres ML | Sharks vs. Sabres"
+    ],
+    "odds": 898,
+    "promo": "",
+    "sport": "NHL"
+  },
+  "2791353964019450161": {
+    "type": "Parlay",
+    "legs": [
+      "Rangers ML | Rangers vs. Kings",
+      "Oilers ML | Oilers vs. Red Wings"
+    ],
+    "odds": 181,
+    "promo": "",
+    "sport": "NHL"
+  }
 }

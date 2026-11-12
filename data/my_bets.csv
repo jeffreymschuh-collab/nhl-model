@@ -1,4 +1,34 @@
 bet_id,placed,settled,type,sport,n_legs,legs,odds,promo,stake_cash,stake_bonus,payout,bonus_refund,result,cash_profit
+5082077602200551699,2026-11-12 18:08,,SGP Max,NHL,5.0,Connor Hellebuyck U 23.5 saves | Devils vs. Capitals  •  Akira Schmid U 23.5 saves | Panthers vs. Red Wings  •  Jake Oettinger U 22.5 saves | Stars vs. Jets  •  Karel Vejmelka U 23.5 saves | Mammoth vs. Blues  •  Blues ML | Mammoth vs. Blues,2136.0,10% Profit Boost,5.0,0.0,0.0,0.0,Open,
+4937962414124695827,2026-11-12 18:08,,Single,NHL,1.0,Karel Vejmelka U 23.5 saves | Mammoth vs. Blues,-105.0,10% Profit Boost,20.0,0.0,0.0,0.0,Open,
+4109300082688524563,2026-11-12 18:08,,Single,NHL,1.0,Connor Hellebuyck U 23.5 saves | Devils vs. Capitals,-120.0,,20.0,0.0,0.0,0.0,Open,
+506420380792127763,2026-11-12 18:08,,Single,NHL,1.0,Jake Oettinger U 22.5 saves | Stars vs. Jets,-105.0,,20.0,0.0,0.0,0.0,Open,
+213587671767974163,2026-11-11 18:02,2026-11-12 00:06,Single,NHL,1.0,Dan Vladar U 25.5 saves | Oilers vs. Flyers,-130.0,,20.0,0.0,35.38,0.0,W,15.38
+2447373086943740179,2026-11-11 18:02,2026-11-12 00:51,Single,NHL,1.0,Sebastian Cossa U 25.5 saves | Golden Knights vs. Mammoth,-125.0,,20.0,0.0,36.0,0.0,W,16.0
+1438566770412749075,2026-11-11 18:02,2026-11-12 01:16,Single,NHL,1.0,Laurent Brossoit U 23.5 saves | Ducks vs. Predators,100.0,,20.0,0.0,40.0,0.0,W,20.0
+2310013298308940051,2026-11-11 18:02,2026-11-12 01:16,SGP Max,NHL,5.0,Oilers ML | Oilers vs. Flyers  •  Dan Vladar U 25.5 saves | Oilers vs. Flyers  •  Sebastian Cossa U 25.5 saves | Golden Knights vs. Mammoth  •  Golden Knights ML | Golden Knights vs. Mammoth  •  Laurent Brossoit U 23.5 saves | Ducks vs. Predators,1495.0,10% Profit Boost,5.0,0.0,87.22,0.0,W,82.22
+199741659546779953,2026-11-10 18:17,2026-11-11 00:30,Single,NHL,1.0,Anton Forsberg U 25.5 saves | Kings vs. Predators,-125.0,,20.0,0.0,0.0,0.0,L,-20.0
+5892291588543086897,2026-11-10 18:17,2026-11-10 21:34,Single,NHL,1.0,Mackenzie Blackwood U 24.5 saves | Maple Leafs vs. Avalanche,-110.0,,20.0,0.0,0.0,0.0,L,-20.0
+848260005888131377,2026-11-10 18:17,2026-11-10 22:06,Single,NHL,1.0,Jake Allen U 25.5 saves | Jets vs. Devils,-145.0,,20.0,0.0,33.79,0.0,W,13.79
+1163511979804066097,2026-11-10 18:17,2026-11-10 22:13,Single,NHL,1.0,Panthers ML | Blue Jackets vs. Panthers,-120.0,,20.0,0.0,36.67,0.0,W,16.67
+4766391681700462897,2026-11-10 18:17,2026-11-11 00:30,SGP Max,NHL,5.0,Avalanche ML | Maple Leafs vs. Avalanche  •  Mackenzie Blackwood U 24.5 saves | Maple Leafs vs. Avalanche  •  Jake Allen U 25.5 saves | Jets vs. Devils  •  Panthers ML | Blue Jackets vs. Panthers  •  Anton Forsberg U 25.5 saves | Kings vs. Predators,1629.0,,5.0,0.0,0.0,0.0,L,-5.0
+8053103644672917779,2026-11-05 17:19,2026-11-05 22:43,Parlay,NHL,5.0,Hurricanes ML | Islanders vs. Hurricanes  •  Red Wings ML | Red Wings vs. Golden Knights  •  Blackhawks +2.5 | Lightning vs. Blackhawks  •  Blues +1.5 | Devils vs. Blues  •  Ducks +1.5 | Oilers vs. Ducks,1861.0,,5.0,0.0,0.0,0.0,L,-5.0
+421012524220154131,2026-11-05 17:14,2026-11-05 21:53,SGP,NHL,2.0,Stars ML | Blue Jackets vs. Stars  •  Cam Talbot U 23.5 saves | Blue Jackets vs. Stars,185.0,,5.0,0.0,0.0,0.0,L,-5.0
+2881146151868956977,2026-11-05 17:13,2026-11-06 00:36,Single,NHL,1.0,Mackenzie Blackwood U 22.5 saves | Avalanche vs. Predators,-105.0,,20.0,0.0,39.05,0.0,W,19.05
+5331104349158506801,2026-11-05 17:13,2026-11-05 21:36,Single,NHL,1.0,Cam Talbot U 23.5 saves | Blue Jackets vs. Stars,-130.0,,20.0,0.0,0.0,0.0,L,-20.0
+5190556255969739026,2026-11-05 11:19,2026-11-05 21:53,Single,NHL,1.0,Blackhawks +2.5 | Lightning vs. Blackhawks,-115.0,,20.0,0.0,0.0,0.0,L,-20.0
+3763000048015769874,2026-11-04 18:57,2026-11-04 22:12,SGP,NHL,2.0,Sabres -1.5 | Sabres vs. Senators  •  Samuel Ersson U 25.5 saves | Sabres vs. Senators,350.0,,4.35,0.0,0.0,0.0,L,-4.35
+8392969200519479571,2026-11-03 17:47,2026-11-03 22:56,SGP,NHL,2.0,Connor Hellebuyck U 24.5 saves | Devils vs. Oilers  •  Oilers ML | Devils vs. Oilers,275.0,,10.0,0.0,0.0,0.0,L,-10.0
+4947355069105438994,2026-11-03 17:41,2026-11-03 22:06,Single,NHL,1.0,Dan Vladar U 26.5 saves | Flyers vs. Wild,-130.0,,20.0,0.0,35.38,0.0,W,15.38
+6280420558807105810,2026-11-03 17:41,2026-11-03 22:11,Single,NHL,1.0,Arturs Silovs U 26.5 saves | Penguins vs. Golden Knights,-149.0,,20.0,0.0,33.33,0.0,W,13.33
+7361284469376024850,2026-11-03 17:41,2026-11-03 22:56,Single,NHL,1.0,Connor Hellebuyck U 24.5 saves | Devils vs. Oilers,-120.0,,20.0,0.0,36.67,0.0,W,16.67
+6136305370731249938,2026-11-03 17:41,2026-11-03 22:06,Single,NHL,1.0,Scott Wedgewood U 25.5 saves | Blue Jackets vs. Avalanche,100.0,,20.0,0.0,40.0,0.0,W,20.0
+3330748813618053394,2026-11-03 16:25,2026-11-03 22:17,Parlay,NHL,4.0,Over 5.5 goals | Rangers vs. Blues  •  Avalanche ML | Blue Jackets vs. Avalanche  •  Lightning -1.5 | Lightning vs. Red Wings  •  Oilers +2.5 | Devils vs. Oilers,640.0,,25.0,0.0,0.0,0.0,L,-25.0
+6364577428173619479,2026-11-02 18:59,2026-11-02 22:53,Parlay,NHL,2.0,Jacob Markstrom U 23.5 saves | Panthers vs. Red Wings  •  Avalanche ML | Blackhawks vs. Avalanche,180.0,,25.0,0.0,0.0,0.0,L,-25.0
+1651228119866147094,2026-11-01 12:00,2026-11-01 20:37,SGP Max,NHL,5.0,Hurricanes team total Over 2.5 | Hurricanes vs. Jets  •  Pyotr Kochetkov U 20.5 saves | Hurricanes vs. Jets  •  Hurricanes -1.5 | Hurricanes vs. Jets  •  Over 4.5 goals | Hurricanes vs. Jets  •  Under 6.5 goals | Rangers vs. Oilers,730.0,,5.0,0.0,0.0,0.0,L,-5.0
+6646669981587210544,2026-11-01 11:27,2026-11-01 15:23,Single,NHL,1.0,Pyotr Kochetkov U 20.5 saves | Hurricanes vs. Jets,100.0,,25.0,0.0,0.0,0.0,L,-25.0
+5285698046032740656,2026-10-31 18:18,2026-10-31 22:38,SGP,NHL,5.0,Blue Jackets +1.5 | Stars vs. Blue Jackets  •  Stars ML | Stars vs. Blue Jackets  •  Under 5.5 goals | Stars vs. Blue Jackets  •  Jake Oettinger U 23.5 saves | Stars vs. Blue Jackets  •  Jet Greaves U 25.5 saves | Stars vs. Blue Jackets,1500.0,,5.0,0.0,0.0,0.0,L,-5.0
+5847674938642792752,2026-10-31 15:20,2026-11-01 00:39,Single,NHL,1.0,Flames +2.5 | Avalanche vs. Flames,-120.0,,25.0,0.0,0.0,0.0,L,-25.0
 578284653513933104,2026-10-30 16:36,2026-10-30 20:39,SGP Max,NHL,5.0,Golden Knights +1.5 | NJD @ VGK  •  Jets +1.5 | WPG @ FLA  •  Dustin Wolf U 26.5 saves | SEA @ CGY  •  Under 6.5 goals | SEA @ CGY  •  Flames +1.5 | SEA @ CGY,1139.0,50% Profit Boost,5.0,0.0,0.0,0.0,L,-5.0
 4708291670242885911,2026-10-30 16:35,2026-10-30 20:39,Parlay,NHL,2.0,Golden Knights +1.5 (-300) | NJD @ VGK  •  Panthers ML (-225) | WPG @ FLA,-108.0,No Sweat Bet,25.0,0.0,0.0,25.0,L,-25.0
 7142895020415254832,2026-10-29 19:56,2026-10-30 00:51,Single,NHL,1.0,Yaroslav Askarov O 22.5 saves | VAN @ SJS,-130.0,,23.85,0.0,42.2,0.0,W,18.35
@@ -9,8 +39,116 @@ bet_id,placed,settled,type,sport,n_legs,legs,odds,promo,stake_cash,stake_bonus,p
 4222427467459199251,2026-10-28 19:23,2026-10-28 23:14,SGP Max,NHL,13.0,Capitals ML  •  Over 4.5  •  Oilers ML  •  Over 4.5  •  Avalanche ML  •  Kraken +2.5  •  Hurricanes ML  •  Lightning ML  •  Mammoth ML  •  Red Wings ML  •  Stars ML  •  Senators ML  •  Sabres ML,19542.0,15% Profit Boost,5.0,0.0,0.0,0.0,L,-5.0
 2972066005448261937,2026-10-28 19:17,2026-10-28 23:01,Parlay,NHL,2.0,Capitals ML  •  Over 22.5 (saves),152.0,,25.0,0.0,63.0,0.0,W,38.0
 3847319013407457584,2026-10-27 17:33,2026-10-27 23:11,Single,NHL,1.0,Jeremy Swayman U 28.5 saves | BOS @ CAR,-110.0,,0.0,25.0,22.73,0.0,W,22.73
-2004439943597916439,2026-10-27 17:32,2026-10-27 22:42,SGP,NHL,2.0,Panthers ML | FLA @ WPG  •  Under 6.5 goals | FLA @ WPG,185.0,,0.0,25.0,46.25,0.0,W,46.25
 7747841185867235632,2026-10-27 17:32,2026-10-27 22:44,Parlay,NHL,2.0,Hurricanes ML  •  Panthers ML,177.0,,25.0,0.0,69.32,0.0,W,44.32
-8347358567619232019,2026-10-26 17:03,2026-10-26 23:17,Unknown,,,(details not captured),,,5.89,0.0,0.0,0.0,L,-5.89
-2791353964019450161,2026-10-26 17:01,2026-10-26 21:50,Unknown,,,(details not captured),,,25.0,0.0,0.0,25.0,L,-25.0
+2004439943597916439,2026-10-27 17:32,2026-10-27 22:42,SGP,NHL,2.0,Panthers ML | FLA @ WPG  •  Under 6.5 goals | FLA @ WPG,185.0,,0.0,25.0,46.25,0.0,W,46.25
+8347358567619232019,2026-10-26 17:03,2026-10-26 23:17,Parlay,NHL,4.0,Maple Leafs ML | Flames vs. Maple Leafs  •  Panthers ML | Jets vs. Panthers  •  Stars ML | Stars vs. Devils  •  Sabres ML | Sharks vs. Sabres,898.0,,5.89,0.0,0.0,0.0,L,-5.89
+2791353964019450161,2026-10-26 17:01,2026-10-26 21:50,Parlay,NHL,2.0,Rangers ML | Rangers vs. Kings  •  Oilers ML | Oilers vs. Red Wings,181.0,,25.0,0.0,0.0,25.0,L,-25.0
 1978353625965134099,2026-10-26 17:00,2026-10-26 23:21,Unknown,,,(details not captured),,,25.0,0.0,51.72,0.0,W,26.72
+8626148755709755697,2026-10-24 21:52,2026-10-25 22:42,Parlay,NHL,2.0,Red Wings ML | Flames vs. Red Wings  •  Avalanche ML | Predators vs. Avalanche,151.0,,25.0,0.0,0.0,0.0,L,-25.0
+5318896896549454099,2026-10-24 15:20,2026-10-25 22:42,Parlay,NHL,4.0,Hurricanes ML | Blues vs. Hurricanes  •  Panthers ML | Blackhawks vs. Panthers  •  Stars ML | Stars vs. Islanders  •  Avalanche ML | Predators vs. Avalanche,461.0,,10.0,0.0,0.0,0.0,L,-10.0
+4415455576717394195,2026-10-24 15:16,2026-10-25 00:40,Parlay,NHL,5.0,Ducks ML | Flyers vs. Ducks  •  Devils ML | Devils vs. Kings  •  Oilers ML | Oilers vs. Maple Leafs  •  Hurricanes ML | Blues vs. Hurricanes  •  Red Wings ML | Flames vs. Red Wings,797.0,,25.0,0.0,0.0,0.0,L,-25.0
+5120356741892145426,2026-10-24 15:11,2026-10-24 22:16,Single,NHL,1.0,Jeremy Swayman O 22.5 saves | Bruins vs. Sharks,-110.0,,21.94,0.0,41.89,0.0,W,19.95
+5519496583588217110,2026-10-23 18:58,2026-10-24 00:26,Single,NHL,1.0,Andrei Vasilevskiy U 27.5 saves | Avalanche vs. Lightning,-105.0,,0.0,25.0,23.81,0.0,W,23.81
+2980172142777336087,2026-10-23 18:53,2026-10-23 23:59,Parlay,NHL,2.0,Canadiens ML | Blackhawks vs. Canadiens  •  Avalanche ML | Avalanche vs. Lightning,192.0,,25.0,0.0,73.13,0.0,W,48.13
+5157889319167459632,2026-10-22 18:12,2026-10-22 23:57,Parlay,NHL,2.0,Stars ML | Stars vs. Jets  •  Hurricanes ML | Oilers vs. Hurricanes,175.0,,25.0,0.0,0.0,0.0,L,-25.0
+2422454996583973143,2026-10-22 18:11,2026-10-22 23:05,Single,NHL,1.0,Jake Oettinger O 20.5 saves | Stars vs. Jets,-130.0,,25.0,0.0,0.0,0.0,L,-25.0
+1534059480034181394,2026-10-21 17:34,2026-10-21 22:26,Parlay,NHL,2.0,Panthers +1.5 | Senators vs. Panthers  •  Sabres ML | Sabres vs. Flyers,104.0,,5.0,0.0,0.0,0.0,L,-5.0
+3088534175976915249,2026-10-21 17:33,2026-10-21 22:10,SGP,NHL,2.0,Sabres ML | Sabres vs. Flyers  •  Sabres team total Under 4.5 | Sabres vs. Flyers,140.0,,20.47,0.0,0.0,0.0,L,-20.47
+2347164546571043090,2026-10-21 17:32,2026-10-21 23:31,Single,NHL,1.0,Akira Schmid U 24.5 saves | Senators vs. Panthers,-110.0,,25.0,0.0,0.0,0.0,L,-25.0
+4648976659721093394,2026-10-20 17:52,2026-10-20 22:06,Single,NHL,1.0,Ilya Sorokin O 22.5 saves | Islanders vs. Ducks,-110.0,,5.0,0.0,0.0,0.0,L,-5.0
+8883207633381753107,2026-10-20 13:19,2026-10-20 21:15,Single,NHL,1.0,Under 6.5 goals | Blue Jackets vs. Maple Leafs,-110.0,,25.0,0.0,0.0,0.0,L,-25.0
+668641913057968403,2026-10-20 13:19,2026-10-20 21:35,Single,NHL,1.0,Joel Hofer O 21.5 saves | Blues vs. Jets,-120.0,,25.0,0.0,45.83,0.0,W,20.83
+2650225749100986643,2026-10-20 13:19,2026-10-20 21:35,Parlay,NHL,2.0,Under 6.5 goals | Blue Jackets vs. Maple Leafs  •  Joel Hofer O 21.5 saves | Blues vs. Jets,250.0,,5.0,0.0,0.0,0.0,L,-5.0
+4428496123824570672,2026-10-18 12:52,2026-10-18 22:41,Single,NHL,1.0,Hurricanes -1.5 | Flames vs. Hurricanes,115.0,,20.0,0.0,0.0,0.0,L,-20.0
+568593161648210198,2026-10-17 16:59,2026-10-17 21:29,Single,NHL,1.0,Ukko-Pekka Luukkonen U 26.5 saves | Canadiens vs. Sabres,-125.0,,5.0,0.0,0.0,0.0,L,-5.0
+6445875496675836182,2026-10-17 12:47,2026-10-18 00:35,Parlay,NHL,5.0,Hurricanes ML | Jets vs. Hurricanes  •  Lightning ML | Lightning vs. Canucks  •  Panthers ML | Panthers vs. Kraken  •  Stars ML | Blackhawks vs. Stars  •  Golden Knights ML | Golden Knights vs. Penguins,550.0,50% Profit Boost,5.0,0.0,46.23,0.0,W,41.23
+8236774845044621591,2026-10-17 12:23,2026-10-17 23:18,Single,NHL,1.0,Golden Knights team total Under 3.5 | Golden Knights vs. Penguins,110.0,,5.0,0.0,0.0,0.0,L,-5.0
+4633895143148224791,2026-10-17 12:23,2026-10-17 18:33,Single,NHL,1.0,Lightning team total Under 3.5 | Lightning vs. Canucks,155.0,,5.0,0.0,0.0,0.0,L,-5.0
+7588256498703270167,2026-10-17 12:23,2026-10-17 21:49,Single,NHL,1.0,Canadiens team total Under 3.5 | Canadiens vs. Sabres,-120.0,,5.0,0.0,0.0,0.0,L,-5.0
+1992774754741911831,2026-10-17 12:22,2026-10-17 21:56,Single,NHL,1.0,Under 6.5 goals | Red Wings vs. Sharks,-120.0,,5.0,0.0,0.0,0.0,L,-5.0
+4154502575879749911,2026-10-17 12:22,2026-10-18 00:10,Single,NHL,1.0,Under 6.5 goals | Golden Knights vs. Penguins,100.0,,5.0,0.0,0.0,0.0,L,-5.0
+6532403179131371799,2026-10-17 12:22,2026-10-18 00:15,Single,NHL,1.0,Under 6.5 goals | Mammoth vs. Oilers,100.0,,5.0,0.0,0.0,0.0,L,-5.0
+5048172226638119191,2026-10-17 12:21,2026-10-17 21:31,Single,NHL,1.0,Spencer Knight U 25.5 saves | Blackhawks vs. Stars,-115.0,,5.0,0.0,0.0,0.0,L,-5.0
+6056978543169110295,2026-10-17 12:21,2026-10-17 15:22,Single,NHL,1.0,Logan Thompson O 25.5 saves | Capitals vs. Devils,-120.0,,5.0,0.0,9.17,0.0,W,4.17
+8644296529093460247,2026-10-17 12:21,2026-10-17 16:06,Single,NHL,1.0,Jake Allen U 25.5 saves | Capitals vs. Devils,-115.0,,5.0,0.0,9.35,0.0,W,4.35
+4104208479852560663,2026-10-16 20:25,2026-10-17 00:06,Single,NHL,1.0,Arturs Silovs U 27.5 saves | Avalanche vs. Penguins,-105.0,,5.0,0.0,9.76,0.0,W,4.76
+105012010747560215,2026-10-16 20:25,2026-10-17 00:41,Single,NHL,1.0,Ducks team total Under 3.5 | Ducks vs. Bruins,-149.0,,5.0,0.0,8.33,0.0,W,3.33
+6734310662236930327,2026-10-16 20:25,2026-10-16 22:37,Single,NHL,1.0,Avalanche team total Under 3.5 | Avalanche vs. Penguins,120.0,,5.0,0.0,0.0,0.0,L,-5.0
+5401245172535263511,2026-10-16 20:25,2026-10-16 23:10,Single,NHL,1.0,Mackenzie Blackwood O 22.5 saves | Avalanche vs. Penguins,-120.0,,5.0,0.0,9.17,0.0,W,4.17
+7202685023483461911,2026-10-16 20:25,2026-10-17 00:41,Single,NHL,1.0,Under 6.5 goals | Ducks vs. Bruins,-110.0,,5.0,0.0,9.55,0.0,W,4.55
+8211491340014453015,2026-10-16 20:25,2026-10-16 23:31,Single,NHL,1.0,Under 6.5 goals | Avalanche vs. Penguins,105.0,,5.0,0.0,0.0,0.0,L,-5.0
+5808695208610758934,2026-10-15 18:27,2026-10-15 21:53,SGP Max,NHL,3.0,Lightning team total Under 3.5 | Lightning vs. Kraken  •  Under 6.5 goals | Maple Leafs vs. Sabres  •  Ukko-Pekka Luukkonen U 25.5 saves | Maple Leafs vs. Sabres,706.0,,5.0,0.0,0.0,0.0,L,-5.0
+3106535432188461334,2026-10-15 18:27,2026-10-15 21:41,Single,NHL,1.0,Ukko-Pekka Luukkonen U 25.5 saves | Maple Leafs vs. Sabres,-105.0,,5.0,0.0,0.0,0.0,L,-5.0
+5268263253326299414,2026-10-15 18:27,2026-10-15 21:53,Single,NHL,1.0,Lightning team total Under 3.5 | Lightning vs. Kraken,115.0,,5.0,0.0,0.0,0.0,L,-5.0
+4763860095060803862,2026-10-15 18:27,2026-10-15 21:24,Single,NHL,1.0,Under 6.5 goals | Maple Leafs vs. Sabres,105.0,,5.0,0.0,0.0,0.0,L,-5.0
+6701641740958433554,2026-10-14 18:19,2026-10-14 22:04,Single,NHL,1.0,Under 6.5 goals | Capitals vs. Canadiens,100.0,,10.0,0.0,0.0,0.0,L,-10.0
+1346107106721399058,2026-10-14 18:15,2026-10-14 22:55,Single,NHL,1.0,Jakub Dobes U 25.5 saves | Capitals vs. Canadiens,-120.0,,10.0,0.0,18.33,0.0,W,8.33
+9207468575676301587,2026-10-14 13:32,2026-10-14 22:04,Single,NHL,1.0,Capitals team total Under 3.5 | Capitals vs. Canadiens,-135.0,,10.0,0.0,0.0,0.0,L,-10.0
+1308154829268451603,2026-10-14 13:32,2026-10-15 00:01,Single,NHL,1.0,Casey DeSmith O 26.5 saves | Avalanche vs. Stars,-105.0,,10.0,0.0,0.0,0.0,L,-10.0
+6652748520723972374,2026-10-13 18:22,2026-10-13 23:20,Single,NHL,1.0,Predators team total Under 2.5 | Predators vs. Golden Knights,125.0,,5.0,0.0,11.25,0.0,W,6.25
+23449869234602262,2026-10-13 18:22,2026-10-13 23:24,Single,NHL,1.0,Stars team total Under 2.5 | Stars vs. Avalanche,135.0,,5.0,0.0,11.75,0.0,W,6.75
+2290064741500059953,2026-10-13 17:54,2026-10-13 23:11,Single,NHL,1.0,Calvin Pickard U 26.5 saves | Jets vs. Wild,-105.0,,10.0,0.0,19.52,0.0,W,9.52
+3497264393526313235,2026-10-13 17:45,2026-10-13 21:36,Single,NHL,1.0,Cam Talbot U 24.5 saves | Blue Jackets vs. Panthers,-115.0,,10.0,0.0,18.7,0.0,W,8.7
+8289094397048520979,2026-10-13 17:45,2026-10-13 21:27,Single,NHL,1.0,Canadiens team total Under 3.5 | Canadiens vs. Sabres,-120.0,,10.0,0.0,0.0,0.0,L,-10.0
+4170740769927332115,2026-10-12 15:14,2026-10-12 21:27,Single,NHL,1.0,Linus Ullmark O 24.5 saves | Devils vs. Senators,-130.0,,5.0,0.0,8.85,0.0,W,3.85
+4179522706737332529,2026-10-12 15:12,2026-10-12 15:39,Single,NHL,1.0,Panthers ML | Sabres vs. Panthers,100.0,,5.0,0.0,0.0,0.0,L,-5.0
+8187575208891253010,2026-10-11 16:03,2026-10-11 19:43,Single,NHL,1.0,Capitals team total Under 3.5 | Capitals vs. Kraken,100.0,,10.0,0.0,20.0,0.0,W,10.0
+1414161369326027026,2026-10-11 16:03,2026-10-11 21:41,Single,NHL,1.0,Hurricanes -1.5 | Flyers vs. Hurricanes,115.0,,20.0,0.0,43.0,0.0,W,23.0
+4584695506994856210,2026-10-11 16:03,2026-10-11 21:01,Single,NHL,1.0,Kevin Lankinen O 24.5 saves | Rangers vs. Canucks,-115.0,Cashed out,5.0,0.0,5.0,0.0,Cashed out,0.0
+814630256295149843,2026-10-10 14:49,2026-10-10 22:41,Single,NHL,1.0,Jake Oettinger O 21.5 saves | Penguins vs. Stars,-110.0,,5.0,0.0,0.0,0.0,L,-5.0
+8164504848163799315,2026-10-10 14:49,2026-10-10 20:43,Single,NHL,1.0,Jacob Markstrom O 23.5 saves | Panthers vs. Wild,-110.0,,5.0,0.0,9.55,0.0,W,4.55
+4918596577070809363,2026-10-10 14:41,2026-10-10 21:40,Parlay,NHL,3.0,Devils -1.5 | Devils vs. Canucks  •  Panthers ML | Panthers vs. Wild  •  Hurricanes -1.5 | Blackhawks vs. Hurricanes,549.0,,5.0,0.0,0.0,0.0,L,-5.0
+3343034897374773553,2026-10-10 14:40,2026-10-10 20:50,Single,NHL,1.0,Panthers ML | Panthers vs. Wild,-130.0,,20.2,0.0,0.0,0.0,L,-20.2
+6431648082970149169,2026-10-10 14:33,2026-10-10 21:30,Single,NHL,1.0,Jacob Fowler O 21.5 saves | Canadiens vs. Red Wings,-125.0,,5.0,0.0,9.0,0.0,W,4.0
+1691373664412500272,2026-10-08 14:20,2026-10-08 23:17,Single,NHL,1.0,Scott Wedgewood O 21.5 saves | Flames vs. Avalanche,-105.0,,5.0,0.0,9.76,0.0,W,4.76
+2064282791138427158,2026-10-08 14:14,2026-10-08 23:18,Single,NHL,1.0,Under 6.5 goals | Flames vs. Avalanche,-130.0,,34.0,0.0,0.0,0.0,L,-34.0
+990196270243119383,2026-10-08 14:14,2026-10-08 23:18,Single,NHL,1.0,Under 6.5 goals | Flames vs. Avalanche,-130.0,,25.0,0.0,0.0,0.0,L,-25.0
+5023829520302604562,2026-10-07 13:49,2026-10-08 00:48,Parlay,NHL,3.0,Under 6.5 goals | Jets vs. Avalanche  •  Penguins +1.5 | Capitals vs. Penguins  •  Ducks +1.5 | Ducks vs. Oilers,334.0,,5.0,0.0,0.0,0.0,L,-5.0
+5502257798693650706,2026-10-07 13:04,2026-10-07 21:16,Single,NHL,1.0,Under 6.5 goals | Capitals vs. Penguins,-105.0,,15.0,0.0,0.0,0.0,L,-15.0
+6324394803496878355,2026-10-07 13:03,2026-10-07 22:22,Single,NHL,1.0,Under 6.5 goals | Jets vs. Avalanche,-115.0,,46.0,0.0,86.0,0.0,W,40.0
+3512570592287129874,2026-10-06 18:25,2026-10-06 21:43,Single,NHL,1.0,Red Wings ML | Red Wings vs. Senators,-120.0,,0.0,25.0,20.83,0.0,W,20.83
+3573294158472937747,2026-10-06 15:01,2026-10-06 21:32,Single,NHL,1.0,Under 6.5 goals | Devils vs. Mammoth,-130.0,,15.0,0.0,0.0,0.0,L,-15.0
+2159359700217495857,2026-10-06 14:00,2026-10-06 22:55,Parlay,NHL,3.0,Under 6.5 goals | Devils vs. Mammoth  •  Under 6.5 goals | Sabres vs. Wild  •  Under 5.5 goals | Blackhawks vs. Blues,549.0,,5.0,0.0,0.0,0.0,L,-5.0
+331908290374140209,2026-10-06 13:58,2026-10-06 22:55,Single,NHL,1.0,Under 5.5 goals | Blackhawks vs. Blues,100.0,,69.0,0.0,0.0,0.0,L,-69.0
+2469804698954236209,2026-10-05 16:31,2026-10-05 21:55,Single,NHL,1.0,Sergei Murashov U 23.5 saves | Penguins vs. Jets,-145.0,,5.0,0.0,0.0,0.0,L,-5.0
+2913828721641259312,2026-10-05 13:34,2026-10-05 22:27,Parlay,NHL,3.0,Under 5.5 goals | Lightning vs. Flyers  •  Under 6.5 goals | Penguins vs. Jets  •  Under 6.5 goals | Stars vs. Sharks,603.0,33% Profit Boost,5.0,0.0,45.07,0.0,W,40.07
+842172893050831152,2026-10-05 13:34,2026-10-05 22:27,Single,NHL,1.0,Under 6.5 goals | Stars vs. Sharks,-120.0,,12.0,0.0,22.0,0.0,W,10.0
+5513928758895182103,2026-10-04 17:42,2026-10-04 23:39,SGP Max,NHL,3.0,Under 5.5 goals | Rangers vs. Mammoth  •  Igor Shesterkin O 23.5 saves | Rangers vs. Mammoth  •  Golden Knights -1.5 | Canucks vs. Golden Knights,542.0,,5.35,0.0,0.0,0.0,L,-5.35
+6906404985014190384,2026-10-04 17:39,2026-10-04 20:31,Single,NHL,1.0,Igor Shesterkin O 23.5 saves | Rangers vs. Mammoth,-115.0,,5.0,0.0,9.35,0.0,W,4.35
+9068132806152028464,2026-10-04 17:39,2026-10-04 20:35,Single,NHL,1.0,Under 5.5 goals | Rangers vs. Mammoth,100.0,,19.0,0.0,0.0,0.0,L,-19.0
+199050155696193810,2026-10-03 19:00,2026-10-03 22:42,Parlay,NHL,3.0,Kraken +1.5 | Oilers vs. Kraken  •  Under 5.5 goals | Islanders vs. Devils  •  Jesper Wallstedt O 22.5 saves | Wild vs. Bruins,548.0,,8.32,0.0,0.0,0.0,L,-8.32
+6610778442713661715,2026-10-03 18:58,2026-10-03 22:42,Single,NHL,1.0,Jesper Wallstedt O 22.5 saves | Wild vs. Bruins,-115.0,,5.0,0.0,9.35,0.0,W,4.35
+413825355451859219,2026-10-03 18:58,2026-10-03 21:45,Single,NHL,1.0,Kraken +1.5 | Oilers vs. Kraken,-145.0,,30.0,0.0,0.0,0.0,L,-30.0
+4353886644919730451,2026-10-02 17:31,2026-10-02 22:36,Single,NHL,1.0,Jeremy Swayman O 24.5 saves | Jets vs. Bruins,-110.0,,5.0,0.0,9.55,0.0,W,4.55
+2901231398633472274,2026-10-02 17:28,2026-10-02 21:20,Single,NHL,1.0,Under 5.5 goals | Red Wings vs. Rangers,105.0,,25.0,0.0,51.25,0.0,W,26.25
+4545977795586687280,2026-10-01 20:19,2026-10-01 23:21,Single,NHL,1.0,Over 6.5 goals | Canucks vs. Oilers,-120.0,,10.0,0.0,18.33,0.0,W,8.33
+222522153311011120,2026-10-01 20:19,2026-10-02 00:10,Single,NHL,1.0,Mammoth -1.5 | Mammoth vs. Blackhawks,115.0,,10.0,0.0,21.5,0.0,W,11.5
+8533808063239553302,2026-10-01 20:18,2026-10-01 23:41,Single,NHL,1.0,Under 5.5 goals | Flames vs. Kraken,105.0,,5.0,0.0,0.0,0.0,L,-5.0
+6294701805414777106,2026-09-30 14:10,2026-09-30 21:35,Single,NHL,1.0,Dan Vladar O 22.5 saves | Flyers vs. Penguins,-110.0,,5.0,0.0,9.55,0.0,W,4.55
+8473461336544772401,2026-09-30 14:05,2026-09-30 22:46,Single,NHL,1.0,Anthony Stolarz O 25.5 saves | Maple Leafs vs. Islanders,-125.0,,5.0,0.0,9.0,0.0,W,4.0
+5839932113855578387,2026-09-30 14:03,2026-10-01 00:56,Parlay,NHL,2.0,Islanders ML | Maple Leafs vs. Islanders  •  Avalanche ML | Avalanche vs. Kings,224.0,,5.0,0.0,0.0,0.0,L,-5.0
+7377016384137593106,2026-09-30 14:03,2026-09-30 22:16,Single,NHL,1.0,Islanders ML | Maple Leafs vs. Islanders,110.0,,10.0,0.0,0.0,0.0,L,-10.0
+6079979691454890258,2026-09-30 14:03,2026-10-01 00:55,Single,NHL,1.0,Avalanche -1.5 | Avalanche vs. Kings,130.0,,20.0,0.0,26.0,0.0,W,6.0
+1401166374490997011,2026-09-29 14:50,2026-09-29 22:29,Single,NHL,1.0,Jeremy Swayman O 23.5 saves | Bruins vs. Rangers,-105.0,,5.0,0.0,9.76,0.0,W,4.76
+5868737204842529043,2026-09-29 14:50,2026-09-29 23:01,Single,NHL,1.0,Igor Shesterkin O 23.5 saves | Bruins vs. Rangers,-125.0,,5.0,0.0,0.0,0.0,L,-5.0
+995899994949157138,2026-09-29 14:46,2026-09-30 01:18,Single,NHL,1.0,Golden Knights -1.5 | Golden Knights vs. Blackhawks,100.0,,25.0,0.0,25.0,0.0,W,0.0
+3894995674743308593,2026-09-26 18:38,2026-09-26 21:53,Single,NHL,1.0,Blues ML | Blackhawks vs. Blues,-154.0,,20.0,0.0,0.0,0.0,L,-20.0
+8434624099132768561,2026-09-26 18:38,2026-09-26 21:51,Single,NHL,1.0,Devils ML | Islanders vs. Devils,-149.0,,10.0,0.0,16.67,0.0,W,6.67
+2814131764174389553,2026-09-26 18:38,2026-09-26 21:51,Parlay,NHL,2.0,Blues ML | Blackhawks vs. Blues  •  Devils ML | Islanders vs. Devils,174.0,,5.0,0.0,0.0,0.0,L,-5.0
+1316614944531284247,2026-09-26 14:36,2026-09-26 17:41,Single,NHL,1.0,Penguins ML | Sabres vs. Penguins,115.0,,10.0,0.0,21.5,0.0,W,11.5
+8710532454093553968,2026-09-25 18:48,2026-09-25 23:05,Parlay,NHL,2.0,Rangers ML | Islanders vs. Rangers  •  Avalanche ML | Avalanche vs. Jets,112.0,,5.0,0.0,10.59,0.0,W,5.59
+6896929805518897431,2026-09-25 18:48,2026-09-25 23:04,Single,NHL,1.0,Avalanche -1.5 | Avalanche vs. Jets,115.0,,10.0,0.0,21.5,0.0,W,11.5
+6752814617443041559,2026-09-25 18:48,2026-09-25 22:01,Single,NHL,1.0,Rangers -1.5 | Islanders vs. Rangers,115.0,,25.0,0.0,53.75,0.0,W,28.75
+3145586158348665137,2026-09-24 17:59,2026-09-24 21:55,Parlay,NHL,2.0,Red Wings ML | Red Wings vs. Sabres  •  Blue Jackets -1.5 | Blue Jackets vs. Penguins,149.0,,5.0,0.0,12.46,0.0,W,7.46
+1972649144069783857,2026-09-24 17:59,2026-09-24 21:55,Single,NHL,1.0,Red Wings -1.5 | Red Wings vs. Sabres,-110.0,,15.0,0.0,0.0,0.0,L,-15.0
+8746062983635009841,2026-09-24 17:59,2026-09-24 21:16,Single,NHL,1.0,Blue Jackets -1.5 | Blue Jackets vs. Penguins,-115.0,20% Profit Boost,15.0,0.0,30.65,0.0,W,15.65
+4342590399290933522,2026-09-23 18:51,2026-09-23 22:31,Single,NHL,1.0,Stars -1.5 | Stars vs. Wild,130.0,,20.0,0.0,26.0,0.0,W,6.0
+2397035360266879250,2026-09-23 18:51,2026-09-23 22:31,Parlay,NHL,2.0,Maple Leafs ML | Maple Leafs vs. Senators  •  Stars -1.5 | Stars vs. Wild,218.0,,5.0,0.0,15.92,0.0,W,10.92
+2426279896335646999,2026-09-22 18:57,2026-09-22 21:44,Parlay,NHL,2.0,Sabres -1.5 | Sabres vs. Blue Jackets  •  Bruins -1.5 | Bruins vs. Flyers,267.0,,5.0,0.0,18.33,0.0,W,13.33
+1476401355739496752,2026-09-22 18:56,2026-09-22 21:27,Single,NHL,1.0,Bruins -1.5 | Bruins vs. Flyers,100.0,,15.0,0.0,30.0,0.0,W,15.0
+1710588536362762544,2026-09-22 18:56,2026-09-22 21:44,Single,NHL,1.0,Sabres -1.5 | Sabres vs. Blue Jackets,-120.0,,15.0,0.0,27.5,0.0,W,12.5
+3872316357500600624,2026-09-22 18:56,2026-09-22 21:49,Single,NHL,1.0,Panthers -1.5 | Hurricanes vs. Panthers,-130.0,,5.0,0.0,0.0,0.0,L,-5.0
+8556059969965916464,2026-09-22 18:56,2026-09-22 21:37,Single,NHL,1.0,Penguins -1.5 | Penguins vs. Red Wings,130.0,,5.0,0.0,0.0,0.0,L,-5.0
+233751317993095473,2026-09-21 19:00,2026-09-21 21:25,Parlay,NHL,2.0,Devils ML | Devils vs. Rangers  •  Penguins -1.5 | Penguins vs. Sabres,223.0,,5.0,0.0,16.15,0.0,W,11.15
+2395479139130933553,2026-09-21 19:00,2026-09-21 21:32,Single,NHL,1.0,Penguins -1.5 | Penguins vs. Sabres,155.0,,20.0,0.0,51.0,0.0,W,31.0
+4888737603534323986,2026-09-20 17:02,2026-09-20 21:41,Parlay,NHL,2.0,Lightning -1.5 | Lightning vs. Predators  •  Panthers -1.5 | Panthers vs. Hurricanes,216.0,,25.0,0.0,0.0,0.0,L,-25.0
