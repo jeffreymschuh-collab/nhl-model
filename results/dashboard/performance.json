@@ -1,11 +1,11 @@
 [
 {
 "market": "All",
-"bets": 24,
-"profit_usd": -70.8,
-"record": "12-12-0",
-"units_profit": -3.54,
-"roi_pct": -12.85,
+"bets": 27,
+"profit_usd": -19.4,
+"record": "15-12-0",
+"units_profit": -0.97,
+"roi_pct": -3.17,
 "avg_clv_pct": -0.39,
 "beat_close_pct": 40.0
 },
@@ -21,11 +21,11 @@
 },
 {
 "market": "Goalie saves",
-"bets": 18,
-"profit_usd": 48.6,
-"record": "11-7-0",
-"units_profit": 2.43,
-"roi_pct": 13.48,
+"bets": 21,
+"profit_usd": 100.0,
+"record": "14-7-0",
+"units_profit": 5.0,
+"roi_pct": 23.79,
 "avg_clv_pct": 3.33,
 "beat_close_pct": 100.0
 },
@@ -40,22 +40,22 @@
 "beat_close_pct": 0.0
 },
 {
-"market": "Leans, not bet: Goalie saves (13/100 leans, watching)",
-"bets": 13,
-"profit_usd": -4.6,
-"record": "7-6-0",
-"units_profit": -0.23,
-"roi_pct": -1.7,
+"market": "Leans, not bet: Goalie saves (16/100 leans, watching)",
+"bets": 16,
+"profit_usd": 7.2,
+"record": "9-7-0",
+"units_profit": 0.36,
+"roi_pct": 2.2,
 "avg_clv_pct": null,
 "beat_close_pct": null
 },
 {
-"market": "Leans, not bet: All markets (16/100 leans, watching)",
-"bets": 16,
-"profit_usd": -23.6,
-"record": "8-8-0",
-"units_profit": -1.18,
-"roi_pct": -7.4,
+"market": "Leans, not bet: All markets (19/100 leans, watching)",
+"bets": 19,
+"profit_usd": -11.8,
+"record": "10-9-0",
+"units_profit": -0.59,
+"roi_pct": -3.1,
 "avg_clv_pct": null,
 "beat_close_pct": null
 }

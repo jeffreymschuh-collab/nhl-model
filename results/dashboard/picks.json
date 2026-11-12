@@ -9,9 +9,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.769,
+"profit_usd": 15.38
 },
 {
 "pick_id": "2026020296|saves|under|s cossa",
@@ -23,9 +23,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 0.8,
+"profit_usd": 16.0
 },
 {
 "pick_id": "2026020297|saves|under|l brossoit",
@@ -37,9 +37,9 @@
 "stake_usd": 20.0,
 "close": "",
 "clv_pct": null,
-"result": "",
-"profit_units": null,
-"profit_usd": null
+"result": "W",
+"profit_units": 1.0,
+"profit_usd": 20.0
 },
 {
 "pick_id": "2026020286|saves|under|m blackwood",
