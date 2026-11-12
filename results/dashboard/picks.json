@@ -1,5 +1,47 @@
 [
 {
+"pick_id": "2026020303|saves|under|c hellebuyck",
+"date": "2026-11-12",
+"matchup": "WSH @ NJD",
+"selection": "Hellebuyck U 23.5 saves",
+"price": "-120",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020306|saves|under|j oettinger",
+"date": "2026-11-12",
+"matchup": "WPG @ DAL",
+"selection": "Oettinger U 22.5 saves",
+"price": "-105",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
+"pick_id": "2026020307|saves|under|k vejmelka",
+"date": "2026-11-12",
+"matchup": "STL @ UTA",
+"selection": "Vejmelka U 23.5 saves",
+"price": "-105",
+"units": 1.0,
+"stake_usd": 20.0,
+"close": "",
+"clv_pct": null,
+"result": "",
+"profit_units": null,
+"profit_usd": null
+},
+{
 "pick_id": "2026020295|saves|under|d vladar",
 "date": "2026-11-11",
 "matchup": "PHI @ EDM",
