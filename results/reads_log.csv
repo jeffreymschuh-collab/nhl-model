@@ -361,9 +361,13 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-12,pm,2026020308,NYI @ LAK,totals,,5.5,Over 5.5,0.5242,0.5522,W,Under 5.5,115,-0.0162,pass,L,-1.0,5.62,7.0,graded
 2026-11-12,pm,2026020308,NYI @ LAK,saves,Darcy Kuemper,24.5,Kuemper U 24.5 saves,0.5937,0.587,W,Kuemper U 24.5 saves,-165,-0.0519,pass,W,0.606,23.0,16.0,graded
 2026-11-12,pm,2026020308,NYI @ LAK,saves,Ilya Sorokin,25.5,Sorokin U 25.5 saves,0.5353,0.5322,L,Sorokin U 25.5 saves,-120,-0.0214,pass,L,-1.0,24.9,26.0,graded
-2026-11-13,am,2026020310,NYR @ VAN,h2h,,,NYR ML,0.6102,0.6628,,VAN ML,170,-0.0409,pass,,,-0.62,,pending
-2026-11-13,am,2026020310,NYR @ VAN,spreads,,1.5,VAN +1.5,0.5987,0.5497,,VAN +1.5,-130,0.0031,slight,,,-0.62,,pending
-2026-11-13,am,2026020310,NYR @ VAN,totals,,6.5,Under 6.5,0.5713,0.511,,Under 6.5,-115,-0.005,pass,,,5.92,,pending
-2026-11-13,am,2026020311,NSH @ VGK,h2h,,,VGK ML,0.5752,0.5883,,VGK ML,-150,-0.0271,pass,,,0.41,,pending
-2026-11-13,am,2026020311,NSH @ VGK,spreads,,1.5,NSH +1.5,0.6318,0.6214,,NSH +1.5,-185,-0.0371,pass,,,0.41,,pending
-2026-11-13,am,2026020311,NSH @ VGK,totals,,5.5,Over 5.5,0.5482,,,Under 5.5,115,-0.0286,pass,,,5.77,,pending
+2026-11-13,pm,2026020310,NYR @ VAN,h2h,,,NYR ML,0.6102,0.6548,,VAN ML,170,-0.0264,pass,,,-0.62,,pending
+2026-11-13,pm,2026020310,NYR @ VAN,spreads,,1.5,VAN +1.5,0.5987,0.5532,,VAN +1.5,-145,-0.0381,pass,,,-0.62,,pending
+2026-11-13,pm,2026020310,NYR @ VAN,totals,,6.5,Under 6.5,0.5713,0.5142,,Under 6.5,-120,-0.0205,pass,,,5.92,,pending
+2026-11-13,pm,2026020310,NYR @ VAN,saves,Leevi Merilainen,25.5,Merilainen U 25.5 saves,0.6644,0.5586,,Merilainen U 25.5 saves,-130,0.0842,official,,,22.8,,pending
+2026-11-13,pm,2026020310,NYR @ VAN,saves,Dylan Garand,21.5,Garand O 21.5 saves,0.5184,0.4624,,Garand O 21.5 saves,-105,-0.0425,pass,,,21.9,,pending
+2026-11-13,pm,2026020311,NSH @ VGK,h2h,,,VGK ML,0.5752,0.589,,VGK ML,-150,-0.0264,pass,,,0.41,,pending
+2026-11-13,pm,2026020311,NSH @ VGK,spreads,,1.5,NSH +1.5,0.6318,0.6209,,NSH +1.5,-185,-0.0376,pass,,,0.41,,pending
+2026-11-13,pm,2026020311,NSH @ VGK,totals,,5.5,Over 5.5,0.5482,,,Under 5.5,115,-0.0286,pass,,,5.77,,pending
+2026-11-13,pm,2026020311,NSH @ VGK,saves,Juuse Saros,26.5,Saros U 26.5 saves,0.5516,0.5278,,Saros U 26.5 saves,-145,-0.088,pass,,,25.5,,pending
+2026-11-13,pm,2026020311,NSH @ VGK,saves,Adin Hill,22.5,Hill U 22.5 saves,0.5873,0.4814,,Hill U 22.5 saves,-105,0.044,lean,,,21.3,,pending

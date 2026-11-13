@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-13T16:27:11.623624+00:00",
+ "generated_at": "2026-11-13T22:06:58.910379+00:00",
  "date": "2026-11-13",
- "run": "am",
+ "run": "pm",
  "params": {
   "half_life_days": 120,
   "season_carry": 1.0,
@@ -22,8 +22,8 @@
   }
  },
  "odds_quota": {
-  "remaining": "311",
-  "used": "189"
+  "remaining": "308",
+  "used": "192"
  },
  "odds_events": [
   {
@@ -55,7 +55,11 @@
    "commence": "2026-11-14T18:00:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -63,7 +67,22 @@
    "commence": "2026-11-14T20:40:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
+   ]
+  },
+  {
+   "event": "Colorado Avalanche @ Montr\u00e9al Canadiens",
+   "commence": "2026-11-15T00:09:00Z",
+   "matched": null,
+   "books": [
+    "fanduel",
+    "hardrockbet",
+    "draftkings",
+    "betmgm"
    ]
   },
   {
@@ -71,7 +90,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -79,7 +102,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -87,7 +114,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -95,7 +126,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -103,7 +138,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -111,7 +150,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -119,7 +162,11 @@
    "commence": "2026-11-15T00:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -127,7 +174,11 @@
    "commence": "2026-11-15T01:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -135,7 +186,11 @@
    "commence": "2026-11-15T02:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -143,7 +198,11 @@
    "commence": "2026-11-15T03:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   },
   {
@@ -151,12 +210,57 @@
    "commence": "2026-11-15T03:10:00Z",
    "matched": null,
    "books": [
-    "draftkings"
+    "draftkings",
+    "fanduel",
+    "hardrockbet",
+    "pinnacle",
+    "betmgm"
    ]
   }
  ],
- "saves_priced": false,
- "saves_diag": [],
+ "saves_priced": true,
+ "saves_diag": [
+  {
+   "goalie": "Leevi Merilainen",
+   "team": "VAN",
+   "exp_shots": 26.9,
+   "save_pct": 0.8918,
+   "played_yesterday": false,
+   "league_sv": 0.8961,
+   "games_in_history": 46,
+   "exp_saves": 22.8
+  },
+  {
+   "goalie": "Dylan Garand",
+   "team": "NYR",
+   "exp_shots": 25.1,
+   "save_pct": 0.8994,
+   "played_yesterday": false,
+   "league_sv": 0.8961,
+   "games_in_history": 17,
+   "exp_saves": 21.9
+  },
+  {
+   "goalie": "Juuse Saros",
+   "team": "NSH",
+   "exp_shots": 30.1,
+   "save_pct": 0.8977,
+   "played_yesterday": false,
+   "league_sv": 0.8961,
+   "games_in_history": 130,
+   "exp_saves": 25.5
+  },
+  {
+   "goalie": "Adin Hill",
+   "team": "VGK",
+   "exp_shots": 24.6,
+   "save_pct": 0.8945,
+   "played_yesterday": false,
+   "league_sv": 0.8961,
+   "games_in_history": 97,
+   "exp_saves": 21.3
+  }
+ ],
  "games": [
   {
    "game_id": 2026020310,
@@ -176,8 +280,8 @@
    "away_missing": [
     "Alberts Smits"
    ],
-   "home_goalie_source": "Daily Faceoff (Unconfirmed)",
-   "away_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "home_goalie_source": "Daily Faceoff (Likely)",
+   "away_goalie_source": "Daily Faceoff (Confirmed)",
    "home_goalie_factor": 0.99,
    "away_goalie_factor": 1.0,
    "lines": [
@@ -189,10 +293,10 @@
      "point": null,
      "price": -220,
      "p_model": 0.6102,
-     "p_market": 0.6628,
-     "p_final": 0.6448,
-     "fair_price": -182,
-     "edge": -0.0622
+     "p_market": 0.6548,
+     "p_final": 0.6394,
+     "fair_price": -177,
+     "edge": -0.0699
     },
     {
      "book": "hardrockbet",
@@ -202,10 +306,10 @@
      "point": null,
      "price": 170,
      "p_model": 0.3898,
-     "p_market": 0.3372,
-     "p_final": 0.3552,
-     "fair_price": 182,
-     "edge": -0.0409
+     "p_market": 0.3452,
+     "p_final": 0.3606,
+     "fair_price": 177,
+     "edge": -0.0264
     },
     {
      "book": "hardrockbet",
@@ -213,12 +317,12 @@
      "selection": "NYR -1.5",
      "side": "away",
      "point": -1.5,
-     "price": 105,
+     "price": 115,
      "p_model": 0.4013,
-     "p_market": 0.4503,
-     "p_final": 0.433,
-     "fair_price": 131,
-     "edge": -0.1123
+     "p_market": 0.4468,
+     "p_final": 0.4307,
+     "fair_price": 132,
+     "edge": -0.0739
     },
     {
      "book": "hardrockbet",
@@ -226,12 +330,12 @@
      "selection": "VAN +1.5",
      "side": "home",
      "point": 1.5,
-     "price": -130,
+     "price": -145,
      "p_model": 0.5987,
-     "p_market": 0.5497,
-     "p_final": 0.567,
-     "fair_price": -131,
-     "edge": 0.0031
+     "p_market": 0.5532,
+     "p_final": 0.5693,
+     "fair_price": -132,
+     "edge": -0.0381
     },
     {
      "book": "hardrockbet",
@@ -239,12 +343,12 @@
      "selection": "Over 6.5",
      "side": "over",
      "point": 6.5,
-     "price": -105,
+     "price": 100,
      "p_model": 0.4287,
-     "p_market": 0.489,
-     "p_final": 0.4678,
-     "fair_price": 114,
-     "edge": -0.0867
+     "p_market": 0.4858,
+     "p_final": 0.4657,
+     "fair_price": 115,
+     "edge": -0.0685
     },
     {
      "book": "hardrockbet",
@@ -252,16 +356,187 @@
      "selection": "Under 6.5",
      "side": "under",
      "point": 6.5,
-     "price": -115,
+     "price": -120,
      "p_model": 0.5713,
-     "p_market": 0.511,
-     "p_final": 0.5322,
-     "fair_price": -114,
-     "edge": -0.005
+     "p_market": 0.5142,
+     "p_final": 0.5343,
+     "fair_price": -115,
+     "edge": -0.0205
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Merilainen O 25.5 saves",
+     "side": "over|l merilainen",
+     "point": 25.5,
+     "price": 100,
+     "p_model": 0.3356,
+     "p_market": 0.4414,
+     "p_final": 0.3872,
+     "fair_price": 158,
+     "edge": -0.2257,
+     "goalie": "Leevi Merilainen",
+     "team": "VAN",
+     "exp_shots": 26.9,
+     "save_pct": 0.8918,
+     "exp_saves": 22.8
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Merilainen U 25.5 saves",
+     "side": "under|l merilainen",
+     "point": 25.5,
+     "price": -130,
+     "p_model": 0.6644,
+     "p_market": 0.5586,
+     "p_final": 0.6128,
+     "fair_price": -158,
+     "edge": 0.0842,
+     "goalie": "Leevi Merilainen",
+     "team": "VAN",
+     "exp_shots": 26.9,
+     "save_pct": 0.8918,
+     "exp_saves": 22.8
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Garand O 21.5 saves",
+     "side": "over|d garand",
+     "point": 21.5,
+     "price": -105,
+     "p_model": 0.5184,
+     "p_market": 0.4624,
+     "p_final": 0.4904,
+     "fair_price": 104,
+     "edge": -0.0425,
+     "goalie": "Dylan Garand",
+     "team": "NYR",
+     "exp_shots": 25.1,
+     "save_pct": 0.8994,
+     "exp_saves": 21.9
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Garand U 21.5 saves",
+     "side": "under|d garand",
+     "point": 21.5,
+     "price": -125,
+     "p_model": 0.4816,
+     "p_market": 0.5376,
+     "p_final": 0.5096,
+     "fair_price": -104,
+     "edge": -0.0827,
+     "goalie": "Dylan Garand",
+     "team": "NYR",
+     "exp_shots": 25.1,
+     "save_pct": 0.8994,
+     "exp_saves": 21.9
     }
    ],
-   "bets": [],
-   "combos": []
+   "bets": [
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Merilainen U 25.5 saves",
+     "side": "under|l merilainen",
+     "point": 25.5,
+     "price": -130,
+     "p_model": 0.6644,
+     "p_market": 0.5586,
+     "p_final": 0.6128,
+     "fair_price": -158,
+     "edge": 0.0842,
+     "goalie": "Leevi Merilainen",
+     "team": "VAN",
+     "exp_shots": 26.9,
+     "save_pct": 0.8918,
+     "exp_saves": 22.8,
+     "units": 1.0,
+     "game_id": 2026020310,
+     "matchup": "NYR @ VAN",
+     "start_utc": "2026-11-14T02:00:00Z"
+    }
+   ],
+   "combos": [
+    {
+     "combo": "NYR -1.5 + Merilainen U 25.5 saves",
+     "matchup": "NYR @ VAN",
+     "start_utc": "2026-11-14T02:00:00Z",
+     "price": 280,
+     "fair_price": 223,
+     "hit_pct": 31.0,
+     "lift": 1.173,
+     "ev_pct": 17.8,
+     "flag": true,
+     "legs": [
+      "NYR -1.5",
+      "Merilainen U 25.5 saves"
+     ]
+    },
+    {
+     "combo": "NYR ML + Merilainen U 25.5 saves",
+     "matchup": "NYR @ VAN",
+     "start_utc": "2026-11-14T02:00:00Z",
+     "price": 157,
+     "fair_price": 135,
+     "hit_pct": 42.6,
+     "lift": 1.086,
+     "ev_pct": 9.5,
+     "flag": true,
+     "legs": [
+      "NYR ML",
+      "Merilainen U 25.5 saves"
+     ]
+    },
+    {
+     "combo": "VAN ML + Garand U 21.5 saves",
+     "matchup": "NYR @ VAN",
+     "start_utc": "2026-11-14T02:00:00Z",
+     "price": 386,
+     "fair_price": 377,
+     "hit_pct": 21.0,
+     "lift": 1.141,
+     "ev_pct": 1.9,
+     "flag": false,
+     "legs": [
+      "VAN ML",
+      "Garand U 21.5 saves"
+     ]
+    },
+    {
+     "combo": "NYR ML + Garand O 21.5 saves",
+     "matchup": "NYR @ VAN",
+     "start_utc": "2026-11-14T02:00:00Z",
+     "price": 184,
+     "fair_price": 195,
+     "hit_pct": 33.9,
+     "lift": 1.08,
+     "ev_pct": -3.8,
+     "flag": false,
+     "legs": [
+      "NYR ML",
+      "Garand O 21.5 saves"
+     ]
+    },
+    {
+     "combo": "VAN ML + Merilainen O 25.5 saves",
+     "matchup": "NYR @ VAN",
+     "start_utc": "2026-11-14T02:00:00Z",
+     "price": 440,
+     "fair_price": 545,
+     "hit_pct": 15.5,
+     "lift": 1.111,
+     "ev_pct": -16.2,
+     "flag": false,
+     "legs": [
+      "VAN ML",
+      "Merilainen O 25.5 saves"
+     ]
+    }
+   ]
   },
   {
    "game_id": 2026020311,
@@ -281,8 +556,8 @@
     "Noah Hanifin"
    ],
    "away_missing": [],
-   "home_goalie_source": "Daily Faceoff (Unconfirmed)",
-   "away_goalie_source": "Daily Faceoff (Unconfirmed)",
+   "home_goalie_source": "Daily Faceoff (Confirmed)",
+   "away_goalie_source": "Daily Faceoff (Confirmed)",
    "home_goalie_factor": 1.008,
    "away_goalie_factor": 0.998,
    "lines": [
@@ -294,10 +569,10 @@
      "point": null,
      "price": 130,
      "p_model": 0.4248,
-     "p_market": 0.4117,
-     "p_final": 0.4163,
+     "p_market": 0.411,
+     "p_final": 0.4158,
      "fair_price": 140,
-     "edge": -0.0426
+     "edge": -0.0436
     },
     {
      "book": "hardrockbet",
@@ -307,10 +582,10 @@
      "point": null,
      "price": -150,
      "p_model": 0.5752,
-     "p_market": 0.5883,
-     "p_final": 0.5837,
+     "p_market": 0.589,
+     "p_final": 0.5842,
      "fair_price": -140,
-     "edge": -0.0271
+     "edge": -0.0264
     },
     {
      "book": "hardrockbet",
@@ -320,10 +595,10 @@
      "point": 1.5,
      "price": -185,
      "p_model": 0.6318,
-     "p_market": 0.6214,
-     "p_final": 0.6251,
-     "fair_price": -167,
-     "edge": -0.0371
+     "p_market": 0.6209,
+     "p_final": 0.6247,
+     "fair_price": -166,
+     "edge": -0.0376
     },
     {
      "book": "hardrockbet",
@@ -333,10 +608,10 @@
      "point": -1.5,
      "price": 140,
      "p_model": 0.3682,
-     "p_market": 0.3786,
-     "p_final": 0.3749,
-     "fair_price": 167,
-     "edge": -0.1001
+     "p_market": 0.3791,
+     "p_final": 0.3753,
+     "fair_price": 166,
+     "edge": -0.0993
     },
     {
      "book": "hardrockbet",
@@ -363,10 +638,158 @@
      "p_final": 0.4518,
      "fair_price": 121,
      "edge": -0.0286
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Saros O 26.5 saves",
+     "side": "over|j saros",
+     "point": 26.5,
+     "price": -125,
+     "p_model": 0.4484,
+     "p_market": 0.4722,
+     "p_final": 0.4603,
+     "fair_price": 117,
+     "edge": -0.1715,
+     "goalie": "Juuse Saros",
+     "team": "NSH",
+     "exp_shots": 30.1,
+     "save_pct": 0.8977,
+     "exp_saves": 25.5
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Saros U 26.5 saves",
+     "side": "under|j saros",
+     "point": 26.5,
+     "price": -145,
+     "p_model": 0.5516,
+     "p_market": 0.5278,
+     "p_final": 0.5397,
+     "fair_price": -117,
+     "edge": -0.088,
+     "goalie": "Juuse Saros",
+     "team": "NSH",
+     "exp_shots": 30.1,
+     "save_pct": 0.8977,
+     "exp_saves": 25.5
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Hill O 22.5 saves",
+     "side": "over|a hill",
+     "point": 22.5,
+     "price": -130,
+     "p_model": 0.4127,
+     "p_market": 0.5186,
+     "p_final": 0.4653,
+     "fair_price": 115,
+     "edge": -0.1768,
+     "goalie": "Adin Hill",
+     "team": "VGK",
+     "exp_shots": 24.6,
+     "save_pct": 0.8945,
+     "exp_saves": 21.3
+    },
+    {
+     "book": "hardrockbet",
+     "market": "saves",
+     "selection": "Hill U 22.5 saves",
+     "side": "under|a hill",
+     "point": 22.5,
+     "price": -105,
+     "p_model": 0.5873,
+     "p_market": 0.4814,
+     "p_final": 0.5347,
+     "fair_price": -115,
+     "edge": 0.044,
+     "goalie": "Adin Hill",
+     "team": "VGK",
+     "exp_shots": 24.6,
+     "save_pct": 0.8945,
+     "exp_saves": 21.3
     }
    ],
    "bets": [],
-   "combos": []
+   "combos": [
+    {
+     "combo": "NSH ML + Hill U 22.5 saves",
+     "matchup": "NSH @ VGK",
+     "start_utc": "2026-11-14T03:00:00Z",
+     "price": 349,
+     "fair_price": 301,
+     "hit_pct": 25.0,
+     "lift": 1.123,
+     "ev_pct": 12.1,
+     "flag": true,
+     "legs": [
+      "NSH ML",
+      "Hill U 22.5 saves"
+     ]
+    },
+    {
+     "combo": "VGK ML + Saros U 26.5 saves",
+     "matchup": "NSH @ VGK",
+     "start_utc": "2026-11-14T03:00:00Z",
+     "price": 182,
+     "fair_price": 197,
+     "hit_pct": 33.7,
+     "lift": 1.069,
+     "ev_pct": -5.1,
+     "flag": false,
+     "legs": [
+      "VGK ML",
+      "Saros U 26.5 saves"
+     ]
+    },
+    {
+     "combo": "VGK -1.5 + Saros U 26.5 saves",
+     "matchup": "NSH @ VGK",
+     "start_utc": "2026-11-14T03:00:00Z",
+     "price": 306,
+     "fair_price": 331,
+     "hit_pct": 23.2,
+     "lift": 1.145,
+     "ev_pct": -5.9,
+     "flag": false,
+     "legs": [
+      "VGK -1.5",
+      "Saros U 26.5 saves"
+     ]
+    },
+    {
+     "combo": "NSH ML + Saros O 26.5 saves",
+     "matchup": "NSH @ VGK",
+     "start_utc": "2026-11-14T03:00:00Z",
+     "price": 314,
+     "fair_price": 372,
+     "hit_pct": 21.2,
+     "lift": 1.107,
+     "ev_pct": -12.3,
+     "flag": false,
+     "legs": [
+      "NSH ML",
+      "Saros O 26.5 saves"
+     ]
+    },
+    {
+     "combo": "VGK ML + Hill O 22.5 saves",
+     "matchup": "NSH @ VGK",
+     "start_utc": "2026-11-14T03:00:00Z",
+     "price": 195,
+     "fair_price": 239,
+     "hit_pct": 29.5,
+     "lift": 1.085,
+     "ev_pct": -13.0,
+     "flag": false,
+     "legs": [
+      "VGK ML",
+      "Hill O 22.5 saves"
+     ]
+    }
+   ]
   }
  ],
  "power_rankings": [
@@ -610,6 +1033,6 @@
     "beat_close_pct": 0.0
    }
   },
-  "pending": 0
+  "pending": 1
  }
 }

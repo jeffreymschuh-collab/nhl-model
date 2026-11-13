@@ -1,13 +1,112 @@
 [
 {
-"combo_id": "none",
-"matchup": "",
-"start_et": "",
-"combo": "No combos priced yet. They appear after the pre-game run, once Hard Rock posts saves lines.",
-"price": "",
-"fair_price": "",
-"hit_pct": null,
-"ev_pct": null,
+"combo_id": "2026020310|NYR -1.5 + Merilainen U 25.5 saves",
+"matchup": "NYR @ VAN",
+"start_et": "9:00 PM",
+"combo": "NYR -1.5 + Merilainen U 25.5 saves",
+"price": "+280",
+"fair_price": "+223",
+"hit_pct": 31.0,
+"ev_pct": 17.8,
+"flag": true
+},
+{
+"combo_id": "2026020311|NSH ML + Hill U 22.5 saves",
+"matchup": "NSH @ VGK",
+"start_et": "10:00 PM",
+"combo": "NSH ML + Hill U 22.5 saves",
+"price": "+349",
+"fair_price": "+301",
+"hit_pct": 25.0,
+"ev_pct": 12.1,
+"flag": true
+},
+{
+"combo_id": "2026020310|NYR ML + Merilainen U 25.5 saves",
+"matchup": "NYR @ VAN",
+"start_et": "9:00 PM",
+"combo": "NYR ML + Merilainen U 25.5 saves",
+"price": "+157",
+"fair_price": "+135",
+"hit_pct": 42.6,
+"ev_pct": 9.5,
+"flag": true
+},
+{
+"combo_id": "2026020310|VAN ML + Garand U 21.5 saves",
+"matchup": "NYR @ VAN",
+"start_et": "9:00 PM",
+"combo": "VAN ML + Garand U 21.5 saves",
+"price": "+386",
+"fair_price": "+377",
+"hit_pct": 21.0,
+"ev_pct": 1.9,
+"flag": false
+},
+{
+"combo_id": "2026020310|NYR ML + Garand O 21.5 saves",
+"matchup": "NYR @ VAN",
+"start_et": "9:00 PM",
+"combo": "NYR ML + Garand O 21.5 saves",
+"price": "+184",
+"fair_price": "+195",
+"hit_pct": 33.9,
+"ev_pct": -3.8,
+"flag": false
+},
+{
+"combo_id": "2026020311|VGK ML + Saros U 26.5 saves",
+"matchup": "NSH @ VGK",
+"start_et": "10:00 PM",
+"combo": "VGK ML + Saros U 26.5 saves",
+"price": "+182",
+"fair_price": "+197",
+"hit_pct": 33.7,
+"ev_pct": -5.1,
+"flag": false
+},
+{
+"combo_id": "2026020311|VGK -1.5 + Saros U 26.5 saves",
+"matchup": "NSH @ VGK",
+"start_et": "10:00 PM",
+"combo": "VGK -1.5 + Saros U 26.5 saves",
+"price": "+306",
+"fair_price": "+331",
+"hit_pct": 23.2,
+"ev_pct": -5.9,
+"flag": false
+},
+{
+"combo_id": "2026020311|NSH ML + Saros O 26.5 saves",
+"matchup": "NSH @ VGK",
+"start_et": "10:00 PM",
+"combo": "NSH ML + Saros O 26.5 saves",
+"price": "+314",
+"fair_price": "+372",
+"hit_pct": 21.2,
+"ev_pct": -12.3,
+"flag": false
+},
+{
+"combo_id": "2026020311|VGK ML + Hill O 22.5 saves",
+"matchup": "NSH @ VGK",
+"start_et": "10:00 PM",
+"combo": "VGK ML + Hill O 22.5 saves",
+"price": "+195",
+"fair_price": "+239",
+"hit_pct": 29.5,
+"ev_pct": -13.0,
+"flag": false
+},
+{
+"combo_id": "2026020310|VAN ML + Merilainen O 25.5 saves",
+"matchup": "NYR @ VAN",
+"start_et": "9:00 PM",
+"combo": "VAN ML + Merilainen O 25.5 saves",
+"price": "+440",
+"fair_price": "+545",
+"hit_pct": 15.5,
+"ev_pct": -16.2,
 "flag": false
 }
 ]

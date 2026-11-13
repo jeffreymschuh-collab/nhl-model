@@ -6,9 +6,9 @@
 "xg_away": 3.27,
 "xg_home": 2.65,
 "home_win_pct": 39.0,
-"best_line": "VAN +1.5",
-"best_edge_pct": 0.3,
-"picks": 0
+"best_line": "Merilainen U 25.5 saves",
+"best_edge_pct": 8.4,
+"picks": 1
 },
 {
 "game_id": "2026020311",
@@ -17,8 +17,8 @@
 "xg_away": 2.68,
 "xg_home": 3.09,
 "home_win_pct": 57.5,
-"best_line": "VGK ML",
-"best_edge_pct": -2.7,
+"best_line": "Hill U 22.5 saves",
+"best_edge_pct": 4.4,
 "picks": 0
 }
 ]
