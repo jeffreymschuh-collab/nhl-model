@@ -1,112 +1,24 @@
 [
 {
-"game_id": "2026020299",
-"matchup": "MTL @ BOS",
-"start_et": "7:00 PM",
-"xg_away": 2.85,
-"xg_home": 3.06,
-"home_win_pct": 53.8,
-"best_line": "BOS ML",
-"best_edge_pct": -2.2,
-"picks": 0
-},
-{
-"game_id": "2026020300",
-"matchup": "MIN @ TOR",
-"start_et": "7:00 PM",
-"xg_away": 3.38,
-"xg_home": 2.83,
-"home_win_pct": 40.6,
-"best_line": "Stolarz U 26.5 saves",
-"best_edge_pct": 3.2,
-"picks": 0
-},
-{
-"game_id": "2026020301",
-"matchup": "COL @ OTT",
-"start_et": "7:00 PM",
-"xg_away": 3.08,
-"xg_home": 2.93,
-"home_win_pct": 47.4,
-"best_line": "Wedgewood U 25.5 saves",
-"best_edge_pct": 1.8,
-"picks": 0
-},
-{
-"game_id": "2026020303",
-"matchup": "WSH @ NJD",
-"start_et": "7:00 PM",
-"xg_away": 2.92,
-"xg_home": 3.21,
-"home_win_pct": 55.0,
-"best_line": "Hellebuyck U 23.5 saves",
-"best_edge_pct": 7.0,
-"picks": 1
-},
-{
-"game_id": "2026020304",
-"matchup": "TBL @ CBJ",
-"start_et": "7:00 PM",
-"xg_away": 2.98,
-"xg_home": 2.99,
-"home_win_pct": 50.3,
-"best_line": "Greaves U 24.5 saves",
-"best_edge_pct": -1.7,
-"picks": 0
-},
-{
-"game_id": "2026020302",
-"matchup": "DET @ FLA",
-"start_et": "7:30 PM",
-"xg_away": 2.83,
-"xg_home": 3.12,
-"home_win_pct": 55.0,
-"best_line": "Schmid U 23.5 saves",
-"best_edge_pct": 4.7,
-"picks": 0
-},
-{
-"game_id": "2026020305",
-"matchup": "BUF @ CHI",
-"start_et": "8:00 PM",
-"xg_away": 3.18,
-"xg_home": 2.73,
-"home_win_pct": 41.9,
-"best_line": "BUF ML",
-"best_edge_pct": -2.9,
-"picks": 0
-},
-{
-"game_id": "2026020306",
-"matchup": "WPG @ DAL",
-"start_et": "8:00 PM",
-"xg_away": 2.51,
-"xg_home": 2.97,
-"home_win_pct": 58.6,
-"best_line": "Oettinger U 22.5 saves",
-"best_edge_pct": 9.4,
-"picks": 1
-},
-{
-"game_id": "2026020307",
-"matchup": "STL @ UTA",
+"game_id": "2026020310",
+"matchup": "NYR @ VAN",
 "start_et": "9:00 PM",
-"xg_away": 3.02,
-"xg_home": 2.93,
-"home_win_pct": 48.3,
-"best_line": "Vejmelka U 23.5 saves",
-"best_edge_pct": 15.0,
-"picks": 1
+"xg_away": 3.27,
+"xg_home": 2.65,
+"home_win_pct": 39.0,
+"best_line": "VAN +1.5",
+"best_edge_pct": 0.3,
+"picks": 0
 },
 {
-"game_id": "2026020308",
-"matchup": "NYI @ LAK",
+"game_id": "2026020311",
+"matchup": "NSH @ VGK",
 "start_et": "10:00 PM",
-"xg_away": 2.77,
-"xg_home": 2.85,
-"home_win_pct": 51.4,
-"best_line": "Sorokin U 25.5 saves",
-"best_edge_pct": -2.1,
+"xg_away": 2.68,
+"xg_home": 3.09,
+"home_win_pct": 57.5,
+"best_line": "VGK ML",
+"best_edge_pct": -2.7,
 "picks": 0
 }
 ]

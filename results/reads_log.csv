@@ -315,49 +315,55 @@ date,run,game_id,matchup,market,goalie,point,call,call_p_model,call_p_market,cal
 2026-11-11,pm,2026020298,PIT @ SJS,totals,,6.5,Under 6.5,0.5034,0.4519,W,Under 6.5,115,0.0102,slight,W,1.15,6.34,5.0,graded
 2026-11-11,pm,2026020298,PIT @ SJS,saves,Yaroslav Askarov,25.5,Askarov U 25.5 saves,0.5444,0.5213,L,Askarov U 25.5 saves,-120,-0.023,pass,L,-1.0,24.7,33.0,graded
 2026-11-11,pm,2026020298,PIT @ SJS,saves,Sergei Murashov,24.5,Murashov U 24.5 saves,0.5669,0.5191,L,Murashov U 24.5 saves,-155,-0.1065,pass,L,-1.0,23.4,34.0,graded
-2026-11-12,pm,2026020299,MTL @ BOS,h2h,,,BOS ML,0.5384,0.5304,,BOS ML,-120,-0.0224,pass,,,0.21,,pending
-2026-11-12,pm,2026020299,MTL @ BOS,spreads,,1.5,MTL +1.5,0.6603,0.6792,,MTL +1.5,-250,-0.0583,pass,,,0.21,,pending
-2026-11-12,pm,2026020299,MTL @ BOS,totals,,6.5,Under 6.5,0.5716,0.5424,,Under 6.5,-130,-0.0222,pass,,,5.91,,pending
-2026-11-12,pm,2026020299,MTL @ BOS,saves,Jeremy Swayman,24.5,Swayman U 24.5 saves,0.555,0.5111,,Swayman U 24.5 saves,-120,-0.0226,pass,,,23.6,,pending
-2026-11-12,pm,2026020299,MTL @ BOS,saves,Jacob Fowler,24.5,Fowler O 24.5 saves,0.502,0.5014,,Fowler O 24.5 saves,-115,-0.062,pass,,,24.5,,pending
-2026-11-12,pm,2026020300,MIN @ TOR,h2h,,,MIN ML,0.5942,0.609,,MIN ML,-170,-0.041,pass,,,-0.55,,pending
-2026-11-12,pm,2026020300,MIN @ TOR,spreads,,1.5,TOR +1.5,0.6077,0.5979,,MIN -1.5,140,-0.0433,pass,,,-0.55,,pending
-2026-11-12,pm,2026020300,MIN @ TOR,totals,,6.5,Under 6.5,0.5239,0.5181,,Over 6.5,100,-0.0403,pass,,,6.21,,pending
-2026-11-12,pm,2026020300,MIN @ TOR,saves,Jesper Wallstedt,24.5,Wallstedt U 24.5 saves,0.5145,0.5081,,Wallstedt O 24.5 saves,100,-0.0226,pass,,,24.3,,pending
-2026-11-12,pm,2026020300,MIN @ TOR,saves,Anthony Stolarz,26.5,Stolarz O 26.5 saves,0.5006,0.4675,,Stolarz U 26.5 saves,100,0.0319,lean,,,26.4,,pending
-2026-11-12,pm,2026020301,COL @ OTT,h2h,,,COL ML,0.526,0.495,,COL ML,-110,-0.0343,pass,,,-0.15,,pending
-2026-11-12,pm,2026020301,COL @ OTT,spreads,,1.5,COL +1.5,0.7099,0.6979,,COL +1.5,-300,-0.0639,pass,,,-0.15,,pending
-2026-11-12,pm,2026020301,COL @ OTT,totals,,6.5,Under 6.5,0.554,0.5247,,Under 6.5,-120,-0.0192,pass,,,6.01,,pending
-2026-11-12,pm,2026020301,COL @ OTT,saves,Linus Ullmark,26.5,Ullmark U 26.5 saves,0.6044,0.6055,,Ullmark U 26.5 saves,-150,0.0082,slight,,,24.7,,pending
-2026-11-12,pm,2026020301,COL @ OTT,saves,Scott Wedgewood,25.5,Wedgewood U 25.5 saves,0.6105,0.5585,,Wedgewood U 25.5 saves,-135,0.0179,slight,,,23.7,,pending
-2026-11-12,pm,2026020303,WSH @ NJD,h2h,,,NJD ML,0.5505,0.5856,,NJD ML,-145,-0.0311,pass,,,0.29,,pending
-2026-11-12,pm,2026020303,WSH @ NJD,spreads,,1.5,WSH +1.5,0.6466,0.6328,,NJD -1.5,160,-0.0578,pass,,,0.29,,pending
-2026-11-12,pm,2026020303,WSH @ NJD,totals,,5.5,Over 5.5,0.6047,,,Over 5.5,-145,0.0217,lean,,,6.13,,pending
-2026-11-12,pm,2026020303,WSH @ NJD,saves,Connor Hellebuyck,23.5,Hellebuyck U 23.5 saves,0.5866,0.5813,,Hellebuyck U 23.5 saves,-120,0.0705,official,,,22.2,,pending
-2026-11-12,pm,2026020304,TBL @ CBJ,h2h,,,CBJ ML,0.503,0.4923,,TBL ML,-110,-0.0379,pass,,,0.01,,pending
-2026-11-12,pm,2026020304,TBL @ CBJ,spreads,,1.5,TBL +1.5,0.6879,,,CBJ -1.5,200,-0.0636,pass,,,0.01,,pending
-2026-11-12,pm,2026020304,TBL @ CBJ,totals,,6.5,Under 6.5,0.561,0.507,,Under 6.5,-115,-0.0167,pass,,,5.97,,pending
-2026-11-12,pm,2026020304,TBL @ CBJ,saves,Jet Greaves,24.5,Greaves U 24.5 saves,0.5584,0.5144,,Greaves U 24.5 saves,-120,-0.0165,pass,,,23.5,,pending
-2026-11-12,pm,2026020302,DET @ FLA,h2h,,,FLA ML,0.5505,0.6063,,DET ML,140,-0.0088,pass,,,0.29,,pending
-2026-11-12,pm,2026020302,DET @ FLA,spreads,,1.5,DET +1.5,0.6495,0.6158,,DET +1.5,-185,-0.033,pass,,,0.29,,pending
-2026-11-12,pm,2026020302,DET @ FLA,totals,,5.5,Over 5.5,0.5765,0.5487,,Under 5.5,115,-0.0507,pass,,,5.95,,pending
-2026-11-12,pm,2026020302,DET @ FLA,saves,Akira Schmid,23.5,Schmid U 23.5 saves,0.5238,0.5234,,Schmid U 23.5 saves,100,0.0471,lean,,,23.1,,pending
-2026-11-12,pm,2026020302,DET @ FLA,saves,John Gibson,25.5,Gibson U 25.5 saves,0.5599,0.5643,,Gibson U 25.5 saves,-125,0.0118,slight,,,24.4,,pending
-2026-11-12,pm,2026020305,BUF @ CHI,h2h,,,BUF ML,0.5812,0.5829,,BUF ML,-150,-0.0295,pass,,,-0.45,,pending
-2026-11-12,pm,2026020305,BUF @ CHI,spreads,,1.5,CHI +1.5,0.6241,0.6294,,CHI +1.5,-185,-0.0333,pass,,,-0.45,,pending
-2026-11-12,pm,2026020305,BUF @ CHI,totals,,6.5,Under 6.5,0.5712,0.5084,,Under 6.5,-110,0.0128,slight,,,5.91,,pending
-2026-11-12,pm,2026020306,WPG @ DAL,h2h,,,DAL ML,0.5861,0.5931,,WPG ML,135,-0.0381,pass,,,0.46,,pending
-2026-11-12,pm,2026020306,WPG @ DAL,spreads,,1.5,WPG +1.5,0.6278,0.6236,,WPG +1.5,-185,-0.037,pass,,,0.46,,pending
-2026-11-12,pm,2026020306,WPG @ DAL,totals,,5.5,Over 5.5,0.5009,0.5238,,Under 5.5,100,-0.0316,pass,,,5.48,,pending
-2026-11-12,pm,2026020306,WPG @ DAL,saves,Jake Oettinger,22.5,Oettinger U 22.5 saves,0.5936,0.527,,Oettinger U 22.5 saves,-105,0.0944,official,,,21.2,,pending
-2026-11-12,pm,2026020306,WPG @ DAL,saves,Stuart Skinner,24.5,Skinner U 24.5 saves,0.621,0.5797,,Skinner U 24.5 saves,-135,0.0453,lean,,,22.5,,pending
-2026-11-12,pm,2026020307,STL @ UTA,h2h,,,STL ML,0.5168,0.5406,,UTA ML,105,-0.0412,pass,,,-0.09,,pending
-2026-11-12,pm,2026020307,STL @ UTA,spreads,,1.5,UTA +1.5,0.6771,0.6836,,UTA +1.5,-250,-0.0461,pass,,,-0.09,,pending
-2026-11-12,pm,2026020307,STL @ UTA,totals,,5.5,Over 5.5,0.576,0.538,,Over 5.5,-130,-0.0246,pass,,,5.95,,pending
-2026-11-12,pm,2026020307,STL @ UTA,saves,Karel Vejmelka,23.5,Vejmelka U 23.5 saves,0.5859,0.5922,,Vejmelka U 23.5 saves,-105,0.1502,official,,,22.2,,pending
-2026-11-12,pm,2026020307,STL @ UTA,saves,Joel Hofer,26.5,Hofer U 26.5 saves,0.6286,0.6093,,Hofer U 26.5 saves,-130,0.0951,lean,,,24.4,,pending
-2026-11-12,pm,2026020308,NYI @ LAK,h2h,,,LAK ML,0.5144,0.5287,,LAK ML,-120,-0.0399,pass,,,0.08,,pending
-2026-11-12,pm,2026020308,NYI @ LAK,spreads,,1.5,NYI +1.5,0.6842,0.6853,,NYI +1.5,-250,-0.0411,pass,,,0.08,,pending
-2026-11-12,pm,2026020308,NYI @ LAK,totals,,5.5,Over 5.5,0.5242,0.5522,,Under 5.5,115,-0.0162,pass,,,5.62,,pending
-2026-11-12,pm,2026020308,NYI @ LAK,saves,Darcy Kuemper,24.5,Kuemper U 24.5 saves,0.5937,0.587,,Kuemper U 24.5 saves,-165,-0.0519,pass,,,23.0,,pending
-2026-11-12,pm,2026020308,NYI @ LAK,saves,Ilya Sorokin,25.5,Sorokin U 25.5 saves,0.5353,0.5322,,Sorokin U 25.5 saves,-120,-0.0214,pass,,,24.9,,pending
+2026-11-12,pm,2026020299,MTL @ BOS,h2h,,,BOS ML,0.5384,0.5304,L,BOS ML,-120,-0.0224,pass,L,-1.0,0.21,-3.0,graded
+2026-11-12,pm,2026020299,MTL @ BOS,spreads,,1.5,MTL +1.5,0.6603,0.6792,W,MTL +1.5,-250,-0.0583,pass,W,0.4,0.21,-3.0,graded
+2026-11-12,pm,2026020299,MTL @ BOS,totals,,6.5,Under 6.5,0.5716,0.5424,L,Under 6.5,-130,-0.0222,pass,L,-1.0,5.91,7.0,graded
+2026-11-12,pm,2026020299,MTL @ BOS,saves,Jeremy Swayman,24.5,Swayman U 24.5 saves,0.555,0.5111,W,Swayman U 24.5 saves,-120,-0.0226,pass,W,0.833,23.6,13.0,graded
+2026-11-12,pm,2026020299,MTL @ BOS,saves,Jacob Fowler,24.5,Fowler O 24.5 saves,0.502,0.5014,W,Fowler O 24.5 saves,-115,-0.062,pass,W,0.87,24.5,30.0,graded
+2026-11-12,pm,2026020300,MIN @ TOR,h2h,,,MIN ML,0.5942,0.609,W,MIN ML,-170,-0.041,pass,W,0.588,-0.55,-3.0,graded
+2026-11-12,pm,2026020300,MIN @ TOR,spreads,,1.5,TOR +1.5,0.6077,0.5979,L,MIN -1.5,140,-0.0433,pass,W,1.4,-0.55,-3.0,graded
+2026-11-12,pm,2026020300,MIN @ TOR,totals,,6.5,Under 6.5,0.5239,0.5181,L,Over 6.5,100,-0.0403,pass,W,1.0,6.21,7.0,graded
+2026-11-12,pm,2026020300,MIN @ TOR,saves,Jesper Wallstedt,24.5,Wallstedt U 24.5 saves,0.5145,0.5081,L,Wallstedt O 24.5 saves,100,-0.0226,pass,W,1.0,24.3,26.0,graded
+2026-11-12,pm,2026020300,MIN @ TOR,saves,Anthony Stolarz,26.5,Stolarz O 26.5 saves,0.5006,0.4675,L,Stolarz U 26.5 saves,100,0.0319,lean,W,1.0,26.4,21.0,graded
+2026-11-12,pm,2026020301,COL @ OTT,h2h,,,COL ML,0.526,0.495,L,COL ML,-110,-0.0343,pass,L,-1.0,-0.15,1.0,graded
+2026-11-12,pm,2026020301,COL @ OTT,spreads,,1.5,COL +1.5,0.7099,0.6979,W,COL +1.5,-300,-0.0639,pass,W,0.333,-0.15,1.0,graded
+2026-11-12,pm,2026020301,COL @ OTT,totals,,6.5,Under 6.5,0.554,0.5247,L,Under 6.5,-120,-0.0192,pass,L,-1.0,6.01,7.0,graded
+2026-11-12,pm,2026020301,COL @ OTT,saves,Linus Ullmark,26.5,Ullmark U 26.5 saves,0.6044,0.6055,W,Ullmark U 26.5 saves,-150,0.0082,slight,W,0.667,24.7,26.0,graded
+2026-11-12,pm,2026020301,COL @ OTT,saves,Scott Wedgewood,25.5,Wedgewood U 25.5 saves,0.6105,0.5585,W,Wedgewood U 25.5 saves,-135,0.0179,slight,W,0.741,23.7,22.0,graded
+2026-11-12,pm,2026020303,WSH @ NJD,h2h,,,NJD ML,0.5505,0.5856,W,NJD ML,-145,-0.0311,pass,W,0.69,0.29,3.0,graded
+2026-11-12,pm,2026020303,WSH @ NJD,spreads,,1.5,WSH +1.5,0.6466,0.6328,L,NJD -1.5,160,-0.0578,pass,W,1.6,0.29,3.0,graded
+2026-11-12,pm,2026020303,WSH @ NJD,totals,,5.5,Over 5.5,0.6047,,W,Over 5.5,-145,0.0217,lean,W,0.69,6.13,7.0,graded
+2026-11-12,pm,2026020303,WSH @ NJD,saves,Connor Hellebuyck,23.5,Hellebuyck U 23.5 saves,0.5866,0.5813,L,Hellebuyck U 23.5 saves,-120,0.0705,official,L,-1.0,22.2,26.0,graded
+2026-11-12,pm,2026020304,TBL @ CBJ,h2h,,,CBJ ML,0.503,0.4923,L,TBL ML,-110,-0.0379,pass,W,0.909,0.01,-2.0,graded
+2026-11-12,pm,2026020304,TBL @ CBJ,spreads,,1.5,TBL +1.5,0.6879,,W,CBJ -1.5,200,-0.0636,pass,L,-1.0,0.01,-2.0,graded
+2026-11-12,pm,2026020304,TBL @ CBJ,totals,,6.5,Under 6.5,0.561,0.507,W,Under 6.5,-115,-0.0167,pass,W,0.87,5.97,4.0,graded
+2026-11-12,pm,2026020304,TBL @ CBJ,saves,Jet Greaves,24.5,Greaves U 24.5 saves,0.5584,0.5144,L,Greaves U 24.5 saves,-120,-0.0165,pass,L,-1.0,23.5,25.0,graded
+2026-11-12,pm,2026020302,DET @ FLA,h2h,,,FLA ML,0.5505,0.6063,W,DET ML,140,-0.0088,pass,L,-1.0,0.29,1.0,graded
+2026-11-12,pm,2026020302,DET @ FLA,spreads,,1.5,DET +1.5,0.6495,0.6158,W,DET +1.5,-185,-0.033,pass,W,0.541,0.29,1.0,graded
+2026-11-12,pm,2026020302,DET @ FLA,totals,,5.5,Over 5.5,0.5765,0.5487,W,Under 5.5,115,-0.0507,pass,L,-1.0,5.95,9.0,graded
+2026-11-12,pm,2026020302,DET @ FLA,saves,Akira Schmid,23.5,Schmid U 23.5 saves,0.5238,0.5234,L,Schmid U 23.5 saves,100,0.0471,lean,L,-1.0,23.1,24.0,graded
+2026-11-12,pm,2026020302,DET @ FLA,saves,John Gibson,25.5,Gibson U 25.5 saves,0.5599,0.5643,W,Gibson U 25.5 saves,-125,0.0118,slight,W,0.8,24.4,24.0,graded
+2026-11-12,pm,2026020305,BUF @ CHI,h2h,,,BUF ML,0.5812,0.5829,L,BUF ML,-150,-0.0295,pass,L,-1.0,-0.45,1.0,graded
+2026-11-12,pm,2026020305,BUF @ CHI,spreads,,1.5,CHI +1.5,0.6241,0.6294,W,CHI +1.5,-185,-0.0333,pass,W,0.541,-0.45,1.0,graded
+2026-11-12,pm,2026020305,BUF @ CHI,totals,,6.5,Under 6.5,0.5712,0.5084,W,Under 6.5,-110,0.0128,slight,W,0.909,5.91,5.0,graded
+2026-11-12,pm,2026020306,WPG @ DAL,h2h,,,DAL ML,0.5861,0.5931,L,WPG ML,135,-0.0381,pass,W,1.35,0.46,-5.0,graded
+2026-11-12,pm,2026020306,WPG @ DAL,spreads,,1.5,WPG +1.5,0.6278,0.6236,W,WPG +1.5,-185,-0.037,pass,W,0.541,0.46,-5.0,graded
+2026-11-12,pm,2026020306,WPG @ DAL,totals,,5.5,Over 5.5,0.5009,0.5238,W,Under 5.5,100,-0.0316,pass,L,-1.0,5.48,11.0,graded
+2026-11-12,pm,2026020306,WPG @ DAL,saves,Jake Oettinger,22.5,Oettinger U 22.5 saves,0.5936,0.527,W,Oettinger U 22.5 saves,-105,0.0944,official,W,0.952,21.2,21.0,graded
+2026-11-12,pm,2026020306,WPG @ DAL,saves,Stuart Skinner,24.5,Skinner U 24.5 saves,0.621,0.5797,L,Skinner U 24.5 saves,-135,0.0453,lean,L,-1.0,22.5,30.0,graded
+2026-11-12,pm,2026020307,STL @ UTA,h2h,,,STL ML,0.5168,0.5406,W,UTA ML,105,-0.0412,pass,L,-1.0,-0.09,-1.0,graded
+2026-11-12,pm,2026020307,STL @ UTA,spreads,,1.5,UTA +1.5,0.6771,0.6836,W,UTA +1.5,-250,-0.0461,pass,W,0.4,-0.09,-1.0,graded
+2026-11-12,pm,2026020307,STL @ UTA,totals,,5.5,Over 5.5,0.576,0.538,L,Over 5.5,-130,-0.0246,pass,L,-1.0,5.95,1.0,graded
+2026-11-12,pm,2026020307,STL @ UTA,saves,Karel Vejmelka,23.5,Vejmelka U 23.5 saves,0.5859,0.5922,W,Vejmelka U 23.5 saves,-105,0.1502,official,W,0.952,22.2,22.0,graded
+2026-11-12,pm,2026020307,STL @ UTA,saves,Joel Hofer,26.5,Hofer U 26.5 saves,0.6286,0.6093,L,Hofer U 26.5 saves,-130,0.0951,lean,L,-1.0,24.4,29.0,graded
+2026-11-12,pm,2026020308,NYI @ LAK,h2h,,,LAK ML,0.5144,0.5287,L,LAK ML,-120,-0.0399,pass,L,-1.0,0.08,-3.0,graded
+2026-11-12,pm,2026020308,NYI @ LAK,spreads,,1.5,NYI +1.5,0.6842,0.6853,W,NYI +1.5,-250,-0.0411,pass,W,0.4,0.08,-3.0,graded
+2026-11-12,pm,2026020308,NYI @ LAK,totals,,5.5,Over 5.5,0.5242,0.5522,W,Under 5.5,115,-0.0162,pass,L,-1.0,5.62,7.0,graded
+2026-11-12,pm,2026020308,NYI @ LAK,saves,Darcy Kuemper,24.5,Kuemper U 24.5 saves,0.5937,0.587,W,Kuemper U 24.5 saves,-165,-0.0519,pass,W,0.606,23.0,16.0,graded
+2026-11-12,pm,2026020308,NYI @ LAK,saves,Ilya Sorokin,25.5,Sorokin U 25.5 saves,0.5353,0.5322,L,Sorokin U 25.5 saves,-120,-0.0214,pass,L,-1.0,24.9,26.0,graded
+2026-11-13,am,2026020310,NYR @ VAN,h2h,,,NYR ML,0.6102,0.6628,,VAN ML,170,-0.0409,pass,,,-0.62,,pending
+2026-11-13,am,2026020310,NYR @ VAN,spreads,,1.5,VAN +1.5,0.5987,0.5497,,VAN +1.5,-130,0.0031,slight,,,-0.62,,pending
+2026-11-13,am,2026020310,NYR @ VAN,totals,,6.5,Under 6.5,0.5713,0.511,,Under 6.5,-115,-0.005,pass,,,5.92,,pending
+2026-11-13,am,2026020311,NSH @ VGK,h2h,,,VGK ML,0.5752,0.5883,,VGK ML,-150,-0.0271,pass,,,0.41,,pending
+2026-11-13,am,2026020311,NSH @ VGK,spreads,,1.5,NSH +1.5,0.6318,0.6214,,NSH +1.5,-185,-0.0371,pass,,,0.41,,pending
+2026-11-13,am,2026020311,NSH @ VGK,totals,,5.5,Over 5.5,0.5482,,,Under 5.5,115,-0.0286,pass,,,5.77,,pending
